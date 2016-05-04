@@ -72,11 +72,13 @@ zd1211-firmware
 #debootstrap
 ## Recover deleted or overwritten files on ext3 and ext4 filesystems
 #ext4magic
+## Keytable files and keyboard utilities
 #kbd
 ## Hardware detection script with loading modules and mkinitcpio.conf / rc.conf support
 #hwdetect
 ## Hardware detection tool from openSUSE
 #hwinfo
+## GNU make utility to maintain groups of programs
 make
 ## A useful diagnositic, instructional, and debugging tool
 #strace
@@ -129,7 +131,9 @@ lxqt-panel
 oxygen-icons
 ## Wireless LAN network manager for LXQT
 #connman
+## A simple binary editor for the Gnome desktop
 #ghex 
+## displays files in hexadecimal and ASCII (or EBCDIC) and highlight the differences between them
 #vbindiff
 ## script to get system information
 #inxi
@@ -139,7 +143,9 @@ laptop-detect
 #geoip-database
 #irqbalance
 #lvm2
+## Linux kernel tool to examine and tune power saving related features of your processor
 cpupower
+## CMT for LADSPA
 cmt
 leafpad
 ttf-dejavu

@@ -6,7 +6,7 @@
 Version:	no need for version controlling, it is just a backup.
 		Change and destroy!
 
-Date:		2016-05-03
+Date:		2016-05-04
 
 License:	Good question. GPL, LGPL, BSD, MIT so far.
 		I will take look into license issues as soon as possible.
@@ -22,15 +22,14 @@ Link to ZIP:	https://drive.google.com/open?id=0B2BaBYQTShFzU3Z2V1NQTGVTYjA
 
 What is it?
 -------------------------------------------------------------------------
-This script creates a 64 bit Arch Linux live system ISO file, that you 
-can burn on cd/dvd, copy to an usb storage or host in a virtual machine.
-Only tested on machines with BIOS, but UEFI and vm should work. You can
-create any system configuration you want, but this ISO should be optimized 
-to act as an effect unit for bass guitars in future. This configuration 
-contains a linux realtime kernel, Guitarix (with webui & specmatch), Calf,
-Carla, Cadence, LV2/LADSPA/etc. plugins, rakarrack, Hydrogen, gtklick and 
-a few impulse responses from two bass amplifiers, but they are not very well, 
-they are too hushed. You will find better/louder IRs on the net, or you can 
+This script creates a 64 bit Arch Linux live system ISO file for audio production, 
+that you can burn on cd/dvd, copy to an usb storage or host in a virtual machine.
+Only tested on machines with BIOS, but UEFI and vm should work. You can create any 
+system configuration you want, but this ISO should be optimized to act as an effect unit 
+for bass guitars in future. This configuration contains a linux realtime kernel, 
+Guitarix (with webui & specmatch), Calf,Carla, Cadence, LV2/LADSPA/etc. plugins, rakarrack, 
+Hydrogen, gtklick and a few impulse responses from two bass amplifiers, but they are not 
+very well, they are too hushed. You will find better/louder IRs on the net, or you can 
 create your own IRs with Expochirptool, a tool for pure data. 
 
 
@@ -40,48 +39,21 @@ Requirements:
 * an Arch Linux system with archiso installed
  (maybe there is a solution for other operating systems, similar to 
  debootstrap, but I don't know in detail momentarily.) 
- It could be possible to perform this script with the official Live ISO, 
- you can download at 
+ 
+ For me it is important to create a clean, new, official system, and maybe it could be 
+ possible to perform this script with the official Live ISO, you can download at 
  * https://www.archlinux.org/download/
- and install archiso with
- % sudo pacman -Syyu
- % sudo pacman -S archiso 
+ 
+ (not working yet ...)
  You may have not enough memory on the live session. 
  Do something like copy the script to another USB storage with a filesystem
- that supports symbolic links,
- unfortunately fat32 does not. Ext2,3,4,reiser,zfs, you name it should work.
+ that supports symbolic links, unfortunately fat32 does not. Ext2,3,4,reiser,zfs, you name it should work.
  Burn the official ISO on a cd/dvd, boot a live session to RAM 
  (from startdialog press "Tab" and enter copytoram=y) and execute the 
  build-rt.sh from the USB storage. The script will create a work and a out directory 
- to the path it was started. Something like that for example.
+ to the path it was started. Something like that for example (*1 appendix).
   
- * Download official ISO and burn it on a cd/dvd.
- * from startdialog press "Tab" and enter copytoram=y
- * partition a USB storage with ext3
- ** lsblk
- ** fdisk /dev/sdX
--> n = new
--> p = primary
--> ? = partition number
--> ? = first sector
--> ? = last sector
--> p = print config
--> w = write it to the storage
 
- ** mkfs.ext3 -L ISOmaker /dev/sdX1
- * mount the storage
- * mkdir /home/user/usbstick
- ** mount -t ext3 /dev/sdX1 /home/user/usbstick
- * Download the ZIP
- ** wget https://github.com/LiberationFrequency/BazzArch/archive/master.zip
- * rename ID BazzArch.zip
- * unzip BazzArch.zip
- * or if unzip is not available
- ** bsdtar -xvf BazzArch.zip
-
- * create the customrepo and build the packages 
- (you have to adjust the path to the storage, instead to your home directory, no ~/)
- * run the script
 
 
 
@@ -97,7 +69,7 @@ we can ignore linux and install just the linux-rt kernel.
 The packages in packages.both can be installed from the official repositories and will be 
 downloaded at creation process, if they are not present in your local pacman cache.
 To install the packages in packages.x86_64 you have to build them from the Arch User Repository 
-and create a custom repository on your local system (*1 appendix). Don't forget to adjust the path of the 
+and create a custom repository on your local system (*2 appendix). Don't forget to adjust the path of the 
 customrepo in the pacman.conf.
 See the Arch wiki for further information. 
 * https://wiki.archlinux.org/index.php/archiso 
@@ -251,12 +223,14 @@ make sure that the device is not mounted and dd it to the top
 
 
 ### known issues ###
+* sudoers is owned by uid 1000, should be 0 
+
 * there was a error, something like client can not connect to jack2-dbus or similar 
 (gconftool-2:9947): GConf-WARNING **: Client failed to connect to the D-BUS daemon:
 /usr/bin/dbus-launch terminated abnormally with the following error: No protocol specified
 Autolaunch error: X11 initialization failed.
 
-* guitarix behave buggy, when you scoll through the impulse responses and it will crash.
+* guitarix behaves buggy, when you scoll through the impulse responses and it will crash.
 
 * pd-extended does not launch from the startmenue, but with pd from the console.
 
@@ -303,7 +277,75 @@ to download the packages you want again, take a look at
 
 -----------------------------------appendix-------------------------------------------
 
-(* 1) 
+(* 1)
+ (not working yet)
+
+ * Download official ISO and burn it on a cd/dvd.
+ * https://www.archlinux.org/download/
+ * from startdialog press "Tab" and enter copytoram=y
+
+Load german keyboard configuration
+ % loadkeys de-latin1
+Partition a USB storage with ext3
+ % lsblk
+ % fdisk /dev/sdX
+-> d = delete partition
+-> n = add new partition
+-> p = primary
+-> default = partition number 
+-> default = first sector
+-> +4G = last sector - approx 4 GB, or default to use all empty space. 
+-> p = print config
+-> w = write it to the storage
+
+Create filesystem
+% mkfs.ext3 -L ISOmaker /dev/sdX1
+
+The problem is, that you running makepkg as root is not allowed, as it 
+can cause permanent catastrophic damage to you system, but there is no other user.
+
+Add a new live-user
+ % useradd -m -p "" -g users -s /usr/bin/zsh live-user
+
+Add live-user to sudoers without password request
+ % echo "live-user ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+
+Login as live-user
+STRG + ALT + F2
+
+create directory and mount device
+ % mkdir usbstick
+ % mount -t ext3 /dev/sdX1 usbstick
+ % cd usbstick
+Download the ZIP
+ % wget https://github.com/LiberationFrequency/BazzArch/archive/master.zip
+ % bsdtar -xvf master.zip
+
+ % sudo pacman -Syyu
+
+ * create the customrepo and build the packages 
+ (you have to adjust the path to the storage, instead to your home directory, no ~/)
+ 
+Error: One or more PGP signatures could not be verified!
+Possible Solution: updated the (pacman-keyring) and also ran (pacman-key --init; pacman-key --populate archlinux)
+The signature must be trusted by your user, not by root using the pacman-key command. For this use the gpg command. 
+ % gpg --recv-keys $missing hash$
+--------------------------------------
+ % pacman-keyring
+ % pacman-key --init
+ % pacman-key --populate archlinux
+
+
+Install archiso
+ % sudo pacman -S archiso 
+
+ * run the script
+
+
+
+
+
+(* 2) 
 
 Create customrepo directories to your local system
 % mkdir ~/customrepo
@@ -340,3 +382,13 @@ Adapt the path in the pacman.conf to your local customrepo!
 
 
 -----------------------------------end appendix---------------------------------------
+
+
+
+
+## Useful information and applications around archiso ##
+
+* Tools to remaster ArchLinux live ISO snapshots. Can generate a 32-bit EFI loader image.
+** https://github.com/HOMEINFO/archiso-tools
+
+

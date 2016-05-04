@@ -38,7 +38,7 @@ fi
 ## assign a password 
 # passwd live-user
 
-## Adding live-user to sudoer without password
+## Adding live-user to sudoer without password request
 echo "live-user ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
 ### WLAN (
