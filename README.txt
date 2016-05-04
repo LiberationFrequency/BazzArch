@@ -10,7 +10,11 @@ Date:		2016-05-03
 
 License:	Good question. GPL, LGPL, BSD, MIT so far.
 		I will take look into license issues as soon as possible.
-		
+
+Link to GitHub: https://github.com/LiberationFrequency/BazzArch.git
+Link to Zip:    https://github.com/LiberationFrequency/BazzArch/archive/master.zip
+
+Mirror:		
 Link to source: https://drive.google.com/open?id=0B2BaBYQTShFzVWNOVkdwUUJyUWc
 Link to ZIP:	https://drive.google.com/open?id=0B2BaBYQTShFzU3Z2V1NQTGVTYjA
 
@@ -69,7 +73,7 @@ Requirements:
  * mkdir /home/user/usbstick
  ** mount -t ext3 /dev/sdX1 /home/user/usbstick
  * Download the ZIP
- ** wget https://drive.google.com/open?id=0B2BaBYQTShFzU3Z2V1NQTGVTYjA
+ ** wget https://github.com/LiberationFrequency/BazzArch/archive/master.zip
  * rename ID BazzArch.zip
  * unzip BazzArch.zip
  * or if unzip is not available
