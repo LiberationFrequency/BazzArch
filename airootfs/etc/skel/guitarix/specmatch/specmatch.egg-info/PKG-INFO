@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: specmatch
+Version: 0.9
+Summary: Calculate an IR to match a spectrum
+Home-page: http://sourceforge.net/projects/guitarix/
+Author: Andreas Degert
+Author-email: guitarix-developer@lists.sourceforge.net
+License: GPL
+Description: Calculate an IR to match a spectrum
+Platform: UNKNOWN

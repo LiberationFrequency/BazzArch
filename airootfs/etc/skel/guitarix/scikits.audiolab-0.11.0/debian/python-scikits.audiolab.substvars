@@ -1,0 +1,5 @@
+python:Versions=2.7
+python:Provides=python2.7-scikits.audiolab
+python:Depends=python (>= 2.7), python (<< 2.8), python:any (>= 2.6.6-7~), python-numpy
+shlibs:Depends=libasound2 (>= 1.0.16), libc6 (>= 2.3), libc6 (>= 2.3.6-6~), libsndfile1 (>= 1.0.20)
+misc:Depends=

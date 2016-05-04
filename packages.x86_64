@@ -1,0 +1,175 @@
+### Custom Repository ###
+#
+###System Apps ###
+#android-apktool
+#android-ndk-r10d
+#android-ndk-r10e
+#android-platform-19
+#android-platform-21
+#android-platform-22
+#android-sdk
+#android-sdk-build-tools-21
+#android-sdk-build-tools-21.1.2
+#android-sdk-build-tools-22.0.1
+#android-sdk-platform-tools
+#android-studio
+#android-support
+#android-support-repository
+###warning: ignoring package linux-4.5.1-1
+###warning: cannot resolve "linux>=3.2", a dependency of "b43-firmware"
+###:: The following package cannot be upgraded due to unresolvable dependencies:
+###      b43-firmware
+##??? license issue if published as binary???
+#b43-firmware
+#eclipse-android
+#eclipse-emf
+#eclipse-gef
+#eclipse-wtp
+#firmware-mod-kit
+#
+qterminal
+qtermwidget
+#obconf-qt - ??? available in customrepo ???
+#lxqt-connman-applet-git - not available in customrepo yet
+## QT image viewer & screenshot tool
+#lximage-qt - not available in customrepo yet
+## QT file/archive manager
+#peazip-qt-build - not available in customrepo yet
+#transmission-sequential-qt - not available in customrepo yet
+#yaourt
+#yaourt-git - not available in customrepo yet
+#package-query
+#wineasio - not available in customrepo yet
+#
+####Realtime####
+linux-rt
+#linux-rt-headers
+#linux-rt-docs
+#linux-rt-lts
+#linux-rt-lts-headers
+#linux-rt-lts-docs
+rtirq
+#nvidia-rt - ??? try again 358.16  
+rts-git
+#rt-tests
+#rtapp
+#
+####Plugins#######
+x42-plugins
+eq10q
+infamousplugins-git
+invada-studio-plugins-lv2
+ir-lv2
+zam-plugins-git
+distrho-lv2-git
+lsp-plugins-lv2
+mda-lv2-git
+tap-plugins-lv2-git
+rkr-lv2-git
+#
+####Music Apps####
+#ardour-git
+#bristol
+#calf-git - not available in customrepo yet
+carla-git
+cadence
+ladish-git
+laditools-git
+guitarix-git
+jack-stdout-git
+libsndfile
+scikits-base
+#hydrogen-git - not available in customrepo yet
+#yoshimi-git - not available in customrepo yet
+#shuriken
+gtklick
+#qsampler
+#linuxsampler-svn
+#setbfree-git
+#openav-luppp-git
+#openav-fabla-git
+#openav-fabla2-git
+#openav-artyfx-git
+#openav-sorcer-git
+#paulstretch-git
+#drumgizmo-git
+##helm-git
+#helm -- created from the debian package with debtab 
+#patches helm update fehlen 
+#dexed-vst-git
+#jamin-cvs - there went something wrong, but I can't remember
+gtklick
+####
+#### binwalk-git ??? license issue if published as binary???
+#binwalk-git
+#jack2-no-dbus-git
+#jack_capture
+#freqtweak
+#synthclone
+#gmidimonitor-git
+
+#sooperlooper - not working - not available in customrepo yet
+#zynaddsubfx-git
+
+### Audio Player ###
+### hqplayer ??? license issue if published as binary???
+#hqplayer
+## A YouTube music player - AUR Version out of date 2016-05-03
+#musictube 
+
+
+#faust-git
+#faust2-git
+#faustlive-git
+## Use pure data extended, if you want to use ExpoChirpToolKit
+#pd-extended
+python2-pyo
+#
+#python-slycot-git
+#python2-enum
+#python2-ethtool
+#python2-linux-procfs
+#python2-pyaudio
+#python2-pyliblo
+#python2-schedutils
+
+
+#front-panel-designer
+
+
+
+
+### HAM ###
+#fldigi
+
+
+### libs ###
+#libgig-svn
+#libicns
+#liblscp
+#libpng12
+#libsigcpp1.2
+#mbelib
+#
+#ntk-git
+#octave-control
+#qt5-quick1
+#ttf-roboto
+#tuna
+
+
+
+
+### Hardware ###
+## Printer ##
+## Activate multilib repository
+## The Brothers-script use C-Shell instead of bash - tcsh available from official Repository
+#tcsh
+#brother-mfc7360n
+#brscan4
+
+
+
+
+
+

@@ -1,0 +1,92 @@
+#N canvas 129 35 580 417 10;
+#X declare -path tools;
+#X obj 43 350 bng 50 4000 50 0 \$0-open-IRanalyser empty 4 17 25 0
+25 -203904 -260097 -1;
+#X obj 42 150 bng 50 4000 50 0 \$0-open-expochirp-generator empty 1
+17 25 0 25 -203904 -260097 -1;
+#N canvas 224 25 537 569 open-files 0;
+#X obj 355 28 ggee/getdir;
+#X obj 355 2 loadbang;
+#X obj 355 69 s \$0-dir;
+#X obj 68 458 r \$0-dir;
+#X obj 35 483 symbol;
+#X msg 35 509 \; pd open IRanalyser.pd \$1/tools;
+#X obj 331 2 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 35 409 r \$0-open-IRanalyser;
+#X obj 70 309 r \$0-dir;
+#X obj 37 334 symbol;
+#X obj 72 173 r \$0-dir;
+#X obj 39 198 symbol;
+#X obj 72 33 r \$0-dir;
+#X obj 39 55 symbol;
+#X obj 39 -11 r \$0-open-expochirp-generator;
+#X obj 39 126 r \$0-open-IRrecorder;
+#X msg 39 222 \; pd open IRrecorder.pd \$1/tools;
+#X obj 37 261 r \$0-open-IReditor;
+#X msg 37 360 \; pd open IReditor.pd \$1/tools;
+#X msg 39 79 \; pd open expochirp-generator.pd \$1/tools;
+#X obj 354 101 declare -path tools;
+#X obj 354 190 print;
+#X msg 354 158 ExpoChirpToolbox version 0.9;
+#X obj 354 131 loadbang;
+#X obj 39 12 delay 100;
+#X obj 39 150 delay 100;
+#X obj 37 285 delay 100;
+#X obj 35 434 delay 100;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 3 0 4 1;
+#X connect 4 0 5 0;
+#X connect 6 0 0 0;
+#X connect 7 0 27 0;
+#X connect 8 0 9 1;
+#X connect 9 0 18 0;
+#X connect 10 0 11 1;
+#X connect 11 0 16 0;
+#X connect 12 0 13 1;
+#X connect 13 0 19 0;
+#X connect 14 0 24 0;
+#X connect 15 0 25 0;
+#X connect 17 0 26 0;
+#X connect 22 0 21 0;
+#X connect 23 0 22 0;
+#X connect 24 0 13 0;
+#X connect 25 0 11 0;
+#X connect 26 0 9 0;
+#X connect 27 0 4 0;
+#X restore 434 58 pd open-files;
+#X text 106 347 [IRanalyser];
+#X text 107 147 [expochirp-generator];
+#X obj 43 217 bng 50 4000 50 0 \$0-open-IRrecorder empty 2 17 25 0
+25 -203904 -260097 -1;
+#X text 108 216 [IRrecorder];
+#X obj 43 284 bng 50 4000 50 0 \$0-open-IReditor empty 3 17 25 0 25
+-203904 -260097 -1;
+#X text 106 283 [IReditor];
+#X text 108 167 Generate an exponential chirp and it's inverse \, store
+these together in a file.;
+#X text 41 19 ExpoChirpToolbox is a set of tools for impulse response
+measurement using the Exponential Sine Sweep method. The toolbox contains
+source code and binaries for the object class [expochirp~] and patches
+for Pd extended. Each patch performs a specific task in the process
+of impulse response measurement.;
+#X text 109 239 Feed a chirp to the system under test and record the
+response. Deconvolve into impulse response.;
+#X text 107 368 Inspect characteristics of an impulse response. Apply
+IR as convolution filter.;
+#X text 107 301 Trim \, window and normalise an impulse response.;
+#N canvas 561 273 402 268 about 0;
+#X text 25 65 ExpoChirpToolbox is a project developed by Serafino di
+Rosario and Katja Vetter.;
+#X text 24 158 Pure Data class [expochirp~] published under BSD license.
+Copyright Katja Vetter 2010-2011.;
+#X text 25 116 ExpoChirpToolbox Pure Data patches published under GNU
+GPL. Copyright Katja Vetter & Serafino di Rosario 2010-2011;
+#X obj 25 239 pddplink www.katjaas.nl/expochirp/expochirp;
+#X text 24 22 ExpoChirpToolbox version 0.9;
+#X text 25 208 If you find a bug \, please report to katjavetter@gmail.com
+;
+#X restore 435 28 pd about;
+#X text 40 107 Be sure to load a single instance of any tool \, to
+avoid confusion. Loading may take few seconds.;

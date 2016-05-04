@@ -1,0 +1,364 @@
+### standard ####
+arch-install-scripts
+#b43-fwcutter
+btrfs-progs
+#clonezilla
+crda
+#darkhttpd
+ddrescue
+dhclient
+dialog
+dmraid
+dnsmasq
+dnsutils
+dosfstools
+#elinks
+ethtool
+f2fs-tools
+fsarchiver
+gnu-netcat
+gpm
+gptfdisk
+grml-zsh-config
+grub
+hdparm
+#ipw2100-fw
+#ipw2200-fw
+irssi
+lftp
+linux-atm
+mc
+mtools
+nfs-utils
+nilfs-utils
+#nmap
+ntfs-3g
+ntp
+openconnect
+openssh
+openvpn
+partclone
+parted
+partimage
+ppp
+pptpclient
+refind-efi
+#rfkill
+rp-pppoe
+#rsync
+smartmontools
+speedtouch
+sudo
+tcpdump
+testdisk
+usb_modeswitch
+vim-minimal
+vpnc
+wget
+#wireless_tools
+wpa_actiond
+wvdial
+xl2tpd
+zd1211-firmware
+#### end standard #####
+
+### --------------------------------------------- ###
+
+## additional ##
+
+#### System Applications ###
+#archiso
+#base-devel
+#debootstrap
+## Recover deleted or overwritten files on ext3 and ext4 filesystems
+#ext4magic
+#kbd
+## Hardware detection script with loading modules and mkinitcpio.conf / rc.conf support
+#hwdetect
+## Hardware detection tool from openSUSE
+#hwinfo
+make
+## A useful diagnositic, instructional, and debugging tool
+#strace
+## A tool that stress tests your system (CPU, memory, I/O, disks)
+#stress
+#
+xorg-server 
+xorg-xinit 
+xorg-utils 
+xorg-server-utils
+#####################################################
+## enable xorg-drivers to install all xf86-* ########
+xorg-drivers 	   		
+#####################################################
+#xf86-input-evdev		
+#xf86-input-joystick		
+#xf86-input-keyboard		
+#xf86-input-libinput			
+#xf86-input-mouse		
+#xf86-input-synaptics		
+#xf86-input-vmmouse		
+#xf86-input-void			
+#xf86-video-amdgpu		
+#xf86-video-ark			
+#xf86-video-ati				
+#xf86-video-dummy		
+#xf86-video-fbdev		
+#xf86-video-glint		
+#xf86-video-i128		
+#xf86-video-intel		
+#xf86-video-mach64		
+#xf86-video-neomagic		
+#xf86-video-nouveau		
+#xf86-video-nv			
+#xf86-video-openchrome		
+#xf86-video-r128		
+#xf86-video-savage		
+#xf86-video-siliconmotion	
+#xf86-video-sis			
+#xf86-video-tdfx		
+#xf86-video-trident		
+#xf86-video-vesa		
+#xf86-video-vmware		
+#xf86-video-voodoo		
+#######################
+#######
+lxqt
+## !!! warning: skipping target: lxqt-panel
+lxqt-panel
+oxygen-icons
+## Wireless LAN network manager for LXQT
+#connman
+#ghex 
+#vbindiff
+## script to get system information
+#inxi
+laptop-detect
+#os-prober
+#ufw
+#geoip-database
+#irqbalance
+#lvm2
+cpupower
+cmt
+leafpad
+ttf-dejavu
+wxpython
+#xarchiver
+
+### Documents ###
+#mupdf
+
+
+### Internet Applications ###
+firefox
+firefox-adblock-plus
+firefox-i18n-de
+#flashplugin
+hunspell-de
+#jre8-openjdk
+#icedtea-web
+
+
+### Audio Applications ###
+a2jmidid
+alsa-utils
+#jack2
+jack2-dbus
+qjackctl
+#qtractor
+
+## MIDI/audio sequencer and notation editor
+#rosegarden
+
+## Time-stretching and pitch-shifting audio library and utility
+#rubberband
+## The Swiss Army knife of sound processing tools
+#sox
+
+## A viewer and analyser of music audio files.
+#sonic-visualiser
+## The Pure Data real-time music and multimedia environment
+#pd
+## A modular patch bay for audio and MIDI systems based on Jack and Alsa
+#patchage
+
+## Onset detection, pitch tracking, note tracking and tempo tracking plugins using Paul Brossier's aubio library
+#vamp-aubio-plugins
+##The Vamp audio analysis plug-in system
+#vamp-plugin-sdk
+
+#
+## Virtual MIDI Piano Keyboard
+vmpk
+## Audio compression format with lossless, lossy and hybrid compression modes
+#wavpack
+
+
+
+
+
+
+
+## Zoom B3 Edit & Share
+## download the software from the manufacturer 
+## http://test.zoom.co.jp/downloads/edit_share/software/
+## activate multilib repository in pacman.conf for wine & wine_gecko
+#
+## A compatibility layer for running Windows programs
+#wine
+## Wine's built-in replacement for Microsoft's Internet Explorer
+#wine_gecko
+## Wine's built-in replacement for Microsoft's .NET Framework
+#wine-mono
+## Script to install various redistributable runtime libraries in Wine.
+#winetricks
+##A Qt4 GUI for Wine
+#q4wine
+
+### Multimedia
+####Music Applications
+## A tool for extracting annotations from audio signals 
+#aubio
+#aeolus
+#audacious
+#audacious-plugins
+#audacity
+#audio-convert
+#chuck
+## An old-school drum-kit sampler
+#drumkv1
+## An old-school polyphonic sampler synthesizer with stereo fx
+#samplv1
+## An old-school all-digital 4-oscillator subtractive polyphonic synthesizer with stereo fx
+#synthv1
+#dssi
+##Audio normalizer, converter, encoder/decoder, ripper, tagger and player
+#gnormalize
+## https://github.com/hydrogen-music/Song-and-pattern-repository
+hydrogen
+#guitarix2
+## Professional-grade audio sampler alternative to Gigasampler
+#linuxsampler
+## LinuxSampler Java GUI
+#jsampler
+## Gigasampler instrument editor
+#gigedit
+## The Linux MultiMedia Studio.
+#lmms
+## Successor to the LADSPA audio plug-in standard
+#lv2
+rakarrack
+#ardour
+#harvid
+## A simple video player that is synchronized to jack transport.
+#xjadeo
+## A native YouTube client in Qt. Watch YouTube videos without Flash Player
+#minitube
+#mixxx
+#qtractor
+#qsynth
+## A simple sound converter application for GNOME
+#soundconverter
+## A cd ripper application
+#sound-juicer
+## A MIDI to WAVE converter and player
+#timidity++
+## A free and open set of instrument patches for use with softsynths
+#timidity-freepats
+## Multitrack guitar tablature editor and player
+#tuxguitar
+
+
+### Plugins
+##A set of LADSPA ambisonics plugins
+#amb-plugins
+##Analogue Modeling SYNTHesizer
+#amsynth 
+calf
+#LADSPA four-band parametric equaliser plugins
+#fil-plugins
+## LADSPA stereo reverb plugin based on greverb
+#g2reverb
+swh-plugins
+#jalv
+## LADSPA stereo and ambisonic reverb plugin based on zita-rev1
+#rev-plugins
+## Tom's LADSPA Plugins
+#tap-plugins
+## LADSPA anti-aliased oscillator plugins
+#vco-plugins
+## The successor of clalsadrv, provides easy access to ALSA PCM devices.
+#zita-alsa-pcmi
+## A fast, partitioned convolution engine library.
+#zita-convolver
+## A C++ library for resampling audio signals
+#zita-resampler
+## Opensource software synthesizer capable of making a countless number of instruments.
+#zynaddsubfx
+
+
+
+####Player
+#banshee
+## A modern music player and library organizer
+#clementine
+## A GTK+ audio player for GNU/Linux.
+#deadbeef
+## An iTunes-like music playback and management application
+#rhythmbox
+## A multi-platform MPEG, VCD/DVD, and DivX player
+vlc
+
+###Codecs -> https://wiki.archlinux.org/index.php/Codecs
+## nur VLC installiert
+lame
+flac
+opus
+#opus-tools
+libvorbis
+#
+libcddb
+libdvdread
+libdvdcss
+libdvdnav
+
+## Reader and rewriter of EXIF informations that supports raw files
+#perl-image-exiftool
+## Ebook management application
+# calibre
+
+
+#brasero
+######gstreamer plugin for brasero and mp3
+
+
+
+
+python2-pip
+python2-setuptools
+pygtk
+python2-matplotlib
+python2-numpy
+python2-scipy
+#python2-virtualenv
+
+
+### APIs ###
+# An API for audio processing plugins & softsynths with UIs
+#dssi
+## DSSI adapter/wrapper for win32 VST plug-ins
+#dssi-vst
+
+
+### Music Games ###
+## A free game like "Singstar", "Rockband" or "Stepmania"
+#performous
+#performous-freesongs
+
+
+### Android ###
+## Android Debbug Bridge 
+#android-tools
+#android-udev
+#eclipse

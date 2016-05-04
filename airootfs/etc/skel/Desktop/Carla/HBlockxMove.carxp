@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE CARLA-PROJECT>
+<CARLA-PROJECT VERSION='2.0'>
+ <EngineSettings>
+  <ForceStereo>false</ForceStereo>
+  <PreferPluginBridges>false</PreferPluginBridges>
+  <PreferUiBridges>true</PreferUiBridges>
+  <UIsAlwaysOnTop>false</UIsAlwaysOnTop>
+  <MaxParameters>200</MaxParameters>
+  <UIBridgesTimeout>4000</UIBridgesTimeout>
+ </EngineSettings>
+
+ <!-- GxWahwah -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>GxWahwah</Name>
+   <URI>http://guitarix.sourceforge.net/plugins/gx_colwah_#_colwah_</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <DryWet>0.6697</DryWet>
+   <Volume>0.649224</Volume>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x0</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>WAH</Name>
+    <Symbol>WAH</Symbol>
+    <Value>0.930000007152557</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>FREQ</Name>
+    <Symbol>FREQ</Symbol>
+    <Value>24</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>MODE</Name>
+    <Symbol>MODE</Symbol>
+    <Value>2</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>MODEL</Name>
+    <Symbol>MODEL</Symbol>
+    <Value>6</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>4</Index>
+    <Name>WET_DRY</Name>
+    <Symbol>WET_DRY</Symbol>
+    <Value>100</Value>
+   </Parameter>
+  </Data>
+ </Plugin>
+
+ <!-- GxMuff -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>GxMuff</Name>
+   <URI>http://guitarix.sourceforge.net/plugins/gx_muff_#_muff_</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x0</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>TONE</Name>
+    <Symbol>TONE</Symbol>
+    <Value>0.312299996614456</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>VOLUME</Name>
+    <Symbol>VOLUME</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+  </Data>
+ </Plugin>
+
+ <!-- BassUp -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>BassUp</Name>
+   <URI>http://eq10q.sourceforge.net/bassup</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <Volume>0.730758</Volume>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x0</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Amount</Name>
+    <Symbol>amount</Symbol>
+    <Value>2.83739995956421</Value>
+   </Parameter>
+  </Data>
+ </Plugin>
+
+ <ExternalPatchbay>
+  <Connection>
+   <Source>system:capture_1</Source>
+   <Target>BassUp:Input</Target>
+  </Connection>
+  <Connection>
+   <Source>GxMuff:Out</Source>
+   <Target>GxWahwah:In</Target>
+  </Connection>
+  <Connection>
+   <Source>GxWahwah:Out</Source>
+   <Target>system:playback_1</Target>
+  </Connection>
+  <Connection>
+   <Source>BassUp:Output</Source>
+   <Target>GxMuff:In</Target>
+  </Connection>
+ </ExternalPatchbay>
+</CARLA-PROJECT>

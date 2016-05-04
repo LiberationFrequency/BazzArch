@@ -1,0 +1,12 @@
+Source: specmatch
+Maintainer: Andreas Degert <guitarix-developer@lists.sourceforge.net>
+Section: python
+Priority: optional
+Build-Depends: python-setuptools (>= 0.6b3), python-numpy, python-scipy, python-matplotlib, python-scikits.audiolab, debhelper (>= 7.4.3)
+Standards-Version: 3.9.1
+
+Package: python-specmatch
+Architecture: any
+Depends: ${misc:Depends}, ${python:Depends}, ${shlibs:Depends}
+Description: Calculate an IR to match a spectrum
+ Calculate an IR to match a spectrum

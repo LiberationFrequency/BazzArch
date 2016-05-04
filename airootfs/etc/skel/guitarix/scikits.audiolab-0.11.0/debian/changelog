@@ -1,0 +1,5 @@
+scikits-audiolab (0.11.0-1) unstable; urgency=low
+
+  * source package automatically created by stdeb 0.6.0+git
+
+ -- David Cournapeau <cournape@gmail.com>  Tue, 08 Jul 2014 09:48:31 +0200

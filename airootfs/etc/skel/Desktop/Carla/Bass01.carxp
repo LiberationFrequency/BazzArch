@@ -1,0 +1,498 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE CARLA-PROJECT>
+<CARLA-PROJECT VERSION='2.0'>
+ <EngineSettings>
+  <ForceStereo>false</ForceStereo>
+  <PreferPluginBridges>false</PreferPluginBridges>
+  <PreferUiBridges>true</PreferUiBridges>
+  <UIsAlwaysOnTop>false</UIsAlwaysOnTop>
+  <MaxParameters>200</MaxParameters>
+  <UIBridgesTimeout>4000</UIBridgesTimeout>
+ </EngineSettings>
+
+ <!-- EQ4Q Mono -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>EQ4Q Mono</Name>
+   <URI>http://eq10q.sourceforge.net/eq/eq4qm</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <DryWet>0.6123</DryWet>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x0</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Bypass</Name>
+    <Symbol>bypass</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Input Gain</Name>
+    <Symbol>input_gain</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>Output Gain</Name>
+    <Symbol>output_gain</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>Filter 1 Gain</Name>
+    <Symbol>filter1_gain</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>4</Index>
+    <Name>Filter 2 Gain</Name>
+    <Symbol>filter2_gain</Symbol>
+    <Value>3.88888907432556</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>5</Index>
+    <Name>Filter 3 Gain</Name>
+    <Symbol>filter3_gain</Symbol>
+    <Value>4.25925922393799</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>6</Index>
+    <Name>Filter 4 Gain</Name>
+    <Symbol>filter4_gain</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>7</Index>
+    <Name>Filter 1 Freq</Name>
+    <Symbol>filter1_freq</Symbol>
+    <Value>20.3362464904785</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>8</Index>
+    <Name>Filter 2 Freq</Name>
+    <Symbol>filter2_freq</Symbol>
+    <Value>105.620361328125</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>9</Index>
+    <Name>Filter 3 Freq</Name>
+    <Symbol>filter3_freq</Symbol>
+    <Value>197.407608032227</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>10</Index>
+    <Name>Filter 4 Freq</Name>
+    <Symbol>filter4_freq</Symbol>
+    <Value>700.198364257812</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>11</Index>
+    <Name>Filter 1 Q</Name>
+    <Symbol>filter1_q</Symbol>
+    <Value>0.686667025089264</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>12</Index>
+    <Name>Filter 2 Q</Name>
+    <Symbol>filter2_q</Symbol>
+    <Value>0.699999988079071</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>13</Index>
+    <Name>Filter 3 Q</Name>
+    <Symbol>filter3_q</Symbol>
+    <Value>2</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>14</Index>
+    <Name>Filter 4 Q</Name>
+    <Symbol>filter4_q</Symbol>
+    <Value>0.699999988079071</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>15</Index>
+    <Name>Filter 1 Type</Name>
+    <Symbol>filter1_type</Symbol>
+    <Value>7</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>16</Index>
+    <Name>Filter 2 Type</Name>
+    <Symbol>filter2_type</Symbol>
+    <Value>9</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>17</Index>
+    <Name>Filter 3 Type</Name>
+    <Symbol>filter3_type</Symbol>
+    <Value>11</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>18</Index>
+    <Name>Filter 4 Type</Name>
+    <Symbol>filter4_type</Symbol>
+    <Value>3</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>19</Index>
+    <Name>Filter 1 Enable</Name>
+    <Symbol>filter1_enable</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>20</Index>
+    <Name>Filter 2 Enable</Name>
+    <Symbol>filter2_enable</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>21</Index>
+    <Name>Filter 3 Enable</Name>
+    <Symbol>filter3_enable</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>22</Index>
+    <Name>Filter 4 Enable</Name>
+    <Symbol>filter4_enable</Symbol>
+    <Value>1</Value>
+   </Parameter>
+  </Data>
+ </Plugin>
+
+ <!-- GxBoss DS1 -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>GxBoss DS1</Name>
+   <URI>http://guitarix.sourceforge.net/plugins/gx_bossds1_#_bossds1_</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <DryWet>0.1009</DryWet>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x0</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>LEVEL</Name>
+    <Symbol>LEVEL</Symbol>
+    <Value>3.12639999389648</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>TONE</Name>
+    <Symbol>TONE</Symbol>
+    <Value>0.67110002040863</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>DRIVE</Name>
+    <Symbol>DRIVE</Symbol>
+    <Value>0.841799974441528</Value>
+   </Parameter>
+  </Data>
+ </Plugin>
+
+ <!-- Gxdetune -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>Gxdetune</Name>
+   <URI>http://guitarix.sourceforge.net/plugins/gx_detune_#_detune_</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <DryWet>0.1114</DryWet>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x1</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>DETUNE</Name>
+    <Symbol>DETUNE</Symbol>
+    <Value>0.0263999998569489</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>OCTAVE</Name>
+    <Symbol>OCTAVE</Symbol>
+    <Value>2</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>COMPENSATE</Name>
+    <Symbol>COMPENSATE</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>LATENCY</Name>
+    <Symbol>LATENCY</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>4</Index>
+    <Name>WET</Name>
+    <Symbol>WET</Symbol>
+    <Value>78.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>5</Index>
+    <Name>DRY</Name>
+    <Symbol>DRY</Symbol>
+    <Value>50</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>6</Index>
+    <Name>LOW</Name>
+    <Symbol>LOW</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>7</Index>
+    <Name>MIDDLELOW</Name>
+    <Symbol>MIDDLELOW</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>8</Index>
+    <Name>MIDDLETREBLE</Name>
+    <Symbol>MIDDLETREBLE</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>9</Index>
+    <Name>TREBLE</Name>
+    <Symbol>TREBLE</Symbol>
+    <Value>1</Value>
+   </Parameter>
+  </Data>
+ </Plugin>
+
+ <!-- GxCompressor -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>GxCompressor</Name>
+   <URI>http://guitarix.sourceforge.net/plugins/gx_compressor#_compressor</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <DryWet>0.0659</DryWet>
+   <Volume>1.27</Volume>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x0</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>RATIO</Name>
+    <Symbol>RATIO</Symbol>
+    <Value>16.0599994659424</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>KNEE</Name>
+    <Symbol>KNEE</Symbol>
+    <Value>10</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>THRESHOLD</Name>
+    <Symbol>THRESHOLD</Symbol>
+    <Value>-44.3800010681152</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>RELEASE</Name>
+    <Symbol>RELEASE</Symbol>
+    <Value>5.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>4</Index>
+    <Name>ATTACK</Name>
+    <Symbol>ATTACK</Symbol>
+    <Value>0.0670000016689301</Value>
+   </Parameter>
+  </Data>
+ </Plugin>
+
+ <!-- TAP Rotary Speaker -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>TAP Rotary Speaker</Name>
+   <URI>http://moddevices.com/plugins/tap/rotspeak</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <DryWet>0.0032</DryWet>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x0</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Horn Frequency</Name>
+    <Symbol>hornfreq</Symbol>
+    <Value>1.31400001049042</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Rotor Frequency</Name>
+    <Symbol>bassfreq</Symbol>
+    <Value>3.1710000038147</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>Mic Distance</Name>
+    <Symbol>stwidht</Symbol>
+    <Value>45.0900001525879</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>Rotor/Horn Mix</Name>
+    <Symbol>hrbal</Symbol>
+    <Value>0.363599985837936</Value>
+   </Parameter>
+  </Data>
+ </Plugin>
+
+ <!-- GxWahwah -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>GxWahwah</Name>
+   <URI>http://guitarix.sourceforge.net/plugins/gx_colwah_#_colwah_</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <DryWet>0</DryWet>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x0</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>WAH</Name>
+    <Symbol>WAH</Symbol>
+    <Value>0.687699973583221</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>FREQ</Name>
+    <Symbol>FREQ</Symbol>
+    <Value>24</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>MODE</Name>
+    <Symbol>MODE</Symbol>
+    <Value>2</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>MODEL</Name>
+    <Symbol>MODEL</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>4</Index>
+    <Name>WET_DRY</Name>
+    <Symbol>WET_DRY</Symbol>
+    <Value>65</Value>
+   </Parameter>
+  </Data>
+ </Plugin>
+
+ <ExternalPatchbay>
+  <Connection>
+   <Source>system:capture_1</Source>
+   <Target>EQ4Q Mono:Input</Target>
+  </Connection>
+  <Connection>
+   <Source>EQ4Q Mono:Output</Source>
+   <Target>GxCompressor:In</Target>
+  </Connection>
+  <Connection>
+   <Source>GxBoss DS1:Out</Source>
+   <Target>GxWahwah:In</Target>
+  </Connection>
+  <Connection>
+   <Source>Gxdetune:Out</Source>
+   <Target>GxBoss DS1:In</Target>
+  </Connection>
+  <Connection>
+   <Source>GxCompressor:Out</Source>
+   <Target>Gxdetune:In</Target>
+  </Connection>
+  <Connection>
+   <Source>TAP Rotary Speaker:Output L</Source>
+   <Target>system:playback_1</Target>
+  </Connection>
+  <Connection>
+   <Source>TAP Rotary Speaker:Output R</Source>
+   <Target>system:playback_2</Target>
+  </Connection>
+  <Connection>
+   <Source>GxWahwah:Out</Source>
+   <Target>TAP Rotary Speaker:Input L</Target>
+  </Connection>
+  <Connection>
+   <Source>GxWahwah:Out</Source>
+   <Target>TAP Rotary Speaker:Input R</Target>
+  </Connection>
+ </ExternalPatchbay>
+</CARLA-PROJECT>

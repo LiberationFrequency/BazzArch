@@ -1,0 +1,1 @@
+jackd -v -p128 -dalsa -r44100 -p128 -n3 -Xseq -D -Chw:Series -Phw:Series

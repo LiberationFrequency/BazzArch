@@ -1,0 +1,9 @@
+
+
+LXQT
+
+Autostart etc.
+% lxqt-config-session
+
+Editing the Application Menu
+% /usr/share/applications/lxqt-*.desktop
