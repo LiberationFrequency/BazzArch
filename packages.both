@@ -68,7 +68,7 @@ zd1211-firmware
 
 #### System Applications ###
 #archiso
-#base-devel
+base-devel
 #debootstrap
 ## Recover deleted or overwritten files on ext3 and ext4 filesystems
 #ext4magic
@@ -125,9 +125,24 @@ xorg-drivers
 #xf86-video-voodoo		
 #######################
 #######
+#### LXQT group #####
 lxqt
-## !!! warning: skipping target: lxqt-panel
-lxqt-panel
+#lxqt-about
+#lxqt-common 
+#lxqt-config
+#lxqt-globalkeys
+#lxqt-notificationd
+#lxqt-openssh-askpass
+#lxqt-panel
+#lxqt-policykit
+#lxqt-powermanagement
+#lxqt-qtplugin
+#lxqt-runner
+#lxqt-session
+#lxqt-sudo
+#lxqt-sudo
+#pcmanfm-qt
+##### end LXQT group ####
 oxygen-icons
 ## Wireless LAN network manager for LXQT
 #connman
@@ -149,7 +164,6 @@ cpupower
 cmt
 leafpad
 ttf-dejavu
-wxpython
 #xarchiver
 
 ### Documents ###
@@ -160,6 +174,11 @@ wxpython
 firefox
 firefox-adblock-plus
 firefox-i18n-de
+#chromium
+#opera
+## Cross-platform QtWebKit browser (Qt5)
+#qupzilla
+#qupzilla-qt4
 #flashplugin
 hunspell-de
 #jre8-openjdk
@@ -174,27 +193,27 @@ jack2-dbus
 qjackctl
 #qtractor
 
+## A modular patch bay for audio and MIDI systems based on Jack and Alsa
+#patchage
+## The Pure Data real-time music and multimedia environment
+#pd
 ## MIDI/audio sequencer and notation editor
 #rosegarden
-
 ## Time-stretching and pitch-shifting audio library and utility
 #rubberband
+## A viewer and analyser of music audio files.
+#sonic-visualiser
 ## The Swiss Army knife of sound processing tools
 #sox
 
-## A viewer and analyser of music audio files.
-#sonic-visualiser
-## The Pure Data real-time music and multimedia environment
-#pd
-## A modular patch bay for audio and MIDI systems based on Jack and Alsa
-#patchage
+
+
+
 
 ## Onset detection, pitch tracking, note tracking and tempo tracking plugins using Paul Brossier's aubio library
 #vamp-aubio-plugins
 ##The Vamp audio analysis plug-in system
 #vamp-plugin-sdk
-
-#
 ## Virtual MIDI Piano Keyboard
 vmpk
 ## Audio compression format with lossless, lossy and hybrid compression modes
@@ -227,8 +246,7 @@ vmpk
 ## A tool for extracting annotations from audio signals 
 #aubio
 #aeolus
-#audacious
-#audacious-plugins
+
 #audacity
 #audio-convert
 #chuck
@@ -238,10 +256,10 @@ vmpk
 #samplv1
 ## An old-school all-digital 4-oscillator subtractive polyphonic synthesizer with stereo fx
 #synthv1
-#dssi
 ##Audio normalizer, converter, encoder/decoder, ripper, tagger and player
 #gnormalize
 ## https://github.com/hydrogen-music/Song-and-pattern-repository
+## An advanced drum machine
 hydrogen
 #guitarix2
 ## Professional-grade audio sampler alternative to Gigasampler
@@ -250,6 +268,8 @@ hydrogen
 #jsampler
 ## Gigasampler instrument editor
 #gigedit
+## An automated music engraving system
+#lilypond
 ## The Linux MultiMedia Studio.
 #lmms
 ## Successor to the LADSPA audio plug-in standard
@@ -276,7 +296,7 @@ rakarrack
 #tuxguitar
 
 
-### Plugins
+### Plugins ###
 ##A set of LADSPA ambisonics plugins
 #amb-plugins
 ##Analogue Modeling SYNTHesizer
@@ -286,8 +306,10 @@ calf
 #fil-plugins
 ## LADSPA stereo reverb plugin based on greverb
 #g2reverb
+##Steve Harris' LADSPA plug-ins suite
 swh-plugins
-#jalv
+##  A simple but fully featured LV2 host for Jack
+jalv
 ## LADSPA stereo and ambisonic reverb plugin based on zita-rev1
 #rev-plugins
 ## Tom's LADSPA Plugins
@@ -305,19 +327,44 @@ swh-plugins
 
 
 
-####Player
+### Player ###
+## Mature Qt-based player known for its plethora of features. The powerful music player for KDE.
+#amarok
+## Lightweight, advanced audio player focused on audio quality. Winamp clone like Beep and old XMMS versions.
+#audacious
+#audacious-plugins
+## iTunes clone, built with GTK+ and Mono. Music management and playback for GNOME
 #banshee
-## A modern music player and library organizer
+## A modern music player and library organizer. Amarok 1.4 clone, ported to Qt 4.
 #clementine
-## A GTK+ audio player for GNU/Linux.
+## Light and fast music player with many features, no GNOME or KDE dependencies, supports console-only, 
+## as well as a GTK+ GUI, comes with many plugins, and has a metadata editor.
 #deadbeef
 ## An iTunes-like music playback and management application
 #rhythmbox
+## Music player and management application. It aims to combine an elegant and immersive browsing experience 
+## with simple and straightforward controls.
+#gnome-music
+
 ## A multi-platform MPEG, VCD/DVD, and DivX player
 vlc
 
 ###Codecs -> https://wiki.archlinux.org/index.php/Codecs
-## nur VLC installiert
+## GStreamer Multimedia Framework
+#gstreamer
+#gstreamer0.10
+#gstreamer0.10-bad
+#gstreamer0.10-bad-plugins
+#gstreamer0.10-base
+#gstreamer0.10-base-plugins
+#gstreamer0.10-good
+#gstreamer0.10-good-plugins
+#gstreamer0.10-ugly
+#gstreamer0.10-ugly-plugins
+#gstreamer0.10-ffmpeg
+#gstreamer0.10-python
+#gstreamer0.10-mm
+
 lame
 flac
 opus
@@ -334,11 +381,28 @@ libdvdnav
 ## Ebook management application
 # calibre
 
-
+## A disc burning application for Gnome
 #brasero
 ######gstreamer plugin for brasero and mp3
 
+### Toolbox ###
+## Utility for viewing, editing and writing ID3 tags of music files, supports many audio formats.
+#easytag
+## An MP3, Ogg/Vorbis and FLAC tag editor, KDE & QT version
+#kid3
+#kid3-qt
+## An MP3 technical info viewer and ID3 1.x tag editor
+#mp3info
 
+
+## A feature-rich screen recorder written in C++/Qt4 that supports X11 and OpenGL.
+#simplescreenrecorder
+## An easy to use utility that records your desktop into the ogg format with a CLI, Qt or GTK+ interface.
+#qt-recordmydesktop
+#recordmydesktop
+#gtk-recordmydesktop
+## Free, open source software for video recording and live streaming.
+#obs-studio
 
 
 python2-pip
@@ -348,10 +412,13 @@ python2-matplotlib
 python2-numpy
 python2-scipy
 #python2-virtualenv
+## A wxWidgets GUI toolkit for Python - needed for python-pyo
+#wxpython
+wxpython2.8
 
 
 ### APIs ###
-# An API for audio processing plugins & softsynths with UIs
+## An API for audio processing plugins & softsynths with UIs
 #dssi
 ## DSSI adapter/wrapper for win32 VST plug-ins
 #dssi-vst

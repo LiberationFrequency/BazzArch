@@ -27,9 +27,12 @@
 #eclipse-wtp
 #firmware-mod-kit
 #
+## A collection of desktop applications for the Linux sound system ALSA.
+qastools-qt5
 qterminal
 qtermwidget
-#obconf-qt - ??? available in customrepo ???
+## Openbox configuration tool. Qt port of ObConf
+obconf-qt
 #lxqt-connman-applet-git - not available in customrepo yet
 ## QT image viewer & screenshot tool
 #lximage-qt - not available in customrepo yet
@@ -73,6 +76,10 @@ rkr-lv2-git
 #calf-git - not available in customrepo yet
 carla-git
 cadence
+## A LilyPond sheet music text editor.
+#frescobaldi - not available in customrepo yet
+## An automated music engraving system (Git snapshot)
+#lilypond-git - not available in customrepo yet
 ladish-git
 laditools-git
 guitarix-git
@@ -82,7 +89,10 @@ scikits-base
 #hydrogen-git - not available in customrepo yet
 #yoshimi-git - not available in customrepo yet
 #shuriken
+## A graphical user interface for the klick metronome for JACK
 gtklick
+#gtklick-git - not available in customrepo yet
+## LinuxSampler Qt GUI
 #qsampler
 #linuxsampler-svn
 #setbfree-git
@@ -119,7 +129,7 @@ gtklick
 
 
 #faust-git
-#faust2-git
+faust2-git
 #faustlive-git
 ## Use pure data extended, if you want to use ExpoChirpToolKit
 #pd-extended
