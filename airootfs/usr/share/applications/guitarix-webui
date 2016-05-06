@@ -1,0 +1,15 @@
+
+[Desktop Entry]
+Name=guitarix-webui
+Name[fr]=guitarix-webui
+GenericName=Mono Amplifier
+GenericName[fr]=Ampli Mono
+Comment=Simple mono amplifier simulation
+Comment[fr]=Simulation d'ampli mono simple
+#Exec=guitarix
+Exec= python2 ~/guitarix/guitarix-webui-0.28.3/websockify/websocketproxy.py -D --web=~/guitarix/guitarix-webui-0.28.3/webui '*':8000 localhost:7000 && guitarix --rpcport=7000
+Icon=gx_head
+Categories=AudioVideo;Audio;X-Jack;Midi;X-MIDI;
+Terminal=false
+Type=Application
+Keywords=Audio;Sound;Guitar;Amplifier;Record;Midi;Jack;

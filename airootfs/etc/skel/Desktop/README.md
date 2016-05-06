@@ -5,7 +5,7 @@
 									
 Version: no need for version controlling, it is just a backup.  	
 									
-Date:		2016-05-05						
+Date:		2016-05-06						
 
 License:	Good question. GPL, LGPL, BSD, MIT so far.
 		I will take look into license issues as soon as possible.
@@ -16,7 +16,7 @@ Zip: 	https://github.com/LiberationFrequency/BazzArch/archive/master.zip
 
 Mirror (maybe not up to date):		
 Google: https://drive.google.com/open?id=0B2BaBYQTShFzVWNOVkdwUUJyUWc  
-ZIP:	https://drive.google.com/open?id=0B2BaBYQTShFzU3Z2V1NQTGVTYjA
+
 
 *************************************************************************
 
@@ -99,20 +99,31 @@ The config file is in /airootfs/etc/skel/.config/rncbc.org
 
 The config in Cadence is pointed to my Zoom B3, I believe, that is fine for me.
 You can change the behaviour in the jack config.  
-..airootfs/etc/skel/.config/jack/conf.xml  
+..airootfs/etc/skel/.config/jack/conf.xml 
 
+In [..]airootfs/var/lib/alsa/asound.state is a test config file of the last state of a Focusrite Scarlet 18i8 soundcard located. (deleted)   
+
+
+You could also save the mixer settings into a custom file with alsactl,   
+e.g. (not tested)   
+ % alsactl --file ~/.config/alsa/stage/asound.state store  
+loading  
+ % alsactl --file ~/.config/alsa/studio/asound.state restore  
+
+   
 
 
 ### Guitarix ###
 The guitarix presets are stored in /airootfs/etc/skel/.config/guitarix/banks
 
-Guitarix can start with the webui by executing the script from the desktop , a tool for 
+Guitarix can start with the webui by executing the script from the desktop, a tool for 
 controlling a headless (embedded) guitarix with a browser on a smartphone or tablet 
 (just some basic functionality at the moment).
 It launches guitarix with 'guitarix --rpcport=7000', for headless use also -N (?).
 Open http://localhost:8000/ in your browser or with IP address from your mobile device. See   
 % ip addr  
 to show information for all ip addresses.
+I added a startmenu entry */for guitarix-webui.
 
 
 Guitarix can launch with specmatch, a tool you can use to adapt the timbre from a recorded sound. 
@@ -135,6 +146,19 @@ There are some tries in this folder, nothing fancy, just playing around. I don't
 ot open them from the folder, then the rack will be empty. You have to open them via the dialog in carla, 
 then it works.  
 
+
+### FAUST ###   
+FAUST (Functional Audio Stream) is a functional programming language specifically designed for real-time 
+signal processing and synthesis. The FAUST compiler translates FAUST code into a C++ object, which may 
+then interface with other C++ code to produce a full program. There is some FAUST code in the home directory, 
+I tested with faust2jaqt and faust2lv2 -gui (-qt4). Copy it to /home/live-user/.lv2 and it is available in 
+Carla, Guitarix (?), jalv-select (?). I tested only Carla and it works, but the GUI looks like GTK.   
+
+Install:  
+packages.both: base-devel  
+packages.x86_64: faust2  
+
+
 ### Convert a png to the properties that supported by syslinux (optional) ###
  % convert -resize 640x480 -depth 16 -colors 65536 mynew.png splash.png
 
@@ -143,7 +167,7 @@ then it works.
 
 
 ### Build the ISO with linux-rt ###
-Check, if your local copy of sudoers is owned by root, otherwise  
+Check, if your local copy of sudoers is owned by root, otherwise do   
  % sudo chown root:root [..]/airootfs/etc/sudoers
 
  % sudo ./build-rt.sh -v
@@ -217,27 +241,31 @@ make sure that the device is not mounted and dd it to the top
 
 
 ### known issues ###
-* sudoers is owned by uid 1000, should be 0 (fixed?)  
-% sudo chown root:root /path/to/sudoers  
 
+* QuaMixer is not preconfigured  
+* Zoom B3/G3 has no controls in Alsa-/QuasMixer  
+ 
 * Preset in guitarix is too loud. Pay attention for your equipment and your ears!  
+* Guitarix-webui, that I created manually, is not shown in startmenu, although it is listed in /usr/share/application.    
+* guitarix behaves buggy, when you scoll through the impulse responses and it will crash.  
+* specmatch is no longer shown in startmenu, but does start from console.  
 
 * Hydrogen is too loud. Pay attention for your equipment and your ears!  
 
-* jalv is not present in startmenu and report missing plugin URI.  
+* jalv is not present in startmenu and report missing plugin URI. jalv-select works fine.    
 
-* wpapassphrase write the pwd also in cleartext to file. 
+* wpa_passphrase write the pwd also in cleartext to file /etc/wpa_supplicant/wpatest.conf  
 
 * there was a error, something like client can not connect to jack2-dbus or similar   
 (gconftool-2:9947): GConf-WARNING **: Client failed to connect to the D-BUS daemon:
 /usr/bin/dbus-launch terminated abnormally with the following error: No protocol specified
 Autolaunch error: X11 initialization failed.
 
-* guitarix behaves buggy, when you scoll through the impulse responses and it will crash.
 
-* pd-extended does not launch from the startmenu, but with pd from the console.
 
-* when faustqt-programms will be closed, the app is still shown in the system tray. 
+* when faustqt-programms will be closed, the app sometimes is still shown in the system tray. 
+* faust2lv2 -gui -qt5 not shown gui / -qt4 works, but looks like gtk / qt4/5 is installed  
+
 
 * The Carla preset BassIRmin does not work with Klangfalter. There is no wet signal.
   My fault, I edited the preset manually.  
@@ -248,15 +276,25 @@ Autolaunch error: X11 initialization failed.
 
 * qterminal not in german? y vs. j  
 
+* (fixed, but now it appears even it is not installed) pd-extended does not launch from the startmenu, but with pd from the console.  
+Exec=/usr/bin/pd  
+ % sudo nano /usr/share/applications/pd-extended.desktop  
+
+ ## done ##  
+
+* sudoers is owned by uid 1000, should be 0 (fixed?)  
+% sudo chown root:root /path/to/sudoers 
 
 
-
-### ToDo ###
+### ToDo ###  
+* set jalv-select to quicklaunch  
 * sign the packages in the customrepo when updating, so I can
   upload them to an online repository.  
 * efibootmanager ???
-* install librosa -  % pip install librosa  
-* Add some eye candy to LXQT config - oxygen icons etc.  
+* update pyo-FX git repo  
+* install librosa -  % pip install librosa  (unsupported locale settings)  
+* Add some eye candy to LXQT config - Battery Watcher widget, Windows Taste????.    
+* File extension assignment  
 * externer monitor
 * Calculator with sparse dependencies 
 * include Edit & Share 
@@ -394,6 +432,8 @@ Calculate checksums for all included packages in the directory and create the da
  % repo-add ~/customrepo/x86_64/customrepo.db.tar.gz ~/customrepo/x86_64/*.pkg.tar.xz  
 Unfortunately there is no recursive process possible by default. If you have a lot of packages,  
 it takes ages. There is a tool, what cover this, but I don't know the name of it.
+Before you re-run repo-add, delete the database.  
+ % rm customrepo.*  
 
 
 Adapt the path in the pacman.conf to your local customrepo!

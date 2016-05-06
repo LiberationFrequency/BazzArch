@@ -29,6 +29,7 @@
 #
 ## A collection of desktop applications for the Linux sound system ALSA.
 qastools-qt5
+##
 qterminal
 qtermwidget
 ## Openbox configuration tool. Qt port of ObConf
@@ -57,35 +58,56 @@ rts-git
 #rt-tests
 #rtapp
 #
-####Plugins#######
-x42-plugins
+#### Plugins #######
+## LV2/JACK audio plug-ins for musicians (git version)
+#calf-git - not available in customrepo yet
+distrho-lv2-git
 eq10q
 infamousplugins-git
 invada-studio-plugins-lv2
 ir-lv2
-zam-plugins-git
-distrho-lv2-git
 lsp-plugins-lv2
 mda-lv2-git
-tap-plugins-lv2-git
 rkr-lv2-git
+tap-plugins-lv2-git
+x42-plugins
+zam-plugins-git
 #
 ####Music Apps####
 #ardour-git
 #bristol
-#calf-git - not available in customrepo yet
+
+## Audio Plugin Host
 carla-git
+#carla-bridges-win
+#carla-bridges-win32-git
+#carla-bridges-win64-git
+
+## JACK toolbox for audio production.
 cadence
+
 ## A LilyPond sheet music text editor.
 #frescobaldi - not available in customrepo yet
 ## An automated music engraving system (Git snapshot)
 #lilypond-git - not available in customrepo yet
+
+## A simple but fully featured LV2 host for Jack
+#jalv-git - not available in customrepo yet
+## A little GUI to select installed lv2 plug-ins and run them with jalv.
+jalv-select-git
+
+## Session management system for JACK.
 ladish-git
+## Utilities to improve integration and workflow with JACK and LASH.
 laditools-git
+
+## A virtual guitar amplifier for Linux
 guitarix-git
 jack-stdout-git
 libsndfile
 scikits-base
+### + some python packages from packages.both for using specmatch and webui. 
+
 #hydrogen-git - not available in customrepo yet
 #yoshimi-git - not available in customrepo yet
 #shuriken
@@ -96,18 +118,21 @@ gtklick
 #qsampler
 #linuxsampler-svn
 #setbfree-git
+
 #openav-luppp-git
 #openav-fabla-git
 #openav-fabla2-git
 #openav-artyfx-git
 #openav-sorcer-git
+
 #paulstretch-git
 #drumgizmo-git
 ##helm-git
 #helm -- created from the debian package with debtab 
 #patches helm update fehlen 
 #dexed-vst-git
-#jamin-cvs - there went something wrong, but I can't remember
+## A JACK Audio Connection Kit Audio Mastering interface - there went something wrong, but I can't remember (updated - fixed!)
+#jamin-cvs 
 gtklick
 ####
 #### binwalk-git ??? license issue if published as binary???
@@ -132,7 +157,7 @@ gtklick
 faust2-git
 #faustlive-git
 ## Use pure data extended, if you want to use ExpoChirpToolKit
-#pd-extended
+pd-extended
 python2-pyo
 #
 #python-slycot-git

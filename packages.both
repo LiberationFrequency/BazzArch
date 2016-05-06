@@ -144,6 +144,9 @@ lxqt
 #pcmanfm-qt
 ##### end LXQT group ####
 oxygen-icons
+## A configurable set of widget styles for KDE and Gtk
+#qtcurve
+qtcurve-qt5
 ## Wireless LAN network manager for LXQT
 #connman
 ## A simple binary editor for the Gnome desktop
@@ -309,7 +312,7 @@ calf
 ##Steve Harris' LADSPA plug-ins suite
 swh-plugins
 ##  A simple but fully featured LV2 host for Jack
-jalv
+#jalv
 ## LADSPA stereo and ambisonic reverb plugin based on zita-rev1
 #rev-plugins
 ## Tom's LADSPA Plugins

@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo ip link set wlan0 up && sudo wpa_supplicant -B -i wlan0 -c wpatest.conf && sudo dhcpcd wlan0
+sudo ip link set wlan0 up && sudo wpa_supplicant -B -i wlan0 -c /etc/wpa_supplicant/wpatest.conf && sudo dhcpcd wlan0
