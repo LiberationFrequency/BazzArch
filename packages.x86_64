@@ -34,10 +34,10 @@ qterminal
 qtermwidget
 ## Openbox configuration tool. Qt port of ObConf
 obconf-qt
-#lxqt-connman-applet-git - not available in customrepo yet
+#lxqt-connman-applet-git - not available in customrepo yet - failed
 ## QT image viewer & screenshot tool
-#lximage-qt - not available in customrepo yet
-## QT file/archive manager
+#lximage-qt-git
+## Free cross-platform QT file archiver - not available in customrepo yet - failed
 #peazip-qt-build - not available in customrepo yet
 #transmission-sequential-qt - not available in customrepo yet
 #yaourt
@@ -61,16 +61,27 @@ rts-git
 #### Plugins #######
 ## LV2/JACK audio plug-ins for musicians (git version)
 #calf-git - not available in customrepo yet
+## Distrho LV2 Audio Plugins, using the JUCE Toolkit
 distrho-lv2-git
+## An LV2 parametric equalizer audio plugin
 eq10q
+## A collection of open-source LV2 plugins
 infamousplugins-git
+## A set of LV2 audio effect plugins, ported from VST.
 invada-studio-plugins-lv2
+## Real-time signal convolver especially suited for creating reverb effects
 ir-lv2
+## Linux Studio Plugins: LV2 format
 lsp-plugins-lv2
+## A port of the MDA VST plugins to the LV2 format
 mda-lv2-git
+## akarrack effects ported to LV2 plugins (git version) - BETA
 rkr-lv2-git
+## LV2 port for the TAP (Tom's Audio Processing) plugins
 tap-plugins-lv2-git
+## Collection of LV2 plugins
 x42-plugins
+## Collection of LV2/LADSPA/VST audio plugins for high quality processing
 zam-plugins-git
 #
 ####Music Apps####
@@ -96,17 +107,22 @@ cadence
 ## A little GUI to select installed lv2 plug-ins and run them with jalv.
 jalv-select-git
 
+##  A matrix audio mixer for Jack using Qt 
+jackmix
+
 ## Session management system for JACK.
 ladish-git
 ## Utilities to improve integration and workflow with JACK and LASH.
 laditools-git
+
+
 
 ## A virtual guitar amplifier for Linux
 guitarix-git
 jack-stdout-git
 libsndfile
 scikits-base
-### + some python packages from packages.both for using specmatch and webui. 
+ 
 
 #hydrogen-git - not available in customrepo yet
 #yoshimi-git - not available in customrepo yet
@@ -131,7 +147,7 @@ gtklick
 #helm -- created from the debian package with debtab 
 #patches helm update fehlen 
 #dexed-vst-git
-## A JACK Audio Connection Kit Audio Mastering interface - there went something wrong, but I can't remember (updated - fixed!)
+## A JACK Audio Connection Kit Audio Mastering interface 
 #jamin-cvs 
 gtklick
 ####

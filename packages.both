@@ -127,6 +127,7 @@ xorg-drivers
 #######
 #### LXQT group #####
 lxqt
+#####################
 #lxqt-about
 #lxqt-common 
 #lxqt-config
@@ -167,21 +168,21 @@ cpupower
 cmt
 leafpad
 ttf-dejavu
-#xarchiver
+xarchiver
 
 ### Documents ###
-#mupdf
+mupdf
 
 
 ### Internet Applications ###
-firefox
-firefox-adblock-plus
-firefox-i18n-de
+#firefox
+#firefox-adblock-plus
+#firefox-i18n-de
 #chromium
 #opera
 ## Cross-platform QtWebKit browser (Qt5)
 #qupzilla
-#qupzilla-qt4
+qupzilla-qt4
 #flashplugin
 hunspell-de
 #jre8-openjdk
@@ -249,7 +250,6 @@ vmpk
 ## A tool for extracting annotations from audio signals 
 #aubio
 #aeolus
-
 #audacity
 #audio-convert
 #chuck
@@ -261,8 +261,8 @@ vmpk
 #synthv1
 ##Audio normalizer, converter, encoder/decoder, ripper, tagger and player
 #gnormalize
-## https://github.com/hydrogen-music/Song-and-pattern-repository
 ## An advanced drum machine
+## https://github.com/hydrogen-music/Song-and-pattern-repository
 hydrogen
 #guitarix2
 ## Professional-grade audio sampler alternative to Gigasampler
@@ -367,13 +367,13 @@ vlc
 #gstreamer0.10-ffmpeg
 #gstreamer0.10-python
 #gstreamer0.10-mm
-
+#
 lame
 flac
 opus
 #opus-tools
 libvorbis
-#
+###CD/DVD libaries
 libcddb
 libdvdread
 libdvdcss
@@ -416,8 +416,8 @@ python2-numpy
 python2-scipy
 #python2-virtualenv
 ## A wxWidgets GUI toolkit for Python - needed for python-pyo
-#wxpython
-wxpython2.8
+wxpython
+#wxpython2.8
 
 
 ### APIs ###

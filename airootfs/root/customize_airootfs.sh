@@ -2,8 +2,8 @@
 
 set -e -u
 
-
-## Spracheinstellungen
+# System language
+## German
 echo "LANG=de_DE.UTF-8" > /etc/locale.conf
 echo "LC_COLLATE=C" >> /etc/locale.conf
 
@@ -30,13 +30,13 @@ echo "BazzArch" > /etc/hostname
 #chmod 700 /root
 
 # Create live session user and add him to groups
-## group adbusers does not exist???
+## group adbusers, vmusers
 if [ ! -d /home/live-user ]; then
     useradd -m -p "" -g users -G "adm,audio,floppy,log,network,rfkill,scanner,storage,optical,video,power,wheel,users,sys,network,lp" -s /usr/bin/zsh live-user 
 fi
 
-## assign a password 
-# passwd live-user
+# Assign a password 
+## passwd live-user
 
 ## Adding live-user to sudoer without password request
 echo "live-user ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
@@ -57,6 +57,7 @@ sed -i 's/#\(HandleSuspendKey=\)suspend/\1ignore/' /etc/systemd/logind.conf
 sed -i 's/#\(HandleHibernateKey=\)hibernate/\1ignore/' /etc/systemd/logind.conf
 sed -i 's/#\(HandleLidSwitch=\)suspend/\1ignore/' /etc/systemd/logind.conf
 
+## Enable services at startup
 systemctl enable pacman-init.service choose-mirror.service
 systemctl enable rtirq.service 
 systemctl enable optimize-rt-system.service
