@@ -2,17 +2,34 @@
 
 set -e -u
 
-# System language
-## German
-echo "LANG=de_DE.UTF-8" > /etc/locale.conf
-echo "LC_COLLATE=C" >> /etc/locale.conf
-
-## Tastaturbelegung festlegen ##
+## Keymap for terminal ##
 echo "KEYMAP=de-latin1" > /etc/vconsole.conf
+
+# System language
+## German and fallback to en_US for applications with missing translation 
+echo "LANG=de_DE.UTF-8" > /etc/locale.conf
+echo "LANGUAGE=de_DE:en_US" >> /etc/locale.conf
+echo "LC_TIME=de_DE.UTF-8" >> /etc/locale.conf
+echo "LC_COLLATE=C" >> /etc/locale.conf
+#echo "LC_ADDRESS=de_DE.UTF-8" >> /etc/locale.conf
+########
+#LC_CTYPE="de_DE.UTF-8"
+#LC_NUMERIC="de_DE.UTF-8"
+#LC_MONETARY="de_DE.UTF-8"
+#LC_MESSAGES="de_DE.UTF-8"
+#LC_PAPER="de_DE.UTF-8"
+#LC_NAME="de_DE.UTF-8"
+#LC_TELEPHONE="de_DE.UTF-8"
+#LC_MEASUREMENT="de_DE.UTF-8"
+#LC_IDENTIFICATION="de_DE.UTF-8"
+#######
+######sed /etc/locale.gen
+locale-gen 
+
 
 ## Systemsprache generieren ##
 #sed -i 's/#\(en_US\.UTF-8\)/\1/' /etc/locale.gen
-sed -i 's/#\(de_DE\.UTF-8\)/\1/' /etc/locale.gen
+#sed -i 's/#\(de_DE\.UTF-8\)/\1/' /etc/locale.gen
 #echo "de_DE.UTF-8 UTF-8" >> /etc/locale.gen
 #echo "de_DE ISO-8859-1" >> /etc/locale.gen
 #echo "de_DE@euro ISO-8859-15 >> /etc/locale.gen
@@ -25,15 +42,25 @@ ln -sf /usr/share/zoneinfo/Europe/Berlin /etc/localtime
 ## Hostname ###
 echo "BazzArch" > /etc/hostname
 
+# Create root user
 #usermod -s /usr/bin/zsh root
 #cp -aT /etc/skel/ /root/
 #chmod 700 /root
 
 # Create live session user and add him to groups
-## group adbusers, vmusers
+## group adbusers, vmusers, wireshark
 if [ ! -d /home/live-user ]; then
     useradd -m -p "" -g users -G "adm,audio,floppy,log,network,rfkill,scanner,storage,optical,video,power,wheel,users,sys,network,lp" -s /usr/bin/zsh live-user 
 fi
+
+## If Wireshark is installed
+gpasswd -a live-user wireshark
+#########################################################
+#DO NOT USE THIS IN A SCRIPT, you will run into trouble.#
+#Use root privilege for dumping provisional!	       	#
+#-------------------------------------------------------#
+###################getcap /usr/bin/dumpcap		#
+#########################################################
 
 # Assign a password 
 ## passwd live-user
@@ -69,6 +96,7 @@ systemctl set-default multi-user.target
 #echo "blacklist b43" >> /etc/modprobe.d/blacklist.conf
 echo "blacklist b43legacy" >> /etc/modprobe.d/blacklist.conf
 echo "blacklist pcspkr" >> /etc/modprobe.d/blacklist.conf
+
 ### Brother MFC-7360N ### 
 ## Zur Erklärung: Wenn man Module mittels der Blacklist am Starten hindert, aber ein anderes 
 ## Modul dieses Modul als Abhängigkeit aufruft, wird das geblacklistete Modul trotzdem geladen. 

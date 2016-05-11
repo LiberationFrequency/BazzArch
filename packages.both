@@ -68,7 +68,9 @@ zd1211-firmware
 
 #### System Applications ###
 #archiso
+## Developer Tools Package Group
 base-devel
+## Bootstrap a basic Debian system
 #debootstrap
 ## Recover deleted or overwritten files on ext3 and ext4 filesystems
 #ext4magic
@@ -79,7 +81,7 @@ base-devel
 ## Hardware detection tool from openSUSE
 #hwinfo
 ## GNU make utility to maintain groups of programs
-make
+#make
 ## A useful diagnositic, instructional, and debugging tool
 #strace
 ## A tool that stress tests your system (CPU, memory, I/O, disks)
@@ -148,14 +150,24 @@ oxygen-icons
 ## A configurable set of widget styles for KDE and Gtk
 #qtcurve
 qtcurve-qt5
+# Virtual filesystem implementation for GIO
+gvfs
+gvfs-afc 
+#gvfs-goa
+#gvfs-google
+#gvfs-gphoto2
+gvfs-mtp 
+gvfs-nfs
+gvfs-smb
+
 ## Wireless LAN network manager for LXQT
 #connman
 ## A simple binary editor for the Gnome desktop
 #ghex 
 ## displays files in hexadecimal and ASCII (or EBCDIC) and highlight the differences between them
-#vbindiff
+vbindiff
 ## script to get system information
-#inxi
+inxi
 laptop-detect
 #os-prober
 #ufw
@@ -166,9 +178,30 @@ laptop-detect
 cpupower
 ## CMT for LADSPA
 cmt
-leafpad
+## A notepad clone for GTK+ 2.0
+#leafpad
+## Simple plain text editor for GTK+ 3
+#l3afpad
+## A Qt-based text editor for Linux and *BSD. With an ultimate small size TEA provides you hundreds of functions.
+tea
+
+
 ttf-dejavu
-xarchiver
+
+
+## GTK+ frontend to various command line archivers
+#xarchiver
+#xarchiver-gtk2
+##Create and modify archives
+file-roller
+
+## A free network protocol analyzer for Unix/Linux and Windows 
+#wireshark-cli
+#wireshark-gtk
+wireshark-qt
+
+## A tool for searching a given binary image for embedded files
+#binwalk
 
 ### Documents ###
 mupdf
@@ -184,6 +217,7 @@ mupdf
 #qupzilla
 qupzilla-qt4
 #flashplugin
+## Spell checker and morphological analyzer library and program
 hunspell-de
 #jre8-openjdk
 #icedtea-web
@@ -277,15 +311,21 @@ hydrogen
 #lmms
 ## Successor to the LADSPA audio plug-in standard
 #lv2
+## Versatile guitar multi-effects processor
 rakarrack
+## Professional-grade digital audio workstation
 #ardour
+## HTTP Ardour Video Daemon
 #harvid
 ## A simple video player that is synchronized to jack transport.
 #xjadeo
 ## A native YouTube client in Qt. Watch YouTube videos without Flash Player
 #minitube
+## Free, open source software for digital DJ'ing.
 #mixxx
+## Audio/MIDI multitrack sequencer
 #qtractor
+## Qt GUI for FluidSynth
 #qsynth
 ## A simple sound converter application for GNOME
 #soundconverter
@@ -304,6 +344,7 @@ rakarrack
 #amb-plugins
 ##Analogue Modeling SYNTHesizer
 #amsynth 
+## LV2/DSSI/LADSPA plug-ins suite and standalone JACK host
 calf
 #LADSPA four-band parametric equaliser plugins
 #fil-plugins

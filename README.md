@@ -2,10 +2,12 @@
 *************************************************************************
 					                BAZZARCH			
 *************************************************************************
-									
+			
+Work in progress.
+						
 Version: no need for version controlling, its just a backup.  	
 									
-Date:		2016-05-07						
+Date:		2016-05-11						
 
 License:	Good question. GPL, LGPL, BSD, MIT so far.
 		I will take look into license issues as soon as possible.
@@ -42,6 +44,8 @@ Requirements:
  (maybe there is a solution for other operating systems, similar to 
  debootstrap, but I don't know in detail momentarily.) (*1 appendix)  
   
+* an Internet connection   
+  Unfortunately it download some things on every build, even if you have all packages available.  
 
 
 HowTo: 
@@ -100,6 +104,10 @@ and dd it to the top (/dev/sdX and not /dev/sdX1)
 
 Known issues:  
 ------------------------------------------  
+* .git file is too large. Fix it!
+
+* faust2 does not work with gcc 6.1.1. Downgrade it.   
+
 * QuaMixer is not preconfigured  
 * Zoom B3/G3 has no controls in Alsa-/QuasMixer  
  
@@ -131,7 +139,7 @@ Exec=/usr/bin/pd
 
 ToDo:  
 --------------------------------------------------------   
-* USB-Automount  
+* "open Terminal here"-dialog  
 * sign the packages in the customrepo when updating, so I can
   upload them to an online repository.  
 * install librosa -  % pip2 install librosa  (unsupported locale settings)  
@@ -146,7 +154,7 @@ ToDo:
 * pacman-key --init ????  
 * put persistent installation into a script  
 * try nvidia-340xx-rt for GT218M [GeForce G210M] / failed linux-rt<4.2 -> try nvidia-340xx-dkms  
-* gvfs, udisks, qtcurve, gEDA
+* gEDA
 * Adjust the application menu - menu://applications  
 It is possible to edit menu entries by editing their .desktop files stored in /usr/share/applications/lxqt-*.desktop files.  
 * write a GUI for klick in QT -> Tutorials: http://zetcode.com/  

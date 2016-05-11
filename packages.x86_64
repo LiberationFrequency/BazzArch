@@ -58,6 +58,8 @@ rts-git
 #rt-tests
 #rtapp
 #
+
+
 #### Plugins #######
 ## LV2/JACK audio plug-ins for musicians (git version)
 #calf-git - not available in customrepo yet
@@ -84,6 +86,8 @@ x42-plugins
 ## Collection of LV2/LADSPA/VST audio plugins for high quality processing
 zam-plugins-git
 #
+
+
 ####Music Apps####
 #ardour-git
 #bristol
@@ -152,7 +156,8 @@ gtklick
 gtklick
 ####
 #### binwalk-git ??? license issue if published as binary???
-#binwalk-git
+## A tool for searching a given binary image for embedded files
+binwalk-git
 #jack2-no-dbus-git
 #jack_capture
 #freqtweak
@@ -173,7 +178,7 @@ gtklick
 faust2-git
 #faustlive-git
 ## Use pure data extended, if you want to use ExpoChirpToolKit
-pd-extended
+#pd-extended
 python2-pyo
 #
 #python-slycot-git
