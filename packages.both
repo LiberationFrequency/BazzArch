@@ -69,7 +69,7 @@ zd1211-firmware
 #### System Applications ###
 #archiso
 ## Developer Tools Package Group
-base-devel
+#base-devel
 ## Bootstrap a basic Debian system
 #debootstrap
 ## Recover deleted or overwritten files on ext3 and ext4 filesystems
@@ -165,9 +165,9 @@ gvfs-smb
 ## A simple binary editor for the Gnome desktop
 #ghex 
 ## displays files in hexadecimal and ASCII (or EBCDIC) and highlight the differences between them
-vbindiff
+#vbindiff
 ## script to get system information
-inxi
+#inxi
 laptop-detect
 #os-prober
 #ufw
@@ -181,9 +181,9 @@ cmt
 ## A notepad clone for GTK+ 2.0
 #leafpad
 ## Simple plain text editor for GTK+ 3
-#l3afpad
+l3afpad
 ## A Qt-based text editor for Linux and *BSD. With an ultimate small size TEA provides you hundreds of functions.
-tea
+#tea
 
 
 ttf-dejavu
@@ -193,12 +193,12 @@ ttf-dejavu
 #xarchiver
 #xarchiver-gtk2
 ##Create and modify archives
-file-roller
+#file-roller
 
 ## A free network protocol analyzer for Unix/Linux and Windows 
 #wireshark-cli
 #wireshark-gtk
-wireshark-qt
+#wireshark-qt
 
 ## A tool for searching a given binary image for embedded files
 #binwalk
@@ -208,26 +208,27 @@ mupdf
 
 
 ### Internet Applications ###
-#firefox
-#firefox-adblock-plus
-#firefox-i18n-de
-#chromium
+firefox
+firefox-adblock-plus
+firefox-i18n-de
+chromium
 #opera
 ## Cross-platform QtWebKit browser (Qt5)
 #qupzilla
-qupzilla-qt4
+#qupzilla-qt4
 #flashplugin
 ## Spell checker and morphological analyzer library and program
 hunspell-de
 #jre8-openjdk
-#icedtea-web
+icedtea-web
 
 
 ### Audio Applications ###
 a2jmidid
 alsa-utils
-#jack2
-jack2-dbus
+######cd - What is it?
+jack2
+#jack2-dbus
 qjackctl
 #qtractor
 
@@ -306,7 +307,7 @@ hydrogen
 ## Gigasampler instrument editor
 #gigedit
 ## An automated music engraving system
-#lilypond
+lilypond
 ## The Linux MultiMedia Studio.
 #lmms
 ## Successor to the LADSPA audio plug-in standard
@@ -476,6 +477,13 @@ wxpython
 
 ### Android ###
 ## Android Debbug Bridge 
-#android-tools
-#android-udev
+android-tools
+android-udev
 #eclipse
+
+
+## Virtualbox (not with linux-rt)
+#virtualbox-guest-modules-arch
+#virtualbox-guest-utils
+
+

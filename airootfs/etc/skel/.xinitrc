@@ -19,3 +19,5 @@ fi
 exec startlxqt
 # ...or the Window Manager of your choice
 
+# Virtual Box (not with linux-rt)
+#/usr/bin/VBoxClient-all

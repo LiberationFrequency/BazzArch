@@ -2,7 +2,7 @@
 
 set -e -u
 
-iso_name=Bazzarch
+iso_name=BazzArch
 iso_label="ARCH_$(date +%Y%m)"
 iso_version=$(date +%Y.%m.%d)
 install_dir=arch
@@ -70,6 +70,7 @@ make_packages() {
     setarch ${arch} mkarchiso-rt ${verbose} -w "${work_dir}/${arch}" -C "${work_dir}/pacman.conf" -D "${install_dir}" -p "$(grep -h -v ^# ${script_path}/packages.{both,${arch}})" install
 }
 
+
 # Needed packages for x86_64 EFI boot
 make_packages_efi() {
     setarch ${arch} mkarchiso-rt ${verbose} -w "${work_dir}/${arch}" -C "${work_dir}/pacman.conf" -D "${install_dir}" -p "prebootloader" install
@@ -100,9 +101,6 @@ make_setup_mkinitcpio() {
       exec 17<&-
     fi
 }
-######kernel######    setarch ${arch} mkarchiso-rt ${verbose} -w "${work_dir}/${arch}" -C "${work_dir}/pacman.conf" -D "${install_dir}" -r 'mkinitcpio -c /etc/mkinitcpio-archiso.conf -k /boot/vmlinuz-linux -g /boot/archiso.img' run
-#####??????? unnecessary ######    setarch ${arch} mkarchiso-rt ${verbose} -w "${work_dir}/${arch}" -C "${work_dir}/pacman.conf" -D "${install_dir}" -r 'mkinitcpio -c /etc/mkinitcpio-archiso.conf -k /boot/vmlinuz-linux-rt -g /boot/archiso.img' run
-
 
 # Customize installation (airootfs)
 make_customize_airootfs() {
@@ -228,7 +226,8 @@ make_prepare() {
 
 # Build ISO
 make_iso() {
-    mkarchiso-rt ${verbose} -w "${work_dir}" -D "${install_dir}" -L "${iso_label}" -o "${out_dir}" iso "${iso_name}-${iso_version}-dual.iso"
+#####    mkarchiso-rt ${verbose} -w "${work_dir}" -D "${install_dir}" -L "${iso_label}" -o "${out_dir}" iso "${iso_name}-${iso_version}-dual.iso"
+    mkarchiso-rt ${verbose} -w "${work_dir}" -D "${install_dir}" -L "${iso_label}" -o "${out_dir}" iso "${iso_name}-${iso_version}-x86_64.iso"
 }
 
 if [[ ${EUID} -ne 0 ]]; then

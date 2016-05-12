@@ -7,12 +7,12 @@ Work in progress.
 						
 Version: no need for version controlling, its just a backup.  	
 									
-Date:		2016-05-11						
+Date:		2016-05-12						
 
 License:	Good question. GPL, LGPL, BSD, MIT so far.
 		I will take look into license issues as soon as possible.
 
-Output size for this current config: 1,1 GB  
+Output size for this current config: 1,3 GB 
 
 Source:  
 GitHub: https://github.com/LiberationFrequency/BazzArch.git  
@@ -32,7 +32,7 @@ Only tested on machines with BIOS, but UEFI (efibootmanager??) and vm should als
 You can create any system configuration you want, but this ISO should be optimized to act 
 as an effect unit for bass guitars in future. This configuration contains a linux realtime kernel, 
 Guitarix (with webui & specmatch), Calf, Carla, Cadence, jalv-select, LV2/LADSPA/etc. plugins, 
-rakarrack, Hydrogen, (gt)klick and a few impulse responses from two bass amplifiers, but they are not 
+rakarrack, Hydrogen, (gt)klick, LilyPond and a few impulse responses from two bass amplifiers, but they are not 
 very well, they are too hushed. You will find better/louder IRs on the net, or you can 
 create your own IRs with Expochirptool, a tool for pure data. 
 
@@ -45,7 +45,7 @@ Requirements:
  debootstrap, but I don't know in detail momentarily.) (*1 appendix)  
   
 * an Internet connection   
-  Unfortunately it download some things on every build, even if you have all packages available.  
+  Unfortunately it downloads some things on every build, even if you have all packages available.  
 
 
 HowTo: 
@@ -104,25 +104,23 @@ and dd it to the top (/dev/sdX and not /dev/sdX1)
 
 Known issues:  
 ------------------------------------------  
+* A stop job is running ... -> https://bbs.archlinux.org/viewtopic.php?pid=1618677#p1618677
+
 * .git file is too large. Fix it!
 
-* faust2 does not work with gcc 6.1.1. Downgrade it.   
+* faust2 does not work with gcc 6.1.1. Too much work. Downgrade it manually or wait till anybody feel responsible.   
 
-* QuaMixer is not preconfigured  
-* Zoom B3/G3 has no controls in Alsa-/QuasMixer  
+* VLC can not play mp.3 from Android / mtp://[usb...]  
+* Drag'n'drop does not work from Android device.  
  
-* JackMix not shown in startmenu  
-
-* Preset in guitarix is too loud. Pay attention for your equipment and your ears!  
-* Guitarix-webui, that I created manually, is not shown in startmenu, although it is listed in /usr/share/application.    
+* Preset in guitarix is too loud. Pay attention for your equipment and your ears!      
 * guitarix behaves buggy, when you scoll through the impulse responses and it will crash.  
   
-
 * Hydrogen is too loud. Pay attention for your equipment and your ears!  
 
 * wpa_passphrase write the pwd also in cleartext to file /etc/wpa_supplicant/wpatest.conf  
 
-* when faustqt-programms will be closed, the app sometimes is still shown in the system tray. 
+* when faustqt-programms will be closed, the app is sometimes still shown in the system tray. 
 * faust2lv2 -gui -qt5 show no gui / -qt4 works / qt4/5 are installed  
 
 
@@ -138,11 +136,15 @@ Exec=/usr/bin/pd
 
 
 ToDo:  
---------------------------------------------------------   
+--------------------------------------------------------  
+* add a network manager  
+* Create a splash screen  
+* Create some presets   
 * "open Terminal here"-dialog  
+* pacman and multilib  
 * sign the packages in the customrepo when updating, so I can
   upload them to an online repository.  
-* install librosa -  % pip2 install librosa  (unsupported locale settings)  
+* install librosa -  % pip2 install librosa  
 * Add some eye candy to LXQT config - Battery Watcher widget??, Windows/Super key????.    
 * File extension assignment  
 * extern screen
@@ -176,9 +178,11 @@ be optimized for realtime audio, try to reduce all sources of error.)
 Edit the config file ../airootfs/root/customize_airootfs.sh with your essid and password, then you can run the wlan script from the live session to connect to your Access-Point automatically , 
 if the driver is installed correctly.  
 
-    % ~/./wlan.sh  
-
-
+    % ./wlan.sh   
+from the home directory. For LAN just connect your computer before startup. Otherwise you get the IP with  
+   % ip addr  
+   % sudo dhcpd enp...    
+ 
 
 
 ### Soundcards  
@@ -318,6 +322,29 @@ Install:
     python2-pyo (http://ajaxsoundstudio.com/software/pyo/)  
     PyAudio (https://people.csail.mit.edu/hubert/pyaudio/) [or Jack (http://jackaudio.org/)]  
     wxPython (http://www.wxpython.org/)  
+
+
+
+
+
+## LilyPond  
+LilyPond ist ein textbasierten Notensatzprogramm mit hoher Qualität.  
+
+Beispiel:  
+Schreibe das in eine Textdatei und speicher diese mit der Erweiterung .ly .  
+
+\version "2.18.2"  
+{  
+  % middle tie looks funny here:  
+  <c' d'' b''>8. ~ <c' d'' b''>8  
+}  
+
+Hiermit erstellt man den Notensatz als PDF:  
+% lilypond name.ly  
+
+
+Install:  
+packages.both: lilypond  
 
 
 
