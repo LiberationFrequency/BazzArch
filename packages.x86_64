@@ -175,7 +175,7 @@ gtklick
 
 
 #faust-git
-#faust2-git
+faust2-git
 #faustlive-git
 ## Use pure data extended, if you want to use ExpoChirpToolKit
 #pd-extended

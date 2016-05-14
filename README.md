@@ -7,12 +7,15 @@ Work in progress.
 						
 Version: no need for version controlling, its just a backup.  	
 									
-Date:		2016-05-12						
+Date:		2016-05-14						
 
 License:	Good question. GPL, LGPL, BSD, MIT so far.
 		I will take look into license issues as soon as possible.
 
-Output size for this current config: 1,3 GB 
+Output size for this current config: 1,48 GB 
+
+Comment:	no EFI, no VM, just BIOS  
+
 
 Source:  
 GitHub: https://github.com/LiberationFrequency/BazzArch.git  
@@ -20,7 +23,6 @@ Zip: 	https://github.com/LiberationFrequency/BazzArch/archive/master.zip
 
 Mirror (maybe not up to date):		
 Google: https://drive.google.com/open?id=0B2BaBYQTShFzVWNOVkdwUUJyUWc  
-
 
 *************************************************************************
 
@@ -46,6 +48,7 @@ Requirements:
   
 * an Internet connection   
   Unfortunately it downloads some things on every build, even if you have all packages available.  
+  see this for a possible solution: http://software.techforums.space/software/easy-way-to-use-archiso-for-100-offline-installs-all-packages-on-iso-4928fb3f.html  
 
 
 HowTo: 
@@ -77,7 +80,9 @@ Configure the script and make sure your local copy of sudoers is owned by root
 
     % la [..]/airootfs/etc/sudoers   
     % sudo chown root:root [..]/airootfs/etc/sudoers  
+
 Of course you can and also should use your system sudoers, this file is a backup.  
+    % sudo cp /etc/sudoers /path/to/BazzArch  
 
      % sudo ./build-rt.sh -v
 (ignore linux and you can press enter to all other questions)
@@ -104,28 +109,23 @@ and dd it to the top (/dev/sdX and not /dev/sdX1)
 
 Known issues:  
 ------------------------------------------  
-* A stop job is running ... -> https://bbs.archlinux.org/viewtopic.php?pid=1618677#p1618677
+* (fix?) A stop job is running ... -> https://bbs.archlinux.org/viewtopic.php?pid=1618677#p1618677
+
+* ad-blocker does not work right - install it via firefox  
+
+* WebUI-script can only be use one time - need if construction  
 
 * .git file is too large. Fix it!
 
-* faust2 does not work with gcc 6.1.1. Too much work. Downgrade it manually or wait till anybody feel responsible.   
-
-* VLC can not play mp.3 from Android / mtp://[usb...]  
+* VLC can not play mp.3/4 from Android / mtp://[usb...]  
 * Drag'n'drop does not work from Android device.  
- 
-* Preset in guitarix is too loud. Pay attention for your equipment and your ears!      
-* guitarix behaves buggy, when you scoll through the impulse responses and it will crash.  
-  
-* Hydrogen is too loud. Pay attention for your equipment and your ears!  
+* Hardware Support - https://sourceforge.net/p/libmtp/code/ci/HEAD/tree/src/music-players.h  
 
-* wpa_passphrase write the pwd also in cleartext to file /etc/wpa_supplicant/wpatest.conf  
-
+* faust2 does not work with gcc 6.1.1. Too much work. Downgrade it manually or wait till anybody feel responsible.   
 * when faustqt-programms will be closed, the app is sometimes still shown in the system tray. 
 * faust2lv2 -gui -qt5 show no gui / -qt4 works / qt4/5 are installed  
-
-
-* The Carla preset BassIRmin does not work with Klangfalter. There is no wet signal.
-  My fault, I edited the preset manually.  
+   
+* wpa_passphrase write the pwd also in cleartext to file /etc/wpa_supplicant/wpatest.conf  
 
 * wxpython & wxpython2.8 & wxgtk & wx...????  wxpython (3) should work with python2-pyo  
 
@@ -133,21 +133,37 @@ Known issues:
 Exec=/usr/bin/pd  
  % sudo nano /usr/share/applications/pd-extended.desktop  
 
+* Preset in guitarix is too loud. Pay attention for your equipment and your ears!      
+* guitarix behaves buggy, when you scoll through the impulse responses and it will crash.  
+  
+* Hydrogen is too loud. Pay attention for your equipment and your ears!  
+
+* The Carla preset BassIRmin does not work with Klangfalter. There is no wet signal.
+  My fault, I edited the preset manually.  
+
+
+
+
 
 
 ToDo:  
 --------------------------------------------------------  
+* enlarge cow-space  
 * add a network manager  
 * Create a splash screen  
 * Create some presets   
-* "open Terminal here"-dialog  
+* "open Terminal here"-dialog  -> proof of concept temporary / Only works with xterm / 
+link xterm to qterminal / Only works on the top of directories, not in the folders or on the dektop.  
 * pacman and multilib  
 * sign the packages in the customrepo when updating, so I can
   upload them to an online repository.  
-* install librosa -  % pip2 install librosa  
+
+* install librosa -  % pip2 install [-e] librosa  
+https://github.com/librosa/librosa/blob/master/librosa/beat.py  
+
 * Add some eye candy to LXQT config - Battery Watcher widget??, Windows/Super key????.    
-* File extension assignment  
-* extern screen
+* File extension associations - /.local/share/applications     
+* extern screen -> works (only VGA tested)
 * Calculator with sparse dependencies 
 * include Edit & Share 
 * create a PKGBUILD for specmatch  
@@ -177,11 +193,13 @@ It is possible to edit menu entries by editing their .desktop files stored in /u
 be optimized for realtime audio, try to reduce all sources of error.)  
 Edit the config file ../airootfs/root/customize_airootfs.sh with your essid and password, then you can run the wlan script from the live session to connect to your Access-Point automatically , 
 if the driver is installed correctly.  
+https://wiki.archlinux.org/index.php/Wireless_network_configuration#Drivers_and_firmware  
 
     % ./wlan.sh   
 from the home directory. For LAN just connect your computer before startup. Otherwise you get the IP with  
-   % ip addr  
-   % sudo dhcpd enp...    
+
+    % ip addr  
+    % sudo dhcpcd enp...    
  
 
 
@@ -328,19 +346,10 @@ Install:
 
 
 ## LilyPond  
-LilyPond ist ein textbasierten Notensatzprogramm mit hoher Qualität.  
+LilyPond is a music engraving application with high quality, which is based upon text.   
+There are a few examples. Execute this to generate a PDF file:  
 
-Beispiel:  
-Schreibe das in eine Textdatei und speicher diese mit der Erweiterung .ly .  
-
-\version "2.18.2"  
-{  
-  % middle tie looks funny here:  
-  <c' d'' b''>8. ~ <c' d'' b''>8  
-}  
-
-Hiermit erstellt man den Notensatz als PDF:  
-% lilypond name.ly  
+    % lilypond name.ly  
 
 
 Install:  
@@ -348,6 +357,27 @@ packages.both: lilypond
 
 
 
+
+# Camera Support  
+The kernel module uvcvideo is loaded by default. VLC can record, play, stream and convert.  
+That works fine for me, for further hardware support information, take a look at  
+http://www.ideasonboard.org/uvc/
+
+You can also use the application cheese from packages.both, for example.  
+  
+
+# Exiftool   
+Perl-image-exiftool is a reader and rewriter of EXIF informations that supports raw files. 
+It answers to the name of image, but it can also be used to read/write audio/video format's metadata.  
+
+Example:  
+Show metadata:  
+
+    % exiftool filename  
+delete metadata:  
+
+     % exiftool -all=filename  
+ 
 
 ## Convert a png to the properties that supported by syslinux (optional)   
      % convert -resize 640x480 -depth 16 -colors 65536 mynew.png splash.png
@@ -556,6 +586,12 @@ repo-add Options
     Remove old package files from the disk when updating their entry in the database.  
  
 
+-----------------------------------------------------------------------------------  
+(* 3) Script messages:  
+
+warning: kpathsea: configuration file texmf.cnf not found in these directories: /usr/bin:/usr/bin/share/texmf-local/web2c:/usr/bin/share/texmf-dist/web2c:/usr/bin/share/texmf/web2c:/usr/bin/texmf-local/web2c:/usr/bin/texmf-dist/web2c:/usr/bin/texmf/web2c:/usr:/usr/share/texmf-local/web2c:/usr/share/texmf-dist/web2c:/usr/share/texmf/web2c:/usr/texmf-local/web2c:/usr/texmf-dist/web2c:/usr/texmf/web2c://texmf-local/web2c:/://share/texmf-local/web2c://share/texmf-dist/web2c://share/texmf/web2c://texmf-local/web2c://texmf-dist/web2c://texmf/web2c.
+Optional dependencies for texlive-bin  
+    ed: for texconfig  
 
 
 

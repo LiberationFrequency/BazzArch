@@ -69,7 +69,7 @@ zd1211-firmware
 #### System Applications ###
 #archiso
 ## Developer Tools Package Group
-#base-devel
+base-devel
 ## Bootstrap a basic Debian system
 #debootstrap
 ## Recover deleted or overwritten files on ext3 and ext4 filesystems
@@ -86,6 +86,7 @@ zd1211-firmware
 #strace
 ## A tool that stress tests your system (CPU, memory, I/O, disks)
 #stress
+#xterm (!!! Attention: xterm is linked against qterminal !!!)
 #
 xorg-server 
 xorg-xinit 
@@ -155,7 +156,7 @@ gvfs
 gvfs-afc 
 #gvfs-goa
 #gvfs-google
-#gvfs-gphoto2
+gvfs-gphoto2
 gvfs-mtp 
 gvfs-nfs
 gvfs-smb
@@ -186,14 +187,31 @@ l3afpad
 #tea
 
 
+
+##Font family based on the Bitstream Vera Fonts with a wider range of characters
 ttf-dejavu
 
+## Library for high quality hyphenation and justification
+#hyphen
+hyphen-de
+#hyphen-en
+#hyphen-fr
+#hyphen-hu
+#hyphen-it
+#hyphen-nl
+#hyphen-pl
+#hyphen-ro
+
+
+### Spelling
+## A spelling and grammar checker, hyphenator and collection of related linguistic data for Finnish language
+#libvoikko
 
 ## GTK+ frontend to various command line archivers
 #xarchiver
 #xarchiver-gtk2
 ##Create and modify archives
-#file-roller
+file-roller
 
 ## A free network protocol analyzer for Unix/Linux and Windows 
 #wireshark-cli
@@ -209,7 +227,7 @@ mupdf
 
 ### Internet Applications ###
 firefox
-firefox-adblock-plus
+#firefox-adblock-plus
 firefox-i18n-de
 chromium
 #opera
@@ -226,7 +244,6 @@ icedtea-web
 ### Audio Applications ###
 a2jmidid
 alsa-utils
-######cd - What is it?
 jack2
 #jack2-dbus
 qjackctl
@@ -243,7 +260,7 @@ qjackctl
 ## A viewer and analyser of music audio files.
 #sonic-visualiser
 ## The Swiss Army knife of sound processing tools
-#sox
+sox
 
 
 
@@ -252,7 +269,9 @@ qjackctl
 ## Onset detection, pitch tracking, note tracking and tempo tracking plugins using Paul Brossier's aubio library
 #vamp-aubio-plugins
 ##The Vamp audio analysis plug-in system
-#vamp-plugin-sdk
+vamp-plugin-sdk
+
+
 ## Virtual MIDI Piano Keyboard
 vmpk
 ## Audio compression format with lossless, lossy and hybrid compression modes
@@ -422,7 +441,7 @@ libdvdcss
 libdvdnav
 
 ## Reader and rewriter of EXIF informations that supports raw files
-#perl-image-exiftool
+perl-image-exiftool
 ## Ebook management application
 # calibre
 
@@ -440,6 +459,8 @@ libdvdnav
 #mp3info
 
 
+## Use your webcam to take photos and videos, apply fancy special effects and share the fun with others
+cheese
 ## A feature-rich screen recorder written in C++/Qt4 that supports X11 and OpenGL.
 #simplescreenrecorder
 ## An easy to use utility that records your desktop into the ogg format with a CLI, Qt or GTK+ interface.
@@ -482,7 +503,7 @@ android-udev
 #eclipse
 
 
-## Virtualbox (not with linux-rt)
+## Virtualbox Guest - for testing ISO in virtualbox (not working with linux-rt)
 #virtualbox-guest-modules-arch
 #virtualbox-guest-utils
 
