@@ -162,8 +162,8 @@ make_efi() {
     mkdir -p ${work_dir}/iso/EFI/boot
 ### deprecated ###   cp ${work_dir}/x86_64/airootfs/usr/lib/prebootloader/PreLoader.efi ${work_dir}/iso/EFI/boot/bootx64.efi
 ### deprecated ###    cp ${work_dir}/x86_64/airootfs/usr/lib/prebootloader/HashTool.efi ${work_dir}/iso/EFI/boot/
-######       cp ${work_dir}/x86_64/airootfs/usr/lib/efitools/PreLoader.efi ${work_dir}/iso/EFI/boot/bootx64.efi
-######       cp ${work_dir}/x86_64/airootfs/usr/lib/efitools/HashTool.efi ${work_dir}/iso/EFI/boot/
+    cp ${work_dir}/x86_64/airootfs/usr/share/efitools/efi/PreLoader.efi ${work_dir}/iso/EFI/boot/bootx64.efi
+    cp ${work_dir}/x86_64/airootfs/usr/share/efitools/efi/HashTool.efi ${work_dir}/iso/EFI/boot/
 
     cp ${work_dir}/x86_64/airootfs/usr/lib/systemd/boot/efi/systemd-bootx64.efi ${work_dir}/iso/EFI/boot/loader.efi
 
@@ -186,8 +186,9 @@ make_efi() {
 make_efiboot() {
     mkdir -p ${work_dir}/iso/EFI/archiso
     truncate -s 40M ${work_dir}/iso/EFI/archiso/efiboot.img
-### deprecated ##    mkfs.vfat -n ARCHISO_EFI ${work_dir}/iso/EFI/archiso/efiboot.img
-    mkfs.fat -F32 -n ARCHISO_EFI ${work_dir}/iso/EFI/archiso/efiboot.img
+### deprecated ???##    mkfs.vfat -n ARCHISO_EFI ${work_dir}/iso/EFI/archiso/efiboot.img
+###    mkfs.fat -F32 -n ARCHISO_EFI ${work_dir}/iso/EFI/archiso/efiboot.img
+    mkfs.vfat -n ARCHISO_EFI ${work_dir}/iso/EFI/archiso/efiboot.img
 
     mkdir -p ${work_dir}/efiboot
     mount ${work_dir}/iso/EFI/archiso/efiboot.img ${work_dir}/efiboot
@@ -201,8 +202,8 @@ make_efiboot() {
     mkdir -p ${work_dir}/efiboot/EFI/boot
 ### deprecated ##    cp ${work_dir}/x86_64/airootfs/usr/lib/prebootloader/PreLoader.efi ${work_dir}/efiboot/EFI/boot/bootx64.efi
 ### deprecated ##    cp ${work_dir}/x86_64/airootfs/usr/lib/prebootloader/HashTool.efi ${work_dir}/efiboot/EFI/boot/
-####    cp ${work_dir}/x86_64/airootfs/usr/lib/efitools/PreLoader.efi ${work_dir}/efiboot/EFI/boot/bootx64.efi
-####    cp ${work_dir}/x86_64/airootfs/usr/lib/efitools/HashTool.efi ${work_dir}/efiboot/EFI/boot/
+    cp ${work_dir}/x86_64/airootfs/usr/share/efitools/efi/PreLoader.efi ${work_dir}/efiboot/EFI/boot/bootx64.efi
+    cp ${work_dir}/x86_64/airootfs/usr/share/efitools/efi/HashTool.efi ${work_dir}/efiboot/EFI/boot/
 
 
     cp ${work_dir}/x86_64/airootfs/usr/lib/systemd/boot/efi/systemd-bootx64.efi ${work_dir}/efiboot/EFI/boot/loader.efi

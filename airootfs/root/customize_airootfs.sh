@@ -81,7 +81,7 @@ wpa_passphrase essid password > /etc/wpa_supplicant/wpatest.conf
 ln -sf /usr/bin/qterminal /usr/bin/xterm
 
 # Fix "A stop job is running for ..." 
-ln -sf /dev/null /etc/sysctl.d/50-coredump.conf
+##ln -sf /dev/null /etc/sysctl.d/50-coredump.conf
 
 
 # Copy files over to home
@@ -99,7 +99,8 @@ sed -i 's/#\(HandleLidSwitch=\)suspend/\1ignore/' /etc/systemd/logind.conf
 # Enable services at startup
 systemctl enable pacman-init.service choose-mirror.service
 systemctl enable rtirq.service 
-systemctl enable optimize-rt-system.service
+## not woking anymore: optimize-rt-system.service: Service has more than one ExecStart= settings, ...
+####systemctl enable optimize-rt-system.service
 ##systemctl enable cups
 systemctl enable avahi-daemon.service
 systemctl set-default multi-user.target

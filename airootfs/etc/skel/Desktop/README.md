@@ -7,14 +7,14 @@ Work in progress.
 						
 Version: no need for version controlling, its just a backup.  	
 									
-Date:		2016-05-14						
+Date:		2016-05-16						
 
 License:	Good question. GPL, LGPL, BSD, MIT so far.
 		I will take look into license issues as soon as possible.
 
-Output size for this current config: 1,48 GB 
+Output size for this current config: 1,46 GB 
 
-Comment:	no EFI, no VM, just BIOS  
+Comment:	EFI should be fixed.  
 
 
 Source:  
@@ -30,7 +30,7 @@ What is it?
 -------------------------------------------------------------------------
 This script creates an 64 bit Arch Linux live system ISO file for audio production purpose, 
 that you can burn on cd/dvd, copy to an usb storage or host in a virtual machine. 
-Only tested on machines with BIOS, but UEFI (efibootmanager??) and vm should also work. 
+Only tested on machines with BIOS, but UEFI should also work. 
 You can create any system configuration you want, but this ISO should be optimized to act 
 as an effect unit for bass guitars in future. This configuration contains a linux realtime kernel, 
 Guitarix (with webui & specmatch), Calf, Carla, Cadence, jalv-select, LV2/LADSPA/etc. plugins, 
@@ -82,7 +82,7 @@ Configure the script and make sure your local copy of sudoers is owned by root
     % sudo chown root:root [..]/airootfs/etc/sudoers  
 
 Of course you can and also should use your system sudoers, this file is a backup.  
-    % sudo cp /etc/sudoers /path/to/BazzArch  
+    % sudo cp /etc/sudoers /path/to/BazzArch/airootfs/etc/  
 
      % sudo ./build-rt.sh -v
 (ignore linux and you can press enter to all other questions)
@@ -110,6 +110,12 @@ and dd it to the top (/dev/sdX and not /dev/sdX1)
 Known issues:  
 ------------------------------------------  
 * (fix?) A stop job is running ... -> https://bbs.archlinux.org/viewtopic.php?pid=1618677#p1618677
+
+* Optimized-rt-system.servive has more than one ExecStart= settings, ...   
+
+* Configuration texmf.cnf not found  
+
+* Any thing overflows the HDD (???cow_size, Optimize-rt, StopJobfix, etc.???)  
 
 * ad-blocker does not work right - install it via firefox  
 
@@ -148,7 +154,7 @@ Exec=/usr/bin/pd
 
 ToDo:  
 --------------------------------------------------------  
-* enlarge cow-space  
+* add cups   
 * add a network manager  
 * Create a splash screen  
 * Create some presets   
@@ -379,6 +385,24 @@ delete metadata:
      % exiftool -all=filename  
  
 
+
+# Samba/Windows Sharing  
+The smbclient provides an easy access to download or upload a file from Samba or Windows easily, or use printer over the network.  
+
+It is integrated into PCManFM:  
+Press Ctrl+l and enter smb://servername/share in the location bar to access your share.  
+
+The mounted share is likely to be present at /run/user/your_UID/gvfs or ~/.gvfs in the filesystem.  
+ 
+
+
+# Screen Recorder  
+
+SimpleScreenRecorder can handle Jack for audio.  
+
+
+----------------------------------------------------------------  
+
 ## Convert a png to the properties that supported by syslinux (optional)   
      % convert -resize 640x480 -depth 16 -colors 65536 mynew.png splash.png
 
@@ -592,6 +616,9 @@ repo-add Options
 warning: kpathsea: configuration file texmf.cnf not found in these directories: /usr/bin:/usr/bin/share/texmf-local/web2c:/usr/bin/share/texmf-dist/web2c:/usr/bin/share/texmf/web2c:/usr/bin/texmf-local/web2c:/usr/bin/texmf-dist/web2c:/usr/bin/texmf/web2c:/usr:/usr/share/texmf-local/web2c:/usr/share/texmf-dist/web2c:/usr/share/texmf/web2c:/usr/texmf-local/web2c:/usr/texmf-dist/web2c:/usr/texmf/web2c://texmf-local/web2c:/://share/texmf-local/web2c://share/texmf-dist/web2c://share/texmf/web2c://texmf-local/web2c://texmf-dist/web2c://texmf/web2c.
 Optional dependencies for texlive-bin  
     ed: for texconfig  
+
+
+java7-headless provide no HOME, java-common does  
 
 
 

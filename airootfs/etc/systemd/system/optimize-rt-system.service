@@ -5,13 +5,13 @@ Description=Real Time Configuration
 
 [Service]
 # Fix highest CPU frequency
-ExecStart=/usr/bin/cpupower frequency-set -g performance
+###ExecStart=/usr/bin/cpupower frequency-set -g performance
 # Disable screen blanking
-ExecStart=/usr/bin/xset -dpms; xset s off
+###ExecStart=/usr/bin/xset -dpms; xset s off
 # Reset Graphiccard Bandwith
-ExecStart=/usr/bin/setpci -v -s "*:*.*" latency_timer=b0 
+###ExecStart=/usr/bin/setpci -v -s "*:*.*" latency_timer=b0 
 
 
 [Install]
-WantedBy=multi-user.target 
+###WantedBy=multi-user.target 
 

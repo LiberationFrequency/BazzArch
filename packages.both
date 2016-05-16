@@ -87,6 +87,8 @@ base-devel
 ## A tool that stress tests your system (CPU, memory, I/O, disks)
 #stress
 #xterm (!!! Attention: xterm is linked against qterminal !!!)
+## Diff utility which works with binary files (needed for repo-add diff)
+#xdelta3
 #
 xorg-server 
 xorg-xinit 
@@ -160,6 +162,8 @@ gvfs-gphoto2
 gvfs-mtp 
 gvfs-nfs
 gvfs-smb
+## Tools to access a server's filespace and printers via SMB
+smbclient
 
 ## Wireless LAN network manager for LXQT
 #connman
@@ -192,7 +196,7 @@ l3afpad
 ttf-dejavu
 
 ## Library for high quality hyphenation and justification
-#hyphen
+hyphen
 hyphen-de
 #hyphen-en
 #hyphen-fr
@@ -460,9 +464,9 @@ perl-image-exiftool
 
 
 ## Use your webcam to take photos and videos, apply fancy special effects and share the fun with others
-cheese
-## A feature-rich screen recorder written in C++/Qt4 that supports X11 and OpenGL.
-#simplescreenrecorder
+#cheese
+## A feature-rich screen recorder written in C++/Qt4 that supports X11 and OpenGL with Jack support.
+simplescreenrecorder
 ## An easy to use utility that records your desktop into the ogg format with a CLI, Qt or GTK+ interface.
 #qt-recordmydesktop
 #recordmydesktop
