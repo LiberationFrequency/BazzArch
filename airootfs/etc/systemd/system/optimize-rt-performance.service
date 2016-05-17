@@ -1,0 +1,9 @@
+[Unit]
+Description=Real Time Configuration
+
+[Service]
+# Fix highest CPU frequency
+ExecStart=/usr/bin/cpupower frequency-set -g performance
+
+[Install]
+WantedBy=multi-user.target 

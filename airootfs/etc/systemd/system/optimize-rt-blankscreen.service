@@ -1,0 +1,9 @@
+[Unit]
+Description=Real Time Configuration
+
+[Service]
+# Disable screen blanking
+ExecStart=/usr/bin/xset -dpms; xset s off
+
+[Install]
+WantedBy=multi-user.target 

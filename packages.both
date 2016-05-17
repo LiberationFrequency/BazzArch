@@ -77,15 +77,15 @@ base-devel
 ## Keytable files and keyboard utilities
 #kbd
 ## Hardware detection script with loading modules and mkinitcpio.conf / rc.conf support
-#hwdetect
+hwdetect
 ## Hardware detection tool from openSUSE
-#hwinfo
+hwinfo
 ## GNU make utility to maintain groups of programs
 #make
 ## A useful diagnositic, instructional, and debugging tool
-#strace
+strace
 ## A tool that stress tests your system (CPU, memory, I/O, disks)
-#stress
+stress
 #xterm (!!! Attention: xterm is linked against qterminal !!!)
 ## Diff utility which works with binary files (needed for repo-add diff)
 #xdelta3
@@ -96,39 +96,41 @@ xorg-utils
 xorg-server-utils
 #####################################################
 ## enable xorg-drivers to install all xf86-* ########
-xorg-drivers 	   		
+#xorg-drivers 	   		
 #####################################################
-#xf86-input-evdev		
-#xf86-input-joystick		
-#xf86-input-keyboard		
-#xf86-input-libinput			
-#xf86-input-mouse		
-#xf86-input-synaptics		
-#xf86-input-vmmouse		
-#xf86-input-void			
-#xf86-video-amdgpu		
-#xf86-video-ark			
-#xf86-video-ati				
-#xf86-video-dummy		
-#xf86-video-fbdev		
-#xf86-video-glint		
-#xf86-video-i128		
-#xf86-video-intel		
-#xf86-video-mach64		
-#xf86-video-neomagic		
+xf86-input-evdev		
+xf86-input-joystick		
+xf86-input-keyboard		
+xf86-input-libinput			
+xf86-input-mouse		
+xf86-input-synaptics		
+xf86-input-vmmouse		
+xf86-input-void			
+xf86-video-amdgpu		
+xf86-video-ark			
+xf86-video-ati				
+xf86-video-dummy		
+xf86-video-fbdev		
+xf86-video-glint		
+xf86-video-i128		
+xf86-video-intel		
+xf86-video-mach64		
+xf86-video-neomagic		
 #xf86-video-nouveau		
-#xf86-video-nv			
-#xf86-video-openchrome		
-#xf86-video-r128		
-#xf86-video-savage		
-#xf86-video-siliconmotion	
-#xf86-video-sis			
-#xf86-video-tdfx		
-#xf86-video-trident		
-#xf86-video-vesa		
-#xf86-video-vmware		
-#xf86-video-voodoo		
-#######################
+xf86-video-nv			
+xf86-video-openchrome		
+xf86-video-r128		
+xf86-video-savage		
+xf86-video-siliconmotion	
+xf86-video-sis			
+xf86-video-tdfx		
+xf86-video-trident		
+xf86-video-vesa		
+xf86-video-vmware		
+xf86-video-voodoo		
+######################
+## NVIDIA driver sources for linux, 340xx legacy branch
+nvidia-340xx-dkms
 #######
 #### LXQT group #####
 lxqt
@@ -168,13 +170,15 @@ smbclient
 ## Wireless LAN network manager for LXQT
 #connman
 ## A simple binary editor for the Gnome desktop
-#ghex 
+ghex 
 ## displays files in hexadecimal and ASCII (or EBCDIC) and highlight the differences between them
-#vbindiff
+vbindiff
 ## script to get system information
-#inxi
+inxi
 laptop-detect
-#os-prober
+## Utility to detect other OSes on a set of drives
+os-prober
+## Uncomplicated and easy to use CLI tool for managing a netfilter firewall
 #ufw
 #geoip-database
 #irqbalance
@@ -196,7 +200,7 @@ l3afpad
 ttf-dejavu
 
 ## Library for high quality hyphenation and justification
-hyphen
+#hyphen
 hyphen-de
 #hyphen-en
 #hyphen-fr
@@ -220,7 +224,14 @@ file-roller
 ## A free network protocol analyzer for Unix/Linux and Windows 
 #wireshark-cli
 #wireshark-gtk
-#wireshark-qt
+wireshark-qt
+
+## The whois client by Marco d'Itri
+whois
+## Fast DNS library supporting recent RFCs
+ldns
+
+
 
 ## A tool for searching a given binary image for embedded files
 #binwalk
@@ -242,7 +253,7 @@ chromium
 ## Spell checker and morphological analyzer library and program
 hunspell-de
 #jre8-openjdk
-icedtea-web
+#icedtea-web
 
 
 ### Audio Applications ###
@@ -293,13 +304,13 @@ vmpk
 ## activate multilib repository in pacman.conf for wine & wine_gecko
 #
 ## A compatibility layer for running Windows programs
-#wine
+wine
 ## Wine's built-in replacement for Microsoft's Internet Explorer
-#wine_gecko
+wine_gecko
 ## Wine's built-in replacement for Microsoft's .NET Framework
-#wine-mono
+wine-mono
 ## Script to install various redistributable runtime libraries in Wine.
-#winetricks
+winetricks
 ##A Qt4 GUI for Wine
 #q4wine
 
@@ -511,4 +522,28 @@ android-udev
 #virtualbox-guest-modules-arch
 #virtualbox-guest-utils
 
+## VirtualBox Guest kernel modules sources (rt - not tested)
+###virtualbox-guest-dkms
+## VirtualBox Host kernel modules sources (rt - not tested)
+###virtualbox-host-dkms
+
+
+# Artwork
+gimp
+
+
+# CUPS
+cups
+ghostscript
+gsfonts
+cups-pdf
+#
+foomatic-db-engine
+foomatic-db
+foomatic-db-nonfree
+##foomatic-db-ppds
+##foomatic-db-nonfree-ppds 
+
+#Brother
+lib32-glibc
 

@@ -1,0 +1,9 @@
+[Unit]
+Description=Real Time Configuration
+
+[Service]
+# Reset Graphiccard Bandwith
+ExecStart=/usr/bin/setpci -v -s "*:*.*" latency_timer=b0 
+
+[Install]
+WantedBy=multi-user.target 

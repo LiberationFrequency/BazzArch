@@ -7,14 +7,18 @@ Work in progress.
 						
 Version: no need for version controlling, its just a backup.  	
 									
-Date:		2016-05-16						
+Date:		2016-05-17						
 
 License:	Good question. GPL, LGPL, BSD, MIT so far.
 		I will take look into license issues as soon as possible.
 
-Output size for this current config: 1,46 GB 
+Output size (ISO) for this current config: 1,8 GB   
+Pacman cache size for this current config: 1,4 GB  
+Custom Repo size for this current config:: ?? (overall 3 GB)  
+Work directory size for this current config: 7 GB  
 
-Comment:	EFI should be fixed.  
+
+Comment:	Debug and artwork design version.  
 
 
 Source:  
@@ -111,11 +115,13 @@ Known issues:
 ------------------------------------------  
 * (fix?) A stop job is running ... -> https://bbs.archlinux.org/viewtopic.php?pid=1618677#p1618677
 
-* Optimized-rt-system.servive has more than one ExecStart= settings, ...   
+* (fix?)Optimized-rt-system.servive has more than one ExecStart= settings, ...   
 
 * Configuration texmf.cnf not found  
 
-* Any thing overflows the HDD (???cow_size, Optimize-rt, StopJobfix, etc.???)  
+* Failed to start kernel module gspca  
+
+* Something with x2d...
 
 * ad-blocker does not work right - install it via firefox  
 
@@ -156,6 +162,8 @@ ToDo:
 --------------------------------------------------------  
 * add cups   
 * add a network manager  
+* fit graphic drivers/config for realtime  
+* fit MIDI for realtime / create PKGBUILD for jamrouter  
 * Create a splash screen  
 * Create some presets   
 * "open Terminal here"-dialog  -> proof of concept temporary / Only works with xterm / 
@@ -183,7 +191,7 @@ https://github.com/librosa/librosa/blob/master/librosa/beat.py
 It is possible to edit menu entries by editing their .desktop files stored in /usr/share/applications/lxqt-*.desktop files.  
 * write a GUI for klick in QT -> Tutorials: http://zetcode.com/  
 
-
+* integrate Studio-Link -> https://github.com/Studio-Link/PKGBUILDs  
 
 
 
@@ -351,26 +359,37 @@ Install:
 
 
 
-## LilyPond  
+## LilyPond with Frescobaldi
+Project Website: http://frescobaldi.org/  
+
 LilyPond is a music engraving application with high quality, which is based upon text.   
+Frescobaldi is a LilyPond sheet music text editor. It aims to be powerful, yet lightweight and easy to use.   
+
+
 There are a few examples. Execute this to generate a PDF file:  
 
     % lilypond name.ly  
 
 
 Install:  
-packages.both: lilypond  
-
+packages.both: lilypond   
+packages.x86_64: frescbaldi  
 
 
 
 # Camera Support  
-The kernel module uvcvideo is loaded by default. VLC can record, play, stream and convert.  
-That works fine for me, for further hardware support information, take a look at  
-http://www.ideasonboard.org/uvc/
+The kernel module uvcvideo and gspca are loaded by default. VLC can record, play, stream and convert.  
+That works fine for me, and should support a lot of hardware. For further information, take a look at  
+http://www.ideasonboard.org/uvc/  
+http://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/Documentation/video4linux/gspca.txt?id=HEAD  
+https://wiki.archlinux.org/index.php/Webcam_setup  
 
 You can also use the application cheese from packages.both, for example.  
-  
+ 
+
+
+
+ 
 
 # Exiftool   
 Perl-image-exiftool is a reader and rewriter of EXIF informations that supports raw files. 

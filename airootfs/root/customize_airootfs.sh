@@ -99,10 +99,14 @@ sed -i 's/#\(HandleLidSwitch=\)suspend/\1ignore/' /etc/systemd/logind.conf
 # Enable services at startup
 systemctl enable pacman-init.service choose-mirror.service
 systemctl enable rtirq.service 
-## not woking anymore: optimize-rt-system.service: Service has more than one ExecStart= settings, ...
-####systemctl enable optimize-rt-system.service
-##systemctl enable cups
+systemctl enable optimize-rt-performance.service
+systemctl enable optimize-rt-blankscreen.service
+systemctl enable optimize-rt-resetgraphic.service
 systemctl enable avahi-daemon.service
+##systemctl enable cups
+systemctl enable org.cups.cupsd.service
+systemctl enable cups-browsed.service
+
 systemctl set-default multi-user.target
 
 # Disable modules
