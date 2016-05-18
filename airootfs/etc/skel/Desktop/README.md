@@ -7,19 +7,27 @@ Work in progress.
 						
 Version: no need for version controlling, its just a backup.  	
 									
-Date:		2016-05-17						
+Date:		2016-05-18						
 
 License:	Good question. GPL, LGPL, BSD, MIT so far.
 		I will take look into license issues as soon as possible.
 
 Output size (ISO) for this current config: 1,8 GB   
-Pacman cache size for this current config: 1,4 GB  
-Custom Repo size for this current config:: ?? (overall 3 GB)  
-Work directory size for this current config: 7 GB  
+Pacman cache size for this current config: ??? (approx 1,7 GB)  
+Custom Repo size for this current config:: ??? (overall 3 GB)  
+Work directory size for this current config: 7,3 GB  
 
 
-Comment:	Debug and artwork design version.  
+Comment:  
+Debug and artwork design version. Nvidia legacy test. Nvidia will not start GUI. 
+Try STRG + ALT + F2 and delete  
 
+    % sudo rm /etc/X11/xorg.conf.d/20-nvidia.conf  
+
+    % sudo rm /etc/X11/xorg.conf  
+
+Back to Terminal 1 should start GUI within a short time.    
+ 
 
 Source:  
 GitHub: https://github.com/LiberationFrequency/BazzArch.git  
@@ -115,11 +123,32 @@ Known issues:
 ------------------------------------------  
 * (fix?) A stop job is running ... -> https://bbs.archlinux.org/viewtopic.php?pid=1618677#p1618677
 
-* (fix?)Optimized-rt-system.servive has more than one ExecStart= settings, ...   
+* Mount intern HDD no longer possible -> Not authorized to perform operation  
+
+* Start GUI: xf86 Enable IO Ports: failed to set IOPL for I/O (Operation not permitted) ->  
+modprobe FATAL: Module nvidia not found in directory /lib/modules/4.4.9-rt17-1-rt  
+ 
+* inxi -G -> Resuming in non X mode: glxinfo not found.  
+
+* >> block.1: block modules  
+----- exec: "/sbin/modprobe ide-cd_mod " -----  
+  modprobe: FATAL: Module ide-cd_mod not found in directory /lib/modules/4.4.9-rt17-1-rt  
+----- return code: ? -----  
+----- exec: "/sbin/modprobe ide-disk " -----  
+  modprobe: FATAL: Module ide-disk not found in directory /lib/modules/4.4.9-rt17-1-rt  
+----- return code: ? -----  
+----- exec: "/sbin/modprobe st " -----  
+----- return code: ? -----  
+
+
+* You have to downgrade Xorg for older Nvidia cards.  
+Unsupported drivers  
+"If you have a GeForce 5 FX series card or older, Nvidia no longer supports drivers for your card. 
+This means that these drivers do not support the current Xorg version. It thus might be easier if you use 
+the nouveau driver, which supports the old cards with the current Xorg."     
+https://wiki.archlinux.org/index.php/NVIDIA#Unsupported_drivers  
 
 * Configuration texmf.cnf not found  
-
-* Failed to start kernel module gspca  
 
 * Something with x2d...
 
@@ -160,10 +189,11 @@ Exec=/usr/bin/pd
 
 ToDo:  
 --------------------------------------------------------  
-* add cups   
+* try scanner over network -> brsaneconfig4 -a name="Brother" model="MFC-7360n" ip=YOUR.SCANNER.IP.HERE     
 * add a network manager  
 * fit graphic drivers/config for realtime  
 * fit MIDI for realtime / create PKGBUILD for jamrouter  
+* add lm-sensors  
 * Create a splash screen  
 * Create some presets   
 * "open Terminal here"-dialog  -> proof of concept temporary / Only works with xterm / 
@@ -191,7 +221,7 @@ https://github.com/librosa/librosa/blob/master/librosa/beat.py
 It is possible to edit menu entries by editing their .desktop files stored in /usr/share/applications/lxqt-*.desktop files.  
 * write a GUI for klick in QT -> Tutorials: http://zetcode.com/  
 
-* integrate Studio-Link -> https://github.com/Studio-Link/PKGBUILDs  
+* try Studio-Link LV2 Plugin with carla,jalv,guitarix -> see also https://github.com/Studio-Link/PKGBUILDs  
 
 
 
@@ -378,11 +408,14 @@ packages.x86_64: frescbaldi
 
 
 # Camera Support  
-The kernel module uvcvideo and gspca are loaded by default. VLC can record, play, stream and convert.  
+The kernel uvcvideo and a few gspca modules are loaded by default. VLC can record, play, stream and convert.  
 That works fine for me, and should support a lot of hardware. For further information, take a look at  
 http://www.ideasonboard.org/uvc/  
 http://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/tree/Documentation/video4linux/gspca.txt?id=HEAD  
 https://wiki.archlinux.org/index.php/Webcam_setup  
+
+For seeing, which modules are available, take a look at /lib/modules/4.4.9-rt17-1-rt/kernel/drivers/media/usb  
+
 
 You can also use the application cheese from packages.both, for example.  
  

@@ -47,7 +47,7 @@ obconf-qt
 #
 ####Realtime####
 linux-rt
-#linux-rt-headers
+linux-rt-headers
 #linux-rt-docs
 #linux-rt-lts
 #linux-rt-lts-headers
@@ -55,8 +55,9 @@ linux-rt
 rtirq
 #nvidia-rt - ??? try again 358.16  
 rts-git
-#rt-tests
-#rtapp
+rt-tests
+## Realtime application thread priority tuning
+rtapp
 #
 ## 
 #downgrade
@@ -160,7 +161,7 @@ simplesysexxer
 
 #openav-luppp-git
 #openav-fabla-git
-#openav-fabla2-git
+openav-fabla2-git
 #openav-artyfx-git
 #openav-sorcer-git
 
@@ -244,7 +245,7 @@ qpdfview
 ## The Brothers-script use C-Shell instead of bash - tcsh available from official Repository
 #tcsh
 brother-mfc7360n
-#brscan4  - not available in customrepo yet
+brscan4
 
 
 

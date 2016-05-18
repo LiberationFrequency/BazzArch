@@ -1,6 +1,6 @@
 ### standard ####
 arch-install-scripts
-#b43-fwcutter
+b43-fwcutter
 btrfs-progs
 #clonezilla
 crda
@@ -22,8 +22,8 @@ gptfdisk
 grml-zsh-config
 grub
 hdparm
-#ipw2100-fw
-#ipw2200-fw
+ipw2100-fw
+ipw2200-fw
 irssi
 lftp
 linux-atm
@@ -31,7 +31,7 @@ mc
 mtools
 nfs-utils
 nilfs-utils
-#nmap
+nmap
 ntfs-3g
 ntp
 openconnect
@@ -43,7 +43,7 @@ partimage
 ppp
 pptpclient
 refind-efi
-#rfkill
+rfkill
 rp-pppoe
 #rsync
 smartmontools
@@ -55,7 +55,7 @@ usb_modeswitch
 vim-minimal
 vpnc
 wget
-#wireless_tools
+wireless_tools
 wpa_actiond
 wvdial
 xl2tpd
@@ -129,8 +129,16 @@ xf86-video-vesa
 xf86-video-vmware		
 xf86-video-voodoo		
 ######################
+## NVIDIA driver sources for linux
+#nvidia-dkms
 ## NVIDIA driver sources for linux, 340xx legacy branch
 nvidia-340xx-dkms
+## Fix for nvidia-xconfig -> Package xorg-server was not found in the pkg-config search path
+xorg-server-devel
+## An open-source implementation of the OpenGL specification
+# mesa
+## Mesa demos and tools (include glxinfo, etc.)
+#mesa-demos
 #######
 #### LXQT group #####
 lxqt
@@ -175,6 +183,7 @@ ghex
 vbindiff
 ## script to get system information
 inxi
+## 
 laptop-detect
 ## Utility to detect other OSes on a set of drives
 os-prober
@@ -323,11 +332,11 @@ winetricks
 #audio-convert
 #chuck
 ## An old-school drum-kit sampler
-#drumkv1
+drumkv1
 ## An old-school polyphonic sampler synthesizer with stereo fx
-#samplv1
+samplv1
 ## An old-school all-digital 4-oscillator subtractive polyphonic synthesizer with stereo fx
-#synthv1
+synthv1
 ##Audio normalizer, converter, encoder/decoder, ripper, tagger and player
 #gnormalize
 ## An advanced drum machine
@@ -357,7 +366,7 @@ rakarrack
 ## A native YouTube client in Qt. Watch YouTube videos without Flash Player
 #minitube
 ## Free, open source software for digital DJ'ing.
-#mixxx
+mixxx
 ## Audio/MIDI multitrack sequencer
 #qtractor
 ## Qt GUI for FluidSynth
@@ -367,9 +376,9 @@ rakarrack
 ## A cd ripper application
 #sound-juicer
 ## A MIDI to WAVE converter and player
-#timidity++
+timidity++
 ## A free and open set of instrument patches for use with softsynths
-#timidity-freepats
+timidity-freepats
 ## Multitrack guitar tablature editor and player
 #tuxguitar
 
@@ -412,7 +421,7 @@ swh-plugins
 ## Lightweight, advanced audio player focused on audio quality. Winamp clone like Beep and old XMMS versions.
 #audacious
 #audacious-plugins
-## iTunes clone, built with GTK+ and Mono. Music management and playback for GNOME
+## An iTunes clone, built with GTK+ and Mono. Music management and playback for GNOME
 #banshee
 ## A modern music player and library organizer. Amarok 1.4 clone, ported to Qt 4.
 #clementine
@@ -539,11 +548,16 @@ gsfonts
 cups-pdf
 #
 foomatic-db-engine
-foomatic-db
-foomatic-db-nonfree
-##foomatic-db-ppds
-##foomatic-db-nonfree-ppds 
+#foomatic-db
+#foomatic-db-nonfree
+foomatic-db-ppds
+foomatic-db-nonfree-ppds 
 
-#Brother
+####Brother
+## GNU C Library (32-bit)
 lib32-glibc
+## A GTK-based X11 frontend for SANE and plugin for Gimp.
+xsane
+## XSane Gimp plugin
+xsane-gimp
 
