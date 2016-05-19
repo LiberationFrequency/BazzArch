@@ -7,27 +7,15 @@ Work in progress.
 						
 Version: no need for version controlling, its just a backup.  	
 									
-Date:		2016-05-18						
+Date:		2016-05-19						
 
 License:	Good question. GPL, LGPL, BSD, MIT so far.
 		I will take look into license issues as soon as possible.
 
 Output size (ISO) for this current config: 1,8 GB   
-Pacman cache size for this current config: ??? (approx 1,7 GB)  
-Custom Repo size for this current config:: ??? (overall 3 GB)  
-Work directory size for this current config: 7,3 GB  
-
-
-Comment:  
-Debug and artwork design version. Nvidia legacy test. Nvidia will not start GUI. 
-Try STRG + ALT + F2 and delete  
-
-    % sudo rm /etc/X11/xorg.conf.d/20-nvidia.conf  
-
-    % sudo rm /etc/X11/xorg.conf  
-
-Back to Terminal 1 should start GUI within a short time.    
- 
+Needed pacman cache size for this current config: approx 2 GB    
+Needed customrepo size for this current config:: ??? (overall 3 GB)  
+Nedded work directory size for this current config: approx 8 GB  
 
 Source:  
 GitHub: https://github.com/LiberationFrequency/BazzArch.git  
@@ -35,6 +23,35 @@ Zip: 	https://github.com/LiberationFrequency/BazzArch/archive/master.zip
 
 Mirror (maybe not up to date):		
 Google: https://drive.google.com/open?id=0B2BaBYQTShFzVWNOVkdwUUJyUWc  
+
+
+
+Comment:  
+Debug and artwork design version. nvidia-340xx-rt legacy test.  
+ 
+I deleted the cups config. To configure cups you need a root password. But this live session 
+has no root user, so you have to change the security config temporary.  
+Edit /etc/cups/cupsd.conf: (done)  
+DefaultAuthType None  
+And all comment all lines with @System.  
+
+   
+
+nvidia: module license 'NVIDIA' taints kernel.  
+Disabling lock debugging due to kernel taint  
+NVRM: The NVIDIA probe routine was not called for 1 device(s).  
+NVRM: This can occur when a driver such as:   
+NVRM: nouveau, rivafb, nvidiafb or rivatv   
+NVRM: was loaded and obtained ownership of the NVIDIA device(s).  
+NVRM: Try unloading the conflicting kernel module (and/or  
+NVRM: reconfigure your kernel without the conflicting  
+NVRM: driver(s)), then try loading the NVIDIA kernel module  
+NVRM: again.  
+NVRM: No NVIDIA graphics adapter probed!  
+[drm] Module unloaded  
+NVRM: NVIDIA init module failed!  
+
+
 
 *************************************************************************
 
@@ -123,7 +140,11 @@ Known issues:
 ------------------------------------------  
 * (fix?) A stop job is running ... -> https://bbs.archlinux.org/viewtopic.php?pid=1618677#p1618677
 
-* Mount intern HDD no longer possible -> Not authorized to perform operation  
+* acpi PNP0A08:00: _OSC: OS supports [ExtendedConfig ASPM ClockPM Segments MSI]  
+acpi PNP0A08:00: _OSC failed (AE_NOT_FOUND); disabling ASPM   
+
+* optimize-rt-blankscreen.service: Unit entered failed state.  
+optimize-rt-blankscreen.service: Failed with result 'exit-code'.  
 
 * Start GUI: xf86 Enable IO Ports: failed to set IOPL for I/O (Operation not permitted) ->  
 modprobe FATAL: Module nvidia not found in directory /lib/modules/4.4.9-rt17-1-rt  
@@ -189,6 +210,7 @@ Exec=/usr/bin/pd
 
 ToDo:  
 --------------------------------------------------------  
+* add Time Sync - ntpd  
 * try scanner over network -> brsaneconfig4 -a name="Brother" model="MFC-7360n" ip=YOUR.SCANNER.IP.HERE     
 * add a network manager  
 * fit graphic drivers/config for realtime  

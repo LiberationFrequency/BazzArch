@@ -16,9 +16,11 @@ jalv-select-git-0.7.r63.b5a5734-1-x86_64.pkg.tar.xz
 klick-0.12.2-3-x86_64.pkg.tar.xz  
 ladish-git-1.r47.g5fe205f-1-x86_64.pkg.tar.xz  
 laditools-git-1.0.r9.g498fc36-7-any.pkg.tar.xz  
+libpng12-1.2.56-3-x86_64.pkg.tar.xz
 linux-rt-4.4.9_rt17-1-x86_64.pkg.tar.xz  
 linuxsampler-svn-r2890-1-x86_64.pkg.tar.xz  
 lsp-plugins-lv2-bin-1.0.7-1-x86_64.pkg.tar.xz  
+nvidia-340xx-rt-340.96-2-x86_64.pkg.tar.xz
 python2-pyo-0.8.0-1-x86_64.pkg.tar.xz  
 qastools-qt5-0.19-2-x86_64.pkg.tar.xz  
 qpdfview-0.4.16-3-x86_64.pkg.tar.xz  
@@ -28,7 +30,7 @@ rkr-lv2-git-beta_1.r10.ge0a080b-1-x86_64.pkg.tar.xz
 rtirq-20150216-1-any.pkg.tar.xz  
 scikits-base-1-2-any.pkg.tar.xz  
  
-
+zynaddsubfx-git-2.5.4.r21.gce9f78d-1-x86_64.pkg.tar.xz
 
 
 

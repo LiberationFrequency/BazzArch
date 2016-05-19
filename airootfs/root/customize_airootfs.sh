@@ -46,7 +46,7 @@ echo "BazzArch" > /etc/hostname
 # Create live session user and add him to groups
 ##### uucp <- HDD overflow ??? part of mtpfs ??? or gvfs-mtp
 if [ ! -d /home/live-user ]; then
-    useradd -m -p "" -g users -G "adm,audio,floppy,log,lp,network,optical,power,rfkill,scanner,storage,sys,users,video,wheel" -s /usr/bin/zsh live-user 
+    useradd -m -p "" -g users -G "adm,audio,floppy,log,lp,network,optical,power,rfkill,scanner,storage,sys,users,uucp,video,wheel" -s /usr/bin/zsh live-user 
 fi
 
 # Assign a password 
@@ -103,7 +103,6 @@ systemctl enable optimize-rt-performance.service
 systemctl enable optimize-rt-blankscreen.service
 systemctl enable optimize-rt-resetgraphic.service
 systemctl enable avahi-daemon.service
-##systemctl enable cups
 systemctl enable org.cups.cupsd.service
 systemctl enable cups-browsed.service
 
@@ -113,6 +112,12 @@ systemctl set-default multi-user.target
 #echo "blacklist b43" >> /etc/modprobe.d/blacklist.conf
 echo "blacklist b43legacy" >> /etc/modprobe.d/blacklist.conf
 echo "blacklist pcspkr" >> /etc/modprobe.d/blacklist.conf
+
+
+
+
+
+##Deprecated####
 ### Brother MFC-7360N ### 
 ## Zur Erklärung: Wenn man Module mittels der Blacklist am Starten hindert, aber ein anderes 
 ## Modul dieses Modul als Abhängigkeit aufruft, wird das geblacklistete Modul trotzdem geladen. 

@@ -2,7 +2,7 @@
 arch-install-scripts
 b43-fwcutter
 btrfs-progs
-#clonezilla
+clonezilla
 crda
 #darkhttpd
 ddrescue
@@ -45,7 +45,7 @@ pptpclient
 refind-efi
 rfkill
 rp-pppoe
-#rsync
+rsync
 smartmontools
 speedtouch
 sudo
@@ -132,13 +132,13 @@ xf86-video-voodoo
 ## NVIDIA driver sources for linux
 #nvidia-dkms
 ## NVIDIA driver sources for linux, 340xx legacy branch
-nvidia-340xx-dkms
+#nvidia-340xx-dkms
 ## Fix for nvidia-xconfig -> Package xorg-server was not found in the pkg-config search path
 xorg-server-devel
 ## An open-source implementation of the OpenGL specification
-# mesa
+mesa
 ## Mesa demos and tools (include glxinfo, etc.)
-#mesa-demos
+mesa-demos
 #######
 #### LXQT group #####
 lxqt
@@ -168,7 +168,7 @@ gvfs
 gvfs-afc 
 #gvfs-goa
 #gvfs-google
-gvfs-gphoto2
+#gvfs-gphoto2
 gvfs-mtp 
 gvfs-nfs
 gvfs-smb
@@ -447,8 +447,8 @@ vlc
 #gstreamer0.10-base-plugins
 #gstreamer0.10-good
 #gstreamer0.10-good-plugins
-#gstreamer0.10-ugly
-#gstreamer0.10-ugly-plugins
+gstreamer0.10-ugly
+gstreamer0.10-ugly-plugins
 #gstreamer0.10-ffmpeg
 #gstreamer0.10-python
 #gstreamer0.10-mm
@@ -470,7 +470,7 @@ perl-image-exiftool
 # calibre
 
 ## A disc burning application for Gnome
-#brasero
+brasero
 ######gstreamer plugin for brasero and mp3
 
 ### Toolbox ###
@@ -548,10 +548,10 @@ gsfonts
 cups-pdf
 #
 foomatic-db-engine
-#foomatic-db
-#foomatic-db-nonfree
-foomatic-db-ppds
-foomatic-db-nonfree-ppds 
+foomatic-db
+foomatic-db-nonfree
+#foomatic-db-ppds
+#foomatic-db-nonfree-ppds 
 
 ####Brother
 ## GNU C Library (32-bit)

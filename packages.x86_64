@@ -53,7 +53,10 @@ linux-rt-headers
 #linux-rt-lts-headers
 #linux-rt-lts-docs
 rtirq
-#nvidia-rt - ??? try again 358.16  
+## NVIDIA drivers for linux-rt
+#nvidia-rt
+## NVIDIA drivers for linux-rt, 340xx legacy branch
+nvidia-340xx-rt
 rts-git
 rt-tests
 ## Realtime application thread priority tuning
@@ -92,9 +95,10 @@ zam-plugins-git
 
 ####Music Apps####
 #ardour-git
-#bristol
+bristol
 
-## Audio Plugin Host
+
+## Audio Plugin Host - Does not build with GCC v6.1.1
 carla-git
 #carla-bridges-win
 #carla-bridges-win32-git
@@ -156,8 +160,10 @@ non-mixer-git
 
 #setbfree-git
 
-# A GUI tool to create backups of the memory contents of MIDI devices
+## A GUI tool to create backups of the memory contents of MIDI devices
 simplesysexxer
+## SoX Resampler library dsd branch
+#sox-dsd-git - not available in customrepo yet
 
 #openav-luppp-git
 #openav-fabla-git
@@ -191,6 +197,8 @@ synthclone
 #hqplayer
 ## A YouTube music player - AUR Version out of date 2016-05-03
 #musictube 
+## Lightweight headless squeezebox emulator - git checkout
+#squeezelite-git  - not available in customrepo yet
 
 
 #faust-git
@@ -250,5 +258,7 @@ brscan4
 
 
 
+## Reaper Developer Version
+reaper
 
 
