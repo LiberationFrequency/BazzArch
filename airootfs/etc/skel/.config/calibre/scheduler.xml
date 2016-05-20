@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<recipe_collection xmlns="http://calibre-ebook.com/recipe_collection">
+
+	<scheduled_recipe last_downloaded="2016-05-20T08:32:55.393841+00:00" id="custom:1000" title="Linux Audio News"><schedule type="days_of_week">0,1,2,3,4,5,6:6:0</schedule></scheduled_recipe>
+
+	<recipe_customization keep_issues="0" add_title_tag="yes" custom_tags="" id="custom:1000"/>
+
+</recipe_collection>

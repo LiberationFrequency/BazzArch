@@ -44,13 +44,15 @@ echo "BazzArch" > /etc/hostname
 ##chmod 700 /root
 
 # Create live session user and add him to groups
-##### uucp <- HDD overflow ??? part of mtpfs ??? or gvfs-mtp
 if [ ! -d /home/live-user ]; then
-    useradd -m -p "" -g users -G "adm,audio,floppy,log,lp,network,optical,power,rfkill,scanner,storage,sys,users,uucp,video,wheel" -s /usr/bin/zsh live-user 
+    useradd -m -p "" -g users -G "adm,audio,floppy,log,lp,network,optical,power,rfkill,scanner,storage,sys,users,video,wheel" -s /usr/bin/zsh live-user 
 fi
 
 # Assign a password 
 ## passwd live-user
+
+# If the mtpfs/gvfs-mtp is installed
+gpasswd -a live-user uucp
 
 
 # If the ADB is installed
@@ -99,9 +101,12 @@ sed -i 's/#\(HandleLidSwitch=\)suspend/\1ignore/' /etc/systemd/logind.conf
 # Enable services at startup
 systemctl enable pacman-init.service choose-mirror.service
 systemctl enable rtirq.service 
-systemctl enable optimize-rt-performance.service
-systemctl enable optimize-rt-blankscreen.service
-systemctl enable optimize-rt-resetgraphic.service
+## Disabled for the benefit of qjackctl config
+#systemctl enable optimize-rt-performance.service
+## Disbled, because not needed for this configuration
+#systemctl enable optimize-rt-blankscreen.service
+## Disabled by default, activate it, if you have trouble with older graphic cards
+#systemctl enable optimize-rt-resetgraphic.service
 systemctl enable avahi-daemon.service
 systemctl enable org.cups.cupsd.service
 systemctl enable cups-browsed.service
@@ -112,9 +117,11 @@ systemctl set-default multi-user.target
 #echo "blacklist b43" >> /etc/modprobe.d/blacklist.conf
 echo "blacklist b43legacy" >> /etc/modprobe.d/blacklist.conf
 echo "blacklist pcspkr" >> /etc/modprobe.d/blacklist.conf
-
-
-
+## Disable nouveau driver to install NVIDIA drivers #####################
+echo "blacklist nouveau" >> /etc/modprobe.d/blacklist.conf		#	
+echo "options nouveau modeset=0" >> /etc/modprobe.d/blacklist.conf	#
+echo "options nouveau.modeset=0." >> /etc/modprobe.d/blacklist.conf	#
+#########################################################################
 
 
 ##Deprecated####

@@ -53,9 +53,9 @@ linux-rt-headers
 #linux-rt-lts-headers
 #linux-rt-lts-docs
 rtirq
-## NVIDIA drivers for linux-rt
+## NVIDIA proprietary drivers for linux-rt -- ??? license issue if published as binary???
 #nvidia-rt
-## NVIDIA drivers for linux-rt, 340xx legacy branch
+## NVIDIA proprietary drivers for linux-rt, 340xx legacy branch -- ??? license issue if published as binary???
 nvidia-340xx-rt
 rts-git
 rt-tests
@@ -73,7 +73,7 @@ distrho-lv2-git
 ## An LV2 parametric equalizer audio plugin
 eq10q
 ## A collection of open-source LV2 plugins
-infamousplugins-git
+#infamousplugins-git
 ## A set of LV2 audio effect plugins, ported from VST.
 invada-studio-plugins-lv2
 ## Real-time signal convolver especially suited for creating reverb effects
@@ -95,7 +95,7 @@ zam-plugins-git
 
 ####Music Apps####
 #ardour-git
-bristol
+#bristol
 
 
 ## Audio Plugin Host - Does not build with GCC v6.1.1
@@ -167,7 +167,7 @@ simplesysexxer
 
 #openav-luppp-git
 #openav-fabla-git
-openav-fabla2-git
+#openav-fabla2-git
 #openav-artyfx-git
 #openav-sorcer-git
 
@@ -182,11 +182,11 @@ openav-fabla2-git
 ####
 #### binwalk-git ??? license issue if published as binary???
 ## A tool for searching a given binary image for embedded files
-binwalk-git
+#binwalk-git
 #jack2-no-dbus-git
 #jack_capture
 #freqtweak
-synthclone
+#synthclone
 #gmidimonitor-git  - not available in customrepo yet
 
 #sooperlooper - not working - not available in customrepo yet
@@ -258,7 +258,7 @@ brscan4
 
 
 
-## Reaper Developer Version
-reaper
+## Reaper5 Developer Version
+#reaper
 
 

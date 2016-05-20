@@ -1,0 +1,17 @@
+#!/usr/bin/env python2
+# vim:fileencoding=utf-8
+from __future__ import unicode_literals, division, absolute_import, print_function
+from calibre.web.feeds.news import AutomaticNewsRecipe
+
+class BasicUserRecipe1463733041(AutomaticNewsRecipe):
+    title          = 'Linux Audio News'
+    oldest_article = 7
+    max_articles_per_feed = 100
+    auto_cleanup   = True
+
+    feeds          = [
+        ('Planet Linux Audio', 'http://planet.linuxaudio.org/atom.xml'),
+        ('Libre Music Production', 'http://libremusicproduction.com/feeds/articles-tutorials-news-full.xml'),
+        ('Musical Artifacts | Libre resources for music making', 'https://musical-artifacts.com/artifacts.atom'),
+        ('calibre Changelog', 'http://calibre-ebook.com/feeds/changelog'),
+    ]

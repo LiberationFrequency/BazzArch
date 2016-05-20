@@ -7,7 +7,7 @@ Work in progress.
 						
 Version: no need for version controlling, its just a backup.  	
 									
-Date:		2016-05-19						
+Date:		2016-05-20						
 
 License:	Good question. GPL, LGPL, BSD, MIT so far.
 		I will take look into license issues as soon as possible.
@@ -24,32 +24,59 @@ Zip: 	https://github.com/LiberationFrequency/BazzArch/archive/master.zip
 Mirror (maybe not up to date):		
 Google: https://drive.google.com/open?id=0B2BaBYQTShFzVWNOVkdwUUJyUWc  
 
-
+----------------------------------------------------------------------  
 
 Comment:  
 Debug and artwork design version. nvidia-340xx-rt legacy test.  
  
 I deleted the cups config. To configure cups you need a root password. But this live session 
 has no root user, so you have to change the security config temporary.  
-Edit /etc/cups/cupsd.conf: (done)  
+Edit /etc/cups/cupsd.conf: (done, but does not have an effect)  
 DefaultAuthType None  
-And all comment all lines with @System.  
+And comment all lines with @System. After that you have to restart cups with:   
+ 
+    % sudo systemctl restart org.cups.cupsd.service   
+
+Brother driver does not appear, works previously.   
 
    
 
+To use the proprietary nvidia-340xx-rt and prevent nouveau to start, use TAB to add nomodeset (or try modeset=0) to the kernel boot line, 
+other the system will use the nouveau driver.  
+  
 nvidia: module license 'NVIDIA' taints kernel.  
 Disabling lock debugging due to kernel taint  
-NVRM: The NVIDIA probe routine was not called for 1 device(s).  
-NVRM: This can occur when a driver such as:   
-NVRM: nouveau, rivafb, nvidiafb or rivatv   
-NVRM: was loaded and obtained ownership of the NVIDIA device(s).  
-NVRM: Try unloading the conflicting kernel module (and/or  
-NVRM: reconfigure your kernel without the conflicting  
-NVRM: driver(s)), then try loading the NVIDIA kernel module  
-NVRM: again.  
-NVRM: No NVIDIA graphics adapter probed!  
-[drm] Module unloaded  
-NVRM: NVIDIA init module failed!  
+vgaarb: device changed decodes: PCI:0000:01:00.0,olddecodes=io+mem,decodes=none:owns=io+mem  
+[drm] Initialized nvidia-drm 0.0.0 20150116 for 0000:01:00.0 on minor 0  
+NVRM: loading NVIDIA UNIX x86_64 Kernel Module  340.96  Sun Nov  8 22:33:28 PST 2015  
+
+
+
+    % lspci -nnk | grep -i vga -A3     
+    01:00.0 VGA compatible controller [0300]: NVIDIA Corporation GT218M [GeForce G210M] [10de:0a74] (rev a2)  
+        Subsystem: Lenovo Device [17aa:389f]  
+        Kernel driver in use: nvidia  
+        Kernel modules: nouveau, nvidia  
+
+
+    % sudo nvidia-xconfig  
+
+    WARNING: Unable to locate/open X configuration file.  
+
+    New X configuration file written to  
+    '/etc/X11/xorg.conf'  
+
+
+It is an inferior qualtity to the nouveau driver configuration. A lot of XRUNs.  
+
+Possible Soultion:  
+* downgrade xorg-server to ??? (current: 1.18.3-1)   
+
+"The Linux 340.* legacy driver series is the last to support the G8x, G9x, and GT2xx GPUs, and motherboard chipsets based on them. 
+Support for new Linux kernels and X servers, as well as fixes for critical bugs, will be included in 340.* legacy 
+releases through the end of 2019."  
+http://nvidia.custhelp.com/app/answers/detail/a_id/3142/  
+
 
 
 
@@ -138,6 +165,10 @@ and dd it to the top (/dev/sdX and not /dev/sdX1)
 
 Known issues:  
 ------------------------------------------  
+* guitarix 0.35.0.r10.g5640286-1-x86_64 does not start: error while loading shared libraries: libbluetooth.so.3: 
+cannot open shared object file: No such file or directory    
+fixed -- pacman -S bluez-libs  
+
 * (fix?) A stop job is running ... -> https://bbs.archlinux.org/viewtopic.php?pid=1618677#p1618677
 
 * acpi PNP0A08:00: _OSC: OS supports [ExtendedConfig ASPM ClockPM Segments MSI]  
@@ -146,11 +177,7 @@ acpi PNP0A08:00: _OSC failed (AE_NOT_FOUND); disabling ASPM
 * optimize-rt-blankscreen.service: Unit entered failed state.  
 optimize-rt-blankscreen.service: Failed with result 'exit-code'.  
 
-* Start GUI: xf86 Enable IO Ports: failed to set IOPL for I/O (Operation not permitted) ->  
-modprobe FATAL: Module nvidia not found in directory /lib/modules/4.4.9-rt17-1-rt  
  
-* inxi -G -> Resuming in non X mode: glxinfo not found.  
-
 * >> block.1: block modules  
 ----- exec: "/sbin/modprobe ide-cd_mod " -----  
   modprobe: FATAL: Module ide-cd_mod not found in directory /lib/modules/4.4.9-rt17-1-rt  
@@ -229,16 +256,15 @@ https://github.com/librosa/librosa/blob/master/librosa/beat.py
 
 * Add some eye candy to LXQT config - Battery Watcher widget??, Windows/Super key????.    
 * File extension associations - /.local/share/applications     
-* extern screen -> works (only VGA tested)
+* extern screen -> works (only VGA with nouveau tested) 
 * Calculator with sparse dependencies 
 * include Edit & Share 
 * create a PKGBUILD for specmatch  
 * create a PKGBUILD for chaoschimp  
 * create a PKGBUILD for midikbd  
-* pacman-key --init ????  
-* put persistent installation into a script  
-* try nvidia-340xx-rt for GT218M [GeForce G210M] / failed linux-rt<4.2 -> try nvidia-340xx-dkms  
-* gEDA
+* pacman-key --init & pacman-key --populate archlinux at startup   
+* put persistent installation into a script    
+* add gEDA,   
 * Adjust the application menu - menu://applications  
 It is possible to edit menu entries by editing their .desktop files stored in /usr/share/applications/lxqt-*.desktop files.  
 * write a GUI for klick in QT -> Tutorials: http://zetcode.com/  
@@ -326,6 +352,8 @@ packages.both:
     python2-matplotlib  
     python2-numpy  
     python2-scipy  
+    bluez-libs (???)  
+  
 packages.x86_64: 
 
     guitarix-git / guitarix2 from packages.both should also work.  
@@ -475,12 +503,45 @@ The mounted share is likely to be present at /run/user/your_UID/gvfs or ~/.gvfs 
 SimpleScreenRecorder can handle Jack for audio.  
 
 
+# CPU-Performance  
+Because this master tree of the live session is more than just an effect unit, I integrate a switch to qjackctl, 
+so the machine runs only with full power, if Jack is running, otherwise it scales the cpu power. It only works with qjackctl 
+at the moment, it executes "sudo cpupower ..." on start and end. That's ugly, but it does the job well.   
+
+ 
+     % watch grep \"cpu MHz\" /proc/cpuinfo  
+
+     % cpupower frequency-info  
+
+     % cpupower frequency-set -g performance  
+ondemand  
+
+not integrated:  
+conservative  		  
+powersave   		
+
+# Calibre Ebook managment  
+* Version 2.57 available  
+* The window frame is set unfavorably. Press ALT and you can move the position with the mouse.  
+
+
 ----------------------------------------------------------------  
 
 ## Convert a png to the properties that supported by syslinux (optional)   
      % convert -resize 640x480 -depth 16 -colors 65536 mynew.png splash.png
 
+### Tips & and tricks  
+Take a screenshot with  
 
+     % import name.png  
+
+or from the root window:  
+
+     % import -windows root name.png  
+
+or time-delayed (10 seconds):  
+
+     % sleep10; import
 
 
 
@@ -623,9 +684,8 @@ Possible Solution: updated the (pacman-keyring) and also ran (pacman-key --init;
 The signature must be trusted by your user, not by root using the pacman-key command. For this use the gpg command.   
  % gpg --recv-keys $missing hash$
 --------------------------------------
- % pacman-keyring  
- % pacman-key --init  
- % pacman-key --populate archlinux  
+ % sudo pacman-key --init    
+ % sudo pacman-key --populate archlinux  
 
 
 Install archiso  
