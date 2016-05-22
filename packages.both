@@ -139,7 +139,23 @@ xorg-server-devel
 mesa
 ## Mesa demos and tools (include glxinfo, etc.)
 mesa-demos
+## VDPAU backend for VA API
+libva-vdpau-driver
+## NVIDIA drivers utilities
+#nvidia-utils
+nvidia-340xx-utils
+
+#lib32-nvidia-utils
+lib32-nvidia-340xx-utils
 #######
+
+
+## Adjusts the color temperature of your screen according to your surroundings.
+#redshift
+
+
+
+
 #### LXQT group #####
 lxqt
 #####################
@@ -194,7 +210,7 @@ os-prober
 #lvm2
 ## Linux kernel tool to examine and tune power saving related features of your processor
 cpupower
-## CMT for LADSPA
+## Computer Music Toolkit plugins for LADSPA
 cmt
 ## A notepad clone for GTK+ 2.0
 #leafpad
@@ -205,8 +221,11 @@ l3afpad
 
 
 
-##Font family based on the Bitstream Vera Fonts with a wider range of characters
+## Font family based on the Bitstream Vera Fonts with a wider range of characters
 ttf-dejavu
+## 
+ttf-liberation
+
 
 ## Library for high quality hyphenation and justification
 #hyphen
@@ -233,12 +252,12 @@ file-roller
 ## A free network protocol analyzer for Unix/Linux and Windows 
 #wireshark-cli
 #wireshark-gtk
-wireshark-qt
+#wireshark-qt
 
 ## The whois client by Marco d'Itri
-whois
+#whois
 ## Fast DNS library supporting recent RFCs
-ldns
+#ldns
 
 
 
@@ -284,7 +303,7 @@ patchage
 ## A viewer and analyser of music audio files.
 #sonic-visualiser
 ## The Swiss Army knife of sound processing tools
-sox
+#sox
 
 
 
@@ -293,7 +312,7 @@ sox
 ## Onset detection, pitch tracking, note tracking and tempo tracking plugins using Paul Brossier's aubio library
 #vamp-aubio-plugins
 ##The Vamp audio analysis plug-in system
-vamp-plugin-sdk
+#vamp-plugin-sdk
 
 
 ## Virtual MIDI Piano Keyboard
@@ -342,6 +361,9 @@ winetricks
 ## An advanced drum machine
 ## https://github.com/hydrogen-music/Song-and-pattern-repository
 hydrogen
+## The LADSPA C* Audio Plugin Suite - CAPS is a collection of audio plugins comprising basic virtual guitar amplification and a small range of classic effects
+#caps
+## A simple mono guitar amplifier and FX for JACK using Faust
 #guitarix2
 ## Professional-grade audio sampler alternative to Gigasampler
 #linuxsampler
@@ -351,6 +373,8 @@ hydrogen
 #gigedit
 ## An automated music engraving system
 lilypond
+## A music score editor that lets you rapidly enter notation which it typesets using the LilyPond music engraver. 
+denemo
 ## The Linux MultiMedia Studio.
 #lmms
 ## Successor to the LADSPA audio plug-in standard
@@ -384,26 +408,36 @@ timidity-freepats
 
 
 ### Plugins ###
-##A set of LADSPA ambisonics plugins
+## A set of LADSPA ambisonics plugins
 #amb-plugins
-##Analogue Modeling SYNTHesizer
+## A realtime modular synthesizer and effect processor
+#ams
+## Analogue Modeling SYNTHesizer
 #amsynth 
+## Bandlimited LADSPA Oscillator Plugins
+#blop
 ## LV2/DSSI/LADSPA plug-ins suite and standalone JACK host
 calf
-#LADSPA four-band parametric equaliser plugins
+# LADSPA four-band parametric equaliser plugins
 #fil-plugins
 ## LADSPA stereo reverb plugin based on greverb
 #g2reverb
-##Steve Harris' LADSPA plug-ins suite
-swh-plugins
-##  A simple but fully featured LV2 host for Jack
+## A simple but fully featured LV2 host for Jack
 #jalv
+## Phaser, Chorus and Moog vcf plugins
+#mcp-plugins
+## LADSPLA plugins and a tool for time compression/expansion using phase-vocoding
+#pvoc
 ## LADSPA stereo and ambisonic reverb plugin based on zita-rev1
 #rev-plugins
+##Steve Harris' LADSPA plug-ins suite
+swh-plugins
 ## Tom's LADSPA Plugins
 #tap-plugins
 ## LADSPA anti-aliased oscillator plugins
 #vco-plugins
+## LADSPA Wah filter plugin
+#wah-plugins
 ## The successor of clalsadrv, provides easy access to ALSA PCM devices.
 #zita-alsa-pcmi
 ## A fast, partitioned convolution engine library.
@@ -467,7 +501,7 @@ libdvdcss
 libdvdnav
 
 ## Reader and rewriter of EXIF informations that supports raw files
-perl-image-exiftool
+#perl-image-exiftool
 ## Ebook management application
 calibre
 
@@ -496,7 +530,7 @@ simplescreenrecorder
 ## Free, open source software for video recording and live streaming.
 #obs-studio
 
-
+#python-pip
 python2-pip
 python2-setuptools
 pygtk
@@ -515,6 +549,10 @@ wxpython
 ## DSSI adapter/wrapper for win32 VST plug-ins
 #dssi-vst
 
+
+## Music Education ##
+## Music education and ear training software
+#solfege
 
 ### Music Games ###
 ## A free game like "Singstar", "Rockband" or "Stepmania"
@@ -540,8 +578,9 @@ android-udev
 
 
 # Artwork
-gimp
-
+#gimp
+## Edit and paint images
+#calligra-krita
 
 # CUPS
 cups
@@ -564,7 +603,43 @@ xsane
 xsane-gimp
 
 
+## HAM ##
+# General purpose DSP and SDR toolkit. With drivers for usrp and fcd.
+# gnuradio
 
-## Fix Guitarix
+
+## Basic AudioDSP add-on for Kodi
+#kodi-addon-adsp-basic
+## Biquad Filters AudioDSP add-on for Kodi
+#kodi-addon-adsp-biquad-filters
+## FreeSurround AudioDSP add-on for Kodi
+#kodi-addon-adsp-freesurround
+
+## A DSP library for telephony
+#spandsp
+## DSP library derived from Speex
+#speexdsp
+
+
+## Fix guitarix-git last
 bluez-libs
+
+## Fix friture-git
+#cython
+
+
+## Cabbage ##
+#freetype2
+#libX11
+#libxinerama
+#libxcursor
+#mesa
+#alsa-lib
+#freeglut
+#libxcomposite
+#libsndfile
+#libxrandr
+
+
+
 

@@ -98,30 +98,57 @@ sed -i 's/#\(HandleSuspendKey=\)suspend/\1ignore/' /etc/systemd/logind.conf
 sed -i 's/#\(HandleHibernateKey=\)hibernate/\1ignore/' /etc/systemd/logind.conf
 sed -i 's/#\(HandleLidSwitch=\)suspend/\1ignore/' /etc/systemd/logind.conf
 
+
+# Disable modules
+#echo "blacklist b43" >> /etc/modprobe.d/blacklist.conf
+echo "blacklist b43legacy" >> /etc/modprobe.d/blacklist.conf
+echo "blacklist pcspkr" >> /etc/modprobe.d/blacklist.conf
+
+
+
+## Disable nouveau driver to install NVIDIA drivers #####################
+#echo "blacklist nouveau" >> /etc/modprobe.d/blacklist.conf		#	
+#echo "options nouveau modeset=0" >> /etc/modprobe.d/blacklist.conf	#
+#echo "options nouveau.modeset=0." >> /etc/modprobe.d/blacklist.conf	#
+#########################################################################
+    replace_line() { #{{{
+    local _search=${1}
+    local _replace=${2}
+    local _filepath=${3}
+  #}}}
+}
+#replace_line '*options nouveau modeset=1' '#options nouveau modeset=1' /etc/modprobe.d/modprobe.conf
+replace_line '*MODULES="nouveau"' '#MODULES="nouveau"' /etc/mkinitcpio.conf
+mkinitcpio -p linux-rt
+nvidia-xconfig --add-argb-glx-visuals --allow-glx-with-composite --composite -no-logo --render-accel -o /etc/X11/xorg.conf.d/20-nvidia.conf;
+
+
+
+
+
+
+
+
+
+
 # Enable services at startup
 systemctl enable pacman-init.service choose-mirror.service
 systemctl enable rtirq.service 
+
 ## Disabled for the benefit of qjackctl config
 #systemctl enable optimize-rt-performance.service
 ## Disbled, because not needed for this configuration
 #systemctl enable optimize-rt-blankscreen.service
 ## Disabled by default, activate it, if you have trouble with older graphic cards
 #systemctl enable optimize-rt-resetgraphic.service
+
 systemctl enable avahi-daemon.service
 systemctl enable org.cups.cupsd.service
 systemctl enable cups-browsed.service
 
 systemctl set-default multi-user.target
 
-# Disable modules
-#echo "blacklist b43" >> /etc/modprobe.d/blacklist.conf
-echo "blacklist b43legacy" >> /etc/modprobe.d/blacklist.conf
-echo "blacklist pcspkr" >> /etc/modprobe.d/blacklist.conf
-## Disable nouveau driver to install NVIDIA drivers #####################
-echo "blacklist nouveau" >> /etc/modprobe.d/blacklist.conf		#	
-echo "options nouveau modeset=0" >> /etc/modprobe.d/blacklist.conf	#
-echo "options nouveau.modeset=0." >> /etc/modprobe.d/blacklist.conf	#
-#########################################################################
+
 
 
 ##Deprecated####

@@ -7,7 +7,7 @@ Work in progress.
 						
 Version: no need for version controlling, its just a backup.  	
 									
-Date:		2016-05-20						
+Date:		2016-05-22						
 
 License:	Good question. GPL, LGPL, BSD, MIT so far.
 		I will take look into license issues as soon as possible.
@@ -27,22 +27,11 @@ Google: https://drive.google.com/open?id=0B2BaBYQTShFzVWNOVkdwUUJyUWc
 ----------------------------------------------------------------------  
 
 Comment:  
-Debug and artwork design version. nvidia-340xx-rt legacy test.  
- 
-I deleted the cups config. To configure cups you need a root password. But this live session 
-has no root user, so you have to change the security config temporary.  
-Edit /etc/cups/cupsd.conf: (done, but does not have an effect)  
-DefaultAuthType None  
-And comment all lines with @System. After that you have to restart cups with:   
- 
-    % sudo systemctl restart org.cups.cupsd.service   
-
-Brother driver does not appear, works previously.   
-
-   
+nvidia-340xx-rt legacy test. For use it with other graphic cards it is recommend to delete the section from 
+../airootfs/root/customize_airootfs.sh (line 109 - 123)  
 
 To use the proprietary nvidia-340xx-rt and prevent nouveau to start, use TAB to add nomodeset (or try modeset=0) to the kernel boot line, 
-other the system will use the nouveau driver.  
+otherwise the system will use the nouveau driver.  
   
 nvidia: module license 'NVIDIA' taints kernel.  
 Disabling lock debugging due to kernel taint  
@@ -76,6 +65,19 @@ Possible Soultion:
 Support for new Linux kernels and X servers, as well as fixes for critical bugs, will be included in 340.* legacy 
 releases through the end of 2019."  
 http://nvidia.custhelp.com/app/answers/detail/a_id/3142/  
+
+
+
+
+I deleted the cups config. To configure cups you need a root password. But this live session 
+has no root user, so you have to change the security config temporary.  
+Edit /etc/cups/cupsd.conf: (done, but does not have an effect)  
+DefaultAuthType None  
+And comment all lines with @System. After that you have to restart cups with:   
+ 
+    % sudo systemctl restart org.cups.cupsd.service   
+
+Brother driver does not appear, works previously.  
 
 
 
@@ -165,9 +167,20 @@ and dd it to the top (/dev/sdX and not /dev/sdX1)
 
 Known issues:  
 ------------------------------------------  
+* :: Running post-transaction hooks...  
+( 1/12) Installing GConf schemas...  
+
+(gconftool-2:13730): GConf-WARNING **: Client failed to connect to the D-BUS daemon:  
+/usr/bin/dbus-launch terminated abnormally with the following error: No protocol specified  
+Autolaunch error: X11 initialization failed.  
+
+* startbuilt -> plymouth -> Error: file not found '/etc/os-release'  
+
 * guitarix 0.35.0.r10.g5640286-1-x86_64 does not start: error while loading shared libraries: libbluetooth.so.3: 
 cannot open shared object file: No such file or directory    
 fixed -- pacman -S bluez-libs  
+
+* No HID controler with linux-rt / mixxx  
 
 * (fix?) A stop job is running ... -> https://bbs.archlinux.org/viewtopic.php?pid=1618677#p1618677
 
@@ -237,6 +250,7 @@ Exec=/usr/bin/pd
 
 ToDo:  
 --------------------------------------------------------  
+* try realtimeconfigquickscan - https://github.com/raboof/realtimeconfigquickscan  
 * add Time Sync - ntpd  
 * try scanner over network -> brsaneconfig4 -a name="Brother" model="MFC-7360n" ip=YOUR.SCANNER.IP.HERE     
 * add a network manager  

@@ -45,6 +45,14 @@ obconf-qt
 #package-query
 #wineasio - not available in customrepo yet
 #
+## An efficient blocker add-on for your browser. Fast, potent, and lean.
+#firefox-extension-ublock - not available in customrepo yet
+## An efficient blocker for modern browsers. Fast and lean. Written from scratch. Development through benchmarking.
+#firefox-extension-ublock-git - not available in customrepo yet
+
+## Useful scripts, systemd timer/service units and their configuration
+uenv-git
+
 ####Realtime####
 linux-rt
 linux-rt-headers
@@ -57,6 +65,8 @@ rtirq
 #nvidia-rt
 ## NVIDIA proprietary drivers for linux-rt, 340xx legacy branch -- ??? license issue if published as binary???
 nvidia-340xx-rt
+## Disable nouveau driver module -- available, but expected not to work
+#xf86-video-nouveau-blacklist-git 
 rts-git
 rt-tests
 ## Realtime application thread priority tuning
@@ -113,6 +123,9 @@ frescobaldi
 #python-poppler-qt4
 #tango-icon-theme
 
+## An application to visualize and analyze live audio data in real-time.
+#friture-git
+
 ## An automated music engraving system (Git snapshot)
 #lilypond-git - not available in customrepo yet
 
@@ -129,7 +142,11 @@ ladish-git
 ## Utilities to improve integration and workflow with JACK and LASH.
 laditools-git
 
-
+## LINGOT is a musical instrument tuner.
+#lingot-hg
+## Free Music Instrument Tuner
+#fmit - not available in customrepo yet
+#fmit-git - not available in customrepo yet
 
 ## A virtual guitar amplifier for Linux
 guitarix-git
@@ -149,19 +166,19 @@ gtklick
 #linuxsampler-svn
 
 ## mhWaveEdit is a GTK2 graphical program for editing, playing and recording sound files with JACK & LADSPA support. 
-mhwaveedit
+#mhwaveedit
 
 ## A modular Digital Audio Workstation system - Git version.
 #non-daw-git - not available in customrepo yet
 ## Jack audio mixer from the NON DAW
-non-mixer-git
+#non-mixer-git
 ## Jack audio session manager from the NON DAW
 #non-sessionmanager-git - not available in customrepo yet
 
 #setbfree-git
 
 ## A GUI tool to create backups of the memory contents of MIDI devices
-simplesysexxer
+#simplesysexxer
 ## SoX Resampler library dsd branch
 #sox-dsd-git - not available in customrepo yet
 
@@ -197,15 +214,17 @@ simplesysexxer
 #hqplayer
 ## A YouTube music player - AUR Version out of date 2016-05-03
 #musictube 
+## 10 band graphical equalizer for Rhythmbox
+#rhythmbox-equalizer - not available in customrepo yet
 ## Lightweight headless squeezebox emulator - git checkout
 #squeezelite-git  - not available in customrepo yet
 
 
 #faust-git
-faust2-git
+#faust2-git
 #faustlive-git
 ## Use pure data extended, if you want to use ExpoChirpToolKit
-pd-extended
+#pd-extended
 python2-pyo
 #wxgtk-light - not available in customrepo yet - build failed
 #wxpython-light - not available in customrepo yet
@@ -225,7 +244,15 @@ python2-pyo
 
 
 ### HAM ###
+## Ham radio test trainer
+#afutrainer  - not available in customrepo yet
+## GUI tool for programming ham radios; supports a large number of makes and models
+#chirp - not available in customrepo yet
+## Daily build for GUI tool for programming ham radios; this pkgbuild is never out of date
+#chirp-daily - not available in customrepo yet
+##
 #fldigi
+##
 
 
 ### libs ###
@@ -240,7 +267,7 @@ python2-pyo
 #octave-control
 #qt5-quick1
 #ttf-roboto
-#tuna
+tuna
 
 
 ## A tabbed document viewer. It uses Poppler for PDF support, libspectre for PS support, DjVuLibre for DjVu support, CUPS for printing support and the Qt toolkit for its interface.
@@ -260,5 +287,59 @@ brscan4
 
 ## Reaper5 Developer Version
 #reaper
+
+
+## Music Education ##
+## A crossplatform tool for learning classical score notation. Mostly for guitarists but also very good for ear training.
+#nootka
+
+
+## Music Games ##
+## Frets on Fire X (FoFiX). Highly improved version of Frets on Fire
+#fofix  - not available in customrepo yet
+## Frets on Fire X (FoFiX). Highly improved version of Frets on Fire (Git Version)
+#fofix-git  - not available in customrepo yet
+## Shared code for FoFiX and FoF:R
+#python2-fretwork-git  - not available in customrepo yet
+## Free and open source karaoke game. (GIT)
+#ultrastardx-git
+## Songs for UltraStar Deluxe (USDX)
+#ultrastardx-songs
+
+
+
+
+
+## Artwork ##
+## A graphical boot splash screen with kernel mode-setting support
+#plymouth - not available in customrepo yet
+#plymouth-git
+## A graphical boot splash screen with kernel mode-setting support. Legacy version since v9 is currently broken.
+#plymouth-legacy - not available in customrepo yet
+## A graphical boot splash screen with kernel mode-setting support for non systemd setups
+#plymouth-nosystemd - not available in customrepo yet
+## A Plyouth theme based on Fedora's Charge theme, but featuring the ArchLinux logo.
+#plymouth-theme-arch-charge - not available in customrepo yet
+#plymouth-theme-arch-charge-big
+
+
+
+
+
+
+## Cabbage ##
+## A programming language for sound rendering and signal processing.
+#csound  - !!! 6.0.7 update -- not available in customrepo yet
+#csound-doc  - not available in customrepo yet
+## A frontend for Csound featuring a highlighting editor with autocomplete, interactive widgets and integrated help
+#csoundqt - not available in customrepo yet
+####libcsound64-dev?????
+####libcsnd-dev??????
+#steinberg-vst36
+
+
+
+## Hercules DJ Control mp3 e2 ##
+#hdjmod  - not available in customrepo yet - not with linux-rt
 
 
