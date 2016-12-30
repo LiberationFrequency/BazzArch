@@ -30,13 +30,17 @@
 ## A collection of desktop applications for the Linux sound system ALSA.
 qastools-qt5
 ##
-qterminal
-qtermwidget
+#qterminal
+## Deprecated - A terminal widget for Qt 
+###qtermwidget
+## New, But not used?? - A terminal widget for Qt
+###qtermwidget-git
 ## Openbox configuration tool. Qt port of ObConf
 obconf-qt
 #lxqt-connman-applet-git - not available in customrepo yet - failed
 ## QT image viewer & screenshot tool
-#lximage-qt-git
+#lximage-qt
+#lximage-qt-git  - not available in customrepo yet / AUR out of date
 ## Free cross-platform QT file archiver - not available in customrepo yet - failed
 #peazip-qt-build - not available in customrepo yet
 #transmission-sequential-qt - not available in customrepo yet
@@ -48,10 +52,11 @@ obconf-qt
 ## An efficient blocker add-on for your browser. Fast, potent, and lean.
 #firefox-extension-ublock - not available in customrepo yet
 ## An efficient blocker for modern browsers. Fast and lean. Written from scratch. Development through benchmarking.
-#firefox-extension-ublock-git - not available in customrepo yet
+#firefox-extension-ublock-git - not signed - need to be installed via firefox add-ons
 
 ## Useful scripts, systemd timer/service units and their configuration
-uenv-git
+## airootfs/usr/lib/systemd/user/gpg-agent.service exists in filesystem
+#uenv-git
 
 ####Realtime####
 linux-rt
@@ -60,14 +65,17 @@ linux-rt-headers
 #linux-rt-lts
 #linux-rt-lts-headers
 #linux-rt-lts-docs
+## Realtime IRQ thread system tuning.
 rtirq
 ## NVIDIA proprietary drivers for linux-rt -- ??? license issue if published as binary???
 #nvidia-rt
 ## NVIDIA proprietary drivers for linux-rt, 340xx legacy branch -- ??? license issue if published as binary???
-nvidia-340xx-rt
+#nvidia-340xx-rt
 ## Disable nouveau driver module -- available, but expected not to work
 #xf86-video-nouveau-blacklist-git 
+## Collection of scripts and systemd services to be used exclusively on linux-rt.\ Enables setting CPU scheduling policies and priorities (amongst others) (during boot) using tuna.
 rts-git
+## A collection of latency testing tools for the linux(-rt) kernel
 rt-tests
 ## Realtime application thread priority tuning
 rtapp
@@ -115,13 +123,13 @@ carla-git
 #carla-bridges-win64-git
 
 ## JACK toolbox for audio production.
-cadence
+#cadence
 
 ## A LilyPond sheet music text editor.
 frescobaldi
-#python-ly
-#python-poppler-qt4
-#tango-icon-theme
+python-ly
+python-poppler-qt4
+tango-icon-theme
 
 ## An application to visualize and analyze live audio data in real-time.
 #friture-git
@@ -150,6 +158,10 @@ laditools-git
 
 ## A virtual guitar amplifier for Linux
 guitarix-git
+## Additional Guitarix effects in LV2 format
+gx-lv2-git
+## Additional Guitarix bass effects in LV2 format 
+#gx-lv2-bass-git - failed, airootfs/usr/lib/lv2/gx_voxbass.lv2/gx_voxbass.ttl exists in both 'gx-lv2-git' and 'gx-lv2-bass-git'
 jack-stdout-git
 libsndfile
 scikits-base
@@ -197,13 +209,19 @@ gtklick
 ## A JACK Audio Connection Kit Audio Mastering interface 
 #jamin-cvs 
 ####
+
 #### binwalk-git ??? license issue if published as binary???
 ## A tool for searching a given binary image for embedded files
 #binwalk-git
+## Scientific Graphics and GUI Library for Python
+#python-pyqtgraph
+
 #jack2-no-dbus-git
 #jack_capture
 #freqtweak
-#synthclone
+## KeyFinder is a tool for estimating the musical key of digital recordings, to aid DJs in harmonic mixing.
+#keyfinder-git
+#synthclone   - not available in customrepo yet
 #gmidimonitor-git  - not available in customrepo yet
 
 #sooperlooper - not working - not available in customrepo yet
@@ -221,7 +239,7 @@ gtklick
 
 
 #faust-git
-#faust2-git
+faust2-git
 #faustlive-git
 ## Use pure data extended, if you want to use ExpoChirpToolKit
 #pd-extended
@@ -252,8 +270,8 @@ python2-pyo
 #chirp-daily - not available in customrepo yet
 ##
 #fldigi
-##
-
+## Firmware for Afatech af9015 based USB dvb devices
+#af9015-firmware
 
 ### libs ###
 #libgig-svn
@@ -267,11 +285,15 @@ python2-pyo
 #octave-control
 #qt5-quick1
 #ttf-roboto
+
+
+
+## Tuna is a tool that can be used to adjust scheduler tunables such as scheduler policy, RT priority and CPU affinity.
 tuna
 
 
 ## A tabbed document viewer. It uses Poppler for PDF support, libspectre for PS support, DjVuLibre for DjVu support, CUPS for printing support and the Qt toolkit for its interface.
-qpdfview
+#qpdfview
 
 
 ### Hardware ###
@@ -279,9 +301,10 @@ qpdfview
 ## Activate multilib repository
 ## The Brothers-script use C-Shell instead of bash - tcsh available from official Repository
 #tcsh
-brother-mfc7360n
-brscan4
-
+#brother-mfc7360n
+#brscan4
+## Video4Linux-DVB device drivers
+#v4l-dvb-git
 
 
 
@@ -302,11 +325,11 @@ brscan4
 ## Shared code for FoFiX and FoF:R
 #python2-fretwork-git  - not available in customrepo yet
 ## Free and open source karaoke game. (GIT)
-#ultrastardx-git
+#ultrastardx-git  - not available in customrepo yet - failed to build
 ## Songs for UltraStar Deluxe (USDX)
-#ultrastardx-songs
-
-
+#ultrastardx-songs  - not available in customrepo yet
+## UltraStar Deluxe WorldParty is a free and open source karaoke game - a fork of UltraStar Deluxe. It allows up to six players to sing along with music using microphones in order to score points, depending on the pitch of the voice and the rhythm of singing.
+#ultrastardxwp-git
 
 
 
@@ -327,7 +350,7 @@ brscan4
 
 
 
-## Cabbage ##
+## Dependencies Cabbage ##
 ## A programming language for sound rendering and signal processing.
 #csound  - !!! 6.0.7 update -- not available in customrepo yet
 #csound-doc  - not available in customrepo yet
@@ -342,4 +365,12 @@ brscan4
 ## Hercules DJ Control mp3 e2 ##
 #hdjmod  - not available in customrepo yet - not with linux-rt
 
+## Boot multiple live Linux distros from a usb flash drive.
+#multibootusb
 
+##
+tunescope-git
+
+
+## A fork of zenity - display graphical dialogs from shell scripts or command line
+yad

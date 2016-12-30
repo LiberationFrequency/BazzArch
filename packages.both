@@ -2,9 +2,9 @@
 arch-install-scripts
 b43-fwcutter
 btrfs-progs
-clonezilla
+#clonezilla
 crda
-darkhttpd
+#darkhttpd
 ddrescue
 dhclient
 dialog
@@ -12,7 +12,7 @@ dmraid
 dnsmasq
 dnsutils
 dosfstools
-elinks
+#elinks
 ethtool
 f2fs-tools
 fsarchiver
@@ -31,7 +31,7 @@ mc
 mtools
 nfs-utils
 nilfs-utils
-nmap
+#nmap
 ntfs-3g
 ntp
 openconnect
@@ -77,15 +77,15 @@ base-devel
 ## Keytable files and keyboard utilities
 #kbd
 ## Hardware detection script with loading modules and mkinitcpio.conf / rc.conf support
-hwdetect
+#hwdetect
 ## Hardware detection tool from openSUSE
-hwinfo
+#hwinfo
 ## GNU make utility to maintain groups of programs
 #make
 ## A useful diagnositic, instructional, and debugging tool
-strace
+#strace
 ## A tool that stress tests your system (CPU, memory, I/O, disks)
-stress
+#stress
 #xterm (!!! Attention: xterm is linked against qterminal !!!)
 ## Diff utility which works with binary files (needed for repo-add diff)
 #xdelta3
@@ -96,38 +96,38 @@ xorg-utils
 xorg-server-utils
 #####################################################
 ## enable xorg-drivers to install all xf86-* ########
-#xorg-drivers 	   		
+xorg-drivers 	   		
 #####################################################
-xf86-input-evdev		
-xf86-input-joystick		
-xf86-input-keyboard		
-xf86-input-libinput			
-xf86-input-mouse		
-xf86-input-synaptics		
-xf86-input-vmmouse		
-xf86-input-void			
-xf86-video-amdgpu		
-xf86-video-ark			
-xf86-video-ati				
-xf86-video-dummy		
-xf86-video-fbdev		
-xf86-video-glint		
-xf86-video-i128		
-xf86-video-intel		
-xf86-video-mach64		
-xf86-video-neomagic		
+#xf86-input-evdev		
+#xf86-input-joystick		
+#xf86-input-keyboard		
+#xf86-input-libinput			
+#xf86-input-mouse		
+#xf86-input-synaptics		
+#xf86-input-vmmouse		
+#xf86-input-void			
+#xf86-video-amdgpu		
+#xf86-video-ark			
+#xf86-video-ati				
+#xf86-video-dummy		
+#xf86-video-fbdev		
+#xf86-video-glint		
+#xf86-video-i128		
+#xf86-video-intel		
+#xf86-video-mach64		
+#xf86-video-neomagic		
 #xf86-video-nouveau		
-xf86-video-nv			
-xf86-video-openchrome		
-xf86-video-r128		
-xf86-video-savage		
-xf86-video-siliconmotion	
-xf86-video-sis			
-xf86-video-tdfx		
-xf86-video-trident		
-xf86-video-vesa		
-xf86-video-vmware		
-xf86-video-voodoo		
+#xf86-video-nv			
+#xf86-video-openchrome		
+#xf86-video-r128		
+#xf86-video-savage		
+#xf86-video-siliconmotion	
+#xf86-video-sis			
+#xf86-video-tdfx		
+#xf86-video-trident		
+#xf86-video-vesa		
+#xf86-video-vmware		
+#xf86-video-voodoo		
 ######################
 ## NVIDIA driver sources for linux
 #nvidia-dkms
@@ -139,14 +139,22 @@ xorg-server-devel
 mesa
 ## Mesa demos and tools (include glxinfo, etc.)
 mesa-demos
-## VDPAU backend for VA API
-libva-vdpau-driver
 ## NVIDIA drivers utilities
 #nvidia-utils
-nvidia-340xx-utils
+#nvidia-340xx-utils
 
 #lib32-nvidia-utils
-lib32-nvidia-340xx-utils
+#lib32-nvidia-340xx-utils
+
+
+######see also: https://wiki.archlinux.org/index.php/Hardware_video_acceleration
+## VDPAU backend for VA API for Nvidia
+libva-vdpau-driver
+## VA-API implementation for Intel G45 and HD Graphics family
+libva-intel-driver
+## For AMD cards you have a choice: either VA-API with mesa or VDPAU.
+
+
 #######
 
 
@@ -159,6 +167,7 @@ lib32-nvidia-340xx-utils
 #### LXQT group #####
 lxqt
 #####################
+#libfm-qt
 #lxqt-about
 #lxqt-common 
 #lxqt-config
@@ -172,8 +181,10 @@ lxqt
 #lxqt-runner
 #lxqt-session
 #lxqt-sudo
-#lxqt-sudo
+#openbox
 #pcmanfm-qt
+#qterminal
+#qtermwidget
 ##### end LXQT group ####
 oxygen-icons
 ## A configurable set of widget styles for KDE and Gtk
@@ -194,12 +205,12 @@ smbclient
 ## Wireless LAN network manager for LXQT
 #connman
 ## A simple binary editor for the Gnome desktop
-ghex 
+#ghex 
 ## displays files in hexadecimal and ASCII (or EBCDIC) and highlight the differences between them
-vbindiff
+#vbindiff
 ## script to get system information
-inxi
-## 
+#inxi
+## Attempts to determine whether it is being run on a laptop or a desktop and appraises its caller of this.
 laptop-detect
 ## Utility to detect other OSes on a set of drives
 os-prober
@@ -211,7 +222,7 @@ os-prober
 ## Linux kernel tool to examine and tune power saving related features of your processor
 cpupower
 ## Computer Music Toolkit plugins for LADSPA
-cmt
+#cmt
 ## A notepad clone for GTK+ 2.0
 #leafpad
 ## Simple plain text editor for GTK+ 3
@@ -265,14 +276,14 @@ file-roller
 #binwalk
 
 ### Documents ###
-mupdf
+#mupdf
 
 
 ### Internet Applications ###
 firefox
 firefox-adblock-plus
 firefox-i18n-de
-chromium
+#chromium
 #opera
 ## Cross-platform QtWebKit browser (Qt5)
 #qupzilla
@@ -316,7 +327,7 @@ patchage
 
 
 ## Virtual MIDI Piano Keyboard
-vmpk
+#vmpk
 ## Audio compression format with lossless, lossy and hybrid compression modes
 #wavpack
 
@@ -332,15 +343,18 @@ vmpk
 ## activate multilib repository in pacman.conf for wine & wine_gecko
 #
 ## A compatibility layer for running Windows programs
-wine
+#wine
 ## Wine's built-in replacement for Microsoft's Internet Explorer
-wine_gecko
+#wine_gecko
 ## Wine's built-in replacement for Microsoft's .NET Framework
-wine-mono
+#wine-mono
 ## Script to install various redistributable runtime libraries in Wine.
-winetricks
+#winetricks
 ##A Qt4 GUI for Wine
 #q4wine
+## A set of tools to transform, query, validate, and edit XML documents
+xmlstarlet
+
 
 ### Multimedia
 ####Music Applications
@@ -390,7 +404,7 @@ denemo
 ## A native YouTube client in Qt. Watch YouTube videos without Flash Player
 #minitube
 ## Free, open source software for digital DJ'ing.
-mixxx
+#mixxx
 ## Audio/MIDI multitrack sequencer
 #qtractor
 ## Qt GUI for FluidSynth
@@ -400,9 +414,9 @@ mixxx
 ## A cd ripper application
 #sound-juicer
 ## A MIDI to WAVE converter and player
-timidity++
+#timidity++
 ## A free and open set of instrument patches for use with softsynths
-timidity-freepats
+#timidity-freepats
 ## Multitrack guitar tablature editor and player
 #tuxguitar
 
@@ -431,7 +445,7 @@ calf
 ## LADSPA stereo and ambisonic reverb plugin based on zita-rev1
 #rev-plugins
 ##Steve Harris' LADSPA plug-ins suite
-swh-plugins
+#swh-plugins
 ## Tom's LADSPA Plugins
 #tap-plugins
 ## LADSPA anti-aliased oscillator plugins
@@ -494,6 +508,7 @@ flac
 opus
 #opus-tools
 libvorbis
+vorbis-tools
 ###CD/DVD libaries
 libcddb
 libdvdread
@@ -503,7 +518,7 @@ libdvdnav
 ## Reader and rewriter of EXIF informations that supports raw files
 #perl-image-exiftool
 ## Ebook management application
-calibre
+#calibre
 
 ## A disc burning application for Gnome
 #brasero
@@ -522,7 +537,7 @@ calibre
 ## Use your webcam to take photos and videos, apply fancy special effects and share the fun with others
 #cheese
 ## A feature-rich screen recorder written in C++/Qt4 that supports X11 and OpenGL with Jack support.
-simplescreenrecorder
+#simplescreenrecorder
 ## An easy to use utility that records your desktop into the ogg format with a CLI, Qt or GTK+ interface.
 #qt-recordmydesktop
 #recordmydesktop
@@ -577,16 +592,16 @@ android-udev
 ###virtualbox-host-dkms
 
 
-# Artwork
+## Artwork ##
 #gimp
 ## Edit and paint images
 #calligra-krita
 
-# CUPS
+## CUPS ##
 cups
 ghostscript
 gsfonts
-cups-pdf
+#cups-pdf
 #
 #foomatic-db-engine
 #foomatic-db
@@ -596,11 +611,11 @@ cups-pdf
 
 ####Brother
 ## GNU C Library (32-bit)
-lib32-glibc
+#lib32-glibc
 ## A GTK-based X11 frontend for SANE and plugin for Gimp.
-xsane
+#xsane
 ## XSane Gimp plugin
-xsane-gimp
+#xsane-gimp
 
 
 ## HAM ##
@@ -621,14 +636,87 @@ xsane-gimp
 #speexdsp
 
 
-## Fix guitarix-git last
+## ??? Fix guitarix-git last and additional
 bluez-libs
+meterbridge
 
-## Fix friture-git
+## Fix ??? friture-git
 #cython
 
 
-## Cabbage ##
+
+
+
+## Office ##
+#libreoffice-still
+#libreoffice-still-de
+#libreoffice-fresh
+#libreoffice-fresh-de
+
+## Download videos from YouTube and many other platforms.
+#youtube-dl
+## You-Get — Dumb downloader that scrapes the web.
+#you-get
+
+
+## Screen lockers/saver ##
+## Screen saver and locker for the X Window System
+#xscreensaver
+## Very simple and lightweight X screen locker. Offers only a black background when locked, there are no animations or text fields.
+#slock
+
+
+## Video editing ##
+## Free video editor designed for simple cutting, filtering and encoding tasks.
+#avidemux-qt
+## Professional video editing and compositing environment.
+#cinelerra-cv
+## Simple yet powerful video transcoder ideal for batch mkv/x264 ripping. GTK+ version.
+#handbrake
+## Non-linear video editor designed for basic to semi-professional work.
+#kdenlive
+## Non-linear video editor based on MLT framework.
+#openshot
+## Video editor designed to be intuitive and integrate well in the GNOME desktop.
+#pitivi
+## Simple python application for transcoding video into formats supported by GStreamer.
+#transmageddon
+## Fully integrated 3D graphics creation suite with a built-in non-linear video editor.
+#blender
+
+
+
+## CD Ripper ##
+## Comprehensive command-line tool for ripping audio CDs.
+#abcde
+## GTK+-based CD ripping program.
+#asunder
+## Compact Disc Digital Audio (CDDA) Digital Audio Extraction (DAE) tool.
+#cdparanoia
+## CD player and ripper for GNOME.
+#goobox
+## Fast and light CD ripper within the GNOME project that resembles Audiograbber
+#grip
+## Program for ripping and encoding Audio CDs and encoding files from disk.
+#kaudiocreator
+## CD ripper aiming for accuracy over speed. Uses cdparanoia, MusicBrainz, AccurateRip.
+#morituri
+## GTK+ program to rip CD audio tracks and encode them to the Ogg, MP3, or FLAC formats.
+#ripperx
+## Audiodisk ripper that tries to deliver a secure rip through multiple rippings of the same track and corrections of any differences.
+#rubyripper
+## Splits .wav and .flac files according to a CUE sheet and encodes the resulting pieces. A useful companion to ABCDE.
+#shntool
+## CD ripper for GNOME.
+#sound-juicer
+## Front-end to various audio converters.
+#soundkonverter
+
+
+
+
+
+## Dependencies Cabbage ##
 #freetype2
 #libX11
 #libxinerama

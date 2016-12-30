@@ -1,0 +1,9 @@
+# Cadence Session Startup
+# Part 2 - Start JACK (or not), according to user settings
+
+INSTALL_PREFIX="/usr"
+
+CADENCE_SESSION="$INSTALL_PREFIX/bin/cadence-session-start --system-start"
+exec $CADENCE_SESSION &
+
+unset INSTALL_PREFIX

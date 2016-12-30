@@ -1,0 +1,11 @@
+# Cadence Session Startup
+# Part 1 - Export Plugins PATHs
+
+INSTALL_PREFIX="/usr"
+
+export LADSPA_PATH=`$INSTALL_PREFIX/bin/cadence-session-start --printLADSPA_PATH`
+export DSSI_PATH=`$INSTALL_PREFIX/bin/cadence-session-start --printDSSI_PATH`
+export LV2_PATH=`$INSTALL_PREFIX/bin/cadence-session-start --printLV2_PATH`
+export VST_PATH=`$INSTALL_PREFIX/bin/cadence-session-start --printVST_PATH`
+
+unset INSTALL_PREFIX

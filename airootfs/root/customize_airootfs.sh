@@ -108,19 +108,18 @@ echo "blacklist pcspkr" >> /etc/modprobe.d/blacklist.conf
 
 ## Disable nouveau driver to install NVIDIA drivers #####################
 #echo "blacklist nouveau" >> /etc/modprobe.d/blacklist.conf		#	
-#echo "options nouveau modeset=0" >> /etc/modprobe.d/blacklist.conf	#
-#echo "options nouveau.modeset=0." >> /etc/modprobe.d/blacklist.conf	#
+#echo "options nouveau nomodeset" >> /etc/modprobe.d/modprobe.conf	#
 #########################################################################
-    replace_line() { #{{{
-    local _search=${1}
-    local _replace=${2}
-    local _filepath=${3}
-  #}}}
-}
-#replace_line '*options nouveau modeset=1' '#options nouveau modeset=1' /etc/modprobe.d/modprobe.conf
-replace_line '*MODULES="nouveau"' '#MODULES="nouveau"' /etc/mkinitcpio.conf
-mkinitcpio -p linux-rt
-nvidia-xconfig --add-argb-glx-visuals --allow-glx-with-composite --composite -no-logo --render-accel -o /etc/X11/xorg.conf.d/20-nvidia.conf;
+#    replace_line() { #{{{
+#    local _search=${1}
+#    local _replace=${2}
+#    local _filepath=${3}
+#  #}}}
+#}
+##replace_line '*options nouveau modeset=1' '#options nouveau modeset=1' /etc/modprobe.d/modprobe.conf
+#replace_line '*MODULES="nouveau"' '#MODULES="nouveau"' /etc/mkinitcpio.conf
+#mkinitcpio -p linux-rt
+#nvidia-xconfig --add-argb-glx-visuals --allow-glx-with-composite --composite -no-logo --render-accel -o /etc/X11/xorg.conf.d/20-nvidia.conf;
 
 
 
@@ -137,8 +136,8 @@ systemctl enable rtirq.service
 
 ## Disabled for the benefit of qjackctl config
 #systemctl enable optimize-rt-performance.service
-## Disbled, because not needed for this configuration
-#systemctl enable optimize-rt-blankscreen.service
+## 
+systemctl enable optimize-rt-blankscreen.service
 ## Disabled by default, activate it, if you have trouble with older graphic cards
 #systemctl enable optimize-rt-resetgraphic.service
 

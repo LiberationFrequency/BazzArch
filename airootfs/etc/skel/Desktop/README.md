@@ -7,13 +7,13 @@ Work in progress.
 						
 Version: no need for version controlling, its just a backup.  	
 									
-Date:		2016-05-22						
+Date:		2016-12-30  						
 
 License:	Good question. GPL, LGPL, BSD, MIT so far.
 		I will take look into license issues as soon as possible.
 
-Output size (ISO) for this current config: 1,8 GB   
-Needed pacman cache size for this current config: approx 2 GB    
+Output size (ISO) for this current config: 1,4 GB   
+Needed pacman cache size for this current config (/var/cache/pacman/pkg): approx 2 GB    
 Needed customrepo size for this current config:: ??? (overall 3 GB)  
 Nedded work directory size for this current config: approx 8 GB  
 
@@ -27,46 +27,8 @@ Google: https://drive.google.com/open?id=0B2BaBYQTShFzVWNOVkdwUUJyUWc
 ----------------------------------------------------------------------  
 
 Comment:  
-nvidia-340xx-rt legacy test. For use it with other graphic cards it is recommend to delete the section from 
-../airootfs/root/customize_airootfs.sh (line 109 - 123)  
-
-To use the proprietary nvidia-340xx-rt and prevent nouveau to start, use TAB to add nomodeset (or try modeset=0) to the kernel boot line, 
-otherwise the system will use the nouveau driver.  
-  
-nvidia: module license 'NVIDIA' taints kernel.  
-Disabling lock debugging due to kernel taint  
-vgaarb: device changed decodes: PCI:0000:01:00.0,olddecodes=io+mem,decodes=none:owns=io+mem  
-[drm] Initialized nvidia-drm 0.0.0 20150116 for 0000:01:00.0 on minor 0  
-NVRM: loading NVIDIA UNIX x86_64 Kernel Module  340.96  Sun Nov  8 22:33:28 PST 2015  
-
-
-
-    % lspci -nnk | grep -i vga -A3     
-    01:00.0 VGA compatible controller [0300]: NVIDIA Corporation GT218M [GeForce G210M] [10de:0a74] (rev a2)  
-        Subsystem: Lenovo Device [17aa:389f]  
-        Kernel driver in use: nvidia  
-        Kernel modules: nouveau, nvidia  
-
-
-    % sudo nvidia-xconfig  
-
-    WARNING: Unable to locate/open X configuration file.  
-
-    New X configuration file written to  
-    '/etc/X11/xorg.conf'  
-
-
-It is an inferior qualtity to the nouveau driver configuration. A lot of XRUNs.  
-
-Possible Soultion:  
-* downgrade xorg-server to ??? (current: 1.18.3-1)   
-
-"The Linux 340.* legacy driver series is the last to support the G8x, G9x, and GT2xx GPUs, and motherboard chipsets based on them. 
-Support for new Linux kernels and X servers, as well as fixes for critical bugs, will be included in 340.* legacy 
-releases through the end of 2019."  
-http://nvidia.custhelp.com/app/answers/detail/a_id/3142/  
-
-
+Standard graphic card driver test. 
+(for nvidia-340xx-rt legacy test see(*4 appendix))  
 
 
 I deleted the cups config. To configure cups you need a root password. But this live session 
@@ -119,8 +81,8 @@ with the option -i to avoid auto-confirmation of package selections. The build-r
 we can ignore linux and install just the linux-rt kernel.
 
 The packages in packages.both can be installed from the official repositories and will be downloaded at 
-creation process, if they are not present in your local pacman cache. To install the packages in 
-packages.x86_64 you have to build them from the Arch User Repository and create a custom repository 
+creation process, if they are not present in your local pacman cache /var/cache/pacman/pkg. To install 
+the packages in packages.x86_64 you have to build them from the Arch User Repository and create a custom repository 
 on your local system (*2 appendix).  
 
 You can copy the SquashFS to RAM during the boot process to free an USB port. Or you can make 
@@ -167,6 +129,11 @@ and dd it to the top (/dev/sdX and not /dev/sdX1)
 
 Known issues:  
 ------------------------------------------  
+* 'show hidden files' only works in one directory. PCManFM 0.11.1 doesn't remenber it. New.  
+see .../airootfs/etc/skel/.config/pcmanfm-qt/lxqt/settings.conf for the config file.  
+
+* linux-api-headers 4.5.5-1 ??? can't ignore it from core. Replacement for RT???  
+
 * :: Running post-transaction hooks...  
 ( 1/12) Installing GConf schemas...  
 
@@ -268,7 +235,7 @@ link xterm to qterminal / Only works on the top of directories, not in the folde
 * install librosa -  % pip2 install [-e] librosa  
 https://github.com/librosa/librosa/blob/master/librosa/beat.py  
 
-* Add some eye candy to LXQT config - Battery Watcher widget??, Windows/Super key????.    
+* Battery Watcher widget??, Windows/Super key????.    
 * File extension associations - /.local/share/applications     
 * extern screen -> works (only VGA with nouveau tested) 
 * Calculator with sparse dependencies 
@@ -276,7 +243,6 @@ https://github.com/librosa/librosa/blob/master/librosa/beat.py
 * create a PKGBUILD for specmatch  
 * create a PKGBUILD for chaoschimp  
 * create a PKGBUILD for midikbd  
-* pacman-key --init & pacman-key --populate archlinux at startup   
 * put persistent installation into a script    
 * add gEDA,   
 * Adjust the application menu - menu://applications  
@@ -539,6 +505,27 @@ powersave
 * The window frame is set unfavorably. Press ALT and you can move the position with the mouse.  
 
 
+
+# RT-Test  
+
+Tuna is a tool that can be used to adjust scheduler tunables such as scheduler policy, RT priority and CPU affinity.  
+
+     % sudo tuna  
+
+Cyclitest (package: rt-test) and feed it to oscilloscope (package: tuna):  
+
+     % sudo cyclictest --smp -n 99 -m -v | oscilloscope > /dev/null  
+
+
+chrt - manipulate the real-time attributes of a proces  
+     % chrt -f -p 2255 80  
+This will set the scheduler to SCHED_FIFO for pid 2255 and sets rtprio 80 for it.  
+
+see also:  
+* https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_MRG/1.3/html-single/Tuna_User_Guide/index.html  
+* https://www.osadl.org/Single-View.111+M52212cb1379.0.html  
+
+
 ----------------------------------------------------------------  
 
 ## Convert a png to the properties that supported by syslinux (optional)   
@@ -622,7 +609,7 @@ https://wiki.archlinux.org/index.php/archiso#Installation_without_Internet_acces
 
 -----------------------------------appendix-------------------------------------------
 
-(* 1) Work the official live ISO  
+(* 1) Work with the official live ISO  
  (not working yet)
 
  For me it is important to create a clean, new, official system, and maybe it could be possible
@@ -768,6 +755,52 @@ Optional dependencies for texlive-bin
 
 java7-headless provide no HOME, java-common does  
 
+--------------------------------------------------------------------------------------
+
+(* 4) 
+
+nvidia-340xx-rt legacy test. For use it with other graphic cards it is recommend to delete the section from 
+../airootfs/root/customize_airootfs.sh (line 109 - 123)  
+
+To use the proprietary nvidia-340xx-rt and prevent nouveau to start, use TAB to add nomodeset (or try modeset=0) to the kernel boot line, 
+otherwise the system will use the nouveau driver.  
+  
+nvidia: module license 'NVIDIA' taints kernel.  
+Disabling lock debugging due to kernel taint  
+vgaarb: device changed decodes: PCI:0000:01:00.0,olddecodes=io+mem,decodes=none:owns=io+mem  
+[drm] Initialized nvidia-drm 0.0.0 20150116 for 0000:01:00.0 on minor 0  
+NVRM: loading NVIDIA UNIX x86_64 Kernel Module  340.96  Sun Nov  8 22:33:28 PST 2015  
+
+
+
+    % lspci -nnk | grep -i vga -A3     
+    01:00.0 VGA compatible controller [0300]: NVIDIA Corporation GT218M [GeForce G210M] [10de:0a74] (rev a2)  
+        Subsystem: Lenovo Device [17aa:389f]  
+        Kernel driver in use: nvidia  
+        Kernel modules: nouveau, nvidia  
+
+
+    % sudo nvidia-xconfig  
+
+    WARNING: Unable to locate/open X configuration file.  
+
+    New X configuration file written to  
+    '/etc/X11/xorg.conf'  
+
+
+####It is an inferior qualtity to the nouveau driver configuration. A lot of XRUNs.  
+This configuration is better, less XRUNs. Need to compare with nouveau. See RT-Test section for further information.  
+
+
+
+
+Possible Soultion:  
+* downgrade xorg-server to ??? (current: 1.18.3-1)   
+
+"The Linux 340.* legacy driver series is the last to support the G8x, G9x, and GT2xx GPUs, and motherboard chipsets based on them. 
+Support for new Linux kernels and X servers, as well as fixes for critical bugs, will be included in 340.* legacy 
+releases through the end of 2019."  
+http://nvidia.custhelp.com/app/answers/detail/a_id/3142/  
 
 
 
