@@ -56,7 +56,7 @@ obconf-qt
 
 ## Useful scripts, systemd timer/service units and their configuration
 ## airootfs/usr/lib/systemd/user/gpg-agent.service exists in filesystem
-#uenv-git
+uenv-git
 
 ####Realtime####
 linux-rt
@@ -126,10 +126,10 @@ carla-git
 #cadence
 
 ## A LilyPond sheet music text editor.
-frescobaldi
-python-ly
-python-poppler-qt4
-tango-icon-theme
+#frescobaldi
+#python-ly
+#python-poppler-qt4
+#tango-icon-theme
 
 ## An application to visualize and analyze live audio data in real-time.
 #friture-git
@@ -160,8 +160,9 @@ laditools-git
 guitarix-git
 ## Additional Guitarix effects in LV2 format
 gx-lv2-git
-## Additional Guitarix bass effects in LV2 format 
-#gx-lv2-bass-git - failed, airootfs/usr/lib/lv2/gx_voxbass.lv2/gx_voxbass.ttl exists in both 'gx-lv2-git' and 'gx-lv2-bass-git'
+## Can be used to produce your own Impulse Responses and to adapt the sound produced by a Guitarix setting to another recorded sound.
+#specmatch
+## forgotten dependencies for specmatch?
 jack-stdout-git
 libsndfile
 scikits-base
@@ -242,7 +243,7 @@ gtklick
 faust2-git
 #faustlive-git
 ## Use pure data extended, if you want to use ExpoChirpToolKit
-#pd-extended
+pd-extended
 python2-pyo
 #wxgtk-light - not available in customrepo yet - build failed
 #wxpython-light - not available in customrepo yet
@@ -373,4 +374,4 @@ tunescope-git
 
 
 ## A fork of zenity - display graphical dialogs from shell scripts or command line
-yad
+#yad

@@ -7,12 +7,12 @@ Work in progress.
 						
 Version: no need for version controlling, its just a backup.  	
 									
-Date:		2016-12-30  						
+Date:		2017-01-01  						
 
 License:	Good question. GPL, LGPL, BSD, MIT so far.
 		I will take look into license issues as soon as possible.
 
-Output size (ISO) for this current config: 1,4 GB   
+Output size (ISO) for this current config: 1434386432 Bytes (1,4 GB, 1,3 GiB) BazzArch-2017.01.01-x86_64.iso  
 Needed pacman cache size for this current config (/var/cache/pacman/pkg): approx 2 GB    
 Needed customrepo size for this current config:: ??? (overall 3 GB)  
 Nedded work directory size for this current config: approx 8 GB  
@@ -22,7 +22,7 @@ GitHub: https://github.com/LiberationFrequency/BazzArch.git
 Zip: 	https://github.com/LiberationFrequency/BazzArch/archive/master.zip
 
 Mirror (maybe not up to date):		
-Google: https://drive.google.com/open?id=0B2BaBYQTShFzVWNOVkdwUUJyUWc  
+ 
 
 ----------------------------------------------------------------------  
 
@@ -30,6 +30,8 @@ Comment:
 Standard graphic card driver test. 
 (for nvidia-340xx-rt legacy test see(*4 appendix))  
 
+uname -r  
+4.8.15-rt10-1-rt  
 
 I deleted the cups config. To configure cups you need a root password. But this live session 
 has no root user, so you have to change the security config temporary.  
@@ -129,8 +131,13 @@ and dd it to the top (/dev/sdX and not /dev/sdX1)
 
 Known issues:  
 ------------------------------------------  
-* 'show hidden files' only works in one directory. PCManFM 0.11.1 doesn't remenber it. New.  
-see .../airootfs/etc/skel/.config/pcmanfm-qt/lxqt/settings.conf for the config file.  
+* (?fix?) can not add app-links to application bar / .../airootfs/etc/skel/.config/lxqt/panel.conf  
+
+* specmatch PKGBUILD does not work.  
+
+* no trashcan / can not delete a file via pcmanfm-qt  
+
+* LXQT requests xscreensaver after resume. Why? I don't want use it?  
 
 * linux-api-headers 4.5.5-1 ??? can't ignore it from core. Replacement for RT???  
 
@@ -217,7 +224,8 @@ Exec=/usr/bin/pd
 
 ToDo:  
 --------------------------------------------------------  
-* try realtimeconfigquickscan - https://github.com/raboof/realtimeconfigquickscan  
+* maybe add a extra Player with jack-support. Or see jack-plugin.     
+* add QasMixer as link in the appbar (right) for mixer !?!  
 * add Time Sync - ntpd  
 * try scanner over network -> brsaneconfig4 -a name="Brother" model="MFC-7360n" ip=YOUR.SCANNER.IP.HERE     
 * add a network manager  
@@ -499,11 +507,8 @@ ondemand
 not integrated:  
 conservative  		  
 powersave   		
-
-# Calibre Ebook managment  
-* Version 2.57 available  
-* The window frame is set unfavorably. Press ALT and you can move the position with the mouse.  
-
+  
+  
 
 
 # RT-Test  
