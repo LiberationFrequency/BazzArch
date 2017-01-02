@@ -7,12 +7,14 @@ Work in progress.
 						
 Version: no need for version controlling, its just a backup.  	
 									
-Date:		2017-01-01  						
+Date:		2017-01-02  						
+Demo Deadline:	2017-xx-xx  
 
 License:	Good question. GPL, LGPL, BSD, MIT so far.
 		I will take look into license issues as soon as possible.
 
-Output size (ISO) for this current config: 1434386432 Bytes (1,4 GB, 1,3 GiB) BazzArch-2017.01.01-x86_64.iso  
+Output size (ISO) for this current config: 1435795456 Bytes (1,4 GB, 1,3 GiB) BazzArch-2017.01.02-x86_64.iso    
+Cut down approx 40-100 Megabyte to fit on a DVD and a reserve for a minimal demo.   
 Needed pacman cache size for this current config (/var/cache/pacman/pkg): approx 2 GB    
 Needed customrepo size for this current config:: ??? (overall 3 GB)  
 Nedded work directory size for this current config: approx 8 GB  
@@ -82,14 +84,10 @@ This is the nearly the same file as mkarchiso, installed by archiso to /usr/bin/
 with the option -i to avoid auto-confirmation of package selections. The build-rt.sh will call this, so 
 we can ignore linux and install just the linux-rt kernel.
 
-The packages in packages.both can be installed from the official repositories and will be downloaded at 
-creation process, if they are not present in your local pacman cache /var/cache/pacman/pkg. To install 
-the packages in packages.x86_64 you have to build them from the Arch User Repository and create a custom repository 
+The packages in packages.both can be installed from the official repositories and will be downloaded at creation process, if they are not present in your local pacman cache /var/cache/pacman/pkg. To install the packages in packages.x86_64 you have to build them from the Arch User Repository and create a custom repository 
 on your local system (*2 appendix).  
 
-You can copy the SquashFS to RAM during the boot process to free an USB port. Or you can make 
-the USB storage persistent, so you can edit and save data to the storage. And/or you can create 
-a script that will be automatically executed when the user logged onto system (* not working yet). 
+You can copy the SquashFS to RAM during the boot process to free an USB port. Or you can make the USB storage persistent, so you can edit and save data to the storage. And/or you can create a script that will be automatically executed when the user logged onto system (* not working yet). 
 Take a look into the config /BassISO/syslinux/archiso_sys64.cfg   
 ???For UEFI edit BassISO/efiboot/loader/entries/archiso-x86_64-usb.conf???
 
@@ -249,7 +247,8 @@ https://github.com/librosa/librosa/blob/master/librosa/beat.py
 * Calculator with sparse dependencies 
 * include Edit & Share 
 * create a PKGBUILD for specmatch  
-* create a PKGBUILD for chaoschimp  
+* create a PKGBUILD for chaoschimp
+http://teragonaudio.com/ChaosChimp.html
 * create a PKGBUILD for midikbd  
 * put persistent installation into a script    
 * add gEDA,   
@@ -427,11 +426,11 @@ Install:
 
 
 
-## LilyPond with Frescobaldi
-Project Website: http://frescobaldi.org/  
+## LilyPond with Denemo
+Project Website: http://www.denemo.org/  
 
 LilyPond is a music engraving application with high quality, which is based upon text.   
-Frescobaldi is a LilyPond sheet music text editor. It aims to be powerful, yet lightweight and easy to use.   
+Denemo lets you rapidly enter notation which it typesets using the LilyPond music engraver. Music can be typed in at the PC-Keyboard (watch demo), or played in via MIDI controller (watch demo), or input acoustically into a microphone plugged into your computer’s soundcard.   
 
 
 There are a few examples. Execute this to generate a PDF file:  
@@ -441,7 +440,7 @@ There are a few examples. Execute this to generate a PDF file:
 
 Install:  
 packages.both: lilypond   
-packages.x86_64: frescbaldi  
+packages.both: denemo   
 
 
 

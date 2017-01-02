@@ -169,6 +169,7 @@ lxqt
 #####################
 #libfm-qt
 #lxqt-about
+#lxqt-build-tools
 #lxqt-common 
 #lxqt-config
 #lxqt-globalkeys
@@ -203,7 +204,7 @@ gvfs-smb
 smbclient
 
 ## Wireless LAN network manager for LXQT
-#connman
+connman
 ## A simple binary editor for the Gnome desktop
 #ghex 
 ## displays files in hexadecimal and ASCII (or EBCDIC) and highlight the differences between them
@@ -314,7 +315,7 @@ patchage
 ## A viewer and analyser of music audio files.
 #sonic-visualiser
 ## The Swiss Army knife of sound processing tools
-#sox
+sox
 
 
 
@@ -509,7 +510,7 @@ opus
 #opus-tools
 libvorbis
 vorbis-tools
-###CD/DVD libaries
+###CD/DVD libaries ?german law issues?
 libcddb
 libdvdread
 libdvdcss
