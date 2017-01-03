@@ -163,11 +163,11 @@ guitarix-git
 ## Additional Guitarix effects in LV2 format
 gx-lv2-git
 ## Can be used to produce your own Impulse Responses and to adapt the sound produced by a Guitarix setting to another recorded sound.
-#specmatch
+specmatch
 ## forgotten dependencies for specmatch?
-jack-stdout-git
-libsndfile
-scikits-base
+#jack-stdout-git
+#libsndfile
+#scikits-base
  
 
 #hydrogen-git - not available in customrepo yet
@@ -242,7 +242,7 @@ gtklick
 
 
 #faust-git
-faust2-git
+#faust2-git
 #faustlive-git
 ## Use pure data extended, if you want to use ExpoChirpToolKit
 pd-extended

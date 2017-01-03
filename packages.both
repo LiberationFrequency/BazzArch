@@ -69,7 +69,7 @@ zd1211-firmware
 #### System Applications ###
 #archiso
 ## Developer Tools Package Group
-base-devel
+#base-devel
 ## Bootstrap a basic Debian system
 #debootstrap
 ## Recover deleted or overwritten files on ext3 and ext4 filesystems
@@ -77,15 +77,15 @@ base-devel
 ## Keytable files and keyboard utilities
 #kbd
 ## Hardware detection script with loading modules and mkinitcpio.conf / rc.conf support
-#hwdetect
+hwdetect
 ## Hardware detection tool from openSUSE
-#hwinfo
+hwinfo
 ## GNU make utility to maintain groups of programs
 #make
 ## A useful diagnositic, instructional, and debugging tool
 #strace
 ## A tool that stress tests your system (CPU, memory, I/O, disks)
-#stress
+stress
 #xterm (!!! Attention: xterm is linked against qterminal !!!)
 ## Diff utility which works with binary files (needed for repo-add diff)
 #xdelta3
@@ -328,7 +328,7 @@ sox
 
 
 ## Virtual MIDI Piano Keyboard
-#vmpk
+vmpk
 ## Audio compression format with lossless, lossy and hybrid compression modes
 #wavpack
 
@@ -511,10 +511,10 @@ opus
 libvorbis
 vorbis-tools
 ###CD/DVD libaries ?german law issues?
-libcddb
-libdvdread
-libdvdcss
-libdvdnav
+#libcddb
+#libdvdread
+#libdvdcss
+#libdvdnav
 
 ## Reader and rewriter of EXIF informations that supports raw files
 #perl-image-exiftool
@@ -621,7 +621,7 @@ gsfonts
 
 ## HAM ##
 # General purpose DSP and SDR toolkit. With drivers for usrp and fcd.
-# gnuradio
+#gnuradio
 
 
 ## Basic AudioDSP add-on for Kodi

@@ -7,13 +7,13 @@ Work in progress.
 						
 Version: no need for version controlling, its just a backup.  	
 									
-Date:		2017-01-02  						
+Date:		2017-01-03  						
 Demo Deadline:	2017-xx-xx  
 
 License:	Good question. GPL, LGPL, BSD, MIT so far.
 		I will take look into license issues as soon as possible.
 
-Output size (ISO) for this current config: 1435795456 Bytes (1,4 GB, 1,3 GiB) BazzArch-2017.01.02-x86_64.iso    
+Output size (ISO) for this current config: 1377550336 Bytes (1,4 GB, 1,3 GiB) BazzArch-2017.01.03-x86_64.iso    
 Cut down approx 40-100 Megabyte to fit on a DVD and a reserve for a minimal demo.   
 Needed pacman cache size for this current config (/var/cache/pacman/pkg): approx 2 GB    
 Needed customrepo size for this current config:: ??? (overall 3 GB)  
@@ -129,8 +129,6 @@ and dd it to the top (/dev/sdX and not /dev/sdX1)
 
 Known issues:  
 ------------------------------------------  
-* (?fix?) can not add app-links to application bar / .../airootfs/etc/skel/.config/lxqt/panel.conf  
-
 * specmatch PKGBUILD does not work.  
 
 * no trashcan / can not delete a file via pcmanfm-qt  
@@ -184,12 +182,10 @@ https://wiki.archlinux.org/index.php/NVIDIA#Unsupported_drivers
 * Configuration texmf.cnf not found  
 
 * Something with x2d...
-
-* ad-blocker does not work right - install it via firefox  
-
+  
 * WebUI-script can only be use one time - need if construction  
 
-* .git file is too large. Fix it!
+* .git file is too large. Fix it!  (It will move to a own Demo-Repository later.)
 
 * VLC can not play mp.3/4 from Android / mtp://[usb...]  
 * Drag'n'drop does not work from Android device.  
@@ -210,7 +206,7 @@ Exec=/usr/bin/pd
 * Preset in guitarix is too loud. Pay attention for your equipment and your ears!      
 * guitarix behaves buggy, when you scoll through the impulse responses and it will crash.  
   
-* Hydrogen is too loud. Pay attention for your equipment and your ears!  
+* (fixed) Hydrogen is too loud. Pay attention for your equipment and your ears!  
 
 * The Carla preset BassIRmin does not work with Klangfalter. There is no wet signal.
   My fault, I edited the preset manually.  
@@ -222,6 +218,12 @@ Exec=/usr/bin/pd
 
 ToDo:  
 --------------------------------------------------------  
+* configure  connman - network manager   
+ 
+* install librosa (make a PKGBUILD!) -  % pip2 install [-e] librosa  
+https://github.com/librosa/librosa/blob/master/librosa/beat.py 
+
+* File extension associations - /.local/share/applications
 * maybe add a extra Player with jack-support. Or see jack-plugin.     
 * add QasMixer as link in the appbar (right) for mixer !?!  
 * add Time Sync - ntpd  
@@ -237,10 +239,6 @@ link xterm to qterminal / Only works on the top of directories, not in the folde
 * pacman and multilib  
 * sign the packages in the customrepo when updating, so I can
   upload them to an online repository.  
-
-* install librosa -  % pip2 install [-e] librosa  
-https://github.com/librosa/librosa/blob/master/librosa/beat.py  
-
 * Battery Watcher widget??, Windows/Super key????.    
 * File extension associations - /.local/share/applications     
 * extern screen -> works (only VGA with nouveau tested) 
@@ -398,7 +396,7 @@ Links:
 
 
 
-## FAUST     
+## FAUST (not available in Demo)     
 FAUST (Functional Audio Stream) is a functional programming language specifically designed for real-time 
 signal processing and synthesis. The FAUST compiler translates FAUST code into a C++ object, which may 
 then interface with other C++ code to produce a full program. There is some FAUST code in the home directory, 
@@ -485,7 +483,7 @@ The mounted share is likely to be present at /run/user/your_UID/gvfs or ~/.gvfs 
  
 
 
-# Screen Recorder  
+# Screen Recorder (not available in Demo)  
 
 SimpleScreenRecorder can handle Jack for audio.  
 
