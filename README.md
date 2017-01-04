@@ -7,14 +7,13 @@ Work in progress.
 						
 Version: no need for version controlling, its just a backup.  	
 									
-Date:		2017-01-03  						
+Date:		2017-01-04  						
 Demo Deadline:	2017-xx-xx  
 
 License:	Good question. GPL, LGPL, BSD, MIT so far.
 		I will take look into license issues as soon as possible.
 
-Output size (ISO) for this current config: 1377550336 Bytes (1,4 GB, 1,3 GiB) BazzArch-2017.01.03-x86_64.iso    
-Cut down approx 40-100 Megabyte to fit on a DVD and a reserve for a minimal demo.   
+Output size (ISO) for this current config: 1382989824 Bytes (1,4 GB, 1,3 GiB) BazzArch-2017.01.04-x86_64.iso    
 Needed pacman cache size for this current config (/var/cache/pacman/pkg): approx 2 GB    
 Needed customrepo size for this current config:: ??? (overall 3 GB)  
 Nedded work directory size for this current config: approx 8 GB  
@@ -44,7 +43,8 @@ And comment all lines with @System. After that you have to restart cups with:
     % sudo systemctl restart org.cups.cupsd.service   
 
 Brother driver does not appear, works previously.  
-
+  
+  
 
 
 
@@ -129,6 +129,10 @@ and dd it to the top (/dev/sdX and not /dev/sdX1)
 
 Known issues:  
 ------------------------------------------  
+* ?Install also efibootmgr, dosfstools as dependencies for syslinux?  
+
+* Unable to create an interface to connman on the system bus. cmst will not be able to communicate with connman.  
+
 * specmatch PKGBUILD does not work.  
 
 * no trashcan / can not delete a file via pcmanfm-qt  
@@ -218,14 +222,20 @@ Exec=/usr/bin/pd
 
 ToDo:  
 --------------------------------------------------------  
-* configure  connman - network manager   
+* Split packages for demo.  
+  * DemoMin - Demo fits on usual DVD.  
+  * DemoMid - Demo for an USB-Stick. Usual Live-Demo without making it persitent.  
+  * DemoMax - Demo with a persitent storage loop.
+
+* Multilingual support  
+* configure connman network manager / installed, rm airootfs/etc/udev/rules.d/81-dhcpcd.rules during complications   
  
-* install librosa (make a PKGBUILD!) -  % pip2 install [-e] librosa  
+* (done) install librosa (PKGBUILD available at AUR) -  % pip2 install [-e] librosa  
 https://github.com/librosa/librosa/blob/master/librosa/beat.py 
 
 * File extension associations - /.local/share/applications
 * maybe add a extra Player with jack-support. Or see jack-plugin.     
-* add QasMixer as link in the appbar (right) for mixer !?!  
+* (done) add QasMixer as link in the appbar (right) for mixer !?! / replace pavucontrol with qasmixer      
 * add Time Sync - ntpd  
 * try scanner over network -> brsaneconfig4 -a name="Brother" model="MFC-7360n" ip=YOUR.SCANNER.IP.HERE     
 * add a network manager  

@@ -203,13 +203,19 @@ gvfs-smb
 ## Tools to access a server's filespace and printers via SMB
 smbclient
 
-## Wireless LAN network manager for LXQT
+## Wireless LAN network manager for LXQT (plus QT-GUI/packages.x86_64 cmst)
 connman
+## Daemons for the bluetooth protocol stack
+bluez
+## A utility providing key negotiation for WPA wireless networks
+wpa_supplicant
+## A Qt frontend to wpa_supplicant
+#wpa_supplicant_gui
 ## A simple binary editor for the Gnome desktop
 #ghex 
-## displays files in hexadecimal and ASCII (or EBCDIC) and highlight the differences between them
+## Displays files in hexadecimal and ASCII (or EBCDIC) and highlight the differences between them
 #vbindiff
-## script to get system information
+## Script to get system information
 inxi
 ## Attempts to determine whether it is being run on a laptop or a desktop and appraises its caller of this.
 laptop-detect
@@ -217,8 +223,13 @@ laptop-detect
 os-prober
 ## Uncomplicated and easy to use CLI tool for managing a netfilter firewall
 #ufw
+## GeoLite country geolocation database compiled by MaxMind
 #geoip-database
-#irqbalance
+## IRQ balancing daemon for SMP systems
+irqbalance
+## Collection of user space tools for general SMBus access and hardware monitoring
+lm_sensors
+## Logical Volume Manager 2 utilities
 #lvm2
 ## Linux kernel tool to examine and tune power saving related features of your processor
 cpupower

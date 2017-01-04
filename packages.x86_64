@@ -27,6 +27,9 @@
 #eclipse-wtp
 #firmware-mod-kit
 #
+## A QT based GUI front end for the connman connection manager with systemtray icon
+cmst
+#
 ## A collection of desktop applications for the Linux sound system ALSA.
 qastools-qt5
 ##
@@ -223,7 +226,11 @@ gtklick
 #jack_capture
 #freqtweak
 ## KeyFinder is a tool for estimating the musical key of digital recordings, to aid DJs in harmonic mixing.
-#keyfinder-git
+#keyfinder-git - failed / g++ (GCC) 6.2.1 20160830 / g++: Fehler: nicht erkannte Kommandozeilenoption »-stdlib=libc++«
+#keyfinder-cli-git - failed / ???
+## Musical key detection for digital audio.
+#libkeyfinder-git
+
 #synthclone   - not available in customrepo yet
 #gmidimonitor-git  - not available in customrepo yet
 
@@ -258,6 +265,8 @@ python2-pyo
 #python2-pyliblo
 #python2-schedutils
 
+## Python library for music and audio analysis
+python2-librosa
 
 #front-panel-designer
 
