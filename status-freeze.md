@@ -33,8 +33,8 @@ rkr-lv2-git-beta_1.r10.ge0a080b-1-x86_64.pkg.tar.xz
 rtirq-20150216-1-any.pkg.tar.xz  
 rts-git-0.2.0.r0.g326a178-1-any.pkg.tar.xz  
 scikits-base-1-2-any.pkg.tar.xz   
-specmatch-0.9-1-x86_64.pkg.tar.xz  
-tunescope-git-r3.0c2e5f8-1-any.pkg.tar.xz  
+#specmatch-0.9-1-x86_64.pkg.tar.xz  
+#tunescope-git-r3.0c2e5f8-1-any.pkg.tar.xz  
   
 uenv-git-8.2.r0.g34d31c9-1-any.pkg.tar.xz  
 x42-plugins-20160825-1-x86_64.pkg.tar.xz  

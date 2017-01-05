@@ -7,13 +7,13 @@ Work in progress.
 						
 Version: no need for version controlling, its just a backup.  	
 									
-Date:		2017-01-04  						
+Date:		2017-01-05  						
 Demo Deadline:	2017-xx-xx  
 
 License:	Good question. GPL, LGPL, BSD, MIT so far.
 		I will take look into license issues as soon as possible.
 
-Output size (ISO) for this current config: 1382989824 Bytes (1,4 GB, 1,3 GiB) BazzArch-2017.01.04-x86_64.iso    
+Output size (ISO) for this current config: 1391149056 Bytes (1,4 GB, 1,3 GiB) BazzArch-2017.01.05-x86_64.iso      
 Needed pacman cache size for this current config (/var/cache/pacman/pkg): approx 2 GB    
 Needed customrepo size for this current config:: ??? (overall 3 GB)  
 Nedded work directory size for this current config: approx 8 GB  
@@ -131,10 +131,11 @@ Known issues:
 ------------------------------------------  
 * ?Install also efibootmgr, dosfstools as dependencies for syslinux?  
 
-* Unable to create an interface to connman on the system bus. cmst will not be able to communicate with connman.  
-
-* specmatch PKGBUILD does not work.  
-
+* ?irqbalance? installed  / Is it recommended with rt and tuna?    
+  
+* specmatch PKGBUILD does not work. There is no scikits.audiolab in pip. ?pip ist with sudo?  
+  * The PKGBUILD build with an error: ERROR: ld.so: object 'libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.  
+   
 * no trashcan / can not delete a file via pcmanfm-qt  
 
 * LXQT requests xscreensaver after resume. Why? I don't want use it?  
@@ -222,26 +223,25 @@ Exec=/usr/bin/pd
 
 ToDo:  
 --------------------------------------------------------  
-* Split packages for demo.  
-  * DemoMin - Demo fits on usual DVD.  
-  * DemoMid - Demo for an USB-Stick. Usual Live-Demo without making it persitent.  
-  * DemoMax - Demo with a persitent storage loop.
+* update airootfs/etc/udev/rules.d/51-android.rules   
 
+* Split packages for demo.  
+  * DemoMin - Minimal demo that fits on usual DVD.    
+  * DemoMid - Standard demo with a changing sizefile. Usual Live-Demo without making it persitent.  
+  * DemoMax - Custom demo with an option for a persitent storage loop.  
+
+* Try to reduce AUR-packages. Maybe there are some alternatives in the 	officinal repos.  
 * Multilingual support  
-* configure connman network manager / installed, rm airootfs/etc/udev/rules.d/81-dhcpcd.rules during complications   
- 
+    
 * (done) install librosa (PKGBUILD available at AUR) -  % pip2 install [-e] librosa  
 https://github.com/librosa/librosa/blob/master/librosa/beat.py 
 
 * File extension associations - /.local/share/applications
-* maybe add a extra Player with jack-support. Or see jack-plugin.     
-* (done) add QasMixer as link in the appbar (right) for mixer !?! / replace pavucontrol with qasmixer      
+* maybe add a extra Player with jack-support. Or see jack-plugin.           
 * add Time Sync - ntpd  
-* try scanner over network -> brsaneconfig4 -a name="Brother" model="MFC-7360n" ip=YOUR.SCANNER.IP.HERE     
-* add a network manager  
+* try scanner over network -> brsaneconfig4 -a name="Brother" model="MFC-7360n" ip=YOUR.SCANNER.IP.HERE       
 * fit graphic drivers/config for realtime  
-* fit MIDI for realtime / create PKGBUILD for jamrouter  
-* add lm-sensors  
+* fit MIDI for realtime / create PKGBUILD for jamrouter    
 * Create a splash screen  
 * Create some presets   
 * "open Terminal here"-dialog  -> proof of concept temporary / Only works with xterm / 
@@ -251,11 +251,10 @@ link xterm to qterminal / Only works on the top of directories, not in the folde
   upload them to an online repository.  
 * Battery Watcher widget??, Windows/Super key????.    
 * File extension associations - /.local/share/applications     
-* extern screen -> works (only VGA with nouveau tested) 
-* Calculator with sparse dependencies 
-* include Edit & Share 
-* create a PKGBUILD for specmatch  
-* create a PKGBUILD for chaoschimp
+* extern screen -> works (only VGA with nouveau tested)  
+* write a PKGBUILD for ZooFX   
+* write a PKGBUILD for specmatch  
+* write a PKGBUILD for chaoschimp
 http://teragonaudio.com/ChaosChimp.html
 * create a PKGBUILD for midikbd  
 * put persistent installation into a script    

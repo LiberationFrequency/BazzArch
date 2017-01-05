@@ -145,6 +145,8 @@ systemctl enable avahi-daemon.service
 systemctl enable org.cups.cupsd.service
 systemctl enable cups-browsed.service
 
+systemctl enable connman.service
+
 systemctl set-default multi-user.target
 
 

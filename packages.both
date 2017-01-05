@@ -725,6 +725,13 @@ meterbridge
 #soundkonverter
 
 
+## SORT it!
+## Simple but powerful calculator using Qt
+speedcrunch
+## Plugin for LXAppearance to configure Openbox
+#lxappearance-obconf
+## Fast, easy, and free BitTorrent client (Qt GUI)
+#transmission-qt
 
 
 
@@ -742,4 +749,5 @@ meterbridge
 
 
 
+### A summary of QT-Software: https://wiki.manjaro.org/index.php?title=List_of_Qt_Applications
 
