@@ -7,13 +7,13 @@ Work in progress.
 						
 Version: no need for version controlling, its just a backup.  	
 									
-Date:		2017-01-05  						
+Date:		2017-01-06  						
 Demo Deadline:	2017-xx-xx  
 
 License:	Good question. GPL, LGPL, BSD, MIT so far.
 		I will take look into license issues as soon as possible.
 
-Output size (ISO) for this current config: 1391149056 Bytes (1,4 GB, 1,3 GiB) BazzArch-2017.01.05-x86_64.iso      
+Output size (ISO) for this current config: 1367670784 Bytes (1,4 GB, 1,3 GiB) BazzArch-2017.01.06-x86_64.iso      
 Needed pacman cache size for this current config (/var/cache/pacman/pkg): approx 2 GB    
 Needed customrepo size for this current config:: ??? (overall 3 GB)  
 Nedded work directory size for this current config: approx 8 GB  
@@ -129,10 +129,10 @@ and dd it to the top (/dev/sdX and not /dev/sdX1)
 
 Known issues:  
 ------------------------------------------  
-* ?Install also efibootmgr, dosfstools as dependencies for syslinux?  
-
 * ?irqbalance? installed  / Is it recommended with rt and tuna?    
   
+* carla (not carla-git): File "/usr/share/carla/carla_host.py", line 28, / ImportError: No module named 'PyQt5' / install/add python-pyqt5 and it works like a charm (done)!        
+
 * specmatch PKGBUILD does not work. There is no scikits.audiolab in pip. ?pip ist with sudo?  
   * The PKGBUILD build with an error: ERROR: ld.so: object 'libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.  
    
@@ -223,7 +223,9 @@ Exec=/usr/bin/pd
 
 ToDo:  
 --------------------------------------------------------  
-* update airootfs/etc/udev/rules.d/51-android.rules   
+* (done)update airootfs/etc/udev/rules.d/51-android.rules   
+  * cp from here: https://github.com/snowdream/51-android/blob/master/51-android.rules  
+  ** see also: https://github.com/M0Rf30/android-udev-rules  
 
 * Split packages for demo.  
   * DemoMin - Minimal demo that fits on usual DVD.    

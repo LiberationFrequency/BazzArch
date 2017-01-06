@@ -2,12 +2,12 @@
 # Current package version status  
 
 #cadence-0.8.1-4-x86_64.pkg.tar.xz  
-carla-git-1.9.6.r500.g0e81fd3-1-x86_64.pkg.tar.xz  
+carla-1.9.7-1-x86_64.pkg.tar.xz  
+#carla-git-1.9.7.r6.g3075aa2c-1-x86_64.pkg.tar.xz  
 cmst-2016.10.03-1-x86_64.pkg.tar.xz   
 distrho-lv2-git-r345.5ca92d5-1-x86_64.pkg.tar.xz  
 eq10q-2.2-1-x86_64.pkg.tar.xz  
-faust2-git-7954.44ce0e9-1-x86_64.pkg.tar.xz  
-firefox-extension-ublock-git-r2690.a70a5005-1-any.pkg.tar.xz  
+#faust2-git-8181.9c274f601-1-x86_64.pkg.tar.xz   
   
 gtklick-0.6.4-2-any.pkg.tar.xz    
 guitarix-git-0.35.2.r23.g1287b0c8-1-x86_64.pkg.tar.xz  
@@ -38,7 +38,7 @@ scikits-base-1-2-any.pkg.tar.xz
   
 uenv-git-8.2.r0.g34d31c9-1-any.pkg.tar.xz  
 x42-plugins-20160825-1-x86_64.pkg.tar.xz  
-zynaddsubfx-git-2.5.4.r21.gce9f78d-1-x86_64.pkg.tar.xz  
+#zynaddsubfx-git-2.5.4.r21.gce9f78d-1-x86_64.pkg.tar.xz  
   
   
     

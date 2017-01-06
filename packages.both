@@ -37,9 +37,9 @@ ntp
 openconnect
 openssh
 openvpn
-partclone
+#partclone
 parted
-partimage
+#partimage
 ppp
 pptpclient
 refind-efi
@@ -52,7 +52,7 @@ sudo
 tcpdump
 testdisk
 usb_modeswitch
-vim-minimal
+#vim-minimal
 vpnc
 wget
 wireless_tools
@@ -655,7 +655,8 @@ meterbridge
 ## Fix ??? friture-git
 #cython
 
-
+## Fix for carla (not carla-git)
+python-pyqt5
 
 
 

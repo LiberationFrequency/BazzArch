@@ -122,10 +122,16 @@ zam-plugins-git
 
 
 ## Audio Plugin Host - Does not build with GCC v6.1.1
-carla-git
+carla
+python-pyliblo
+####
+#carla-git
 #carla-bridges-win
 #carla-bridges-win32-git
 #carla-bridges-win64-git
+
+
+
 
 ## JACK toolbox for audio production.
 #cadence
