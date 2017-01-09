@@ -26,6 +26,7 @@ linuxsampler-svn-r2890-1-x86_64.pkg.tar.xz
 lsp-plugins-lv2-bin-1.0.18-1-x86_64.pkg.tar.xz  
 #nvidia-340xx-rt-340.98-1-x86_64.pkg.tar.xz  
 ???python2-enum-0.4.6-1-any.pkg.tar.xz  
+pd-extended-0.43.4-5-x86_64.pkg.tar.xz  
 python2-pyo-0.8.2-1-x86_64.pkg.tar.xz  
 qastools-qt5-0.21-1-x86_64.pkg.tar.xz  
 qpdfview-0.4.16-3-x86_64.pkg.tar.xz   
@@ -34,6 +35,7 @@ rtirq-20150216-1-any.pkg.tar.xz
 rts-git-0.2.0.r0.g326a178-1-any.pkg.tar.xz  
 scikits-base-1-2-any.pkg.tar.xz   
 #specmatch-0.9-1-x86_64.pkg.tar.xz  
+tuna-1:0.12-2-any.pkg.tar.xz  
 #tunescope-git-r3.0c2e5f8-1-any.pkg.tar.xz  
   
 uenv-git-8.2.r0.g34d31c9-1-any.pkg.tar.xz  

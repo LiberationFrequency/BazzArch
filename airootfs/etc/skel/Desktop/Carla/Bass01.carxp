@@ -197,7 +197,7 @@
 
   <Data>
    <Active>Yes</Active>
-   <DryWet>0.1009</DryWet>
+   <DryWet>0.4273</DryWet>
    <ControlChannel>1</ControlChannel>
    <Options>0x0</Options>
 
@@ -234,7 +234,7 @@
 
   <Data>
    <Active>Yes</Active>
-   <DryWet>0.1114</DryWet>
+   <DryWet>0.4357</DryWet>
    <ControlChannel>1</ControlChannel>
    <Options>0x1</Options>
 
@@ -320,8 +320,8 @@
 
   <Data>
    <Active>Yes</Active>
-   <DryWet>0.0659</DryWet>
-   <Volume>1.27</Volume>
+   <DryWet>0.6185</DryWet>
+   <Volume>1.075436</Volume>
    <ControlChannel>1</ControlChannel>
    <Options>0x0</Options>
 
@@ -372,7 +372,8 @@
 
   <Data>
    <Active>Yes</Active>
-   <DryWet>0.0032</DryWet>
+   <DryWet>0.6341</DryWet>
+   <Volume>0.747522</Volume>
    <ControlChannel>1</ControlChannel>
    <Options>0x0</Options>
 
@@ -416,7 +417,8 @@
 
   <Data>
    <Active>Yes</Active>
-   <DryWet>0</DryWet>
+   <DryWet>0.5</DryWet>
+   <Volume>0.712978</Volume>
    <ControlChannel>1</ControlChannel>
    <Options>0x0</Options>
 
@@ -431,7 +433,7 @@
     <Index>1</Index>
     <Name>FREQ</Name>
     <Symbol>FREQ</Symbol>
-    <Value>24</Value>
+    <Value>34.9872016906738</Value>
    </Parameter>
 
    <Parameter>

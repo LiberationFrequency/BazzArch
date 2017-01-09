@@ -280,16 +280,62 @@ python2-librosa
 
 
 ### HAM ###
+### https://wiki.archlinux.org/index.php/Amateur_radio ###s
+## Firmware for Afatech af9015 based USB dvb devices
+#af9015-firmware
 ## Ham radio test trainer
 #afutrainer  - not available in customrepo yet
 ## GUI tool for programming ham radios; supports a large number of makes and models
 #chirp - not available in customrepo yet
 ## Daily build for GUI tool for programming ham radios; this pkgbuild is never out of date
 #chirp-daily - not available in customrepo yet
+## The package represents databases of entities (countries), prefixes and callsigns that are used by amateur radio logging software - CONTESTING VERSION.
+#cty - out of date in customrepo
+## Ham Radio - Determines ARRL DXCC entity of a callsign
+#dxcc
 ##
 #fldigi
-## Firmware for Afatech af9015 based USB dvb devices
-#af9015-firmware
+## Moxon antenna designer
+#fl_moxgen - ?????
+## General purpose DSP and SDR toolkit. With drivers for usrp and fcd. 
+#gnuradio-git - not available in customrepo yet
+## Gnuradio blocks and tools for receiving GSM transmissions
+#gnuradio-gsm-git - not available in customrepo yet
+## Multi-channel receiver with use of RTL-SDR dongles
+#gnuradio-multi-rtl-git - not available in customrepo yet
+## Essential radio astronomy tools for Gnuradio.
+#gnuradio-ra-blocks-git - not available in customrepo yet
+## Simple radio astronomy for Gnuradio.
+#gnuradio-simple-ra-git - not available in customrepo yet
+## Real-time satellite tracking and orbit prediction application
+#gpredict- not available in customrepo yet
+## SDR receiver for Funcube Dongle, RTL-SDR, USRP and OsmoSDR devices.
+#gqrx-git- not available in customrepo yet
+## Ham radio (specific) XDG-compliant menu
+#hamradio-menus
+## Small desktop display of the current solar indices
+#hamsolar- not available in customrepo yet
+## Python script to convert string into NATO alphabet representation
+##nato - ??????
+## A Linux based SDR program similar in operation and features to other programs like Gqrx, HDSDR, and SDR#
+#natpos-sdr- not available in customrepo yet
+## A RF Signal Propagation, Loss, And Terrain analysis tool for the spectrum between 20 MHz and 20 GHz
+#splat- not available in customrepo yet
+## A 3D planetarium software which renders realistic skies in real time
+#stellarium-bzr - not available in customrepo yet
+## An astronomical world map that shows day and night and the Sun and Moon position
+#sunclock - not available in customrepo yet
+## QSO log signing data for the ARRL Logbook of The World (LoTW)
+#trustedqsl- not available in customrepo yet
+## QSO log signing & upload - ARRL's Logbook of The World (LoTW) - GIT version
+#trustedqsl-git- not available in customrepo yet
+## Full featured APRS Tracking/Information Reporting System
+#xastir - not available in customrepo yet
+## GTK+ Antenna EM Modeling Client
+#xnec2c- not available in customrepo yet
+
+
+
 
 ### libs ###
 #libgig-svn

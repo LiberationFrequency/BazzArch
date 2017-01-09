@@ -7,13 +7,13 @@ Work in progress.
 						
 Version: no need for version controlling, its just a backup.  	
 									
-Date:		2017-01-06  						
+Date:		2017-01-09  						
 Demo Deadline:	2017-xx-xx  
 
 License:	Good question. GPL, LGPL, BSD, MIT so far.
 		I will take look into license issues as soon as possible.
 
-Output size (ISO) for this current config: 1367670784 Bytes (1,4 GB, 1,3 GiB) BazzArch-2017.01.06-x86_64.iso      
+Output size (ISO) for this current config: 1385709568 Bytes (1,4 GB, 1,3 GiB) BazzArch-2017.01.09-x86_64.iso      
 Needed pacman cache size for this current config (/var/cache/pacman/pkg): approx 2 GB    
 Needed customrepo size for this current config:: ??? (overall 3 GB)  
 Nedded work directory size for this current config: approx 8 GB  
@@ -129,14 +129,14 @@ and dd it to the top (/dev/sdX and not /dev/sdX1)
 
 Known issues:  
 ------------------------------------------  
+* WebUI-script can only be use one time - need if construction  
+
 * ?irqbalance? installed  / Is it recommended with rt and tuna?    
   
-* carla (not carla-git): File "/usr/share/carla/carla_host.py", line 28, / ImportError: No module named 'PyQt5' / install/add python-pyqt5 and it works like a charm (done)!        
-
 * specmatch PKGBUILD does not work. There is no scikits.audiolab in pip. ?pip ist with sudo?  
   * The PKGBUILD build with an error: ERROR: ld.so: object 'libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.  
    
-* no trashcan / can not delete a file via pcmanfm-qt  
+* no trashcan / can not delete a file via pcmanfm-qt ?!  
 
 * LXQT requests xscreensaver after resume. Why? I don't want use it?  
 
@@ -188,8 +188,6 @@ https://wiki.archlinux.org/index.php/NVIDIA#Unsupported_drivers
 
 * Something with x2d...
   
-* WebUI-script can only be use one time - need if construction  
-
 * .git file is too large. Fix it!  (It will move to a own Demo-Repository later.)
 
 * VLC can not play mp.3/4 from Android / mtp://[usb...]  
