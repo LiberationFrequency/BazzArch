@@ -1,0 +1,816 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE CARLA-PROJECT>
+<CARLA-PROJECT VERSION='2.0'>
+ <EngineSettings>
+  <ForceStereo>false</ForceStereo>
+  <PreferPluginBridges>false</PreferPluginBridges>
+  <PreferUiBridges>true</PreferUiBridges>
+  <UIsAlwaysOnTop>false</UIsAlwaysOnTop>
+  <MaxParameters>200</MaxParameters>
+  <UIBridgesTimeout>4000</UIBridgesTimeout>
+ </EngineSettings>
+
+ <!-- EQ10Q Stereo -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>EQ10Q Stereo</Name>
+   <URI>http://eq10q.sourceforge.net/eq/eq10qs</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <Volume>0.65913</Volume>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x0</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Bypass</Name>
+    <Symbol>bypass</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Input Gain</Name>
+    <Symbol>input_gain</Symbol>
+    <Value>0.0799999982118607</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>Output Gain</Name>
+    <Symbol>output_gain</Symbol>
+    <Value>-0.476000010967255</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>Filter 1 Gain</Name>
+    <Symbol>filter1_gain</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>4</Index>
+    <Name>Filter 2 Gain</Name>
+    <Symbol>filter2_gain</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>5</Index>
+    <Name>Filter 3 Gain</Name>
+    <Symbol>filter3_gain</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>6</Index>
+    <Name>Filter 4 Gain</Name>
+    <Symbol>filter4_gain</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>7</Index>
+    <Name>Filter 5 Gain</Name>
+    <Symbol>filter5_gain</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>8</Index>
+    <Name>Filter 6 Gain</Name>
+    <Symbol>filter6_gain</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>9</Index>
+    <Name>Filter 7 Gain</Name>
+    <Symbol>filter7_gain</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>10</Index>
+    <Name>Filter 8 Gain</Name>
+    <Symbol>filter8_gain</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>11</Index>
+    <Name>Filter 9 Gain</Name>
+    <Symbol>filter9_gain</Symbol>
+    <Value>-0.144509002566338</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>12</Index>
+    <Name>Filter 10 Gain</Name>
+    <Symbol>filter10_gain</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>13</Index>
+    <Name>Filter 1 Freq</Name>
+    <Symbol>filter1_freq</Symbol>
+    <Value>20.6010456085205</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>14</Index>
+    <Name>Filter 2 Freq</Name>
+    <Symbol>filter2_freq</Symbol>
+    <Value>60</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>15</Index>
+    <Name>Filter 3 Freq</Name>
+    <Symbol>filter3_freq</Symbol>
+    <Value>120</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>16</Index>
+    <Name>Filter 4 Freq</Name>
+    <Symbol>filter4_freq</Symbol>
+    <Value>240</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>17</Index>
+    <Name>Filter 5 Freq</Name>
+    <Symbol>filter5_freq</Symbol>
+    <Value>480</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>18</Index>
+    <Name>Filter 6 Freq</Name>
+    <Symbol>filter6_freq</Symbol>
+    <Value>960</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>19</Index>
+    <Name>Filter 7 Freq</Name>
+    <Symbol>filter7_freq</Symbol>
+    <Value>1920</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>20</Index>
+    <Name>Filter 8 Freq</Name>
+    <Symbol>filter8_freq</Symbol>
+    <Value>3840</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>21</Index>
+    <Name>Filter 9 Freq</Name>
+    <Symbol>filter9_freq</Symbol>
+    <Value>4404.59619140625</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>22</Index>
+    <Name>Filter 10 Freq</Name>
+    <Symbol>filter10_freq</Symbol>
+    <Value>4306.62109375</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>23</Index>
+    <Name>Filter 1 Q</Name>
+    <Symbol>filter1_q</Symbol>
+    <Value>0.699999988079071</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>24</Index>
+    <Name>Filter 2 Q</Name>
+    <Symbol>filter2_q</Symbol>
+    <Value>0.699999988079071</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>25</Index>
+    <Name>Filter 3 Q</Name>
+    <Symbol>filter3_q</Symbol>
+    <Value>2</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>26</Index>
+    <Name>Filter 4 Q</Name>
+    <Symbol>filter4_q</Symbol>
+    <Value>2</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>27</Index>
+    <Name>Filter 5 Q</Name>
+    <Symbol>filter5_q</Symbol>
+    <Value>2</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>28</Index>
+    <Name>Filter 6 Q</Name>
+    <Symbol>filter6_q</Symbol>
+    <Value>2</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>29</Index>
+    <Name>Filter 7 Q</Name>
+    <Symbol>filter7_q</Symbol>
+    <Value>2</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>30</Index>
+    <Name>Filter 8 Q</Name>
+    <Symbol>filter8_q</Symbol>
+    <Value>2</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>31</Index>
+    <Name>Filter 9 Q</Name>
+    <Symbol>filter9_q</Symbol>
+    <Value>0.699999988079071</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>32</Index>
+    <Name>Filter 10 Q</Name>
+    <Symbol>filter10_q</Symbol>
+    <Value>0.699999988079071</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>33</Index>
+    <Name>Filter 1 Type</Name>
+    <Symbol>filter1_type</Symbol>
+    <Value>8</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>34</Index>
+    <Name>Filter 2 Type</Name>
+    <Symbol>filter2_type</Symbol>
+    <Value>9</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>35</Index>
+    <Name>Filter 3 Type</Name>
+    <Symbol>filter3_type</Symbol>
+    <Value>11</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>36</Index>
+    <Name>Filter 4 Type</Name>
+    <Symbol>filter4_type</Symbol>
+    <Value>11</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>37</Index>
+    <Name>Filter 5 Type</Name>
+    <Symbol>filter5_type</Symbol>
+    <Value>11</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>38</Index>
+    <Name>Filter 6 Type</Name>
+    <Symbol>filter6_type</Symbol>
+    <Value>11</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>39</Index>
+    <Name>Filter 7 Type</Name>
+    <Symbol>filter7_type</Symbol>
+    <Value>11</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>40</Index>
+    <Name>Filter 8 Type</Name>
+    <Symbol>filter8_type</Symbol>
+    <Value>11</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>41</Index>
+    <Name>Filter 9 Type</Name>
+    <Symbol>filter9_type</Symbol>
+    <Value>10</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>42</Index>
+    <Name>Filter 10 Type</Name>
+    <Symbol>filter10_type</Symbol>
+    <Value>4</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>43</Index>
+    <Name>Filter 1 Enable</Name>
+    <Symbol>filter1_enable</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>44</Index>
+    <Name>Filter 2 Enable</Name>
+    <Symbol>filter2_enable</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>45</Index>
+    <Name>Filter 3 Enable</Name>
+    <Symbol>filter3_enable</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>46</Index>
+    <Name>Filter 4 Enable</Name>
+    <Symbol>filter4_enable</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>47</Index>
+    <Name>Filter 5 Enable</Name>
+    <Symbol>filter5_enable</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>48</Index>
+    <Name>Filter 6 Enable</Name>
+    <Symbol>filter6_enable</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>49</Index>
+    <Name>Filter 7 Enable</Name>
+    <Symbol>filter7_enable</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>50</Index>
+    <Name>Filter 8 Enable</Name>
+    <Symbol>filter8_enable</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>51</Index>
+    <Name>Filter 9 Enable</Name>
+    <Symbol>filter9_enable</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>52</Index>
+    <Name>Filter 10 Enable</Name>
+    <Symbol>filter10_enable</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>57</Index>
+    <Name>Mid Side Mode</Name>
+    <Symbol>midsidemode</Symbol>
+    <Value>0</Value>
+   </Parameter>
+  </Data>
+ </Plugin>
+
+ <!-- KlangFalter -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>KlangFalter</Name>
+   <URI>https://github.com/HiFi-LoFi/KlangFalter</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <DryWet>0.9252</DryWet>
+   <Volume>1.119505</Volume>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x5</Options>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>Wet On</Name>
+    <Symbol>wet_on</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>Wet</Name>
+    <Symbol>wet</Symbol>
+    <Value>0.928476691246033</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>4</Index>
+    <Name>Dry On</Name>
+    <Symbol>dry_on</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>5</Index>
+    <Name>Dry</Name>
+    <Symbol>dry</Symbol>
+    <Value>0.682288229465485</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>6</Index>
+    <Name>EQ Low Type</Name>
+    <Symbol>eq_low_type</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>7</Index>
+    <Name>EQ Low Cut Freq</Name>
+    <Symbol>eq_low_cut_freq</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>8</Index>
+    <Name>EQ Low Shelf Freq</Name>
+    <Symbol>eq_low_shelf_freq</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>9</Index>
+    <Name>EQ Low Shelf Gain</Name>
+    <Symbol>eq_low_shelf_gain</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>10</Index>
+    <Name>EQ High Type</Name>
+    <Symbol>eq_high_type</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>11</Index>
+    <Name>EQ High Cut Freq</Name>
+    <Symbol>eq_high_cut_freq</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>12</Index>
+    <Name>EQ High Shelf Freq</Name>
+    <Symbol>eq_high_shelf_freq</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>13</Index>
+    <Name>EQ High Shelf Gain</Name>
+    <Symbol>eq_high_shelf_gain</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>14</Index>
+    <Name>Stereo Width</Name>
+    <Symbol>stereo_width</Symbol>
+    <Value>0.100000001490116</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>15</Index>
+    <Name>Autogain On</Name>
+    <Symbol>autogain_on</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>16</Index>
+    <Name>Autogain</Name>
+    <Symbol>autogain</Symbol>
+    <Value>0.833333015441895</Value>
+   </Parameter>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#Chunk</Type>
+    <Key>urn:juce:stateBinary</Key>
+    <Value>
+VkMyIWUCAAA8Q29udm9sdXRpb24gcGx1Z2luVmVyc2lvbj0iMjAxMy4wOC4zMSIgd2V0T249IjEiIHdldERlY2liZWxzPSIxMS40MTcyMDU4MTA1NDY4NzUiIGRyeU9uPSIxIiBkcnlEZWNpYmVscz0iLTE4LjEyNTQxMTk4NzMwNDY4NzUiIGF1dG9HYWluT249IjEiIGVxTG93VHlwZT0iQ3V0IiBlcUxvd0N1dEZyZXE9IjAiIGVxTG93U2hlbGZGcmVxPSIyMCIgZXFMb3dTaGVsZkRlY2liZWxzPSIwIiBlcUhpZ2hUeXBlPSJDdXQiIGVxSGlnaEN1dEZyZXE9IjIwMDAwIiBlcUhpZ2hTaGVsZkZyZXE9IjIwMDAwIiBlcUhpZ2hTaGVsZkRlY2liZWxzPSIwIiBpckJlZ2luPSIwIiBpckVuZD0iMSIgc3RyZXRjaD0iMSIgcHJlZGVsYXlNcz0iMCIgYXR0YWNrTGVuZ3RoPSIwIiBhdHRhY2tTaGFwZT0iMCIgZGVjYXlTaGFwZT0iMCIgc3RlcmVvV2lkdGg9IjEiIHJldmVyc2U9IjAiPjxJbXB1bHNlUmVzcG9uc2UgaW5wdXQ9IjAiIG91dHB1dD0iMCIgZmlsZT0iQlhMMzAwMF9UZXN0M18wMDQud2F2IiBmaWxlQ2hhbm5lbD0iMCIvPjxJbXB1bHNlUmVzcG9uc2UgaW5wdXQ9IjEiIG91dHB1dD0iMSIgZmlsZT0iQlhMMzAwMF9UZXN0M18wMDQud2F2IiBmaWxlQ2hhbm5lbD0iMCIvPjwvQ29udm9sdXRpb24+AA==
+    </Value>
+   </CustomData>
+  </Data>
+ </Plugin>
+
+ <!-- CS10QS -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>CS10QS</Name>
+   <URI>http://eq10q.sourceforge.net/compressor_stereo</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <Volume>1.106551</Volume>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x0</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Key Listen</Name>
+    <Symbol>keylisten</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Threshold (dB)</Name>
+    <Symbol>threshold</Symbol>
+    <Value>-20.075138092041</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>Attack (ms)</Name>
+    <Symbol>attack</Symbol>
+    <Value>10</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>Makeup (dB)</Name>
+    <Symbol>compmakeup</Symbol>
+    <Value>2.72001194953918</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>4</Index>
+    <Name>Decay (ms)</Name>
+    <Symbol>decay</Symbol>
+    <Value>250</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>5</Index>
+    <Name>Ratio (dB)</Name>
+    <Symbol>compratio</Symbol>
+    <Value>1.98913395404816</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>6</Index>
+    <Name>HPF Key Filter (Hz)</Name>
+    <Symbol>hpf</Symbol>
+    <Value>20</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>7</Index>
+    <Name>LPF Key Filter (Hz)</Name>
+    <Symbol>lpf</Symbol>
+    <Value>20000</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>8</Index>
+    <Name>Gain (dB)</Name>
+    <Symbol>ingain</Symbol>
+    <Value>-4.15999984741211</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>11</Index>
+    <Name>Knee (dB)</Name>
+    <Symbol>knee</Symbol>
+    <Value>6</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>12</Index>
+    <Name>Dry/Wet</Name>
+    <Symbol>drywet</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>13</Index>
+    <Name>FeedBack Compressor</Name>
+    <Symbol>isfeedbackcompressor</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>14</Index>
+    <Name>Compressor Mode</Name>
+    <Symbol>compressorMode</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>15</Index>
+    <Name>Punch</Name>
+    <Symbol>punch</Symbol>
+    <Value>0</Value>
+   </Parameter>
+  </Data>
+ </Plugin>
+
+ <!-- CS10QS -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>CS10QS (2)</Name>
+   <URI>http://eq10q.sourceforge.net/compressor_stereo</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <DryWet>0.6702</DryWet>
+   <Volume>0.989203</Volume>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x0</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Key Listen</Name>
+    <Symbol>keylisten</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Threshold (dB)</Name>
+    <Symbol>threshold</Symbol>
+    <Value>-29.0254135131836</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>Attack (ms)</Name>
+    <Symbol>attack</Symbol>
+    <Value>1.71194899082184</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>Makeup (dB)</Name>
+    <Symbol>compmakeup</Symbol>
+    <Value>2.55999898910522</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>4</Index>
+    <Name>Decay (ms)</Name>
+    <Symbol>decay</Symbol>
+    <Value>14.6256494522095</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>5</Index>
+    <Name>Ratio (dB)</Name>
+    <Symbol>compratio</Symbol>
+    <Value>25.6567974090576</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>6</Index>
+    <Name>HPF Key Filter (Hz)</Name>
+    <Symbol>hpf</Symbol>
+    <Value>20</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>7</Index>
+    <Name>LPF Key Filter (Hz)</Name>
+    <Symbol>lpf</Symbol>
+    <Value>20000</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>8</Index>
+    <Name>Gain (dB)</Name>
+    <Symbol>ingain</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>11</Index>
+    <Name>Knee (dB)</Name>
+    <Symbol>knee</Symbol>
+    <Value>5.04000091552734</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>12</Index>
+    <Name>Dry/Wet</Name>
+    <Symbol>drywet</Symbol>
+    <Value>0.663999021053314</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>13</Index>
+    <Name>FeedBack Compressor</Name>
+    <Symbol>isfeedbackcompressor</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>14</Index>
+    <Name>Compressor Mode</Name>
+    <Symbol>compressorMode</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>15</Index>
+    <Name>Punch</Name>
+    <Symbol>punch</Symbol>
+    <Value>0.175999999046326</Value>
+   </Parameter>
+  </Data>
+ </Plugin>
+
+ <ExternalPatchbay>
+  <Connection>
+   <Source>system:capture_1</Source>
+   <Target>EQ10Q Stereo:Input1</Target>
+  </Connection>
+  <Connection>
+   <Source>system:capture_2</Source>
+   <Target>EQ10Q Stereo:Input2</Target>
+  </Connection>
+  <Connection>
+   <Source>EQ10Q Stereo:Output1</Source>
+   <Target>KlangFalter:Audio Input 1</Target>
+  </Connection>
+  <Connection>
+   <Source>EQ10Q Stereo:Output2</Source>
+   <Target>KlangFalter:Audio Input 2</Target>
+  </Connection>
+  <Connection>
+   <Source>KlangFalter:Audio Output 1</Source>
+   <Target>CS10QS:Input</Target>
+  </Connection>
+  <Connection>
+   <Source>KlangFalter:Audio Output 1</Source>
+   <Target>CS10QS (2):Input</Target>
+  </Connection>
+  <Connection>
+   <Source>KlangFalter:Audio Output 2</Source>
+   <Target>CS10QS:InputR</Target>
+  </Connection>
+  <Connection>
+   <Source>KlangFalter:Audio Output 2</Source>
+   <Target>CS10QS (2):InputR</Target>
+  </Connection>
+  <Connection>
+   <Source>CS10QS:Output</Source>
+   <Target>system:playback_1</Target>
+  </Connection>
+  <Connection>
+   <Source>CS10QS:OutputR</Source>
+   <Target>system:playback_2</Target>
+  </Connection>
+  <Connection>
+   <Source>CS10QS (2):Output</Source>
+   <Target>system:playback_1</Target>
+  </Connection>
+  <Connection>
+   <Source>CS10QS (2):OutputR</Source>
+   <Target>system:playback_2</Target>
+  </Connection>
+ </ExternalPatchbay>
+</CARLA-PROJECT>

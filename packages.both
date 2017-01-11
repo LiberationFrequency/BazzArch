@@ -69,7 +69,7 @@ zd1211-firmware
 #### System Applications ###
 #archiso
 ## Developer Tools Package Group
-#base-devel
+base-devel
 ## Bootstrap a basic Debian system
 #debootstrap
 ## Recover deleted or overwritten files on ext3 and ext4 filesystems
@@ -214,7 +214,7 @@ wpa_supplicant
 ## A simple binary editor for the Gnome desktop
 #ghex 
 ## Displays files in hexadecimal and ASCII (or EBCDIC) and highlight the differences between them
-#vbindiff
+vbindiff
 ## Script to get system information
 inxi
 ## Attempts to determine whether it is being run on a laptop or a desktop and appraises its caller of this.
@@ -245,9 +245,9 @@ l3afpad
 
 
 ## Font family based on the Bitstream Vera Fonts with a wider range of characters
-ttf-dejavu
-## 
+ttf-dejavu 
 ttf-liberation
+#ttf-roboto
 
 
 ## Library for high quality hyphenation and justification
@@ -292,10 +292,10 @@ file-roller
 
 
 ### Internet Applications ###
-firefox
+#firefox
 #firefox-adblock-plus
-firefox-i18n-de
-#chromium
+#firefox-i18n-de
+chromium
 #opera
 ## Cross-platform QtWebKit browser (Qt5)
 #qupzilla
@@ -322,7 +322,7 @@ patchage
 ## MIDI/audio sequencer and notation editor
 #rosegarden
 ## Time-stretching and pitch-shifting audio library and utility
-#rubberband
+rubberband
 ## A viewer and analyser of music audio files.
 #sonic-visualiser
 ## The Swiss Army knife of sound processing tools
@@ -371,17 +371,17 @@ xmlstarlet
 ### Multimedia
 ####Music Applications
 ## A tool for extracting annotations from audio signals 
-#aubio
+aubio
 #aeolus
 #audacity
 #audio-convert
 #chuck
 ## An old-school drum-kit sampler
-#drumkv1
+drumkv1
 ## An old-school polyphonic sampler synthesizer with stereo fx
-#samplv1
+samplv1
 ## An old-school all-digital 4-oscillator subtractive polyphonic synthesizer with stereo fx
-#synthv1
+synthv1
 ##Audio normalizer, converter, encoder/decoder, ripper, tagger and player
 #gnormalize
 ## An advanced drum machine
@@ -426,9 +426,9 @@ denemo
 ## A cd ripper application
 #sound-juicer
 ## A MIDI to WAVE converter and player
-#timidity++
+timidity++
 ## A free and open set of instrument patches for use with softsynths
-#timidity-freepats
+timidity-freepats
 ## Multitrack guitar tablature editor and player
 #tuxguitar
 
@@ -513,7 +513,7 @@ vlc
 #gstreamer0.10-python
 #gstreamer0.10-mm
 #
-#gst-plugins-ugly
+gst-plugins-ugly
 #
 lame
 flac
@@ -522,18 +522,18 @@ opus
 libvorbis
 vorbis-tools
 ###CD/DVD libaries ?german law issues?
-#libcddb
-#libdvdread
-#libdvdcss
-#libdvdnav
+libcddb
+libdvdread
+libdvdcss
+libdvdnav
 
 ## Reader and rewriter of EXIF informations that supports raw files
-#perl-image-exiftool
+perl-image-exiftool
 ## Ebook management application
 #calibre
 
 ## A disc burning application for Gnome
-#brasero
+brasero
 ######plus gst-plugins-ugly for brasero and mp3
 
 ### Toolbox ###
@@ -549,7 +549,7 @@ vorbis-tools
 ## Use your webcam to take photos and videos, apply fancy special effects and share the fun with others
 #cheese
 ## A feature-rich screen recorder written in C++/Qt4 that supports X11 and OpenGL with Jack support.
-#simplescreenrecorder
+simplescreenrecorder
 ## An easy to use utility that records your desktop into the ogg format with a CLI, Qt or GTK+ interface.
 #qt-recordmydesktop
 #recordmydesktop
@@ -583,8 +583,8 @@ wxpython
 
 ### Music Games ###
 ## A free game like "Singstar", "Rockband" or "Stepmania"
-#performous
-#performous-freesongs
+performous
+performous-freesongs
 
 
 ### Android ###
@@ -653,7 +653,7 @@ bluez-libs
 meterbridge
 
 ## Fix ??? friture-git
-#cython
+cython
 
 ## Fix for carla (not carla-git)
 python-pyqt5

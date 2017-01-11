@@ -32,17 +32,11 @@ cmst
 #
 ## A collection of desktop applications for the Linux sound system ALSA.
 qastools-qt5
-##
-#qterminal
-## Deprecated - A terminal widget for Qt 
-###qtermwidget
-## New, but not used. Use the official package instead! - A terminal widget for Qt
-###qtermwidget-git
 ## Openbox configuration tool. Qt port of ObConf
 obconf-qt
 #lxqt-connman-applet-git - not available in customrepo yet - failed
 ## QT image viewer & screenshot tool
-#lximage-qt ??? Installed by dependency ???
+lximage-qt
 #lximage-qt-git  - not available in customrepo yet / AUR out of date
 ## Free cross-platform QT file archiver - not available in customrepo yet - failed
 #peazip-qt-build - not available in customrepo yet
@@ -91,6 +85,8 @@ rtapp
 #calf-git - not available in customrepo yet
 ## Distrho LV2 Audio Plugins, using the JUCE Toolkit
 distrho-lv2-git
+## DrMr is an LV2 sampler plugin that can play Hydrogen drumkits. This version enables plugin state saving using strings.
+#drmr-falktx-git
 ## An LV2 parametric equalizer audio plugin
 eq10q
 ## A collection of open-source LV2 plugins
@@ -107,6 +103,8 @@ lsp-plugins-lv2
 mda-lv2-git
 ## Rakarrack effects ported to LV2 plugins (git version) - BETA
 rkr-lv2-git
+## lv2 drum synthersizer without sampling
+stegosaurus-lv2
 ## LV2 port for the TAP (Tom's Audio Processing) plugins
 tap-plugins-lv2-git
 ## Collection of LV2 plugins
@@ -117,8 +115,8 @@ zam-plugins-git
 
 
 ####Music Apps####
-#ardour-git
-#bristol
+ardour-git
+bristol
 
 
 ## Audio Plugin Host - Does not build with GCC v6.1.1
@@ -143,7 +141,7 @@ python-pyliblo
 #tango-icon-theme
 
 ## An application to visualize and analyze live audio data in real-time.
-#friture-git
+friture-git
 
 ## An automated music engraving system (Git snapshot)
 #lilypond-git - not available in customrepo yet
@@ -181,7 +179,8 @@ scikits-base
 
 #hydrogen-git - not available in customrepo yet
 #yoshimi-git - not available in customrepo yet
-#shuriken
+## QT / Open source beat slicer for Linux which harnesses the power of aubio's onset detection algorithms and Rubber Band's time stretching capabilities.
+shuriken
 ## A graphical user interface for the klick metronome for JACK
 gtklick
 #gtklick-git - not available in customrepo yet
@@ -212,12 +211,14 @@ gtklick
 #openav-artyfx-git
 #openav-sorcer-git
 
-#paulstretch-git
-#drumgizmo-git
-##helm-git
-#helm -- created from the debian package with debtab 
-#patches helm update fehlen 
+paulstretch-git
+drumgizmo-git
 #dexed-vst-git
+
+helm-git 
+###patches helm update fehlen ???
+steinberg-vst36
+
 ## A JACK Audio Connection Kit Audio Mastering interface 
 #jamin-cvs 
 ####
@@ -255,10 +256,16 @@ gtklick
 
 
 #faust-git
-#faust2-git
+faust2-git
 #faustlive-git
+
 ## Use pure data extended, if you want to use ExpoChirpToolKit
 pd-extended
+## Run Faust signal processors in Pd, Pd-Extended version
+#pdextended-faust  - not available in customrepo yet
+## LV2 plugin host for Pd, Pd-Extended version
+#pdextended-lv2plugin-git  - not available in customrepo yet
+
 python2-pyo
 #wxgtk-light - not available in customrepo yet - build failed
 #wxpython-light - not available in customrepo yet
@@ -279,63 +286,6 @@ python2-librosa
 
 
 
-### HAM ###
-### https://wiki.archlinux.org/index.php/Amateur_radio ###s
-## Firmware for Afatech af9015 based USB dvb devices
-#af9015-firmware
-## Ham radio test trainer
-#afutrainer  - not available in customrepo yet
-## GUI tool for programming ham radios; supports a large number of makes and models
-#chirp - not available in customrepo yet
-## Daily build for GUI tool for programming ham radios; this pkgbuild is never out of date
-#chirp-daily - not available in customrepo yet
-## The package represents databases of entities (countries), prefixes and callsigns that are used by amateur radio logging software - CONTESTING VERSION.
-#cty - out of date in customrepo
-## Ham Radio - Determines ARRL DXCC entity of a callsign
-#dxcc
-##
-#fldigi
-## Moxon antenna designer
-#fl_moxgen - ?????
-## General purpose DSP and SDR toolkit. With drivers for usrp and fcd. 
-#gnuradio-git - not available in customrepo yet
-## Gnuradio blocks and tools for receiving GSM transmissions
-#gnuradio-gsm-git - not available in customrepo yet
-## Multi-channel receiver with use of RTL-SDR dongles
-#gnuradio-multi-rtl-git - not available in customrepo yet
-## Essential radio astronomy tools for Gnuradio.
-#gnuradio-ra-blocks-git - not available in customrepo yet
-## Simple radio astronomy for Gnuradio.
-#gnuradio-simple-ra-git - not available in customrepo yet
-## Real-time satellite tracking and orbit prediction application
-#gpredict- not available in customrepo yet
-## SDR receiver for Funcube Dongle, RTL-SDR, USRP and OsmoSDR devices.
-#gqrx-git- not available in customrepo yet
-## Ham radio (specific) XDG-compliant menu
-#hamradio-menus
-## Small desktop display of the current solar indices
-#hamsolar- not available in customrepo yet
-## Python script to convert string into NATO alphabet representation
-##nato - ??????
-## A Linux based SDR program similar in operation and features to other programs like Gqrx, HDSDR, and SDR#
-#natpos-sdr- not available in customrepo yet
-## A RF Signal Propagation, Loss, And Terrain analysis tool for the spectrum between 20 MHz and 20 GHz
-#splat- not available in customrepo yet
-## A 3D planetarium software which renders realistic skies in real time
-#stellarium-bzr - not available in customrepo yet
-## An astronomical world map that shows day and night and the Sun and Moon position
-#sunclock - not available in customrepo yet
-## QSO log signing data for the ARRL Logbook of The World (LoTW)
-#trustedqsl- not available in customrepo yet
-## QSO log signing & upload - ARRL's Logbook of The World (LoTW) - GIT version
-#trustedqsl-git- not available in customrepo yet
-## Full featured APRS Tracking/Information Reporting System
-#xastir - not available in customrepo yet
-## GTK+ Antenna EM Modeling Client
-#xnec2c- not available in customrepo yet
-
-
-
 
 ### libs ###
 #libgig-svn
@@ -348,7 +298,7 @@ python2-librosa
 #ntk-git
 #octave-control
 #qt5-quick1
-#ttf-roboto
+#ttf-roboto  ## out of date / moved to community
 
 
 
@@ -414,18 +364,6 @@ tuna
 
 
 
-## Dependencies Cabbage ##
-## A programming language for sound rendering and signal processing.
-#csound  - !!! 6.0.7 update -- not available in customrepo yet
-#csound-doc  - not available in customrepo yet
-## A frontend for Csound featuring a highlighting editor with autocomplete, interactive widgets and integrated help
-#csoundqt - not available in customrepo yet
-####libcsound64-dev?????
-####libcsnd-dev??????
-#steinberg-vst36
-
-
-
 ## Hercules DJ Control mp3 e2 ##
 #hdjmod  - not available in customrepo yet - not with linux-rt
 
@@ -438,3 +376,105 @@ tuna
 
 ## A fork of zenity - display graphical dialogs from shell scripts or command line
 #yad
+
+
+
+
+
+
+### HAM ###
+### https://wiki.archlinux.org/index.php/Amateur_radio ###s
+## Firmware for Afatech af9015 based USB dvb devices
+#af9015-firmware
+## Ham radio test trainer
+#afutrainer  - not available in customrepo yet
+## Programs for the hamradio protocol AX.25 that would be used by normal users
+#ax25-apps - not available in customrepo yet
+## The network tools to configure hamradio interfaces and some of the hamradio specific network daemons
+#ax25-tools - not available in customrepo yet
+## Ham Radio - library for AX.25, ROSE, 6PACK, KISS and NETROM protoc
+#libax25 - not available in customrepo yet
+## GUI tool for programming ham radios; supports a large number of makes and models
+#chirp - not available in customrepo yet
+## Daily build for GUI tool for programming ham radios; this pkgbuild is never out of date
+#chirp-daily - not available in customrepo yet
+## Ham Radio Morse Code transmitter - text input is sent via udp port 6789.
+#cwdaemon - not available in customrepo yet
+## The package represents databases of entities (countries), prefixes and callsigns that are used by amateur radio logging software - CONTESTING VERSION.
+#cty - out of date in customrepo
+## Ham Radio - Determines ARRL DXCC entity of a callsign
+#dxcc
+## Ham Radio HF Beacon Assistant
+#eepbeacon- not available in customrepo yet
+## Ham Radio UTC/Local-time Clock
+#eepclock - not available in customrepo yet
+## Ham Radio Contest CW Keyer
+#eepkeyer - not available in customrepo yet
+## Ham Radio - Elecraft K2 CLI-based Rig Control
+#fasttuna- not available in customrepo yet
+## Ham Radio - Field Day Logger with networked nodes
+#fdlog- not available in customrepo yet
+##
+#fldigi
+## Moxon antenna designer
+#fl_moxgen - ?????
+## Ham Radio multi-mode digital communications package.
+#gmfsk - not available in customrepo yet
+## General purpose DSP and SDR toolkit. With drivers for usrp and fcd. 
+#gnuradio-git - not available in customrepo yet
+## Gnuradio blocks and tools for receiving GSM transmissions
+#gnuradio-gsm-git - not available in customrepo yet
+## Multi-channel receiver with use of RTL-SDR dongles
+#gnuradio-multi-rtl-git - not available in customrepo yet
+## Essential radio astronomy tools for Gnuradio.
+#gnuradio-ra-blocks-git - not available in customrepo yet
+## Simple radio astronomy for Gnuradio.
+#gnuradio-simple-ra-git - not available in customrepo yet
+## Real-time satellite tracking and orbit prediction application
+#gpredict - not available in customrepo yet
+## SDR receiver for Funcube Dongle, RTL-SDR, USRP and OsmoSDR devices.
+#gqrx-git - not available in customrepo yet
+## Ham Radio Maidenhead grid converter & bearing + distance calculator
+#gridloc - not available in customrepo yet
+## Ham radio equipment control libraries
+#hamlib - not available in customrepo yet
+#hamlib-git - not available in customrepo yet
+## Ham radio (specific) XDG-compliant menu
+#hamradio-menus
+## Small desktop display of the current solar indices
+#hamsolar- not available in customrepo yet
+## Python script to convert string into NATO alphabet representation
+##nato - ??????
+## A Linux based SDR program similar in operation and features to other programs like Gqrx, HDSDR, and SDR#
+#natpos-sdr- not available in customrepo yet
+## A RF Signal Propagation, Loss, And Terrain analysis tool for the spectrum between 20 MHz and 20 GHz
+#splat- not available in customrepo yet
+## A 3D planetarium software which renders realistic skies in real time
+#stellarium-bzr - not available in customrepo yet
+## An astronomical world map that shows day and night and the Sun and Moon position
+#sunclock - not available in customrepo yet
+## QSO log signing data for the ARRL Logbook of The World (LoTW)
+#trustedqsl- not available in customrepo yet
+## QSO log signing & upload - ARRL's Logbook of The World (LoTW) - GIT version
+#trustedqsl-git- not available in customrepo yet
+## Full featured APRS Tracking/Information Reporting System
+#xastir - not available in customrepo yet
+## GTK+ Antenna EM Modeling Client
+#xnec2c- not available in customrepo yet
+
+
+
+
+
+
+## Dependencies Cabbage ##
+## A programming language for sound rendering and signal processing.
+#csound  - !!! 6.0.7 update -- not available in customrepo yet
+#csound-doc  - not available in customrepo yet
+## A frontend for Csound featuring a highlighting editor with autocomplete, interactive widgets and integrated help
+#csoundqt - not available in customrepo yet
+####libcsound64-dev?????
+####libcsnd-dev??????
+#steinberg-vst36
+
+

@@ -7,13 +7,13 @@ Work in progress.
 						
 Version: no need for version controlling, its just a backup.  	
 									
-Date:		2017-01-09  						
+Date:		2017-01-11  						
 Demo Deadline:	2017-xx-xx  
 
 License:	Good question. GPL, LGPL, BSD, MIT so far.
 		I will take look into license issues as soon as possible.
 
-Output size (ISO) for this current config: 1385709568 Bytes (1,4 GB, 1,3 GiB) BazzArch-2017.01.09-x86_64.iso      
+Output size (ISO) for this current config: 1375731712 Bytes (1,4 GB, 1,3 GiB) BazzArchDemoMin-2017.01.10-x86_64.iso      
 Needed pacman cache size for this current config (/var/cache/pacman/pkg): approx 2 GB    
 Needed customrepo size for this current config:: ??? (overall 3 GB)  
 Nedded work directory size for this current config: approx 8 GB  
@@ -28,7 +28,7 @@ Mirror (maybe not up to date):
 ----------------------------------------------------------------------  
 
 Comment:  
-Standard graphic card driver test. 
+Standard DemoMin test. 
 (for nvidia-340xx-rt legacy test see(*4 appendix))  
 
 uname -r  
@@ -142,39 +142,18 @@ Known issues:
 
 * linux-api-headers 4.5.5-1 ??? can't ignore it from core. Replacement for RT???  
 
-* :: Running post-transaction hooks...  
-( 1/12) Installing GConf schemas...  
-
-(gconftool-2:13730): GConf-WARNING **: Client failed to connect to the D-BUS daemon:  
-/usr/bin/dbus-launch terminated abnormally with the following error: No protocol specified  
-Autolaunch error: X11 initialization failed.  
-
 * startbuilt -> plymouth -> Error: file not found '/etc/os-release'  
 
 * guitarix 0.35.0.r10.g5640286-1-x86_64 does not start: error while loading shared libraries: libbluetooth.so.3: 
 cannot open shared object file: No such file or directory    
 fixed -- pacman -S bluez-libs  
 
-* No HID controler with linux-rt / mixxx  
+* No HID controler with linux-rt / e.g Hercules DJ Control mp3 e3 / see: mixxx  
 
 * (fix?) A stop job is running ... -> https://bbs.archlinux.org/viewtopic.php?pid=1618677#p1618677
 
-* acpi PNP0A08:00: _OSC: OS supports [ExtendedConfig ASPM ClockPM Segments MSI]  
-acpi PNP0A08:00: _OSC failed (AE_NOT_FOUND); disabling ASPM   
-
 * optimize-rt-blankscreen.service: Unit entered failed state.  
 optimize-rt-blankscreen.service: Failed with result 'exit-code'.  
-
- 
-* >> block.1: block modules  
------ exec: "/sbin/modprobe ide-cd_mod " -----  
-  modprobe: FATAL: Module ide-cd_mod not found in directory /lib/modules/4.4.9-rt17-1-rt  
------ return code: ? -----  
------ exec: "/sbin/modprobe ide-disk " -----  
-  modprobe: FATAL: Module ide-disk not found in directory /lib/modules/4.4.9-rt17-1-rt  
------ return code: ? -----  
------ exec: "/sbin/modprobe st " -----  
------ return code: ? -----  
 
 
 * You have to downgrade Xorg for older Nvidia cards.  
@@ -184,9 +163,6 @@ This means that these drivers do not support the current Xorg version. It thus m
 the nouveau driver, which supports the old cards with the current Xorg."     
 https://wiki.archlinux.org/index.php/NVIDIA#Unsupported_drivers  
 
-* Configuration texmf.cnf not found  
-
-* Something with x2d...
   
 * .git file is too large. Fix it!  (It will move to a own Demo-Repository later.)
 
@@ -200,19 +176,11 @@ https://wiki.archlinux.org/index.php/NVIDIA#Unsupported_drivers
    
 * wpa_passphrase write the pwd also in cleartext to file /etc/wpa_supplicant/wpatest.conf  
 
-* wxpython & wxpython2.8 & wxgtk & wx...????  wxpython (3) should work with python2-pyo  
-
-* pd-extended does not launch from the startmenu, but with pd from the console.  
-Exec=/usr/bin/pd  
- % sudo nano /usr/share/applications/pd-extended.desktop  
-
 * Preset in guitarix is too loud. Pay attention for your equipment and your ears!      
-* guitarix behaves buggy, when you scoll through the impulse responses and it will crash.  
-  
+  * guitarix behaves buggy, when you scoll through the impulse responses and it will crash.  
+  * choosing IRs in Klangfalter makes a lot of digital Sound.     
 * (fixed) Hydrogen is too loud. Pay attention for your equipment and your ears!  
 
-* The Carla preset BassIRmin does not work with Klangfalter. There is no wet signal.
-  My fault, I edited the preset manually.  
 
 
 
@@ -221,6 +189,12 @@ Exec=/usr/bin/pd
 
 ToDo:  
 --------------------------------------------------------  
+* Install a simple recorder for demo.  
+
+* MIDI tools   
+
+* b43 firmware for rt-kernel ???  
+
 * (done)update airootfs/etc/udev/rules.d/51-android.rules   
   * cp from here: https://github.com/snowdream/51-android/blob/master/51-android.rules  
   ** see also: https://github.com/M0Rf30/android-udev-rules  
@@ -230,9 +204,9 @@ ToDo:
   * DemoMid - Standard demo with a changing sizefile. Usual Live-Demo without making it persitent.  
   * DemoMax - Custom demo with an option for a persitent storage loop.  
 
-* Try to reduce AUR-packages. Maybe there are some alternatives in the 	officinal repos.  
 * Multilingual support  
-    
+  * hyphen-en/de/etc. would blow up the scope for a Demo. You have to build an ISO for each language.    
+
 * (done) install librosa (PKGBUILD available at AUR) -  % pip2 install [-e] librosa  
 https://github.com/librosa/librosa/blob/master/librosa/beat.py 
 
@@ -288,8 +262,12 @@ from the home directory. For LAN just connect your computer before startup. Othe
     % sudo dhcpcd enp...    
  
 
+## Network Manager  
+ConnMan mit cmt GUI.  
 
-### Soundcards  
+
+
+## Soundcards  
 There are some presets for qjackctl and it is preconfigured with a2jmidi and dbus support. 
 The config file is in /airootfs/etc/skel/.config/rncbc.org
 
@@ -312,7 +290,7 @@ loading
    
 
 
-### Guitarix   
+## Guitarix   
 The guitarix presets are stored in /airootfs/etc/skel/.config/guitarix/banks
 
 Guitarix can start with the webui by executing the script from the desktop, a tool for 
@@ -416,7 +394,7 @@ Install:
 
     packages.both: base-devel  
     packages.x86_64: faust2-git 
-
+  
 
 
 ## Pyo  
@@ -429,6 +407,12 @@ Install:
     PyAudio (https://people.csail.mit.edu/hubert/pyaudio/) [or Jack (http://jackaudio.org/)]  
     wxPython (http://www.wxpython.org/)  
 
+
+## Pure Data  
+Pure Data (aka Pd) is an open source visual programming language that can run on anything from personal computers and Raspberry Pis to smartphones (via libpd, pddroidparty, and Rjdj). Pd enables musicians, visual artists, performers, researchers, and developers to create software graphically without writing lines of code.  
+
+## ExpoChirpToolBox  
+ExpoChirpToolbox is an impulse response (IR) measurement tool chain in Pure Data, available for Windows, OSX and Linux. It implements the Exponential Sine Sweep method which has been so succesfully advocated by Angelo Farina. The toolbox is in developement, and has functionality for the generation of test signals, recording test responses, IR editing and basic IR analysis. The edited IR can be applied as a convolution filter in the toolbox.  
 
 
 
@@ -451,7 +435,7 @@ packages.both: denemo
 
 
 
-# Camera Support  
+## Camera Support  
 The kernel uvcvideo and a few gspca modules are loaded by default. VLC can record, play, stream and convert.  
 That works fine for me, and should support a lot of hardware. For further information, take a look at  
 http://www.ideasonboard.org/uvc/  
@@ -468,7 +452,7 @@ You can also use the application cheese from packages.both, for example.
 
  
 
-# Exiftool   
+## Exiftool (not available in minimal demo)  
 Perl-image-exiftool is a reader and rewriter of EXIF informations that supports raw files. 
 It answers to the name of image, but it can also be used to read/write audio/video format's metadata.  
 
@@ -492,7 +476,7 @@ The mounted share is likely to be present at /run/user/your_UID/gvfs or ~/.gvfs 
  
 
 
-# Screen Recorder (not available in Demo)  
+# Screen Recorder (not available in minimal demo)    
 
 SimpleScreenRecorder can handle Jack for audio.  
 

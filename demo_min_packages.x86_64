@@ -10,7 +10,7 @@ qastools-qt5
 ## Openbox configuration tool. Qt port of ObConf
 obconf-qt
 ## QT image viewer & screenshot tool
-#lximage-qt ??? Installed by dependency ???
+lximage-qt
 
 ## Useful scripts, systemd timer/service units and their configuration
 uenv-git
@@ -36,13 +36,13 @@ rts-git
 rt-tests
 ## Realtime application thread priority tuning
 rtapp
-#
-## 
-#downgrade
+
 
 #### Plugins #######
 ## Distrho LV2 Audio Plugins, using the JUCE Toolkit
 distrho-lv2-git
+## DrMr is an LV2 sampler plugin that can play Hydrogen drumkits. This version enables plugin state saving using strings.
+#drmr-falktx-git
 ## An LV2 parametric equalizer audio plugin
 eq10q
 ## A collection of open-source LV2 plugins
@@ -59,8 +59,10 @@ lsp-plugins-lv2
 mda-lv2-git
 ## Rakarrack effects ported to LV2 plugins (git version) - BETA
 rkr-lv2-git
+## lv2 drum synthersizer without sampling
+#stegosaurus-lv2
 ## LV2 port for the TAP (Tom's Audio Processing) plugins
-tap-plugins-lv2-git
+#tap-plugins-lv2-git
 ## Collection of LV2 plugins
 x42-plugins
 ## Collection of LV2/LADSPA/VST audio plugins for high quality processing
@@ -72,28 +74,8 @@ zam-plugins-git
 ## Audio Plugin Host 
 carla
 python-pyliblo
-####
-#carla-git
-#carla-bridges-win
-#carla-bridges-win32-git
-#carla-bridges-win64-git
 
 
-## JACK toolbox for audio production.
-#cadence
-
-## A LilyPond sheet music text editor.
-#frescobaldi
-#python-ly
-#python-poppler-qt4
-#tango-icon-theme
-
-
-## An automated music engraving system (Git snapshot)
-#lilypond-git - not available in customrepo yet
-
-## A simple but fully featured LV2 host for Jack
-#jalv-git - not available in customrepo yet
 ## A little GUI to select installed lv2 plug-ins and run them with jalv.
 jalv-select-git
 
@@ -118,9 +100,6 @@ scikits-base
 ## A graphical user interface for the klick metronome for JACK
 gtklick
 
-#jack2-no-dbus-git
-#jack_capture
-#freqtweak
 ## KeyFinder is a tool for estimating the musical key of digital recordings, to aid DJs in harmonic mixing.
 #keyfinder-git - failed / g++ (GCC) 6.2.1 20160830 / g++: Fehler: nicht erkannte Kommandozeilenoption »-stdlib=libc++«
 #keyfinder-cli-git - failed / ???
@@ -129,22 +108,10 @@ gtklick
 
 #zynaddsubfx-git
 
-#faust-git
-#faust2-git
-#faustlive-git
 ## Use pure data extended, if you want to use ExpoChirpToolKit
 pd-extended
 python2-pyo
-#wxgtk-light - not available in customrepo yet - build failed
-#wxpython-light - not available in customrepo yet
-#
-#python-slycot-git
-#python2-enum
-#python2-ethtool
-#python2-linux-procfs
-#python2-pyaudio
-#python2-pyliblo
-#python2-schedutils
+
 
 ## Python library for music and audio analysis
 python2-librosa
@@ -161,27 +128,8 @@ python2-librosa
 #ntk-git
 #octave-control
 #qt5-quick1
-#ttf-roboto
+#ttf-roboto  ## out of date / moved to community
 
 ## Tuna is a tool that can be used to adjust scheduler tunables such as scheduler policy, RT priority and CPU affinity.
 tuna
-
-## A tabbed document viewer. It uses Poppler for PDF support, libspectre for PS support, DjVuLibre for DjVu support, CUPS for printing support and the Qt toolkit for its interface.
-#qpdfview
-
-### Hardware ###
-## Printer ##
-## Activate multilib repository
-## The Brothers-script use C-Shell instead of bash - tcsh available from official Repository
-#tcsh
-#brother-mfc7360n
-#brscan4
-
-## Music Education ##
-## A crossplatform tool for learning classical score notation. Mostly for guitarists but also very good for ear training.
-#nootka
-
-
-## An oscilloscope style guitar tuner
-#tunescope-git
 
