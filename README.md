@@ -7,13 +7,14 @@ Work in progress.
 						
 Version: no need for version controlling, its just a backup.  	
 									
-Date:		2017-01-11  						
+Date:		2017-01-13  						
 Demo Deadline:	2017-xx-xx  
 
 License:	Good question. GPL, LGPL, BSD, MIT so far.
 		I will take look into license issues as soon as possible.
 
 Output size (ISO) for this current config: 1375731712 Bytes (1,4 GB, 1,3 GiB) BazzArchDemoMin-2017.01.10-x86_64.iso      
+Output size (ISO) for this current config: 1677721600 Bytes (1,7 GB, 1,6 GiB) BazzArch-2017.01.13-x86_64.iso    
 Needed pacman cache size for this current config (/var/cache/pacman/pkg): approx 2 GB    
 Needed customrepo size for this current config:: ??? (overall 3 GB)  
 Nedded work directory size for this current config: approx 8 GB  
@@ -28,7 +29,7 @@ Mirror (maybe not up to date):
 ----------------------------------------------------------------------  
 
 Comment:  
-Standard DemoMin test. 
+Standard DemoMin&Mid test. 
 (for nvidia-340xx-rt legacy test see(*4 appendix))  
 
 uname -r  
@@ -73,6 +74,8 @@ Requirements:
 * an Internet connection   
   Unfortunately it downloads some things on every build, even if you have all packages available.  
   see this for a possible solution: http://software.techforums.space/software/easy-way-to-use-archiso-for-100-offline-installs-all-packages-on-iso-4928fb3f.html  
+
+* for this configuration you need a minimum of 2 (1.9) Gigabyte RAM. 4 (3.8) Gigabyte for suspend to RAM.   
 
 
 HowTo: 
@@ -129,12 +132,26 @@ and dd it to the top (/dev/sdX and not /dev/sdX1)
 
 Known issues:  
 ------------------------------------------  
-* WebUI-script can only be use one time - need if construction  
+* tuna: GUI failed / segmentation fault  
+  * /usr/lib/python2.7/site-packages/gtk-2.0/gtk/__init__.py:57: GtkWarning: could not open display  
+
+* friture-git  
+  * Traceback (most recent call last):
+  *  File "/usr/bin/friture", line 7, in <module>
+    * from friture.analyzer import main
+  * ModuleNotFoundError: No module named 'friture'  
+ 
+* enter /usr/share/application with PCManFM-QT let it crash sometimes.     
+
+* Suspend to RAM does not work on some machines. Maybe a BIOS/ACPI issue, maybe unrecoverable.  
+
+* WebUI-script can only be use one time    
 
 * ?irqbalance? installed  / Is it recommended with rt and tuna?    
   
-* specmatch PKGBUILD does not work. There is no scikits.audiolab in pip. ?pip ist with sudo?  
+* specmatch PKGBUILD does not work. There is no scikits.audiolab in pip. ?pip it with sudo?  
   * The PKGBUILD build with an error: ERROR: ld.so: object 'libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.  
+  * specmatch should be essential for BazzArch. Install it manualy and copy paste it to the system.  
    
 * no trashcan / can not delete a file via pcmanfm-qt ?!  
 
@@ -189,7 +206,38 @@ https://wiki.archlinux.org/index.php/NVIDIA#Unsupported_drivers
 
 ToDo:  
 --------------------------------------------------------  
+* add Launchpad support (maybe not with rt)
+ * try e.g. https://github.com/FMMT666/launchpad.py   
+
 * Install a simple recorder for demo.  
+
+* Configure cups  
+
+* Debug realtime!  rtcheck  
+  * --> rtc0 and hpet max user frequency  
+    * Suggested value is 2048 or more  
+    * 64  
+    * 64  
+
+  * disable swap ?  
+  * root is not in audio group  
+
+  * STANDARD TEST
+    * as root: /dev/cpu_dma_latency set to 0us  
+      * policy: fifo: loadavg: 37.06 12.64 4.60 1/221 5151          
+      * T: 0 ( 5150) P:98 I:100 C:  10000 Min:      4 Act:   10 Avg:    9 Max:      37
+      * T: 1 ( 5151) P:98 I:100 C:  10000 Min:      4 Act:    9 Avg:    8 Max:      40
+    * as live-user: open /dev/cpu_dma_latency: Permission denied  
+      * policy: fifo: loadavg: 0.15 7.03 6.28 1/221 5632          
+      * T: 0 ( 5630) P:98 I:100 C:  10000 Min:      4 Act:   21 Avg:   21 Max:      76  
+      * T: 1 ( 5631) P:98 I:100 C:   9965 Min:      5 Act:    8 Avg:   22 Max:     102    
+
+  * --> Realtime is really working?  
+    * /etc/pam.d/system-auth:session   required  pam_limits.so  
+    * /etc/pam.d/system-services:session   required    pam_limits.so  
+
+  * ...
+
 
 * MIDI tools   
 
@@ -480,6 +528,8 @@ The mounted share is likely to be present at /run/user/your_UID/gvfs or ~/.gvfs 
 
 SimpleScreenRecorder can handle Jack for audio.  
 
+# ZooFX  
+Test  
 
 # CPU-Performance  
 Because this master tree of the live session is more than just an effect unit, I integrate a switch to qjackctl, 
@@ -539,7 +589,12 @@ or time-delayed (10 seconds):
 
      % sleep10; import
 
-
+  
+Activate USB-Tethering, very helpful if the wireless driver is installed:  
+  * on your phone/tablet   
+  * in Arch:  
+    * ls /sys/class/net  
+    * dhcpcd ... / e.g. usb0  
 
 
 ## Make the storage persistent (before copy ISO to USB) (optional)   

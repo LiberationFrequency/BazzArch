@@ -6,6 +6,7 @@ cadence-0.8.1-4-x86_64.pkg.tar.xz
 carla-1.9.7-1-x86_64.pkg.tar.xz  
 carla-git-1.9.7.r6.g3075aa2c-1-x86_64.pkg.tar.xz  
 cmst-2016.10.03-1-x86_64.pkg.tar.xz   
+composer-git-1:2.0rc1.19.g812e02d-1-x86_64.pkg.tar.xz  
 distrho-lv2-git-r345.5ca92d5-1-x86_64.pkg.tar.xz  
 drmr-falktx-git-20150509-1-x86_64.pkg.tar.xz  
 drumgizmo-git-0.9.11.r65.gb9ae5c7-1-x86_64.pkg.tar.xz  
@@ -29,8 +30,14 @@ linux-rt-4.8.15_rt10-1-x86_64.pkg.tar.xz
 #linuxsampler-svn-r2890-1-x86_64.pkg.tar.xz    
 lsp-plugins-lv2-bin-1.0.18-1-x86_64.pkg.tar.xz  
 #nvidia-340xx-rt-340.98-1-x86_64.pkg.tar.xz  
+openav-artyfx-git-1.3.r3.g2f88ea4-1-x86_64.pkg.tar.xz  
+openav-fabla2-git-40d9c96-1-x86_64.pkg.tar.xz  
+openav-luppp-git-1.1.r10.g908bb89-1-x86_64.pkg.tar.xz  
+openav-sorcer-git-1.1.3.r2.ge0d5f2f-1-x86_64.pkg.tar.xz  
 ???python2-enum-0.4.6-1-any.pkg.tar.xz  
 pd-extended-0.43.4-5-x86_64.pkg.tar.xz  
+python-pyalsaaudio-git-0.8.2.r5.g478d055-1-x86_64.pkg.tar.xz   
+python2-pyalsaaudio-git-0.8.2.r5.g478d055-1-x86_64.pkg.tar.xz  
 python2-pyo-0.8.2-1-x86_64.pkg.tar.xz  
 qastools-qt5-0.21-1-x86_64.pkg.tar.xz  
 qpdfview-0.4.16-3-x86_64.pkg.tar.xz   

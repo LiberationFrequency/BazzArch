@@ -99,6 +99,7 @@ xorg-server-utils
 xorg-drivers 	   		
 #####################################################
 #xf86-input-evdev		
+## Joystick no longer available ???
 #xf86-input-joystick		
 #xf86-input-keyboard		
 #xf86-input-libinput			
@@ -333,9 +334,9 @@ sox
 
 
 ## Onset detection, pitch tracking, note tracking and tempo tracking plugins using Paul Brossier's aubio library
-#vamp-aubio-plugins
+vamp-aubio-plugins
 ##The Vamp audio analysis plug-in system
-#vamp-plugin-sdk
+vamp-plugin-sdk
 
 
 ## Virtual MIDI Piano Keyboard
@@ -383,7 +384,7 @@ samplv1
 ## An old-school all-digital 4-oscillator subtractive polyphonic synthesizer with stereo fx
 synthv1
 ##Audio normalizer, converter, encoder/decoder, ripper, tagger and player
-#gnormalize
+gnormalize
 ## An advanced drum machine
 ## https://github.com/hydrogen-music/Song-and-pattern-repository
 hydrogen
@@ -416,7 +417,7 @@ denemo
 ## A native YouTube client in Qt. Watch YouTube videos without Flash Player
 #minitube
 ## Free, open source software for digital DJ'ing.
-#mixxx
+mixxx
 ## Audio/MIDI multitrack sequencer
 #qtractor
 ## Qt GUI for FluidSynth
@@ -583,6 +584,7 @@ wxpython
 
 ### Music Games ###
 ## A free game like "Singstar", "Rockband" or "Stepmania"
+## see also composer-git from package.x86_64
 performous
 performous-freesongs
 
@@ -653,7 +655,7 @@ bluez-libs
 meterbridge
 
 ## Fix ??? friture-git
-cython
+#cython
 
 ## Fix for carla (not carla-git)
 python-pyqt5

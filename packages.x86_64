@@ -36,7 +36,7 @@ qastools-qt5
 obconf-qt
 #lxqt-connman-applet-git - not available in customrepo yet - failed
 ## QT image viewer & screenshot tool
-lximage-qt
+#lximage-qt - failed?? choosing dialog during build works.  
 #lximage-qt-git  - not available in customrepo yet / AUR out of date
 ## Free cross-platform QT file archiver - not available in customrepo yet - failed
 #peazip-qt-build - not available in customrepo yet
@@ -81,12 +81,20 @@ rtapp
 #downgrade
 
 #### Plugins #######
+## Alsa Modular modules in LV2 form.
+#ams-lv2-git- not available in customrepo yet 
+## A set of LV2 plugins to mangle, slash, repeat and do much more with your beats.
+#beatslash-lv2-git - not available in customrepo yet
+## An LV2 port of the BLOP LADSPA plugins by Mike Rawes.
+#blop-lv2- not available in customrepo yet
 ## LV2/JACK audio plug-ins for musicians (git version)
 #calf-git - not available in customrepo yet
+## The LADSPA C* Audio Plugin Suite (LV2 port)
+#caps-lv2-git- not available in customrepo yet
 ## Distrho LV2 Audio Plugins, using the JUCE Toolkit
 distrho-lv2-git
 ## DrMr is an LV2 sampler plugin that can play Hydrogen drumkits. This version enables plugin state saving using strings.
-#drmr-falktx-git
+drmr-falktx-git
 ## An LV2 parametric equalizer audio plugin
 eq10q
 ## A collection of open-source LV2 plugins
@@ -141,7 +149,8 @@ python-pyliblo
 #tango-icon-theme
 
 ## An application to visualize and analyze live audio data in real-time.
-friture-git
+#friture-git - error: see readme  
+#friture - not available in customrepo yet
 
 ## An automated music engraving system (Git snapshot)
 #lilypond-git - not available in customrepo yet
@@ -176,6 +185,12 @@ jack-stdout-git
 libsndfile
 scikits-base
  
+### Looper ###
+## A looper, drum machine, sequencer, live sampler and plugin host
+#giada - not available in customrepo yet
+## Live looping sampler capable of immediate loop recording
+#sooperlooper - not available in customrepo yet
+
 
 #hydrogen-git - not available in customrepo yet
 #yoshimi-git - not available in customrepo yet
@@ -198,18 +213,19 @@ gtklick
 ## Jack audio session manager from the NON DAW
 #non-sessionmanager-git - not available in customrepo yet
 
-#setbfree-git
+## A DSP tonewheel organ emulator
+setbfree-git
 
 ## A GUI tool to create backups of the memory contents of MIDI devices
 #simplesysexxer
 ## SoX Resampler library dsd branch
 #sox-dsd-git - not available in customrepo yet
 
-#openav-luppp-git
+openav-artyfx-git
 #openav-fabla-git
-#openav-fabla2-git
-#openav-artyfx-git
-#openav-sorcer-git
+openav-fabla2-git
+openav-luppp-git
+openav-sorcer-git
 
 paulstretch-git
 drumgizmo-git
@@ -220,7 +236,7 @@ helm-git
 steinberg-vst36
 
 ## A JACK Audio Connection Kit Audio Mastering interface 
-#jamin-cvs 
+jamin-cvs 
 ####
 
 #### binwalk-git ??? license issue if published as binary???
@@ -230,8 +246,9 @@ steinberg-vst36
 #python-pyqtgraph
 
 #jack2-no-dbus-git
-#jack_capture
-#freqtweak
+jack_capture
+## Audio Effect Processor and Spectrum Analyzer
+freqtweak
 ## KeyFinder is a tool for estimating the musical key of digital recordings, to aid DJs in harmonic mixing.
 #keyfinder-git - failed / g++ (GCC) 6.2.1 20160830 / g++: Fehler: nicht erkannte Kommandozeilenoption »-stdlib=libc++«
 #keyfinder-cli-git - failed / ???
@@ -328,7 +345,7 @@ tuna
 
 ## Music Education ##
 ## A crossplatform tool for learning classical score notation. Mostly for guitarists but also very good for ear training.
-#nootka
+#nootka - not available in customrepo yet
 
 
 ## Music Games ##
@@ -344,7 +361,8 @@ tuna
 #ultrastardx-songs  - not available in customrepo yet
 ## UltraStar Deluxe WorldParty is a free and open source karaoke game - a fork of UltraStar Deluxe. It allows up to six players to sing along with music using microphones in order to score points, depending on the pitch of the voice and the rhythm of singing.
 #ultrastardxwp-git
-
+## Song editor for karaoke games
+composer-git
 
 
 ## Artwork ##
@@ -371,11 +389,24 @@ tuna
 #multibootusb
 
 ## An oscilloscope style guitar tuner
-#tunescope-git
+tunescope-git
 
 
 ## A fork of zenity - display graphical dialogs from shell scripts or command line
 #yad
+
+
+### for use with aubio ###
+## ALSA wrappers for Python 3
+#python-pyalsaaudio 
+## ALSA wrappers for Python 2
+python2-pyalsaaudio
+## Jack audio client module for python
+#pyjack  - not available in customrepo yet / ??? 
+### see also pyaudio for portaudio ###
+
+## JACK client to map joystick buttons to MIDI events
+#midijoystick-git - not available in customrepo yet
 
 
 

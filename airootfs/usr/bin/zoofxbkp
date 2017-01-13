@@ -1,0 +1,393 @@
+#!/bin/bash
+
+## Proof of concept, how to backup a single Patch and the whole bank from a ZFXB3
+## and convert it to several formats simultaneously.
+## It reads the name of the patch and set it as filename.
+## It creates two (amidi) SysEx files, the .b3x is a message without a locator information. 
+## The .b3z contains a similar representation of the patch with a locator compared to CC. 
+## Additional it creates a human readable plain text file. In total 301 + 100 objects should be in the folders.
+## Not ready yet.
+## e.g.
+## ./zfxbkp.sh -s /save/to/path/
+
+## Known issues
+## Two or more patches with the same name will be overwritten. 
+## Very slow, but otherwise it is a mess sometimes. Not so urgend in this phase.
+## It is recommend to backup a fresh booted (connected?) device,because it replies sometimes
+## the full amidi dump cache or similar, so the script can not extract the informations. 
+
+# Parse arguments
+usage() {
+    echo "Usage: $0 [-h] [-v] [-s /patch/to/directory]"
+
+    echo "  -h  Help. Display this message and quit."
+    echo "  -s  Save bank to directory. e.g. ./zfxbackup.sh -s /home/user/ZFXB3_Patches/Bankname"
+    echo "  -t  Transmit bank back to device.  e.g. ./zfxbackup.sh -t /home/user/ZFXB3_Patches/Bankname/bank"
+    echo "      Play it back with 'amidi -p hw:2,0,0 -s filename' manually after unlock."
+    echo "      You can also send the SysEx message directly shown in the plain text file." 
+    echo "  -v  Version. Print version number and quit."
+    exit
+}
+
+
+dirname=""
+bankname=bank
+optspec="hvs:t:"
+while getopts "$optspec" optchar
+do
+    case "${optchar}" in
+        h)
+            usage
+	    exit 0
+            ;;
+        s)
+            dirname="$OPTARG"
+            ;;
+        t)
+            path="$OPTARG"
+            echo $path
+            amidi -p hw:2,0,0 -S "F0 52 00 4F 50 F7" -i 0.4
+            amidi -p hw:2,0,0 -s $path/00_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/01_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/02_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/03_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/04_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/05_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/06_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/07_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/08_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/09_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/0A_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/0B_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/0C_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/0D_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/0E_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/0F_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/10_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/11_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/12_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/13_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/14_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/15_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/16_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/17_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/18_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/19_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/1A_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/1B_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/1C_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/1D_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/1E_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/1F_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/20_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/21_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/22_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/23_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/24_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/25_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/26_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/27_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/28_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/29_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/2A_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/2B_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/2C_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/2D_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/2E_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/2F_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/30_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/31_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/32_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/33_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/34_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/35_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/36_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/37_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/38_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/39_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/3A_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/3B_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/3C_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/3D_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/3E_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/3F_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/40_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/41_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/42_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/43_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/44_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/45_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/46_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/47_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/48_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/49_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/4A_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/4B_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/4C_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/4D_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/4E_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/4F_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/50_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/51_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/52_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/53_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/54_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/55_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/56_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/57_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/58_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/59_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/5A_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/5B_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/5C_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/5D_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/5E_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/5F_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/60_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/61_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/62_*.b3z -i 0.1 &&
+            amidi -p hw:2,0,0 -s $path/63_*.b3z -i 0.1 
+            amidi -p hw:2,0,0 -S "F0 52 00 4F 51 F7"
+            exit 1
+            ;;
+        v)
+            echo "0.00.005 alpha"
+            exit 1
+            ;;
+    	:) 
+            echo "Error: -$OPTARG requires an argument" 
+            usage
+            exit 1
+            ;;
+        ?)
+            echo "Error: unknown option -$OPTARG" 
+            usage
+            exit 1
+            ;;
+        *)
+            usage
+            ;;
+    esac
+done
+
+
+if [ -z "$dirname" ]; then
+  echo "Error: you must specify a directory name using -s"
+  usage
+  exit 1
+fi
+
+## Creates a directory, if it not exist.
+if [ ! -e "$dirname" ]; then
+  mkdir $dirname; 
+fi
+
+
+
+date=$(date)
+
+## Identify device
+id=$(amidi -p hw:2,0,0 -S "F0 7E 00 06 01 F7" -d -t 0.4)
+
+# Manufacturer ID
+man=("${id:16:2}")
+case "$man" in
+        52) mans=Zoom
+            ;;
+esac
+
+# Model ID
+mod=("${id:19:2}")
+case "$mod" in
+        4F) mods=B3
+            modsl=b3
+            ;;
+#        59) mods=G3x
+#            ;;
+#        ??) mods=G5
+#            ;;
+
+esac
+
+# System version
+verh=("${id:31:11}")
+# Convert hex2string
+vers=$(for c in `echo "$verh"`; do printf "\x$c"; done;)
+
+## Unlock device:
+amidi -p hw:2,0,0 -S "F0 $man 00 $mod 50 F7" -i 0.4
+
+## Store the current bank position before start backup
+pos=$(amidi -p hw:2,0,0 -S "F0 $man 00 $mod 33 F7" -d -t 0.4)
+poscut=("${pos:19:27}")
+
+
+i=$((0x0))
+
+for i in $(seq 0 99); do
+  var=$((i ++))
+  varh=$(echo 16o${var}p |dc)
+
+  ## Change Patch from A0 to J9:
+  amidi -p hw:2,0,0 -S "C0 $varh" -i 0.4
+
+  ## Request global patch configuration with bank information:
+  sysex=$(amidi -p hw:2,0,0 -S "F0 $man 00 $mod 09 00 00 $varh F7" -d -t 0.4)
+#  echo ""
+#  echo "Patch: $sysex"
+
+  ## Cut the answer to position of hex filename:
+  namecuth=("${sysex:181:17} ${sysex:202:11}")
+#  echo "Cut: $namecuth"
+
+  ## Convert hex to string:
+  namecuts=$(for c in `echo "$namecuth"`; do printf "\x$c"; done;)
+#  echo "String Cut: $namecuts"
+
+  ## CC extract:
+  cccuth=("${sysex:22:2}")
+
+
+######### not silent #################
+  ## Request current patch configuration:
+  sysex1=$(amidi -p hw:2,0,0 -S "F0 $man 00 $mod 29 F7" -d -t 0.4)
+  ## Cut the answer to position of hex filename:
+#  namecuth1=("${sysex:166:17} ${sysex:187:11}")
+#######################################
+
+
+
+
+  ## Save Patch to a plain text file:
+  echo $date > $dirname/"$namecuts".txt
+  echo "Manufacturer: $mans ("ID: $man")" >> $dirname/"$namecuts".txt
+  echo "Model: $mods ("ID: $mod")" >> $dirname/"$namecuts".txt
+  echo "System Version: $vers" >> $dirname/"$namecuts".txt
+  echo "Patchname: $namecuts" >> $dirname/"$namecuts".txt
+
+#  echo "i: $i"
+
+  ih=$(echo 16i${var}p |dc)
+#  echo "ih: $ih"
+
+  bankx=$(($ih+(0xA0)))
+#  echo "bankx: $bankx"
+
+  banks=$(echo 16o${bankx}p |dc)
+#  echo "banks: $banks"
+
+  echo "Bank Location: $cccuth (CC) / Bank: $banks (works only up to F9)" >> $dirname/"$namecuts".txt
+  echo "SysEx Message with location (78 byte):" >> $dirname/"$namecuts".txt
+  echo $sysex >> $dirname/"$namecuts".txt
+  echo "SysEX message of current patch without location (68 byte):" >> $dirname/"$namecuts".txt
+  echo $sysex1 >> $dirname/"$namecuts".txt
+  echo "Path: $dirname" >> $dirname/"$namecuts".txt
+  echo "Description:" >> $dirname/"$namecuts".txt
+  
+  ## Save Patch to (amidi) SysEx file:
+  amidi -p hw:2,0,0 -S "F0 $man 00 $mod 29 F7" -r $dirname/"$namecuts"."$modsl"x -t 0.4
+
+  if [ ! -e "$dirname/$bankname" ]; then
+    mkdir $dirname/$bankname; 
+  fi  
+
+  db=($dirname/$bankname)
+  #echo $db
+  amidi -p hw:2,0,0 -S "F0 $man 00 $mod 09 00 00 $varh F7" -r $db/"$cccuth""_""$namecuts"."$modsl"z -t 0.4
+#  amidi -p hw:2,0,0 -S "F0 $man 00 $mod 09 00 00 $varh F7" -r $dirname/"$cccuth""_""$namecuts".b3z -t 0.4
+
+
+
+
+  ## Save Patch to a .b3p file. Need to reverse engineering the messages first.
+  ## "F0 $man 00 $mod 09 00 00 $varh F7" or/and "F0 $man 00 $mod 29 F7"
+
+  echo "<?xml version="1.0" encoding="UTF-8"?>" > $dirname/"$namecuts"."$modsl"p
+  echo "" >> $dirname/"$namecuts".b3p
+  echo "<PatchData>" >> $dirname/"$namecuts".b3p
+  echo "  <Product>$mods</Product>" >> $dirname/"$namecuts".b3p
+  echo "  <Name>$namecuts</Name>" >> $dirname/"$namecuts".b3p
+  echo "  <Tooltip></Tooltip>" >> $dirname/"$namecuts".b3p
+  echo "  <Version>$vers</Version>" >> $dirname/"$namecuts".b3p
+  echo "  <Module0>" >> $dirname/"$namecuts".b3p
+  echo "    <Prm0></Prm0>" >> $dirname/"$namecuts".b3p
+  echo "    <Prm1></Prm1>" >> $dirname/"$namecuts".b3p
+  echo "    <Prm2></Prm2>" >> $dirname/"$namecuts".b3p
+  echo "    <Prm3></Prm3>" >> $dirname/"$namecuts".b3p
+  echo "    <Prm4></Prm4>" >> $dirname/"$namecuts".b3p
+  echo "    <Prm5></Prm5>" >> $dirname/"$namecuts".b3p
+  echo "    <Prm6></Prm6>" >> $dirname/"$namecuts".b3p
+  echo "    <Prm7></Prm7>" >> $dirname/"$namecuts".b3p
+  echo "    <Prm8></Prm8>" >> $dirname/"$namecuts".b3p
+  echo "    <Prm9></Prm9>" >> $dirname/"$namecuts".b3p
+  echo "    <Prm10></Prm10>" >> $dirname/"$namecuts".b3p
+  echo "  </Module0>" >> $dirname/"$namecuts".b3p
+  echo "  <Module1>" >> $dirname/"$namecuts".b3p
+  echo "    <Prm0></Prm0>" >> $dirname/"$namecuts".b3p
+  echo "    <Prm1></Prm1>" >> $dirname/"$namecuts".b3p
+  echo "    <Prm2></Prm2>" >> $dirname/"$namecuts".b3p
+  echo "    <Prm3></Prm3>" >> $dirname/"$namecuts".b3p
+  echo "    <Prm4></Prm4>" >> $dirname/"$namecuts".b3p
+  echo "    <Prm5></Prm5>" >> $dirname/"$namecuts".b3p
+  echo "    <Prm6></Prm6>" >> $dirname/"$namecuts".b3p
+  echo "    <Prm7></Prm7>" >> $dirname/"$namecuts".b3p
+  echo "    <Prm8></Prm8>" >> $dirname/"$namecuts".b3p
+  echo "    <Prm9></Prm9>" >> $dirname/"$namecuts".b3p
+  echo "    <Prm10></Prm10>" >> $dirname/"$namecuts".b3p
+  echo "  </Module1>" >> $dirname/"$namecuts".b3p
+  echo "  <Module2>" >> $dirname/"$namecuts".b3p
+  echo "    <Prm0></Prm0>" >> $dirname/"$namecuts".b3p
+  echo "    <Prm1></Prm1>" >> $dirname/"$namecuts".b3p
+  echo "    <Prm2></Prm2>" >> $dirname/"$namecuts".b3p
+  echo "    <Prm3></Prm3>" >> $dirname/"$namecuts".b3p
+  echo "    <Prm4></Prm4>" >> $dirname/"$namecuts".b3p
+  echo "    <Prm5></Prm5>" >> $dirname/"$namecuts".b3p
+  echo "    <Prm6></Prm6>" >> $dirname/"$namecuts".b3p
+  echo "    <Prm7></Prm7>" >> $dirname/"$namecuts".b3p
+  echo "    <Prm8></Prm8>" >> $dirname/"$namecuts".b3p
+  echo "    <Prm9></Prm9>" >> $dirname/"$namecuts".b3p
+  echo "    <Prm10></Prm10>" >> $dirname/"$namecuts".b3p
+  echo "  </Module2>" >> $dirname/"$namecuts".b3p
+  echo "  <Module3>" >> $dirname/"$namecuts".b3p
+  echo "    <Prm0></Prm0>" >> $dirname/"$namecuts".b3p
+  echo "    <Prm1></Prm1>" >> $dirname/"$namecuts".b3p
+  echo "    <Prm2></Prm2>" >> $dirname/"$namecuts".b3p
+  echo "    <Prm3></Prm3>" >> $dirname/"$namecuts".b3p
+  echo "    <Prm4></Prm4>" >> $dirname/"$namecuts".b3p
+  echo "    <Prm5></Prm5>" >> $dirname/"$namecuts".b3p
+  echo "    <Prm6>0</Prm6>" >> $dirname/"$namecuts".b3p
+  echo "    <Prm7></Prm7>" >> $dirname/"$namecuts".b3p
+  echo "    <Prm8>0</Prm8>" >> $dirname/"$namecuts".b3p
+  echo "    <Prm9>0</Prm9>" >> $dirname/"$namecuts".b3p
+  echo "    <Prm10>0</Prm10>" >> $dirname/"$namecuts".b3p
+  echo "  </Module3>" >> $dirname/"$namecuts".b3p
+  echo "  <Module4>" >> $dirname/"$namecuts".b3p
+  echo "    <Prm0>0</Prm0>" >> $dirname/"$namecuts".b3p
+  echo "    <Prm1>0</Prm1>" >> $dirname/"$namecuts".b3p
+  echo "    <Prm2>0</Prm2>" >> $dirname/"$namecuts".b3p
+  echo "    <Prm3>0</Prm3>" >> $dirname/"$namecuts".b3p
+  echo "    <Prm4>0</Prm4>" >> $dirname/"$namecuts".b3p
+  echo "    <Prm5>0</Prm5>" >> $dirname/"$namecuts".b3p
+  echo "    <Prm6>0</Prm6>" >> $dirname/"$namecuts".b3p
+  echo "    <Prm7>0</Prm7>" >> $dirname/"$namecuts".b3p
+  echo "    <Prm8>0</Prm8>" >> $dirname/"$namecuts".b3p
+  echo "    <Prm9>0</Prm9>" >> $dirname/"$namecuts".b3p
+  echo "    <Prm10>0</Prm10>" >> $dirname/"$namecuts".b3p
+  echo "  </Module4>" >> $dirname/"$namecuts".b3p
+  echo "</PatchData>" >> $dirname/"$namecuts".b3p
+
+
+
+  ## Save complete bank to an own .xml-file-structure:
+  ## 
+
+done
+
+
+
+## Jump back to last patch used
+amidi -p hw:2,0,0 -S "$poscut"
+
+sleep 0.4
+## Lock device again:
+amidi -p hw:2,0,0 -S "F0 $man 00 $mod 51 F7"
