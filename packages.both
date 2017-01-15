@@ -2,9 +2,9 @@
 arch-install-scripts
 b43-fwcutter
 btrfs-progs
-#clonezilla
+clonezilla
 crda
-#darkhttpd
+darkhttpd
 ddrescue
 dhclient
 dialog
@@ -31,15 +31,15 @@ mc
 mtools
 nfs-utils
 nilfs-utils
-#nmap
+nmap
 ntfs-3g
 ntp
 openconnect
 openssh
 openvpn
-#partclone
+partclone
 parted
-#partimage
+partimage
 ppp
 pptpclient
 refind-efi
@@ -52,7 +52,7 @@ sudo
 tcpdump
 testdisk
 usb_modeswitch
-#vim-minimal
+vim-minimal
 vpnc
 wget
 wireless_tools
@@ -80,10 +80,12 @@ base-devel
 hwdetect
 ## Hardware detection tool from openSUSE
 hwinfo
+## Lists open files for running Unix processes
+lsof
 ## GNU make utility to maintain groups of programs
 #make
 ## A useful diagnositic, instructional, and debugging tool
-#strace
+strace
 ## A tool that stress tests your system (CPU, memory, I/O, disks)
 stress
 #xterm (!!! Attention: xterm is linked against qterminal !!!)
@@ -314,10 +316,10 @@ alsa-utils
 jack2
 #jack2-dbus
 qjackctl
-#qtractor
+
 
 ## A modular patch bay for audio and MIDI systems based on Jack and Alsa
-patchage
+#patchage
 ## The Pure Data real-time music and multimedia environment
 #pd
 ## MIDI/audio sequencer and notation editor
@@ -325,7 +327,7 @@ patchage
 ## Time-stretching and pitch-shifting audio library and utility
 rubberband
 ## A viewer and analyser of music audio files.
-#sonic-visualiser
+sonic-visualiser
 ## The Swiss Army knife of sound processing tools
 sox
 
@@ -373,9 +375,13 @@ xmlstarlet
 ####Music Applications
 ## A tool for extracting annotations from audio signals 
 aubio
-#aeolus
-#audacity
-#audio-convert
+## Synthesised pipe organ emulator
+aeolus
+## A program that lets you manipulate digital audio waveforms
+audacity
+## A script with an easy to use interface to convert audio files: wav, mp3, ogg, flac, aac, mpc, ape and wma
+audio-convert
+## Concurrent, on-the-fly audio programming language
 #chuck
 ## An old-school drum-kit sampler
 drumkv1
@@ -419,13 +425,11 @@ denemo
 ## Free, open source software for digital DJ'ing.
 mixxx
 ## Audio/MIDI multitrack sequencer
-#qtractor
+qtractor
 ## Qt GUI for FluidSynth
 #qsynth
 ## A simple sound converter application for GNOME
 #soundconverter
-## A cd ripper application
-#sound-juicer
 ## A MIDI to WAVE converter and player
 timidity++
 ## A free and open set of instrument patches for use with softsynths
@@ -438,9 +442,9 @@ timidity-freepats
 ## A set of LADSPA ambisonics plugins
 #amb-plugins
 ## A realtime modular synthesizer and effect processor
-#ams
+ams
 ## Analogue Modeling SYNTHesizer
-#amsynth 
+amsynth 
 ## Bandlimited LADSPA Oscillator Plugins
 #blop
 ## LV2/DSSI/LADSPA plug-ins suite and standalone JACK host
@@ -519,7 +523,7 @@ gst-plugins-ugly
 lame
 flac
 opus
-#opus-tools
+opus-tools
 libvorbis
 vorbis-tools
 ###CD/DVD libaries ?german law issues?
@@ -580,7 +584,7 @@ wxpython
 
 ## Music Education ##
 ## Music education and ear training software
-#solfege
+solfege
 
 ### Music Games ###
 ## A free game like "Singstar", "Rockband" or "Stepmania"
@@ -676,7 +680,7 @@ python-pyqt5
 
 ## Screen lockers/saver ##
 ## Screen saver and locker for the X Window System
-#xscreensaver
+xscreensaver
 ## Very simple and lightweight X screen locker. Offers only a black background when locked, there are no animations or text fields.
 #slock
 
@@ -703,7 +707,7 @@ python-pyqt5
 
 ## CD Ripper ##
 ## Comprehensive command-line tool for ripping audio CDs.
-#abcde
+abcde
 ## GTK+-based CD ripping program.
 #asunder
 ## Compact Disc Digital Audio (CDDA) Digital Audio Extraction (DAE) tool.
@@ -721,9 +725,9 @@ python-pyqt5
 ## Audiodisk ripper that tries to deliver a secure rip through multiple rippings of the same track and corrections of any differences.
 #rubyripper
 ## Splits .wav and .flac files according to a CUE sheet and encodes the resulting pieces. A useful companion to ABCDE.
-#shntool
+shntool
 ## CD ripper for GNOME.
-#sound-juicer
+sound-juicer
 ## Front-end to various audio converters.
 #soundkonverter
 
@@ -734,7 +738,7 @@ speedcrunch
 ## Plugin for LXAppearance to configure Openbox
 #lxappearance-obconf
 ## Fast, easy, and free BitTorrent client (Qt GUI)
-#transmission-qt
+transmission-qt
 
 
 

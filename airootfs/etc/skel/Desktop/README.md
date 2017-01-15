@@ -7,14 +7,14 @@ Work in progress.
 						
 Version: no need for version controlling, its just a backup.  	
 									
-Date:		2017-01-13  						
+Date:		2017-01-15  						
 Demo Deadline:	2017-xx-xx  
 
 License:	Good question. GPL, LGPL, BSD, MIT so far.
 		I will take look into license issues as soon as possible.
 
 Output size (ISO) for this current config: 1375731712 Bytes (1,4 GB, 1,3 GiB) BazzArchDemoMin-2017.01.10-x86_64.iso      
-Output size (ISO) for this current config: 1677721600 Bytes (1,7 GB, 1,6 GiB) BazzArch-2017.01.13-x86_64.iso    
+Output size (ISO) for this current config: 1814429696 Bytes (1,8 GB, 1,7 GiB) BazzArch-2017.01.15-x86_64.iso    
 Needed pacman cache size for this current config (/var/cache/pacman/pkg): approx 2 GB    
 Needed customrepo size for this current config:: ??? (overall 3 GB)  
 Nedded work directory size for this current config: approx 8 GB  
@@ -34,6 +34,9 @@ Standard DemoMin&Mid test.
 
 uname -r  
 4.8.15-rt10-1-rt  
+
+If you get a SegFault for guitarix, hydrogen, ardour, etc. build guitarix-git again.  
+
 
 I deleted the cups config. To configure cups you need a root password. But this live session 
 has no root user, so you have to change the security config temporary.  
@@ -132,18 +135,16 @@ and dd it to the top (/dev/sdX and not /dev/sdX1)
 
 Known issues:  
 ------------------------------------------  
-* tuna: GUI failed / segmentation fault  
-  * /usr/lib/python2.7/site-packages/gtk-2.0/gtk/__init__.py:57: GtkWarning: could not open display  
+* guitarix: error while loading shared libraries: libboost_system.so.1.62.0: cannot open shared object file: No such file or directory  
+  * is libboost_system.so.1.63.0  
+* 1554 segmentation fault (core dumped)  hydrogen  
 
-* friture-git  
-  * Traceback (most recent call last):
-  *  File "/usr/bin/friture", line 7, in <module>
-    * from friture.analyzer import main
-  * ModuleNotFoundError: No module named 'friture'  
- 
+* Ardour5 crashes with segmentation fault during scanning plugins (VSTs?)     
+
 * enter /usr/share/application with PCManFM-QT let it crash sometimes.     
 
 * Suspend to RAM does not work on some machines. Maybe a BIOS/ACPI issue, maybe unrecoverable.  
+  * Mouse freeze sometimes after resume from suspend.  
 
 * WebUI-script can only be use one time    
 
@@ -153,6 +154,12 @@ Known issues:
   * The PKGBUILD build with an error: ERROR: ld.so: object 'libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.  
   * specmatch should be essential for BazzArch. Install it manualy and copy paste it to the system.  
    
+* friture-git / friture works   
+  * Traceback (most recent call last):
+  *  File "/usr/bin/friture", line 7, in <module>
+    * from friture.analyzer import main
+  * ModuleNotFoundError: No module named 'friture'  
+
 * no trashcan / can not delete a file via pcmanfm-qt ?!  
 
 * LXQT requests xscreensaver after resume. Why? I don't want use it?  
@@ -163,9 +170,7 @@ Known issues:
 
 * guitarix 0.35.0.r10.g5640286-1-x86_64 does not start: error while loading shared libraries: libbluetooth.so.3: 
 cannot open shared object file: No such file or directory    
-fixed -- pacman -S bluez-libs  
-
-* No HID controler with linux-rt / e.g Hercules DJ Control mp3 e3 / see: mixxx  
+fixed -- pacman -S bluez-libs   
 
 * (fix?) A stop job is running ... -> https://bbs.archlinux.org/viewtopic.php?pid=1618677#p1618677
 
@@ -206,6 +211,9 @@ https://wiki.archlinux.org/index.php/NVIDIA#Unsupported_drivers
 
 ToDo:  
 --------------------------------------------------------  
+* add customrepo to list of installed packages  
+  * mkarchiso-rt line 265  
+
 * add Launchpad support (maybe not with rt)
  * try e.g. https://github.com/FMMT666/launchpad.py   
 
@@ -514,7 +522,7 @@ delete metadata:
  
 
 
-# Samba/Windows Sharing  
+## Samba/Windows Sharing  
 The smbclient provides an easy access to download or upload a file from Samba or Windows easily, or use printer over the network.  
 
 It is integrated into PCManFM:  
@@ -524,14 +532,14 @@ The mounted share is likely to be present at /run/user/your_UID/gvfs or ~/.gvfs 
  
 
 
-# Screen Recorder (not available in minimal demo)    
+## Screen Recorder (not available in minimal demo)    
 
 SimpleScreenRecorder can handle Jack for audio.  
 
-# ZooFX  
+## ZooFX  
 Test  
 
-# CPU-Performance  
+## CPU-Performance  
 Because this master tree of the live session is more than just an effect unit, I integrate a switch to qjackctl, 
 so the machine runs only with full power, if Jack is running, otherwise it scales the cpu power. It only works with qjackctl 
 at the moment, it executes "sudo cpupower ..." on start and end. That's ugly, but it does the job well.   
@@ -551,7 +559,7 @@ powersave
   
 
 
-# RT-Test  
+## RT-Test  
 
 Tuna is a tool that can be used to adjust scheduler tunables such as scheduler policy, RT priority and CPU affinity.  
 
@@ -573,28 +581,31 @@ see also:
 
 ----------------------------------------------------------------  
 
-## Convert a png to the properties that supported by syslinux (optional)   
-     % convert -resize 640x480 -depth 16 -colors 65536 mynew.png splash.png
+# Tips & and tricks 
 
-### Tips & and tricks  
-Take a screenshot with  
+    Convert a png to the properties that supported by syslinux (optional)   
+      * % convert -resize 640x480 -depth 16 -colors 65536 mynew.png splash.png
 
-     % import name.png  
-
-or from the root window:  
-
-     % import -windows root name.png  
-
-or time-delayed (10 seconds):  
-
-     % sleep10; import
+ 
+    Take a screenshot with  
+      * % import name.png  
+    * or from the root window:  
+      * % import -windows root name.png  
+    * or time-delayed (10 seconds):  
+      * % sleep10; import
 
   
-Activate USB-Tethering, very helpful if the wireless driver is installed:  
-  * on your phone/tablet   
-  * in Arch:  
-    * ls /sys/class/net  
-    * dhcpcd ... / e.g. usb0  
+    Activate USB-Tethering, very helpful if the wireless driver is installed:  
+      * enable it on your phone/tablet   
+    * in Arch:  
+      * ls /sys/class/net  
+      * dhcpcd ... / e.g. usb0  
+
+
+    Convert a .mp4 to a .mp3 or .wav  
+     * mp3: ffmpeg -i input.mp4 -vn -acodec libmp3lame -ac 2 -ab 160k -ar 48000 output.mp3  
+     * wav: ffmpeg -i input.mp4 output.wav  
+    
 
 
 ## Make the storage persistent (before copy ISO to USB) (optional)   
@@ -644,7 +655,7 @@ copy the ISO to USB
 
 
 
-### Installation   
+# Installation   
 If you wish to install the ISO as it is without an Internet connection, or, if you do not want   
 to download the packages you want again, take a look at   
 https://wiki.archlinux.org/index.php/archiso#Installation_without_Internet_access  
@@ -657,7 +668,7 @@ https://wiki.archlinux.org/index.php/archiso#Installation_without_Internet_acces
 
 
 
------------------------------------appendix-------------------------------------------
+# Appendix
 
 (* 1) Work with the official live ISO  
  (not working yet)

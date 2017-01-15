@@ -84,7 +84,7 @@ rtapp
 ## Alsa Modular modules in LV2 form.
 #ams-lv2-git- not available in customrepo yet 
 ## A set of LV2 plugins to mangle, slash, repeat and do much more with your beats.
-#beatslash-lv2-git - not available in customrepo yet
+#beatslash-lv2-git - not available in customrepo yet - failed to build dependencies (boost error)
 ## An LV2 port of the BLOP LADSPA plugins by Mike Rawes.
 #blop-lv2- not available in customrepo yet
 ## LV2/JACK audio plug-ins for musicians (git version)
@@ -98,27 +98,36 @@ drmr-falktx-git
 ## An LV2 parametric equalizer audio plugin
 eq10q
 ## A collection of open-source LV2 plugins
-#infamousplugins-git
+infamousplugins-git
 ## A set of LV2 audio effect plugins, ported from VST.
 invada-studio-plugins-lv2
 ## Real-time signal convolver especially suited for creating reverb effects
 ir-lv2
 ## Linux Studio Plugins: standalone Jack version
-#lsp-plugins-jack-bin
+#lsp-plugins-jack-bin   - not available in customrepo yet
 ## Linux Studio Plugins: LV2 format
 lsp-plugins-lv2
+## A command line program to process audio files with LV2 plugins
+lv2file
+## An ANSI C command line parser - Dependency of lv2file
+argtable
+#argtable-docs-2.13-2-any.pkg.tar.xz
 ## A port of the MDA VST plugins to the LV2 format
 mda-lv2-git
 ## Rakarrack effects ported to LV2 plugins (git version) - BETA
 rkr-lv2-git
+## An investigative LV2 plugin bundle
+#sherlock-lv2 - not available in customrepo yet
 ## lv2 drum synthersizer without sampling
 stegosaurus-lv2
+## Lightweight non-linear plugin host
+#synthpod-git- not available in customrepo yet
 ## LV2 port for the TAP (Tom's Audio Processing) plugins
 tap-plugins-lv2-git
 ## Collection of LV2 plugins
 x42-plugins
 ## Collection of LV2/LADSPA/VST audio plugins for high quality processing
-zam-plugins-git
+zam-plugins-git  
 #
 
 
@@ -127,7 +136,7 @@ ardour-git
 bristol
 
 
-## Audio Plugin Host - Does not build with GCC v6.1.1
+## Audio Plugin Host
 carla
 python-pyliblo
 ####
@@ -140,7 +149,7 @@ python-pyliblo
 
 
 ## JACK toolbox for audio production.
-#cadence
+cadence
 
 ## A LilyPond sheet music text editor.
 #frescobaldi
@@ -150,7 +159,7 @@ python-pyliblo
 
 ## An application to visualize and analyze live audio data in real-time.
 #friture-git - error: see readme  
-#friture - not available in customrepo yet
+friture
 
 ## An automated music engraving system (Git snapshot)
 #lilypond-git - not available in customrepo yet
@@ -189,7 +198,7 @@ scikits-base
 ## A looper, drum machine, sequencer, live sampler and plugin host
 #giada - not available in customrepo yet
 ## Live looping sampler capable of immediate loop recording
-#sooperlooper - not available in customrepo yet
+sooperlooper
 
 
 #hydrogen-git - not available in customrepo yet
@@ -200,11 +209,11 @@ shuriken
 gtklick
 #gtklick-git - not available in customrepo yet
 ## LinuxSampler Qt GUI
-#qsampler
-#linuxsampler-svn
+qsampler
+linuxsampler-svn
 
 ## mhWaveEdit is a GTK2 graphical program for editing, playing and recording sound files with JACK & LADSPA support. 
-#mhwaveedit
+mhwaveedit
 
 ## A modular Digital Audio Workstation system - Git version.
 #non-daw-git - not available in customrepo yet
@@ -258,8 +267,7 @@ freqtweak
 #synthclone   - not available in customrepo yet
 #gmidimonitor-git  - not available in customrepo yet
 
-#sooperlooper - not working - not available in customrepo yet
-#zynaddsubfx-git
+zynaddsubfx-git
 
 ### Audio Player ###
 ### hqplayer ??? license issue if published as binary???
@@ -345,7 +353,7 @@ tuna
 
 ## Music Education ##
 ## A crossplatform tool for learning classical score notation. Mostly for guitarists but also very good for ear training.
-#nootka - not available in customrepo yet
+nootka
 
 
 ## Music Games ##
@@ -406,7 +414,7 @@ python2-pyalsaaudio
 ### see also pyaudio for portaudio ###
 
 ## JACK client to map joystick buttons to MIDI events
-#midijoystick-git - not available in customrepo yet
+midijoystick-git
 
 
 

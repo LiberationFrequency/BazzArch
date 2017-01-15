@@ -178,8 +178,6 @@ make_efi() {
 make_efiboot() {
     mkdir -p ${work_dir}/iso/EFI/archiso
     truncate -s 40M ${work_dir}/iso/EFI/archiso/efiboot.img
-### deprecated ???##    mkfs.vfat -n ARCHISO_EFI ${work_dir}/iso/EFI/archiso/efiboot.img
-###    mkfs.fat -F32 -n ARCHISO_EFI ${work_dir}/iso/EFI/archiso/efiboot.img
     mkfs.vfat -n ARCHISO_EFI ${work_dir}/iso/EFI/archiso/efiboot.img
 
     mkdir -p ${work_dir}/efiboot
