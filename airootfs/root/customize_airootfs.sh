@@ -146,6 +146,7 @@ systemctl enable org.cups.cupsd.service
 systemctl enable cups-browsed.service
 
 systemctl enable connman.service
+systemctl enable timidity.service
 
 systemctl set-default multi-user.target
 

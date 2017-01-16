@@ -226,7 +226,7 @@ mhwaveedit
 setbfree-git
 
 ## A GUI tool to create backups of the memory contents of MIDI devices
-#simplesysexxer
+simplesysexxer
 ## SoX Resampler library dsd branch
 #sox-dsd-git - not available in customrepo yet
 
@@ -415,6 +415,38 @@ python2-pyalsaaudio
 
 ## JACK client to map joystick buttons to MIDI events
 midijoystick-git
+
+
+
+
+## Audio2MIDI Dependencies - https://github.com/justinsalamon/audio_to_midi_melodia ##
+## Python library for decoding audio files
+python2-audioread
+## A JSON Annotated Music Specification for Reproducible MIR Research
+python2-jams
+## Joblib is a set of tools to provide lightweight pipelining in Python.
+python2-joblib
+## A pure python library for creating multi-track MIDI files
+python2-midiutil
+## Common metrics for common audio/music processing tasks.
+python2-mir_eval
+## Python library for efficient signal resampling
+python2-resampy
+## Use Vamp plugins for audio feature analysis.
+python2-vamp
+####################################################################################
+## plus packages from packages.both #####
+## plus download MELODIA - http://mtg.upf.edu/technologies/melodia
+## and audio_to_midi_melodia https://github.com/justinsalamon/audio_to_midi_melodia
+## and cp MTG-MELODIA-files to /usr/local/lib/vamp manually
+####################################################################################
+
+
+
+## Generate PKGBUILD file for a Python module from PyPi
+#pip2pkgbuild
+#python2-pip2pkgbuild
+
 
 
 

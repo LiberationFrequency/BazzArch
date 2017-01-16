@@ -427,7 +427,7 @@ mixxx
 ## Audio/MIDI multitrack sequencer
 qtractor
 ## Qt GUI for FluidSynth
-#qsynth
+qsynth
 ## A simple sound converter application for GNOME
 #soundconverter
 ## A MIDI to WAVE converter and player
@@ -739,6 +739,21 @@ speedcrunch
 #lxappearance-obconf
 ## Fast, easy, and free BitTorrent client (Qt GUI)
 transmission-qt
+
+
+## Audio2MIDI Dependencies ##
+## Python Decorator module
+python2-decorator
+## An implementation of JSON Schema validation for Python
+#python-jsonschema
+python2-jsonschema
+## Cross-section and time series data analysis toolkit
+python2-pandas
+## A set of python modules for machine learning and data mining
+#python-scikit-learn
+python2-scikit-learn
+## C-Extensions for Python
+cython2
 
 
 

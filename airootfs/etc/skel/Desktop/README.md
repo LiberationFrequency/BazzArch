@@ -7,14 +7,14 @@ Work in progress.
 						
 Version: no need for version controlling, its just a backup.  	
 									
-Date:		2017-01-15  						
+Date:		2017-01-16  						
 Demo Deadline:	2017-xx-xx  
 
 License:	Good question. GPL, LGPL, BSD, MIT so far.
 		I will take look into license issues as soon as possible.
 
 Output size (ISO) for this current config: 1375731712 Bytes (1,4 GB, 1,3 GiB) BazzArchDemoMin-2017.01.10-x86_64.iso      
-Output size (ISO) for this current config: 1814429696 Bytes (1,8 GB, 1,7 GiB) BazzArch-2017.01.15-x86_64.iso    
+Output size (ISO) for this current config: 1832878080 Bytes (1,8 GB, 1,7 GiB) BazzArch-2017.01.16-x86_64.iso    
 Needed pacman cache size for this current config (/var/cache/pacman/pkg): approx 2 GB    
 Needed customrepo size for this current config:: ??? (overall 3 GB)  
 Nedded work directory size for this current config: approx 8 GB  
@@ -135,12 +135,6 @@ and dd it to the top (/dev/sdX and not /dev/sdX1)
 
 Known issues:  
 ------------------------------------------  
-* guitarix: error while loading shared libraries: libboost_system.so.1.62.0: cannot open shared object file: No such file or directory  
-  * is libboost_system.so.1.63.0  
-* 1554 segmentation fault (core dumped)  hydrogen  
-
-* Ardour5 crashes with segmentation fault during scanning plugins (VSTs?)     
-
 * enter /usr/share/application with PCManFM-QT let it crash sometimes.     
 
 * Suspend to RAM does not work on some machines. Maybe a BIOS/ACPI issue, maybe unrecoverable.  
@@ -154,12 +148,6 @@ Known issues:
   * The PKGBUILD build with an error: ERROR: ld.so: object 'libfakeroot.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.  
   * specmatch should be essential for BazzArch. Install it manualy and copy paste it to the system.  
    
-* friture-git / friture works   
-  * Traceback (most recent call last):
-  *  File "/usr/bin/friture", line 7, in <module>
-    * from friture.analyzer import main
-  * ModuleNotFoundError: No module named 'friture'  
-
 * no trashcan / can not delete a file via pcmanfm-qt ?!  
 
 * LXQT requests xscreensaver after resume. Why? I don't want use it?  
@@ -211,7 +199,7 @@ https://wiki.archlinux.org/index.php/NVIDIA#Unsupported_drivers
 
 ToDo:  
 --------------------------------------------------------  
-* add customrepo to list of installed packages  
+* (done?) add customrepo to list of installed packages  
   * mkarchiso-rt line 265  
 
 * add Launchpad support (maybe not with rt)
@@ -225,10 +213,7 @@ ToDo:
   * --> rtc0 and hpet max user frequency  
     * Suggested value is 2048 or more  
     * 64  
-    * 64  
-
-  * disable swap ?  
-  * root is not in audio group  
+    * 64    
 
   * STANDARD TEST
     * as root: /dev/cpu_dma_latency set to 0us  
@@ -243,8 +228,8 @@ ToDo:
   * --> Realtime is really working?  
     * /etc/pam.d/system-auth:session   required  pam_limits.so  
     * /etc/pam.d/system-services:session   required    pam_limits.so  
-
-  * ...
+    * That should be okay, but take a look, I mean there is more to configure.  
+  * ... 
 
 
 * MIDI tools   
@@ -537,7 +522,20 @@ The mounted share is likely to be present at /run/user/your_UID/gvfs or ~/.gvfs 
 SimpleScreenRecorder can handle Jack for audio.  
 
 ## ZooFX  
-Test  
+Test... A collection of shell scripts that use SysEx messages to interact with a Zoom (B3) effect unit and handle some useful tasks.      
+
+## AUDIO2MIDI 
+At the moment only the dependencies are prepared. You have to download the main apps manually.
+  * https://github.com/justinsalamon/audio_to_midi_melodia  
+  * http://mtg.upf.edu/technologies/melodia  
+and copy the MTG-MELODIA-files to /usr/local/lib/vamp  
+
+then e.g. 
+python2 audio_to_midi_melodia.py ../test.wav ../song.mid 115 --smooth 0.25 --minduration 0.1 [--jams]  
+
+
+## Sonic Visualiser   
+Sonic Visualiser is an application for viewing and analysing the contents of music audio files.  
 
 ## CPU-Performance  
 Because this master tree of the live session is more than just an effect unit, I integrate a switch to qjackctl, 
@@ -606,6 +604,9 @@ see also:
      * mp3: ffmpeg -i input.mp4 -vn -acodec libmp3lame -ac 2 -ab 160k -ar 48000 output.mp3  
      * wav: ffmpeg -i input.mp4 output.wav  
     
+
+    MIDI2wav - at the moment with freepats
+      timidity input.mid -Ow -o out.wav
 
 
 ## Make the storage persistent (before copy ISO to USB) (optional)   
