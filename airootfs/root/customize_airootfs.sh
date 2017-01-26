@@ -147,6 +147,7 @@ systemctl enable cups-browsed.service
 
 systemctl enable connman.service
 systemctl enable timidity.service
+systemctl enable optimize-rt-interrupfreq.service
 
 systemctl set-default multi-user.target
 

@@ -7,14 +7,14 @@ Work in progress.
 						
 Version: no need for version controlling, its just a backup.  	
 									
-Date:		2017-01-16  						
+Date:		2017-01-26    						
 Demo Deadline:	2017-xx-xx  
 
 License:	Good question. GPL, LGPL, BSD, MIT so far.
 		I will take look into license issues as soon as possible.
 
 Output size (ISO) for this current config: 1375731712 Bytes (1,4 GB, 1,3 GiB) BazzArchDemoMin-2017.01.10-x86_64.iso      
-Output size (ISO) for this current config: 1832878080 Bytes (1,8 GB, 1,7 GiB) BazzArch-2017.01.16-x86_64.iso    
+Output size (ISO) for this current config: 1679605760 Bytes (1,7 GB, 1,6 GiB) BazzArch-2017.01.26-x86_64.iso      
 Needed pacman cache size for this current config (/var/cache/pacman/pkg): approx 2 GB    
 Needed customrepo size for this current config:: ??? (overall 3 GB)  
 Nedded work directory size for this current config: approx 8 GB  
@@ -23,10 +23,14 @@ Source:
 GitHub: https://github.com/LiberationFrequency/BazzArch.git  
 Zip: 	https://github.com/LiberationFrequency/BazzArch/archive/master.zip
 
-Mirror (maybe not up to date):		
+Mirror:		
  
 
 ----------------------------------------------------------------------  
+
+Changelog:  
+* set customrepo in pacman.conf on the first position for installing own, newer packages than the officinal one, but with the same name.     
+* use aubio-0.4.4  
 
 Comment:  
 Standard DemoMin&Mid test. 
@@ -34,9 +38,7 @@ Standard DemoMin&Mid test.
 
 uname -r  
 4.8.15-rt10-1-rt  
-
-If you get a SegFault for guitarix, hydrogen, ardour, etc. build guitarix-git again.  
-
+ 
 
 I deleted the cups config. To configure cups you need a root password. But this live session 
 has no root user, so you have to change the security config temporary.  
@@ -135,6 +137,8 @@ and dd it to the top (/dev/sdX and not /dev/sdX1)
 
 Known issues:  
 ------------------------------------------  
+* Guitarix: Gtk-Message: Failed to load module "canberra-gtk-module"   
+
 * enter /usr/share/application with PCManFM-QT let it crash sometimes.     
 
 * Suspend to RAM does not work on some machines. Maybe a BIOS/ACPI issue, maybe unrecoverable.  
@@ -199,14 +203,12 @@ https://wiki.archlinux.org/index.php/NVIDIA#Unsupported_drivers
 
 ToDo:  
 --------------------------------------------------------  
-* (done?) add customrepo to list of installed packages  
+* add customrepo to list of installed packages  
   * mkarchiso-rt line 265  
 
 * add Launchpad support (maybe not with rt)
  * try e.g. https://github.com/FMMT666/launchpad.py   
-
-* Install a simple recorder for demo.  
-
+  
 * Configure cups  
 
 * Debug realtime!  rtcheck  
@@ -214,6 +216,8 @@ ToDo:
     * Suggested value is 2048 or more  
     * 64  
     * 64    
+    * sudo echo 2048 > /sys/class/rtc/rtc0/max_user_freq                                                          :(
+      * zsh: keine Berechtigung: /sys/class/rtc/rtc0/max_user_freq  
 
   * STANDARD TEST
     * as root: /dev/cpu_dma_latency set to 0us  
@@ -400,7 +404,7 @@ e.g.
 
 Dependencies  
 
-    klick (≥ 0.11.0, built with OSC support)  
+    klick-git (≥ 0.11.0, built with OSC support)  
     pyliblo (≥ 0.7.0)  
     Python (≥ 2.5)  
     PyGTK  
@@ -770,10 +774,13 @@ Create customrepo directories to your local system
 
 
 Build packages, e.g. linux-rt  
+I created a repository, where I started to collect the necessary PKGBUILDs.  
+https://github.com/LiberationFrequency/PKGBUILDs/tree/master/BazzArch  
+Also you will found them in the Arch User Repository:   
 https://aur.archlinux.org/packages/linux-rt/  
 You get the wget link by copy the link 'Download snapshot'.  
 If the package is no longer available in AUR, take a look into the archive.  
-https://github.com/aur-archive
+https://github.com/aur-archive  
 ---------------
 
  % mkdir AUR  

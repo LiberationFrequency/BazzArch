@@ -54,7 +54,7 @@ ir-lv2
 ## Linux Studio Plugins: standalone Jack version
 #lsp-plugins-jack-bin
 ## Linux Studio Plugins: LV2 format
-lsp-plugins-lv2
+lsp-plugins-lv2-bin
 ## A port of the MDA VST plugins to the LV2 format
 mda-lv2-git
 ## Rakarrack effects ported to LV2 plugins (git version) - BETA
@@ -70,6 +70,9 @@ zam-plugins-git
 #
 
 ####Music Apps####
+
+## mhWaveEdit is a GTK2 graphical program for editing, playing and recording sound files with JACK & LADSPA support. 
+mhwaveedit
 
 ## Audio Plugin Host 
 carla

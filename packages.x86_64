@@ -1,32 +1,7 @@
 ### Custom Repository ###
 #
 ###System Apps ###
-#android-apktool
-#android-ndk-r10d
-#android-ndk-r10e
-#android-platform-19
-#android-platform-21
-#android-platform-22
-#android-sdk
-#android-sdk-build-tools-21
-#android-sdk-build-tools-21.1.2
-#android-sdk-build-tools-22.0.1
-#android-sdk-platform-tools
-#android-studio
-#android-support
-#android-support-repository
-###warning: ignoring package linux-4.5.1-1
-###warning: cannot resolve "linux>=3.2", a dependency of "b43-firmware"
-###:: The following package cannot be upgraded due to unresolvable dependencies:
-###      b43-firmware
-##??? license issue if published as binary???
-#b43-firmware
-#eclipse-android
-#eclipse-emf
-#eclipse-gef
-#eclipse-wtp
-#firmware-mod-kit
-#
+
 ## A QT based GUI front end for the connman connection manager with systemtray icon
 cmst
 #
@@ -46,10 +21,7 @@ obconf-qt
 #package-query
 #wineasio - not available in customrepo yet
 #
-## An efficient blocker add-on for your browser. Fast, potent, and lean.
-#firefox-extension-ublock - not available in customrepo yet
-## An efficient blocker for modern browsers. Fast and lean. Written from scratch. Development through benchmarking.
-#firefox-extension-ublock-git - not signed - need to be installed via firefox add-ons
+
 
 ## Useful scripts, systemd timer/service units and their configuration
 ## airootfs/usr/lib/systemd/user/gpg-agent.service exists in filesystem
@@ -77,8 +49,15 @@ rt-tests
 ## Realtime application thread priority tuning
 rtapp
 #
+## A set of C++ classes that provides a common API for realtime MIDI input/output.
+rtmidi
+## A set of C++ classes that provide a common API for realtime audio input/output.
+rtaudio
 ## 
 #downgrade
+
+
+
 
 #### Plugins #######
 ## Alsa Modular modules in LV2 form.
@@ -102,12 +81,12 @@ infamousplugins-git
 ## A set of LV2 audio effect plugins, ported from VST.
 invada-studio-plugins-lv2
 ## Real-time signal convolver especially suited for creating reverb effects
-ir-lv2
+ir-lv2-git
 ## Linux Studio Plugins: standalone Jack version
 #lsp-plugins-jack-bin   - not available in customrepo yet
 ## Linux Studio Plugins: LV2 format
-lsp-plugins-lv2
-## A command line program to process audio files with LV2 plugins
+lsp-plugins-lv2-bin
+##-- A command line program to process audio files with LV2 plugins
 lv2file
 ## An ANSI C command line parser - Dependency of lv2file
 argtable
@@ -117,7 +96,7 @@ mda-lv2-git
 ## Rakarrack effects ported to LV2 plugins (git version) - BETA
 rkr-lv2-git
 ## An investigative LV2 plugin bundle
-#sherlock-lv2 - not available in customrepo yet
+sherlock-lv2
 ## lv2 drum synthersizer without sampling
 stegosaurus-lv2
 ## Lightweight non-linear plugin host
@@ -132,8 +111,14 @@ zam-plugins-git
 
 
 ####Music Apps####
+## A multichannel hard disk recorder and digital audio workstation
 ardour-git
+## Vintage synthesizers emulator
 bristol
+## GUI for bristol, based on python3 and tkinter
+pybristol
+## mhWaveEdit is a GTK2 graphical program for editing, playing and recording sound files with JACK & LADSPA support. 
+mhwaveedit
 
 
 ## Audio Plugin Host
@@ -159,7 +144,7 @@ cadence
 
 ## An application to visualize and analyze live audio data in real-time.
 #friture-git - error: see readme  
-friture
+#friture
 
 ## An automated music engraving system (Git snapshot)
 #lilypond-git - not available in customrepo yet
@@ -173,7 +158,7 @@ jalv-select-git
 #jackmix
 
 ## Session management system for JACK.
-ladish-git
+#ladish-git
 ## Utilities to improve integration and workflow with JACK and LASH.
 laditools-git
 
@@ -185,35 +170,41 @@ laditools-git
 
 ## A virtual guitar amplifier for Linux
 guitarix-git
-## Additional Guitarix effects in LV2 format
-gx-lv2-git
+## A set of guitar pedal simulation LV2 plugins from the guitarix project.
+gxplugins-lv2
 ## Can be used to produce your own Impulse Responses and to adapt the sound produced by a Guitarix setting to another recorded sound.
 #specmatch
 ## forgotten dependencies for specmatch?
 jack-stdout-git
+## A C library for reading and writing files containing sampled sound -- from extra repo
 libsndfile
+## Files common for all SciKits packages
 scikits-base
  
 ### Looper ###
 ## A looper, drum machine, sequencer, live sampler and plugin host
 #giada - not available in customrepo yet
-## Live looping sampler capable of immediate loop recording
-sooperlooper
+## Live looping sampler capable of immediate loop recording -- missing wxgtk2.8
+#sooperlooper
+#wxgtk2.8
+## Sooperlooper LV2 moddevices ???
 
 
 #hydrogen-git - not available in customrepo yet
 #yoshimi-git - not available in customrepo yet
-## QT / Open source beat slicer for Linux which harnesses the power of aubio's onset detection algorithms and Rubber Band's time stretching capabilities.
-shuriken
+## QT / Open source beat slicer for Linux which harnesses the power of aubio's onset detection algorithms and Rubber Band's time stretching capabilities. 
+shuriken-git
 ## A graphical user interface for the klick metronome for JACK
-gtklick
-#gtklick-git - not available in customrepo yet
+gtklick-git
+klick-git
 ## LinuxSampler Qt GUI
 qsampler
+## LinuxSampler Control Protocol C++ library
+liblscp-svn
+## Professional-grade audio sampler alternative to Gigasampler
 linuxsampler-svn
 
-## mhWaveEdit is a GTK2 graphical program for editing, playing and recording sound files with JACK & LADSPA support. 
-mhwaveedit
+
 
 ## A modular Digital Audio Workstation system - Git version.
 #non-daw-git - not available in customrepo yet
@@ -245,7 +236,7 @@ helm-git
 steinberg-vst36
 
 ## A JACK Audio Connection Kit Audio Mastering interface 
-jamin-cvs 
+#jamin-cvs 
 ####
 
 #### binwalk-git ??? license issue if published as binary???
@@ -255,9 +246,9 @@ jamin-cvs
 #python-pyqtgraph
 
 #jack2-no-dbus-git
-jack_capture
+#jack_capture
 ## Audio Effect Processor and Spectrum Analyzer
-freqtweak
+#freqtweak
 ## KeyFinder is a tool for estimating the musical key of digital recordings, to aid DJs in harmonic mixing.
 #keyfinder-git - failed / g++ (GCC) 6.2.1 20160830 / g++: Fehler: nicht erkannte Kommandozeilenoption »-stdlib=libc++«
 #keyfinder-cli-git - failed / ???
@@ -285,7 +276,7 @@ faust2-git
 #faustlive-git
 
 ## Use pure data extended, if you want to use ExpoChirpToolKit
-pd-extended
+#pd-extended
 ## Run Faust signal processors in Pd, Pd-Extended version
 #pdextended-faust  - not available in customrepo yet
 ## LV2 plugin host for Pd, Pd-Extended version
@@ -353,7 +344,7 @@ tuna
 
 ## Music Education ##
 ## A crossplatform tool for learning classical score notation. Mostly for guitarists but also very good for ear training.
-nootka
+#nootka
 
 
 ## Music Games ##
@@ -370,7 +361,7 @@ nootka
 ## UltraStar Deluxe WorldParty is a free and open source karaoke game - a fork of UltraStar Deluxe. It allows up to six players to sing along with music using microphones in order to score points, depending on the pitch of the voice and the rhythm of singing.
 #ultrastardxwp-git
 ## Song editor for karaoke games
-composer-git
+#composer-git
 
 
 ## Artwork ##
@@ -397,14 +388,14 @@ composer-git
 #multibootusb
 
 ## An oscilloscope style guitar tuner
-tunescope-git
+#tunescope-git
 
 
 ## A fork of zenity - display graphical dialogs from shell scripts or command line
 #yad
 
 
-### for use with aubio ###
+
 ## ALSA wrappers for Python 3
 #python-pyalsaaudio 
 ## ALSA wrappers for Python 2
@@ -441,6 +432,20 @@ python2-vamp
 ## and cp MTG-MELODIA-files to /usr/local/lib/vamp manually
 ####################################################################################
 
+## Update to 0.4.4
+aubio
+denemo
+vamp-aubio-plugins
+#shuriken-git
+#ardour-git
+
+## Open-source C++ library for audio analysis and audio-based music information retrieval
+# essentia-git
+
+## librosa add ##
+python2-cache
+
+
 
 
 ## Generate PKGBUILD file for a Python module from PyPi
@@ -449,20 +454,51 @@ python2-vamp
 
 
 
+#android-apktool
+#android-ndk-r10d
+#android-ndk-r10e
+#android-platform-19
+#android-platform-21
+#android-platform-22
+#android-sdk
+#android-sdk-build-tools-21
+#android-sdk-build-tools-21.1.2
+#android-sdk-build-tools-22.0.1
+#android-sdk-platform-tools
+#android-studio
+#android-support
+#android-support-repository
+###warning: ignoring package linux-4.5.1-1
+###warning: cannot resolve "linux>=3.2", a dependency of "b43-firmware"
+###:: The following package cannot be upgraded due to unresolvable dependencies:
+###      b43-firmware
+##??? license issue if published as binary???
+#b43-firmware
+#eclipse-android
+#eclipse-emf
+#eclipse-gef
+#eclipse-wtp
+#firmware-mod-kit
+#
 
 
 
 
-### HAM ###
+
+### HAMRADIO - https://wiki.archlinux.org/index.php/Amateur_radio ###
 ### https://wiki.archlinux.org/index.php/Amateur_radio ###s
 ## Firmware for Afatech af9015 based USB dvb devices
 #af9015-firmware
 ## Ham radio test trainer
 #afutrainer  - not available in customrepo yet
+## Antenna radiation pattern visualization software
+#antennavis - not available in customrepo yet
 ## Programs for the hamradio protocol AX.25 that would be used by normal users
 #ax25-apps - not available in customrepo yet
 ## The network tools to configure hamradio interfaces and some of the hamradio specific network daemons
 #ax25-tools - not available in customrepo yet
+## an open source codec designed for communications quality speech below 5000 bit/s - Required for freedv
+#codec2 - not available in customrepo yet
 ## Ham Radio - library for AX.25, ROSE, 6PACK, KISS and NETROM protoc
 #libax25 - not available in customrepo yet
 ## GUI tool for programming ham radios; supports a large number of makes and models
@@ -484,11 +520,14 @@ python2-vamp
 ## Ham Radio - Elecraft K2 CLI-based Rig Control
 #fasttuna- not available in customrepo yet
 ## Ham Radio - Field Day Logger with networked nodes
-#fdlog- not available in customrepo yet
+#fdlog - not available in customrepo yet
 ##
 #fldigi
 ## Moxon antenna designer
 #fl_moxgen - ?????
+## Digital Voice for Radio Amateurs
+#freedv - not available in customrepo yet
+
 ## Ham Radio multi-mode digital communications package.
 #gmfsk - not available in customrepo yet
 ## General purpose DSP and SDR toolkit. With drivers for usrp and fcd. 

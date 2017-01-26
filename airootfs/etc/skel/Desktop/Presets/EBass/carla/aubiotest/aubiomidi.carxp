@@ -1,0 +1,1538 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE CARLA-PROJECT>
+<CARLA-PROJECT VERSION='2.0'>
+ <EngineSettings>
+  <ForceStereo>false</ForceStereo>
+  <PreferPluginBridges>false</PreferPluginBridges>
+  <PreferUiBridges>true</PreferUiBridges>
+  <UIsAlwaysOnTop>false</UIsAlwaysOnTop>
+  <MaxParameters>200</MaxParameters>
+  <UIBridgesTimeout>4000</UIBridgesTimeout>
+ </EngineSettings>
+
+ <!-- EQ10Q Mono -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>EQ10Q Mono</Name>
+   <URI>http://eq10q.sourceforge.net/eq/eq10qm</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x0</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Bypass</Name>
+    <Symbol>bypass</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Input Gain</Name>
+    <Symbol>input_gain</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>Output Gain</Name>
+    <Symbol>output_gain</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>Filter 1 Gain</Name>
+    <Symbol>filter1_gain</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>4</Index>
+    <Name>Filter 2 Gain</Name>
+    <Symbol>filter2_gain</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>5</Index>
+    <Name>Filter 3 Gain</Name>
+    <Symbol>filter3_gain</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>6</Index>
+    <Name>Filter 4 Gain</Name>
+    <Symbol>filter4_gain</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>7</Index>
+    <Name>Filter 5 Gain</Name>
+    <Symbol>filter5_gain</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>8</Index>
+    <Name>Filter 6 Gain</Name>
+    <Symbol>filter6_gain</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>9</Index>
+    <Name>Filter 7 Gain</Name>
+    <Symbol>filter7_gain</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>10</Index>
+    <Name>Filter 8 Gain</Name>
+    <Symbol>filter8_gain</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>11</Index>
+    <Name>Filter 9 Gain</Name>
+    <Symbol>filter9_gain</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>12</Index>
+    <Name>Filter 10 Gain</Name>
+    <Symbol>filter10_gain</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>13</Index>
+    <Name>Filter 1 Freq</Name>
+    <Symbol>filter1_freq</Symbol>
+    <Value>20</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>14</Index>
+    <Name>Filter 2 Freq</Name>
+    <Symbol>filter2_freq</Symbol>
+    <Value>60</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>15</Index>
+    <Name>Filter 3 Freq</Name>
+    <Symbol>filter3_freq</Symbol>
+    <Value>120</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>16</Index>
+    <Name>Filter 4 Freq</Name>
+    <Symbol>filter4_freq</Symbol>
+    <Value>240</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>17</Index>
+    <Name>Filter 5 Freq</Name>
+    <Symbol>filter5_freq</Symbol>
+    <Value>480</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>18</Index>
+    <Name>Filter 6 Freq</Name>
+    <Symbol>filter6_freq</Symbol>
+    <Value>960</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>19</Index>
+    <Name>Filter 7 Freq</Name>
+    <Symbol>filter7_freq</Symbol>
+    <Value>1920</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>20</Index>
+    <Name>Filter 8 Freq</Name>
+    <Symbol>filter8_freq</Symbol>
+    <Value>3840</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>21</Index>
+    <Name>Filter 9 Freq</Name>
+    <Symbol>filter9_freq</Symbol>
+    <Value>7680</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>22</Index>
+    <Name>Filter 10 Freq</Name>
+    <Symbol>filter10_freq</Symbol>
+    <Value>354.58984375</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>23</Index>
+    <Name>Filter 1 Q</Name>
+    <Symbol>filter1_q</Symbol>
+    <Value>0.699999988079071</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>24</Index>
+    <Name>Filter 2 Q</Name>
+    <Symbol>filter2_q</Symbol>
+    <Value>0.699999988079071</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>25</Index>
+    <Name>Filter 3 Q</Name>
+    <Symbol>filter3_q</Symbol>
+    <Value>2</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>26</Index>
+    <Name>Filter 4 Q</Name>
+    <Symbol>filter4_q</Symbol>
+    <Value>2</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>27</Index>
+    <Name>Filter 5 Q</Name>
+    <Symbol>filter5_q</Symbol>
+    <Value>2</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>28</Index>
+    <Name>Filter 6 Q</Name>
+    <Symbol>filter6_q</Symbol>
+    <Value>2</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>29</Index>
+    <Name>Filter 7 Q</Name>
+    <Symbol>filter7_q</Symbol>
+    <Value>2</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>30</Index>
+    <Name>Filter 8 Q</Name>
+    <Symbol>filter8_q</Symbol>
+    <Value>2</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>31</Index>
+    <Name>Filter 9 Q</Name>
+    <Symbol>filter9_q</Symbol>
+    <Value>0.699999988079071</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>32</Index>
+    <Name>Filter 10 Q</Name>
+    <Symbol>filter10_q</Symbol>
+    <Value>0.699999988079071</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>33</Index>
+    <Name>Filter 1 Type</Name>
+    <Symbol>filter1_type</Symbol>
+    <Value>8</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>34</Index>
+    <Name>Filter 2 Type</Name>
+    <Symbol>filter2_type</Symbol>
+    <Value>9</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>35</Index>
+    <Name>Filter 3 Type</Name>
+    <Symbol>filter3_type</Symbol>
+    <Value>11</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>36</Index>
+    <Name>Filter 4 Type</Name>
+    <Symbol>filter4_type</Symbol>
+    <Value>11</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>37</Index>
+    <Name>Filter 5 Type</Name>
+    <Symbol>filter5_type</Symbol>
+    <Value>11</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>38</Index>
+    <Name>Filter 6 Type</Name>
+    <Symbol>filter6_type</Symbol>
+    <Value>11</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>39</Index>
+    <Name>Filter 7 Type</Name>
+    <Symbol>filter7_type</Symbol>
+    <Value>11</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>40</Index>
+    <Name>Filter 8 Type</Name>
+    <Symbol>filter8_type</Symbol>
+    <Value>11</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>41</Index>
+    <Name>Filter 9 Type</Name>
+    <Symbol>filter9_type</Symbol>
+    <Value>10</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>42</Index>
+    <Name>Filter 10 Type</Name>
+    <Symbol>filter10_type</Symbol>
+    <Value>4</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>43</Index>
+    <Name>Filter 1 Enable</Name>
+    <Symbol>filter1_enable</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>44</Index>
+    <Name>Filter 2 Enable</Name>
+    <Symbol>filter2_enable</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>45</Index>
+    <Name>Filter 3 Enable</Name>
+    <Symbol>filter3_enable</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>46</Index>
+    <Name>Filter 4 Enable</Name>
+    <Symbol>filter4_enable</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>47</Index>
+    <Name>Filter 5 Enable</Name>
+    <Symbol>filter5_enable</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>48</Index>
+    <Name>Filter 6 Enable</Name>
+    <Symbol>filter6_enable</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>49</Index>
+    <Name>Filter 7 Enable</Name>
+    <Symbol>filter7_enable</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>50</Index>
+    <Name>Filter 8 Enable</Name>
+    <Symbol>filter8_enable</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>51</Index>
+    <Name>Filter 9 Enable</Name>
+    <Symbol>filter9_enable</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>52</Index>
+    <Name>Filter 10 Enable</Name>
+    <Symbol>filter10_enable</Symbol>
+    <Value>1</Value>
+   </Parameter>
+  </Data>
+ </Plugin>
+
+ <!-- ZynAddSubFX -->
+ <Plugin>
+  <Info>
+   <Type>INTERNAL</Type>
+   <Name>ZynAddSubFX</Name>
+   <Label>zynaddsubfx</Label>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x1c4</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Part 1 Enabled</Name>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Part 2 Enabled</Name>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>Part 3 Enabled</Name>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>Part 4 Enabled</Name>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>4</Index>
+    <Name>Part 5 Enabled</Name>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>5</Index>
+    <Name>Part 6 Enabled</Name>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>6</Index>
+    <Name>Part 7 Enabled</Name>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>7</Index>
+    <Name>Part 8 Enabled</Name>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>8</Index>
+    <Name>Part 9 Enabled</Name>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>9</Index>
+    <Name>Part 10 Enabled</Name>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>10</Index>
+    <Name>Part 11 Enabled</Name>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>11</Index>
+    <Name>Part 12 Enabled</Name>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>12</Index>
+    <Name>Part 13 Enabled</Name>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>13</Index>
+    <Name>Part 14 Enabled</Name>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>14</Index>
+    <Name>Part 15 Enabled</Name>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>15</Index>
+    <Name>Part 16 Enabled</Name>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>16</Index>
+    <Name>Part 1 Volume</Name>
+    <Value>100</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>17</Index>
+    <Name>Part 2 Volume</Name>
+    <Value>100</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>18</Index>
+    <Name>Part 3 Volume</Name>
+    <Value>100</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>19</Index>
+    <Name>Part 4 Volume</Name>
+    <Value>100</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>20</Index>
+    <Name>Part 5 Volume</Name>
+    <Value>100</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>21</Index>
+    <Name>Part 6 Volume</Name>
+    <Value>100</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>22</Index>
+    <Name>Part 7 Volume</Name>
+    <Value>100</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>23</Index>
+    <Name>Part 8 Volume</Name>
+    <Value>100</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>24</Index>
+    <Name>Part 9 Volume</Name>
+    <Value>100</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>25</Index>
+    <Name>Part 10 Volume</Name>
+    <Value>100</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>26</Index>
+    <Name>Part 11 Volume</Name>
+    <Value>100</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>27</Index>
+    <Name>Part 12 Volume</Name>
+    <Value>100</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>28</Index>
+    <Name>Part 13 Volume</Name>
+    <Value>100</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>29</Index>
+    <Name>Part 14 Volume</Name>
+    <Value>100</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>30</Index>
+    <Name>Part 15 Volume</Name>
+    <Value>100</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>31</Index>
+    <Name>Part 16 Volume</Name>
+    <Value>100</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>32</Index>
+    <Name>Part 1 Panning</Name>
+    <Value>64</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>33</Index>
+    <Name>Part 2 Panning</Name>
+    <Value>64</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>34</Index>
+    <Name>Part 3 Panning</Name>
+    <Value>64</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>35</Index>
+    <Name>Part 4 Panning</Name>
+    <Value>64</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>36</Index>
+    <Name>Part 5 Panning</Name>
+    <Value>64</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>37</Index>
+    <Name>Part 6 Panning</Name>
+    <Value>64</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>38</Index>
+    <Name>Part 7 Panning</Name>
+    <Value>64</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>39</Index>
+    <Name>Part 8 Panning</Name>
+    <Value>64</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>40</Index>
+    <Name>Part 9 Panning</Name>
+    <Value>64</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>41</Index>
+    <Name>Part 10 Panning</Name>
+    <Value>64</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>42</Index>
+    <Name>Part 11 Panning</Name>
+    <Value>64</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>43</Index>
+    <Name>Part 12 Panning</Name>
+    <Value>64</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>44</Index>
+    <Name>Part 13 Panning</Name>
+    <Value>64</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>45</Index>
+    <Name>Part 14 Panning</Name>
+    <Value>64</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>46</Index>
+    <Name>Part 15 Panning</Name>
+    <Value>64</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>47</Index>
+    <Name>Part 16 Panning</Name>
+    <Value>64</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>48</Index>
+    <Name>Filter Cutoff</Name>
+    <Value>64</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>49</Index>
+    <Name>Filter Q</Name>
+    <Value>64</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>50</Index>
+    <Name>Bandwidth</Name>
+    <Value>64</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>51</Index>
+    <Name>FM Gain</Name>
+    <Value>127</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>52</Index>
+    <Name>Res Center Freq</Name>
+    <Value>64</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>53</Index>
+    <Name>Res Bandwidth</Name>
+    <Value>64</Value>
+   </Parameter>
+
+   <CurrentMidiBank>1</CurrentMidiBank>
+   <CurrentMidiProgram>1</CurrentMidiProgram>
+
+   <CustomData>
+    <Type>http://kxstudio.sf.net/ns/carla/string</Type>
+    <Key>midiPrograms</Key>
+    <Value>0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://kxstudio.sf.net/ns/carla/chunk</Type>
+    <Key>State</Key>
+    <Value>
+
+&lt;?xml version=&quot;1.0f&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE ZynAddSubFX-data&gt;
+&lt;ZynAddSubFX-data version-major=&quot;3&quot; version-minor=&quot;0&quot;
+version-revision=&quot;1&quot; ZynAddSubFX-author=&quot;Nasca Octavian Paul&quot;&gt;
+&lt;INFORMATION&gt;
+&lt;par_bool name=&quot;PADsynth_used&quot; value=&quot;yes&quot; /&gt;
+&lt;/INFORMATION&gt;
+&lt;BASE_PARAMETERS&gt;
+&lt;par name=&quot;max_midi_parts&quot; value=&quot;16&quot; /&gt;
+&lt;par name=&quot;max_kit_items_per_instrument&quot; value=&quot;16&quot; /&gt;
+&lt;par name=&quot;max_system_effects&quot; value=&quot;4&quot; /&gt;
+&lt;par name=&quot;max_insertion_effects&quot; value=&quot;8&quot; /&gt;
+&lt;par name=&quot;max_instrument_effects&quot; value=&quot;3&quot; /&gt;
+&lt;par name=&quot;max_addsynth_voices&quot; value=&quot;8&quot; /&gt;
+&lt;/BASE_PARAMETERS&gt;
+&lt;MASTER&gt;
+&lt;par name=&quot;volume&quot; value=&quot;80&quot; /&gt;
+&lt;par name=&quot;key_shift&quot; value=&quot;64&quot; /&gt;
+&lt;par_bool name=&quot;nrpn_receive&quot; value=&quot;yes&quot; /&gt;
+&lt;MICROTONAL&gt;
+&lt;string name=&quot;name&quot;&gt;12tET&lt;/string&gt;
+&lt;string name=&quot;comment&quot;&gt;Equal Temperament 12 notes per octave&lt;/string&gt;
+&lt;par_bool name=&quot;invert_up_down&quot; value=&quot;no&quot; /&gt;
+&lt;par name=&quot;invert_up_down_center&quot; value=&quot;60&quot; /&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;no&quot; /&gt;
+&lt;par name=&quot;global_fine_detune&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;a_note&quot; value=&quot;69&quot; /&gt;
+&lt;par_real name=&quot;a_freq&quot; value=&quot;440&quot; exact_value=&quot;0x43DC0000&quot; /&gt;
+&lt;/MICROTONAL&gt;
+&lt;PART id=&quot;0&quot;&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;yes&quot; /&gt;
+&lt;par name=&quot;volume&quot; value=&quot;100&quot; /&gt;
+&lt;par name=&quot;panning&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;min_key&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;max_key&quot; value=&quot;127&quot; /&gt;
+&lt;par name=&quot;key_shift&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;rcv_chn&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;velocity_sensing&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;velocity_offset&quot; value=&quot;64&quot; /&gt;
+&lt;par_bool name=&quot;note_on&quot; value=&quot;yes&quot; /&gt;
+&lt;par_bool name=&quot;poly_mode&quot; value=&quot;yes&quot; /&gt;
+&lt;par name=&quot;legato_mode&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;key_limit&quot; value=&quot;15&quot; /&gt;
+&lt;INSTRUMENT&gt;
+&lt;INFO&gt;
+&lt;string name=&quot;name&quot;&gt;Church Organ 4&lt;/string&gt;
+&lt;string name=&quot;author&quot;&gt;&lt;/string&gt;
+&lt;string name=&quot;comments&quot;&gt;&lt;/string&gt;
+&lt;par name=&quot;type&quot; value=&quot;0&quot; /&gt;
+&lt;/INFO&gt;
+&lt;INSTRUMENT_KIT&gt;
+&lt;par name=&quot;kit_mode&quot; value=&quot;0&quot; /&gt;
+&lt;par_bool name=&quot;drum_mode&quot; value=&quot;no&quot; /&gt;
+&lt;INSTRUMENT_KIT_ITEM id=&quot;0&quot;&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;yes&quot; /&gt;
+&lt;string name=&quot;name&quot;&gt;&lt;/string&gt;
+&lt;par_bool name=&quot;muted&quot; value=&quot;no&quot; /&gt;
+&lt;par name=&quot;min_key&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;max_key&quot; value=&quot;127&quot; /&gt;
+&lt;par name=&quot;send_to_instrument_effect&quot; value=&quot;0&quot; /&gt;
+&lt;par_bool name=&quot;add_enabled&quot; value=&quot;no&quot; /&gt;
+&lt;par_bool name=&quot;sub_enabled&quot; value=&quot;no&quot; /&gt;
+&lt;par_bool name=&quot;pad_enabled&quot; value=&quot;yes&quot; /&gt;
+&lt;PAD_SYNTH_PARAMETERS&gt;
+&lt;par_bool name=&quot;stereo&quot; value=&quot;yes&quot; /&gt;
+&lt;par name=&quot;mode&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;bandwidth&quot; value=&quot;455&quot; /&gt;
+&lt;par name=&quot;bandwidth_scale&quot; value=&quot;0&quot; /&gt;
+&lt;HARMONIC_PROFILE&gt;
+&lt;par name=&quot;base_type&quot; value=&quot;1&quot; /&gt;
+&lt;par name=&quot;base_par1&quot; value=&quot;90&quot; /&gt;
+&lt;par name=&quot;frequency_multiplier&quot; value=&quot;12&quot; /&gt;
+&lt;par name=&quot;modulator_par1&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;modulator_frequency&quot; value=&quot;30&quot; /&gt;
+&lt;par name=&quot;width&quot; value=&quot;127&quot; /&gt;
+&lt;par name=&quot;amplitude_multiplier_type&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;amplitude_multiplier_mode&quot; value=&quot;2&quot; /&gt;
+&lt;par name=&quot;amplitude_multiplier_par1&quot; value=&quot;80&quot; /&gt;
+&lt;par name=&quot;amplitude_multiplier_par2&quot; value=&quot;98&quot; /&gt;
+&lt;par_bool name=&quot;autoscale&quot; value=&quot;yes&quot; /&gt;
+&lt;par name=&quot;one_half&quot; value=&quot;0&quot; /&gt;
+&lt;/HARMONIC_PROFILE&gt;
+&lt;OSCIL&gt;
+&lt;par name=&quot;harmonic_mag_type&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;base_function&quot; value=&quot;1&quot; /&gt;
+&lt;par name=&quot;base_function_par&quot; value=&quot;19&quot; /&gt;
+&lt;par name=&quot;base_function_modulation&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;base_function_modulation_par1&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;base_function_modulation_par2&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;base_function_modulation_par3&quot; value=&quot;32&quot; /&gt;
+&lt;par name=&quot;modulation&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;modulation_par1&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;modulation_par2&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;modulation_par3&quot; value=&quot;32&quot; /&gt;
+&lt;par name=&quot;wave_shaping&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;wave_shaping_function&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;filter_type&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;filter_par1&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;filter_par2&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;filter_before_wave_shaping&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;spectrum_adjust_type&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;spectrum_adjust_par&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;rand&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;amp_rand_type&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;amp_rand_power&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;harmonic_shift&quot; value=&quot;0&quot; /&gt;
+&lt;par_bool name=&quot;harmonic_shift_first&quot; value=&quot;no&quot; /&gt;
+&lt;par name=&quot;adaptive_harmonics&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;adaptive_harmonics_base_frequency&quot; value=&quot;128&quot; /&gt;
+&lt;par name=&quot;adaptive_harmonics_power&quot; value=&quot;100&quot; /&gt;
+&lt;par name=&quot;adaptive_harmonics_par&quot; value=&quot;50&quot; /&gt;
+&lt;HARMONICS&gt;
+&lt;HARMONIC id=&quot;1&quot;&gt;
+&lt;par name=&quot;mag&quot; value=&quot;127&quot; /&gt;
+&lt;par name=&quot;phase&quot; value=&quot;64&quot; /&gt;
+&lt;/HARMONIC&gt;
+&lt;HARMONIC id=&quot;2&quot;&gt;
+&lt;par name=&quot;mag&quot; value=&quot;127&quot; /&gt;
+&lt;par name=&quot;phase&quot; value=&quot;64&quot; /&gt;
+&lt;/HARMONIC&gt;
+&lt;HARMONIC id=&quot;4&quot;&gt;
+&lt;par name=&quot;mag&quot; value=&quot;122&quot; /&gt;
+&lt;par name=&quot;phase&quot; value=&quot;64&quot; /&gt;
+&lt;/HARMONIC&gt;
+&lt;/HARMONICS&gt;
+&lt;/OSCIL&gt;
+&lt;RESONANCE&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;no&quot; /&gt;
+&lt;/RESONANCE&gt;
+&lt;HARMONIC_POSITION&gt;
+&lt;par name=&quot;type&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;parameter1&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;parameter2&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;parameter3&quot; value=&quot;0&quot; /&gt;
+&lt;/HARMONIC_POSITION&gt;
+&lt;SAMPLE_QUALITY&gt;
+&lt;par name=&quot;samplesize&quot; value=&quot;3&quot; /&gt;
+&lt;par name=&quot;basenote&quot; value=&quot;4&quot; /&gt;
+&lt;par name=&quot;octaves&quot; value=&quot;3&quot; /&gt;
+&lt;par name=&quot;samples_per_octave&quot; value=&quot;2&quot; /&gt;
+&lt;/SAMPLE_QUALITY&gt;
+&lt;AMPLITUDE_PARAMETERS&gt;
+&lt;par name=&quot;volume&quot; value=&quot;90&quot; /&gt;
+&lt;par name=&quot;panning&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;velocity_sensing&quot; value=&quot;69&quot; /&gt;
+&lt;par name=&quot;fadein_adjustment&quot; value=&quot;20&quot; /&gt;
+&lt;par name=&quot;punch_strength&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;punch_time&quot; value=&quot;60&quot; /&gt;
+&lt;par name=&quot;punch_stretch&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;punch_velocity_sensing&quot; value=&quot;72&quot; /&gt;
+&lt;AMPLITUDE_ENVELOPE&gt;
+&lt;par_bool name=&quot;free_mode&quot; value=&quot;no&quot; /&gt;
+&lt;par name=&quot;env_points&quot; value=&quot;4&quot; /&gt;
+&lt;par name=&quot;env_sustain&quot; value=&quot;2&quot; /&gt;
+&lt;par name=&quot;env_stretch&quot; value=&quot;0&quot; /&gt;
+&lt;par_bool name=&quot;forced_release&quot; value=&quot;yes&quot; /&gt;
+&lt;par_bool name=&quot;linear_envelope&quot; value=&quot;no&quot; /&gt;
+&lt;par name=&quot;A_dt&quot; value=&quot;24&quot; /&gt;
+&lt;par name=&quot;D_dt&quot; value=&quot;40&quot; /&gt;
+&lt;par name=&quot;R_dt&quot; value=&quot;42&quot; /&gt;
+&lt;par name=&quot;A_val&quot; value=&quot;66&quot; /&gt;
+&lt;par name=&quot;D_val&quot; value=&quot;66&quot; /&gt;
+&lt;par name=&quot;S_val&quot; value=&quot;127&quot; /&gt;
+&lt;par name=&quot;R_val&quot; value=&quot;66&quot; /&gt;
+&lt;/AMPLITUDE_ENVELOPE&gt;
+&lt;AMPLITUDE_LFO&gt;
+&lt;par_real name=&quot;freq&quot; value=&quot;0.629921&quot; exact_value=&quot;0x3F214281&quot; /&gt;
+&lt;par name=&quot;intensity&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;start_phase&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;lfo_type&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;randomness_amplitude&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;randomness_frequency&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;delay&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;stretch&quot; value=&quot;64&quot; /&gt;
+&lt;par_bool name=&quot;continous&quot; value=&quot;no&quot; /&gt;
+&lt;/AMPLITUDE_LFO&gt;
+&lt;/AMPLITUDE_PARAMETERS&gt;
+&lt;FREQUENCY_PARAMETERS&gt;
+&lt;par name=&quot;fixed_freq&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;fixed_freq_et&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;bend_adjust&quot; value=&quot;88&quot; /&gt;
+&lt;par name=&quot;offset_hz&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;detune&quot; value=&quot;8192&quot; /&gt;
+&lt;par name=&quot;coarse_detune&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;detune_type&quot; value=&quot;1&quot; /&gt;
+&lt;FREQUENCY_ENVELOPE&gt;
+&lt;par_bool name=&quot;free_mode&quot; value=&quot;no&quot; /&gt;
+&lt;par name=&quot;env_points&quot; value=&quot;3&quot; /&gt;
+&lt;par name=&quot;env_sustain&quot; value=&quot;1&quot; /&gt;
+&lt;par name=&quot;env_stretch&quot; value=&quot;0&quot; /&gt;
+&lt;par_bool name=&quot;forced_release&quot; value=&quot;no&quot; /&gt;
+&lt;par_bool name=&quot;linear_envelope&quot; value=&quot;no&quot; /&gt;
+&lt;par name=&quot;A_dt&quot; value=&quot;50&quot; /&gt;
+&lt;par name=&quot;D_dt&quot; value=&quot;10&quot; /&gt;
+&lt;par name=&quot;R_dt&quot; value=&quot;60&quot; /&gt;
+&lt;par name=&quot;A_val&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;D_val&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;S_val&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;R_val&quot; value=&quot;64&quot; /&gt;
+&lt;/FREQUENCY_ENVELOPE&gt;
+&lt;FREQUENCY_LFO&gt;
+&lt;par_real name=&quot;freq&quot; value=&quot;0.641181&quot; exact_value=&quot;0x3F242470&quot; /&gt;
+&lt;par name=&quot;intensity&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;start_phase&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;lfo_type&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;randomness_amplitude&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;randomness_frequency&quot; value=&quot;41&quot; /&gt;
+&lt;par name=&quot;delay&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;stretch&quot; value=&quot;64&quot; /&gt;
+&lt;par_bool name=&quot;continous&quot; value=&quot;no&quot; /&gt;
+&lt;/FREQUENCY_LFO&gt;
+&lt;/FREQUENCY_PARAMETERS&gt;
+&lt;FILTER_PARAMETERS&gt;
+&lt;par name=&quot;velocity_sensing_amplitude&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;velocity_sensing&quot; value=&quot;64&quot; /&gt;
+&lt;FILTER&gt;
+&lt;par name=&quot;category&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;type&quot; value=&quot;3&quot; /&gt;
+&lt;par name=&quot;freq&quot; value=&quot;40&quot; /&gt;
+&lt;par name=&quot;q&quot; value=&quot;33&quot; /&gt;
+&lt;par name=&quot;stages&quot; value=&quot;2&quot; /&gt;
+&lt;par name=&quot;freq_track&quot; value=&quot;127&quot; /&gt;
+&lt;par name=&quot;gain&quot; value=&quot;64&quot; /&gt;
+&lt;/FILTER&gt;
+&lt;FILTER_ENVELOPE&gt;
+&lt;par_bool name=&quot;free_mode&quot; value=&quot;no&quot; /&gt;
+&lt;par name=&quot;env_points&quot; value=&quot;4&quot; /&gt;
+&lt;par name=&quot;env_sustain&quot; value=&quot;2&quot; /&gt;
+&lt;par name=&quot;env_stretch&quot; value=&quot;34&quot; /&gt;
+&lt;par_bool name=&quot;forced_release&quot; value=&quot;yes&quot; /&gt;
+&lt;par_bool name=&quot;linear_envelope&quot; value=&quot;no&quot; /&gt;
+&lt;par name=&quot;A_dt&quot; value=&quot;36&quot; /&gt;
+&lt;par name=&quot;D_dt&quot; value=&quot;70&quot; /&gt;
+&lt;par name=&quot;R_dt&quot; value=&quot;60&quot; /&gt;
+&lt;par name=&quot;A_val&quot; value=&quot;107&quot; /&gt;
+&lt;par name=&quot;D_val&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;S_val&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;R_val&quot; value=&quot;64&quot; /&gt;
+&lt;/FILTER_ENVELOPE&gt;
+&lt;FILTER_LFO&gt;
+&lt;par_real name=&quot;freq&quot; value=&quot;0.629921&quot; exact_value=&quot;0x3F214281&quot; /&gt;
+&lt;par name=&quot;intensity&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;start_phase&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;lfo_type&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;randomness_amplitude&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;randomness_frequency&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;delay&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;stretch&quot; value=&quot;64&quot; /&gt;
+&lt;par_bool name=&quot;continous&quot; value=&quot;no&quot; /&gt;
+&lt;/FILTER_LFO&gt;
+&lt;/FILTER_PARAMETERS&gt;
+&lt;/PAD_SYNTH_PARAMETERS&gt;
+&lt;/INSTRUMENT_KIT_ITEM&gt;
+&lt;INSTRUMENT_KIT_ITEM id=&quot;1&quot;&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;no&quot; /&gt;
+&lt;/INSTRUMENT_KIT_ITEM&gt;
+&lt;INSTRUMENT_KIT_ITEM id=&quot;2&quot;&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;no&quot; /&gt;
+&lt;/INSTRUMENT_KIT_ITEM&gt;
+&lt;INSTRUMENT_KIT_ITEM id=&quot;3&quot;&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;no&quot; /&gt;
+&lt;/INSTRUMENT_KIT_ITEM&gt;
+&lt;INSTRUMENT_KIT_ITEM id=&quot;4&quot;&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;no&quot; /&gt;
+&lt;/INSTRUMENT_KIT_ITEM&gt;
+&lt;INSTRUMENT_KIT_ITEM id=&quot;5&quot;&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;no&quot; /&gt;
+&lt;/INSTRUMENT_KIT_ITEM&gt;
+&lt;INSTRUMENT_KIT_ITEM id=&quot;6&quot;&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;no&quot; /&gt;
+&lt;/INSTRUMENT_KIT_ITEM&gt;
+&lt;INSTRUMENT_KIT_ITEM id=&quot;7&quot;&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;no&quot; /&gt;
+&lt;/INSTRUMENT_KIT_ITEM&gt;
+&lt;INSTRUMENT_KIT_ITEM id=&quot;8&quot;&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;no&quot; /&gt;
+&lt;/INSTRUMENT_KIT_ITEM&gt;
+&lt;INSTRUMENT_KIT_ITEM id=&quot;9&quot;&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;no&quot; /&gt;
+&lt;/INSTRUMENT_KIT_ITEM&gt;
+&lt;INSTRUMENT_KIT_ITEM id=&quot;10&quot;&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;no&quot; /&gt;
+&lt;/INSTRUMENT_KIT_ITEM&gt;
+&lt;INSTRUMENT_KIT_ITEM id=&quot;11&quot;&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;no&quot; /&gt;
+&lt;/INSTRUMENT_KIT_ITEM&gt;
+&lt;INSTRUMENT_KIT_ITEM id=&quot;12&quot;&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;no&quot; /&gt;
+&lt;/INSTRUMENT_KIT_ITEM&gt;
+&lt;INSTRUMENT_KIT_ITEM id=&quot;13&quot;&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;no&quot; /&gt;
+&lt;/INSTRUMENT_KIT_ITEM&gt;
+&lt;INSTRUMENT_KIT_ITEM id=&quot;14&quot;&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;no&quot; /&gt;
+&lt;/INSTRUMENT_KIT_ITEM&gt;
+&lt;INSTRUMENT_KIT_ITEM id=&quot;15&quot;&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;no&quot; /&gt;
+&lt;/INSTRUMENT_KIT_ITEM&gt;
+&lt;/INSTRUMENT_KIT&gt;
+&lt;INSTRUMENT_EFFECTS&gt;
+&lt;INSTRUMENT_EFFECT id=&quot;0&quot;&gt;
+&lt;EFFECT&gt;
+&lt;par name=&quot;type&quot; value=&quot;7&quot; /&gt;
+&lt;par name=&quot;preset&quot; value=&quot;0&quot; /&gt;
+&lt;EFFECT_PARAMETERS&gt;
+&lt;par_no id=&quot;0&quot;&gt;
+&lt;par name=&quot;par&quot; value=&quot;67&quot; /&gt;
+&lt;/par_no&gt;
+&lt;par_no id=&quot;10&quot;&gt;
+&lt;par name=&quot;par&quot; value=&quot;8&quot; /&gt;
+&lt;/par_no&gt;
+&lt;par_no id=&quot;11&quot;&gt;
+&lt;par name=&quot;par&quot; value=&quot;32&quot; /&gt;
+&lt;/par_no&gt;
+&lt;par_no id=&quot;12&quot;&gt;
+&lt;par name=&quot;par&quot; value=&quot;81&quot; /&gt;
+&lt;/par_no&gt;
+&lt;par_no id=&quot;13&quot;&gt;
+&lt;par name=&quot;par&quot; value=&quot;57&quot; /&gt;
+&lt;/par_no&gt;
+&lt;par_no id=&quot;16&quot;&gt;
+&lt;par name=&quot;par&quot; value=&quot;64&quot; /&gt;
+&lt;/par_no&gt;
+&lt;par_no id=&quot;17&quot;&gt;
+&lt;par name=&quot;par&quot; value=&quot;64&quot; /&gt;
+&lt;/par_no&gt;
+&lt;par_no id=&quot;18&quot;&gt;
+&lt;par name=&quot;par&quot; value=&quot;64&quot; /&gt;
+&lt;/par_no&gt;
+&lt;par_no id=&quot;21&quot;&gt;
+&lt;par name=&quot;par&quot; value=&quot;64&quot; /&gt;
+&lt;/par_no&gt;
+&lt;par_no id=&quot;22&quot;&gt;
+&lt;par name=&quot;par&quot; value=&quot;64&quot; /&gt;
+&lt;/par_no&gt;
+&lt;par_no id=&quot;23&quot;&gt;
+&lt;par name=&quot;par&quot; value=&quot;64&quot; /&gt;
+&lt;/par_no&gt;
+&lt;par_no id=&quot;26&quot;&gt;
+&lt;par name=&quot;par&quot; value=&quot;64&quot; /&gt;
+&lt;/par_no&gt;
+&lt;par_no id=&quot;27&quot;&gt;
+&lt;par name=&quot;par&quot; value=&quot;64&quot; /&gt;
+&lt;/par_no&gt;
+&lt;par_no id=&quot;28&quot;&gt;
+&lt;par name=&quot;par&quot; value=&quot;64&quot; /&gt;
+&lt;/par_no&gt;
+&lt;par_no id=&quot;31&quot;&gt;
+&lt;par name=&quot;par&quot; value=&quot;64&quot; /&gt;
+&lt;/par_no&gt;
+&lt;par_no id=&quot;32&quot;&gt;
+&lt;par name=&quot;par&quot; value=&quot;64&quot; /&gt;
+&lt;/par_no&gt;
+&lt;par_no id=&quot;33&quot;&gt;
+&lt;par name=&quot;par&quot; value=&quot;64&quot; /&gt;
+&lt;/par_no&gt;
+&lt;par_no id=&quot;36&quot;&gt;
+&lt;par name=&quot;par&quot; value=&quot;64&quot; /&gt;
+&lt;/par_no&gt;
+&lt;par_no id=&quot;37&quot;&gt;
+&lt;par name=&quot;par&quot; value=&quot;64&quot; /&gt;
+&lt;/par_no&gt;
+&lt;par_no id=&quot;38&quot;&gt;
+&lt;par name=&quot;par&quot; value=&quot;64&quot; /&gt;
+&lt;/par_no&gt;
+&lt;par_no id=&quot;41&quot;&gt;
+&lt;par name=&quot;par&quot; value=&quot;64&quot; /&gt;
+&lt;/par_no&gt;
+&lt;par_no id=&quot;42&quot;&gt;
+&lt;par name=&quot;par&quot; value=&quot;64&quot; /&gt;
+&lt;/par_no&gt;
+&lt;par_no id=&quot;43&quot;&gt;
+&lt;par name=&quot;par&quot; value=&quot;64&quot; /&gt;
+&lt;/par_no&gt;
+&lt;par_no id=&quot;46&quot;&gt;
+&lt;par name=&quot;par&quot; value=&quot;64&quot; /&gt;
+&lt;/par_no&gt;
+&lt;par_no id=&quot;47&quot;&gt;
+&lt;par name=&quot;par&quot; value=&quot;64&quot; /&gt;
+&lt;/par_no&gt;
+&lt;par_no id=&quot;48&quot;&gt;
+&lt;par name=&quot;par&quot; value=&quot;64&quot; /&gt;
+&lt;/par_no&gt;
+&lt;/EFFECT_PARAMETERS&gt;
+&lt;/EFFECT&gt;
+&lt;par name=&quot;route&quot; value=&quot;0&quot; /&gt;
+&lt;par_bool name=&quot;bypass&quot; value=&quot;no&quot; /&gt;
+&lt;/INSTRUMENT_EFFECT&gt;
+&lt;INSTRUMENT_EFFECT id=&quot;1&quot;&gt;
+&lt;EFFECT&gt;
+&lt;par name=&quot;type&quot; value=&quot;0&quot; /&gt;
+&lt;/EFFECT&gt;
+&lt;par name=&quot;route&quot; value=&quot;0&quot; /&gt;
+&lt;par_bool name=&quot;bypass&quot; value=&quot;no&quot; /&gt;
+&lt;/INSTRUMENT_EFFECT&gt;
+&lt;INSTRUMENT_EFFECT id=&quot;2&quot;&gt;
+&lt;EFFECT&gt;
+&lt;par name=&quot;type&quot; value=&quot;0&quot; /&gt;
+&lt;/EFFECT&gt;
+&lt;par name=&quot;route&quot; value=&quot;0&quot; /&gt;
+&lt;par_bool name=&quot;bypass&quot; value=&quot;no&quot; /&gt;
+&lt;/INSTRUMENT_EFFECT&gt;
+&lt;/INSTRUMENT_EFFECTS&gt;
+&lt;/INSTRUMENT&gt;
+&lt;CONTROLLER&gt;
+&lt;par name=&quot;pitchwheel_bendrange&quot; value=&quot;200&quot; /&gt;
+&lt;par name=&quot;pitchwheel_bendrange_down&quot; value=&quot;0&quot; /&gt;
+&lt;par_bool name=&quot;pitchwheel_split&quot; value=&quot;no&quot; /&gt;
+&lt;par_bool name=&quot;expression_receive&quot; value=&quot;yes&quot; /&gt;
+&lt;par name=&quot;panning_depth&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;filter_cutoff_depth&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;filter_q_depth&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;bandwidth_depth&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;mod_wheel_depth&quot; value=&quot;80&quot; /&gt;
+&lt;par_bool name=&quot;mod_wheel_exponential&quot; value=&quot;no&quot; /&gt;
+&lt;par_bool name=&quot;fm_amp_receive&quot; value=&quot;yes&quot; /&gt;
+&lt;par_bool name=&quot;volume_receive&quot; value=&quot;yes&quot; /&gt;
+&lt;par_bool name=&quot;sustain_receive&quot; value=&quot;yes&quot; /&gt;
+&lt;par_bool name=&quot;portamento_receive&quot; value=&quot;yes&quot; /&gt;
+&lt;par name=&quot;portamento_time&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;portamento_pitchthresh&quot; value=&quot;3&quot; /&gt;
+&lt;par name=&quot;portamento_pitchthreshtype&quot; value=&quot;1&quot; /&gt;
+&lt;par name=&quot;portamento_portamento&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;portamento_updowntimestretch&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;portamento_proportional&quot; value=&quot;0&quot; /&gt;
+&lt;par name=&quot;portamento_proprate&quot; value=&quot;80&quot; /&gt;
+&lt;par name=&quot;portamento_propdepth&quot; value=&quot;90&quot; /&gt;
+&lt;par name=&quot;resonance_center_depth&quot; value=&quot;64&quot; /&gt;
+&lt;par name=&quot;resonance_bandwidth_depth&quot; value=&quot;64&quot; /&gt;
+&lt;/CONTROLLER&gt;
+&lt;/PART&gt;
+&lt;PART id=&quot;1&quot;&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;no&quot; /&gt;
+&lt;/PART&gt;
+&lt;PART id=&quot;2&quot;&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;no&quot; /&gt;
+&lt;/PART&gt;
+&lt;PART id=&quot;3&quot;&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;no&quot; /&gt;
+&lt;/PART&gt;
+&lt;PART id=&quot;4&quot;&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;no&quot; /&gt;
+&lt;/PART&gt;
+&lt;PART id=&quot;5&quot;&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;no&quot; /&gt;
+&lt;/PART&gt;
+&lt;PART id=&quot;6&quot;&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;no&quot; /&gt;
+&lt;/PART&gt;
+&lt;PART id=&quot;7&quot;&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;no&quot; /&gt;
+&lt;/PART&gt;
+&lt;PART id=&quot;8&quot;&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;no&quot; /&gt;
+&lt;/PART&gt;
+&lt;PART id=&quot;9&quot;&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;no&quot; /&gt;
+&lt;/PART&gt;
+&lt;PART id=&quot;10&quot;&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;no&quot; /&gt;
+&lt;/PART&gt;
+&lt;PART id=&quot;11&quot;&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;no&quot; /&gt;
+&lt;/PART&gt;
+&lt;PART id=&quot;12&quot;&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;no&quot; /&gt;
+&lt;/PART&gt;
+&lt;PART id=&quot;13&quot;&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;no&quot; /&gt;
+&lt;/PART&gt;
+&lt;PART id=&quot;14&quot;&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;no&quot; /&gt;
+&lt;/PART&gt;
+&lt;PART id=&quot;15&quot;&gt;
+&lt;par_bool name=&quot;enabled&quot; value=&quot;no&quot; /&gt;
+&lt;/PART&gt;
+&lt;SYSTEM_EFFECTS&gt;
+&lt;SYSTEM_EFFECT id=&quot;0&quot;&gt;
+&lt;EFFECT&gt;
+&lt;par name=&quot;type&quot; value=&quot;0&quot; /&gt;
+&lt;/EFFECT&gt;
+&lt;VOLUME id=&quot;0&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;1&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;2&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;3&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;4&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;5&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;6&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;7&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;8&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;9&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;10&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;11&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;12&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;13&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;14&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;15&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;SENDTO id=&quot;1&quot;&gt;
+&lt;par name=&quot;send_vol&quot; value=&quot;0&quot; /&gt;
+&lt;/SENDTO&gt;
+&lt;SENDTO id=&quot;2&quot;&gt;
+&lt;par name=&quot;send_vol&quot; value=&quot;0&quot; /&gt;
+&lt;/SENDTO&gt;
+&lt;SENDTO id=&quot;3&quot;&gt;
+&lt;par name=&quot;send_vol&quot; value=&quot;0&quot; /&gt;
+&lt;/SENDTO&gt;
+&lt;/SYSTEM_EFFECT&gt;
+&lt;SYSTEM_EFFECT id=&quot;1&quot;&gt;
+&lt;EFFECT&gt;
+&lt;par name=&quot;type&quot; value=&quot;0&quot; /&gt;
+&lt;/EFFECT&gt;
+&lt;VOLUME id=&quot;0&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;1&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;2&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;3&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;4&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;5&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;6&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;7&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;8&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;9&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;10&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;11&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;12&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;13&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;14&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;15&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;SENDTO id=&quot;2&quot;&gt;
+&lt;par name=&quot;send_vol&quot; value=&quot;0&quot; /&gt;
+&lt;/SENDTO&gt;
+&lt;SENDTO id=&quot;3&quot;&gt;
+&lt;par name=&quot;send_vol&quot; value=&quot;0&quot; /&gt;
+&lt;/SENDTO&gt;
+&lt;/SYSTEM_EFFECT&gt;
+&lt;SYSTEM_EFFECT id=&quot;2&quot;&gt;
+&lt;EFFECT&gt;
+&lt;par name=&quot;type&quot; value=&quot;0&quot; /&gt;
+&lt;/EFFECT&gt;
+&lt;VOLUME id=&quot;0&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;1&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;2&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;3&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;4&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;5&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;6&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;7&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;8&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;9&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;10&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;11&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;12&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;13&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;14&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;15&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;SENDTO id=&quot;3&quot;&gt;
+&lt;par name=&quot;send_vol&quot; value=&quot;0&quot; /&gt;
+&lt;/SENDTO&gt;
+&lt;/SYSTEM_EFFECT&gt;
+&lt;SYSTEM_EFFECT id=&quot;3&quot;&gt;
+&lt;EFFECT&gt;
+&lt;par name=&quot;type&quot; value=&quot;0&quot; /&gt;
+&lt;/EFFECT&gt;
+&lt;VOLUME id=&quot;0&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;1&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;2&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;3&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;4&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;5&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;6&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;7&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;8&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;9&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;10&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;11&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;12&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;13&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;14&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;VOLUME id=&quot;15&quot;&gt;
+&lt;par name=&quot;vol&quot; value=&quot;0&quot; /&gt;
+&lt;/VOLUME&gt;
+&lt;/SYSTEM_EFFECT&gt;
+&lt;/SYSTEM_EFFECTS&gt;
+&lt;INSERTION_EFFECTS&gt;
+&lt;INSERTION_EFFECT id=&quot;0&quot;&gt;
+&lt;par name=&quot;part&quot; value=&quot;-1&quot; /&gt;
+&lt;EFFECT&gt;
+&lt;par name=&quot;type&quot; value=&quot;0&quot; /&gt;
+&lt;/EFFECT&gt;
+&lt;/INSERTION_EFFECT&gt;
+&lt;INSERTION_EFFECT id=&quot;1&quot;&gt;
+&lt;par name=&quot;part&quot; value=&quot;-1&quot; /&gt;
+&lt;EFFECT&gt;
+&lt;par name=&quot;type&quot; value=&quot;0&quot; /&gt;
+&lt;/EFFECT&gt;
+&lt;/INSERTION_EFFECT&gt;
+&lt;INSERTION_EFFECT id=&quot;2&quot;&gt;
+&lt;par name=&quot;part&quot; value=&quot;-1&quot; /&gt;
+&lt;EFFECT&gt;
+&lt;par name=&quot;type&quot; value=&quot;0&quot; /&gt;
+&lt;/EFFECT&gt;
+&lt;/INSERTION_EFFECT&gt;
+&lt;INSERTION_EFFECT id=&quot;3&quot;&gt;
+&lt;par name=&quot;part&quot; value=&quot;-1&quot; /&gt;
+&lt;EFFECT&gt;
+&lt;par name=&quot;type&quot; value=&quot;0&quot; /&gt;
+&lt;/EFFECT&gt;
+&lt;/INSERTION_EFFECT&gt;
+&lt;INSERTION_EFFECT id=&quot;4&quot;&gt;
+&lt;par name=&quot;part&quot; value=&quot;-1&quot; /&gt;
+&lt;EFFECT&gt;
+&lt;par name=&quot;type&quot; value=&quot;0&quot; /&gt;
+&lt;/EFFECT&gt;
+&lt;/INSERTION_EFFECT&gt;
+&lt;INSERTION_EFFECT id=&quot;5&quot;&gt;
+&lt;par name=&quot;part&quot; value=&quot;-1&quot; /&gt;
+&lt;EFFECT&gt;
+&lt;par name=&quot;type&quot; value=&quot;0&quot; /&gt;
+&lt;/EFFECT&gt;
+&lt;/INSERTION_EFFECT&gt;
+&lt;INSERTION_EFFECT id=&quot;6&quot;&gt;
+&lt;par name=&quot;part&quot; value=&quot;-1&quot; /&gt;
+&lt;EFFECT&gt;
+&lt;par name=&quot;type&quot; value=&quot;0&quot; /&gt;
+&lt;/EFFECT&gt;
+&lt;/INSERTION_EFFECT&gt;
+&lt;INSERTION_EFFECT id=&quot;7&quot;&gt;
+&lt;par name=&quot;part&quot; value=&quot;-1&quot; /&gt;
+&lt;EFFECT&gt;
+&lt;par name=&quot;type&quot; value=&quot;0&quot; /&gt;
+&lt;/EFFECT&gt;
+&lt;/INSERTION_EFFECT&gt;
+&lt;/INSERTION_EFFECTS&gt;
+&lt;/MASTER&gt;
+&lt;/ZynAddSubFX-data&gt;
+
+    </Value>
+   </CustomData>
+  </Data>
+ </Plugin>
+
+ <ExternalPatchbay>
+  <Connection>
+   <Source>system:capture_1</Source>
+   <Target>EQ10Q Mono:Input</Target>
+  </Connection>
+  <Connection>
+   <Source>aubio:midi_out_1</Source>
+   <Target>ZynAddSubFX:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>EQ10Q Mono:Output</Source>
+   <Target>aubio:in_1</Target>
+  </Connection>
+  <Connection>
+   <Source>ZynAddSubFX:output_1</Source>
+   <Target>system:playback_1</Target>
+  </Connection>
+  <Connection>
+   <Source>ZynAddSubFX:output_2</Source>
+   <Target>system:playback_2</Target>
+  </Connection>
+ </ExternalPatchbay>
+</CARLA-PROJECT>

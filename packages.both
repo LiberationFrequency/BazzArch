@@ -323,7 +323,7 @@ qjackctl
 ## The Pure Data real-time music and multimedia environment
 #pd
 ## MIDI/audio sequencer and notation editor
-#rosegarden
+rosegarden
 ## Time-stretching and pitch-shifting audio library and utility
 rubberband
 ## A viewer and analyser of music audio files.
@@ -336,7 +336,7 @@ sox
 
 
 ## Onset detection, pitch tracking, note tracking and tempo tracking plugins using Paul Brossier's aubio library
-vamp-aubio-plugins
+#vamp-aubio-plugins
 ##The Vamp audio analysis plug-in system
 vamp-plugin-sdk
 
@@ -374,7 +374,7 @@ xmlstarlet
 ### Multimedia
 ####Music Applications
 ## A tool for extracting annotations from audio signals 
-aubio
+#aubio
 ## Synthesised pipe organ emulator
 aeolus
 ## A program that lets you manipulate digital audio waveforms
@@ -384,13 +384,13 @@ audio-convert
 ## Concurrent, on-the-fly audio programming language
 #chuck
 ## An old-school drum-kit sampler
-drumkv1
+#drumkv1
 ## An old-school polyphonic sampler synthesizer with stereo fx
-samplv1
+#samplv1
 ## An old-school all-digital 4-oscillator subtractive polyphonic synthesizer with stereo fx
-synthv1
+#synthv1
 ##Audio normalizer, converter, encoder/decoder, ripper, tagger and player
-gnormalize
+#gnormalize
 ## An advanced drum machine
 ## https://github.com/hydrogen-music/Song-and-pattern-repository
 hydrogen
@@ -407,7 +407,7 @@ hydrogen
 ## An automated music engraving system
 lilypond
 ## A music score editor that lets you rapidly enter notation which it typesets using the LilyPond music engraver. 
-denemo
+#denemo
 ## The Linux MultiMedia Studio.
 #lmms
 ## Successor to the LADSPA audio plug-in standard
@@ -425,9 +425,11 @@ denemo
 ## Free, open source software for digital DJ'ing.
 mixxx
 ## Audio/MIDI multitrack sequencer
-qtractor
+#qtractor
 ## Qt GUI for FluidSynth
-qsynth
+#qsynth
+## A real-time software synthesizer based on the SoundFont 2 specifications
+#fluidsynth
 ## A simple sound converter application for GNOME
 #soundconverter
 ## A MIDI to WAVE converter and player
@@ -518,7 +520,7 @@ vlc
 #gstreamer0.10-python
 #gstreamer0.10-mm
 #
-gst-plugins-ugly
+#gst-plugins-ugly
 #
 lame
 flac
@@ -538,7 +540,7 @@ perl-image-exiftool
 #calibre
 
 ## A disc burning application for Gnome
-brasero
+#brasero
 ######plus gst-plugins-ugly for brasero and mp3
 
 ### Toolbox ###
@@ -554,7 +556,7 @@ brasero
 ## Use your webcam to take photos and videos, apply fancy special effects and share the fun with others
 #cheese
 ## A feature-rich screen recorder written in C++/Qt4 that supports X11 and OpenGL with Jack support.
-simplescreenrecorder
+#simplescreenrecorder
 ## An easy to use utility that records your desktop into the ogg format with a CLI, Qt or GTK+ interface.
 #qt-recordmydesktop
 #recordmydesktop
@@ -584,13 +586,13 @@ wxpython
 
 ## Music Education ##
 ## Music education and ear training software
-solfege
+#solfege
 
 ### Music Games ###
 ## A free game like "Singstar", "Rockband" or "Stepmania"
 ## see also composer-git from package.x86_64
-performous
-performous-freesongs
+#performous
+#performous-freesongs
 
 
 ### Android ###
@@ -680,7 +682,7 @@ python-pyqt5
 
 ## Screen lockers/saver ##
 ## Screen saver and locker for the X Window System
-xscreensaver
+#xscreensaver
 ## Very simple and lightweight X screen locker. Offers only a black background when locked, there are no animations or text fields.
 #slock
 
@@ -727,7 +729,7 @@ abcde
 ## Splits .wav and .flac files according to a CUE sheet and encodes the resulting pieces. A useful companion to ABCDE.
 shntool
 ## CD ripper for GNOME.
-sound-juicer
+#sound-juicer
 ## Front-end to various audio converters.
 #soundkonverter
 
@@ -756,6 +758,9 @@ python2-scikit-learn
 cython2
 
 
+## Dependencies for execute ofxaubio
+freeimage
+
 
 ## Dependencies Cabbage ##
 #freetype2
@@ -773,3 +778,21 @@ cython2
 
 ### A summary of QT-Software: https://wiki.manjaro.org/index.php?title=List_of_Qt_Applications
 
+################################Develop##########################################################
+
+## Arch Linux repo building tool
+#repose
+
+
+### OpenFrameWorks ###
+## Highly extensible IDE (CPP variant) - Total size of install packages:  243,86 MiB
+#eclipse-cpp
+## Debugger
+#gdb
+
+
+
+## An error occurred while collecting items to be installed
+## session context was:(profile=epp.package.cpp, phase=org.eclipse.equinox.internal.p2.engine.phases.Collect, operand=, action=).
+## No repository found containing: osgi.bundle,org.eclipse.gef4.mvc.compatibility.luna,0.1.0.201506081138
+## No repository found containing: org.eclipse.update.feature,org.eclipse.gef4.mvc.compatibility.luna,0.1.0.201506081138
